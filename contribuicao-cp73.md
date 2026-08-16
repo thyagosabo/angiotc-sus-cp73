@@ -4,9 +4,9 @@
 
 **Natureza da contribuição:** técnico-científica.
 
-> **VERSÃO 2 — RASCUNHO.** Duas dependências abertas, marcadas no texto como `[PENDENTE]`:
-> extração das OCI de síndrome coronariana crônica no SIA 2025, e ancoragem do Δ de
-> angiografias evitadas na literatura de ensaios. Nenhuma conclusão da síntese depende delas.
+> **VERSÃO 2 — RASCUNHO.** Uma dependência aberta, marcada no texto como `[PENDENTE]`:
+> extração das OCI de síndrome coronariana crônica no SIA 2025, que pode substituir a
+> reconstrução de episódios por pareamento. Nenhuma conclusão da síntese depende dela.
 
 ---
 
@@ -183,7 +183,11 @@ Ensaios randomizados de estratégia diagnóstica reportam taxas absolutas de ang
 | CRESCENT-II (6 meses) | funcional-primeiro | +1,4 | R$ 195,68 |
 | PRECISE (11,8 meses) | usual care | +4,1 | R$ 215,40 |
 
-**Contra comparadores não invasivos, a angiotomografia não reduz de forma consistente o número total de angiografias invasivas — na maioria dos ensaios o aumenta.** A faixa observada vai de −6,4 a +4,1 por 100, e a metanálise de Foy (2017), no subgrupo de dor torácica estável, aponta aumento de 2,9 por 100.
+**Nos ensaios que compararam estratégias não invasivas iniciais, a magnitude da redução observada na angiografia invasiva foi ausente, variável ou insuficiente para sustentar, isoladamente, neutralidade orçamentária aos custos estimados para o SUS.** A faixa observada vai de −6,4 a +4,1 por 100, e a metanálise de Foy (2017), no subgrupo de dor torácica estável, aponta aumento de 2,9 por 100.
+
+A dissociação entre volume e adequação é característica desta literatura e não deve ser colapsada. O PROMISE ilustra os dois sentidos simultaneamente: a angiotomografia **aumentou** o cateterismo total em 90 dias, de 8,1% para 12,2%, e ao mesmo tempo **reduziu** o cateterismo sem doença obstrutiva, de 4,3% para 3,4%. O PRECISE, com estratégia mais elaborada — diferimento de teste em pacientes de risco mínimo e angiotomografia com FFR-TC nos demais —, reduziu o cateterismo total de 16,9% para 12,8%, porém com aumento de revascularização de 5,2% para 9,2%; o custo total permaneceu semelhante, com redução de 27% no componente diagnóstico e aumento de 67% no componente de revascularização. `[conferir citação de PRECISE antes de submeter]`
+
+Reduzir cateterismo não implica reduzir gasto: a economia diagnóstica pode ser absorvida a jusante quando a melhor seleção identifica mais pacientes efetivamente candidatos a revascularização.
 
 O preço de neutralidade correspondente a toda a faixa observada situa-se entre **R$ 138,73 e R$ 215,40**.
 
@@ -198,9 +202,9 @@ Os dois ensaios CRESCENT aplicaram **escore de cálcio como filtro antes da angi
 | Angiotomografia em todos (CAPP) | −6,4 | R$ 138,73 |
 | Filtrada por escore de cálcio (CRESCENT-I e II) | −1,0 a +1,4 | R$ 178,16 a R$ 195,68 |
 
-A diferença de desenho é a explicação mais plausível para a divergência de direção entre ensaios com o mesmo comparador. **A especificação do protocolo altera o resultado orçamentário em cerca de R$ 50 por episódio** — magnitude comparável à de vários dos parâmetros discutidos na avaliação econômica.
+**A heterogeneidade entre estratégias de tomografia sugere que o impacto orçamentário depende não apenas da tecnologia, mas também dos critérios de seleção e do protocolo de utilização. Entretanto, comparações indiretas entre ensaios não permitem quantificar isoladamente o efeito do filtro por escore de cálcio** — populações, centros, condutas a jusante e épocas diferem entre CRESCENT e CAPP, e a diferença observada não pode ser atribuída causalmente ao desenho do protocolo.
 
-Isso responde diretamente a um dos pontos que o Comitê listou como essencial ao esclarecimento: "os critérios para evitar uso inadequado da tecnologia". Recomenda-se que qualquer incorporação especifique o protocolo, e não apenas a tecnologia.
+Ainda assim, o ponto responde a um dos itens que o Comitê listou como essencial ao esclarecimento: "os critérios para evitar uso inadequado da tecnologia". Recomenda-se que qualquer incorporação especifique o protocolo de utilização, e não apenas a tecnologia.
 
 **Ressalvas.** PROMISE contabiliza janela de 90 dias, e SCOT-HEART demonstra dependência do horizonte — aumento em 6 meses, nulo em 5 anos (HR 1,00). O braço de intervenção do PRECISE não é angiotomografia pura, incluindo diferimento de teste em pacientes de risco mínimo. A metanálise de Foy inclui 9 de 13 ensaios em população de emergência; utilizou-se o subgrupo estável. As contagens por braço do CAPP não constam do artigo primário, que reporta angiografias apenas estratificadas por resultado do teste índice; os totais provêm do gráfico de floresta de Foy (2017). Em CRESCENT-I e CRESCENT-II as diferenças de angiografia total não são estatisticamente significativas (p = 0,843 e p = 0,860).
 
@@ -215,26 +219,71 @@ Ensaios com comparador **invasivo-primeiro**, isto é, pacientes já encaminhado
 
 Nessa indicação, o preço de neutralidade **supera o custo microcusteado corrigido de R$ 622,54**. A angiotomografia como filtro anterior a um cateterismo já indicado é, pelos dados disponíveis, orçamentariamente neutra ou economizadora.
 
-Estes Δ não são intercambiáveis com os da seção anterior: a população já estava referenciada para procedimento invasivo, e a taxa do braço comparador é de 97% por construção do desenho. Trata-se de pergunta clínica diferente.
+**Estes Δ não são intercambiáveis com os da seção anterior. Trata-se de outra população e de outro PICO** — pacientes já referenciados para procedimento invasivo —, e a taxa do braço comparador é de 97% por construção do desenho. Não constitui alternativa automaticamente substituível à incorporação ora analisada.
 
-**A implicação é direta para esta consulta.** A proposta em apreciação é de incorporação como exame de **primeira linha**, substituindo investigação funcional. É precisamente a indicação para a qual a evidência não sustenta neutralidade orçamentária. A indicação para a qual a economia se sustenta — filtro antes de cateterismo já indicado — não é a que está sendo requerida.
+O mecanismo explica por que os sinais econômicos divergem tanto:
 
-Recomenda-se que a apreciação final considere explicitamente essa distinção, inclusive a possibilidade de incorporação restrita à indicação de gatekeeping, com critérios de elegibilidade correspondentes.
+| População | Trajetória | Espaço econômico |
+|---|---|---|
+| Investigação não invasiva inicial | teste funcional → angiotomografia | O exame substituído custa R$ 32 a R$ 788. Há pouco a remover do percurso para financiar o custo adicional. |
+| Já indicada a cateterismo | cateterismo direto → angiotomografia → cateterismo seletivo | Há um procedimento caro e invasivo que pode ser efetivamente retirado do percurso. |
+
+Os desfechos clínicos nessa segunda população sustentam a substituição. No CONSERVE, pacientes estáveis já elegíveis a cateterismo randomizados para filtro por angiotomografia tiveram eventos em um ano idênticos ao encaminhamento direto — 4,6% contra 4,6% — com custos diagnósticos 57% menores. No DISCHARGE, 3.561 pacientes com dor torácica estável, probabilidade intermediária e já referidos a cateterismo, os eventos cardiovasculares maiores em 3,5 anos foram semelhantes entre as estratégias e as complicações maiores relacionadas ao procedimento foram menores no grupo de tomografia. `[conferir citação de custos do CONSERVE antes de submeter]`
+
+**A implicação para esta consulta é direta.** A proposta em apreciação é de incorporação como exame de **primeira linha**, substituindo investigação funcional — precisamente a indicação para a qual a evidência não sustenta neutralidade orçamentária aos custos estimados. A indicação para a qual o espaço econômico existe é distinta, tem população própria e não está sendo requerida.
+
+Recomenda-se que a apreciação final considere explicitamente essa distinção, inclusive a eventual avaliação, como pergunta separada e com critérios de elegibilidade próprios, da indicação de filtro anterior a cateterismo já indicado.
 
 ### 4.6 O benefício que a evidência sustenta não é orçamentário
 
 Há um desfecho em que a angiotomografia é consistente em **todos** os ensaios que o reportam, independentemente do comparador: a redução de angiografias invasivas sem doença obstrutiva.
 
-| Ensaio | AngioTC | Comparador | Evitadas /100 |
-|---|---|---|---|
-| PRECISE — cateterismo sem DAC obstrutiva | 2,6% | 10,2% | **7,6** |
-| CRESCENT-II — ICA sem indicação classe I | 1,5% | 7,2% | **5,7** |
-| PROMISE — cateterismo sem obstrução | 3,4% | 4,3% | 0,9 |
-| SCOT-HEART — artérias normais ao cateterismo | 20 casos | 56 casos | HR 0,39 (0,23–0,68) |
+O **IQWiG**, agência alemã de avaliação de tecnologias em saúde, publicou em 8 de março de 2024 o relatório final D22-01 sobre exatamente esta tecnologia, por encomenda do G-BA. Sua Tabela 43 reporta cateterismos sem doença obstrutiva com denominador de **pacientes randomizados** — que é a grandeza economicamente relevante:
 
-O ganho de rendimento diagnóstico é o achado robusto da literatura; a redução de volume total, não. Avaliado ao valor SIA do cateterismo, o resultado do PRECISE corresponde a R$ 55,49 por paciente investigado — insuficiente para fechar a diferença de preço, mas relevante como argumento de adequação de indicação e de exposição do paciente a procedimento invasivo desnecessário.
+**Contra métodos funcionais**
 
-Esta contribuição registra o ponto porque a decisão de incorporação não se esgota em impacto orçamentário: evitar cateterismo sem achado obstrutivo é benefício clínico e de segurança que a análise econômica, isoladamente, não captura.
+| Ensaio | AngioTC | Comparador | Evitados /100 | Valor ao preço SIA |
+|---|---|---|---|---|
+| CARE-CCTA | 4/460 (0,9%) | 30/443 (6,8%) | **5,9** | R$ 43,10 |
+| CATCH | 14/285 (4,9%) | 23/291 (7,9%) | 3,0 | R$ 21,84 |
+| SCOT-HEART | 20/2073 (1,0%) | 56/2073 (2,7%) | 1,7 | R$ 12,68 |
+| PROMISE | 170/4996 (3,4%) | 213/5007 (4,3%) | 0,9 | R$ 6,22 |
+
+Metanálise dos estudos de alta certeza (CATCH e PROMISE): OR 0,77 (IC95% 0,64–0,94; p = 0,011), favorável à angiotomografia.
+
+**Contra cateterismo direto**
+
+| Ensaio | AngioTC | Comparador | Evitados /100 | Valor ao preço SIA |
+|---|---|---|---|---|
+| CAD-MAN | 6/167 (3,6%) | 137/162 (84,6%) | **81,0** | R$ 591,23 |
+| DISCHARGE | 111/1808 (6,1%) | 1260/1753 (71,9%) | 65,7 | R$ 479,98 |
+| CONSERVE | 24/784 (3,1%) | 439/719 (61,1%) | 58,0 | R$ 423,45 |
+| Reis 2022 | 5/115 (4,3%) | 61/105 (58,1%) | 53,7 | R$ 392,43 |
+
+A lacuna a fechar para sustentar o custo microcusteado corrigido é de **R$ 437,08 por episódio** (R$ 622,54 − R$ 185,46).
+
+- Contra métodos funcionais, a maior economia observada — R$ 43,10 — cobre **10% da lacuna**.
+- Contra cateterismo direto, a menor economia observada — R$ 392,43 — cobre **90% da lacuna**, e as demais a superam.
+
+O mesmo desfecho, medido do mesmo modo pela mesma agência, separa as duas indicações por uma ordem de grandeza. É a confirmação independente da conclusão da seção 4.5.
+
+**No horizonte econômico analisado nesta contribuição, o benefício mais consistente diretamente relacionado à utilização de recursos é o aumento da adequação da indicação de angiografia invasiva, e não uma economia decorrente da redução global de procedimentos invasivos.**
+
+Esta é uma afirmação sobre utilização de recursos no curto prazo, **não uma caracterização do benefício clínico da tecnologia**. O SCOT-HEART demonstrou redução de morte coronariana e infarto não fatal em 5 anos com a angiotomografia associada ao cuidado padrão, resultado mantido na análise de 10 anos, com revascularização cumulativa semelhante entre os braços. Benefício clínico em desfechos duros e neutralidade orçamentária de curto prazo são perguntas distintas, e esta contribuição responde apenas à segunda.
+
+O PRECISE ilustra a dissociação de forma quase definicional: reduziu o cateterismo sem doença obstrutiva de 10,2% para 2,6% enquanto identificava mais pacientes efetivamente candidatos a revascularização. O PROMISE mostra o mesmo padrão em menor magnitude — mais cateterismos totais, menor proporção de cateterismos negativos. **Melhor seleção não é sinônimo de menor gasto.**
+
+### 4.7 Limitação metodológica desta seção
+
+**Nenhuma revisão sistemática publica diferença de risco absoluta para cateterismo em população de dor torácica estável.** Os Δ utilizados acima são diferenças aritméticas entre percentuais publicados por braço, não estimativas agrupadas de diferença absoluta com intervalo de confiança. A única diferença de risco agrupada localizada na literatura (Hulten, JACC 2013: +21 por 1.000) refere-se a população de emergência e não se aplica.
+
+Registram-se ainda três advertências sobre as fontes secundárias:
+
+1. A metanálise em rede de **Siontis (BMJ 2018)**, que separa corretamente os comparadores como nós distintos, reporta NNT 24 (16 a 92) para teste funcional contra angiotomografia sobre taxa-base de 12,2% — coerente com aumento de cateterismo pela angiotomografia.
+2. A revisão de **Zito (Ann Intern Med 2023)** teve errata publicada (2024;177:991-2); os intervalos de confiança indexados no PubMed permanecem desatualizados. O IC do cateterismo índice passou de 0,22–0,25 para 0,20–0,28.
+3. A revisão de **Hwang (Clin Cardiol 2017)** contém erro de extração para SCOT-HEART — os valores 94 e 8 correspondem a exames *recém-solicitados* após a tomografia, não a totais por braço, cujos valores reais são 491 e 502. O subgrupo estável dessa revisão é inflado por esse erro e **não foi utilizado** nesta análise.
+
+A dependência temporal é o principal fator de discordância entre revisões: SCOT-HEART mostra aumento em 6 meses e nulidade em 5 anos (HR 1,00), de modo que revisões ancoradas em horizontes curtos e longos chegam a conclusões opostas a partir do mesmo ensaio.
 
 ### 4.4 Independência em relação à população elegível
 
@@ -257,10 +306,10 @@ O `C_episódio_atual` de R$ 185,46 é, portanto, **preço de tabela, não custo 
 3. **83 estabelecimentos** reúnem hardware ≥64 canais, hemodinâmica co-localizada e produção coronariana documentada — o estrato de maior plausibilidade de implantação imediata.
 4. **Doze UFs não possuem nenhum estabelecimento nesse estrato**; AP, PI e TO não possuem nenhum tomógrafo de ≥64 canais confirmado disponível ao SUS.
 5. A investigação funcional do SUS concentra-se no **teste ergométrico (76,0% dos episódios identificados, R$ 32,20)**, e não em exames de custo médio-alto — ressalvado que a composição da população elegível não é identificável nos registros administrativos.
-6. **A neutralidade orçamentária como exame de primeira linha não é sustentada pela evidência.** O requisito de 59,9 angiografias evitadas por 100 pacientes, ao custo microcusteado corrigido de R$ 622,54, é **14,6 vezes maior que o melhor resultado observado** em ensaios com comparador não invasivo. A faixa observada na literatura (−6,4 a +4,1 por 100) corresponde a preços de neutralidade entre R$ 138,73 e R$ 215,40. Ao preço da saúde suplementar, a neutralidade é logicamente impossível.
-7. **O caso econômico existe, mas para outra indicação.** Em ensaios com comparador invasivo-primeiro — pacientes já encaminhados a cateterismo — o Δ observado é de +66 a +75 por 100, e o preço de neutralidade (R$ 667 a R$ 734) **supera** o custo microcusteado corrigido. A indicação de gatekeeping antes de cateterismo já indicado é orçamentariamente sustentável; a de primeira linha, que é a requerida, não é. Recomenda-se que a apreciação final considere explicitamente a incorporação restrita a essa indicação.
-8. **O protocolo altera o resultado.** Angiotomografia filtrada por escore de cálcio (CRESCENT) e aplicada universalmente (CAPP) diferem em cerca de R$ 50 por episódio no preço de neutralidade. Qualquer incorporação deve especificar o protocolo, não apenas a tecnologia.
-9. **O benefício robusto da tecnologia não é orçamentário, é de adequação.** A redução de cateterismos sem doença obstrutiva é consistente em todos os ensaios que a reportam (5,7 a 7,6 por 100), ao contrário da redução de volume total. A decisão de incorporação não deveria se esgotar em impacto orçamentário.
+6. **Nos ensaios que compararam estratégias não invasivas iniciais, a redução observada na angiografia invasiva foi ausente, variável ou insuficiente para sustentar, isoladamente, neutralidade orçamentária aos custos estimados para o SUS.** O requisito de 59,9 angiografias evitadas por 100 pacientes, ao custo microcusteado corrigido de R$ 622,54, é **14,6 vezes maior que o melhor resultado observado**. A faixa da literatura (−6,4 a +4,1 por 100) corresponde a preços de neutralidade entre R$ 138,73 e R$ 215,40. Ao preço da saúde suplementar, a neutralidade é logicamente impossível.
+7. **Existe espaço econômico em outro PICO, que não é o ora apreciado.** Em pacientes já referenciados a cateterismo, o Δ observado é de +54 a +81 por 100 e o preço de neutralidade supera o custo microcusteado corrigido. O mecanismo é claro: há um procedimento caro e invasivo a remover do percurso, o que não ocorre quando o exame substituído custa R$ 32. Trata-se de população distinta, com critérios de elegibilidade próprios, e **não de alternativa automaticamente substituível** à incorporação requerida. Recomenda-se que a apreciação final considere avaliá-la como pergunta separada.
+8. **O impacto orçamentário depende do protocolo, não apenas da tecnologia** — critérios de seleção e regras de utilização alteram o resultado observado entre ensaios. Comparações indiretas, contudo, não permitem quantificar isoladamente o efeito de nenhum componente do protocolo. Recomenda-se que qualquer incorporação especifique regras de utilização.
+9. **No horizonte econômico desta contribuição, o benefício mais consistente ligado a recursos é o aumento da adequação da indicação de cateterismo** (5,7 a 7,6 evitados por 100 sem doença obstrutiva), e não economia por redução de volume. Isto **não caracteriza o benefício clínico da tecnologia**: o SCOT-HEART demonstrou redução de morte coronariana e infarto não fatal em 5 e 10 anos. Benefício clínico e neutralidade orçamentária de curto prazo são perguntas distintas; esta contribuição responde apenas à segunda.
 10. Não há código SIGTAP para a tecnologia; microcusteio contemporâneo é condição necessária para qualquer análise econômica reprodutível.
 
 Nada nesta contribuição se pronuncia sobre o mérito clínico da tecnologia. As conclusões dizem respeito exclusivamente a capacidade de implementação e sustentabilidade orçamentária, nos termos em que o Comitê solicitou esclarecimento.
