@@ -28,3 +28,4 @@ SIA 2025: 36 arquivos a processar
 [27/36] PASC2503.dbc: 1416 pares
 [28/36] PASC2504.dbc: 1415 pares
 [29/36] PASC2505.dbc: 1459 pares
+[30/36] PASC2506.dbc: 1446 pares
