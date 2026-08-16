@@ -146,7 +146,12 @@ def main():
 
     # ================= §4 LIMIAR =================
     C_CINT = (v["0208010025"] + v["0208010033"]) / q["0208010025"]
-    subst = [("mix medio SIA", C_EP), ("mix NATS", 316.76), ("cintilografia", C_CINT)]
+    C_ECO = v["0205010016"] / q["0205010016"]; C_TE = v["0211020060"] / q["0211020060"]
+    # NATS (relatorio preliminar): TE + 50% cintilo + 50% eco, MAS cintilo so pelo codigo de estresse (408,52)
+    C_NATS_orig = 30.00 + 0.5 * 408.52 + 0.5 * 165.00           # = 316,76, como publicado
+    C_NATS_conv = C_TE + 0.5 * C_CINT + 0.5 * C_ECO              # mesmo percurso, convencao do §3.1, valores SIA
+    subst = [("mix medio SIA", C_EP), ("mix NATS (publicado)", C_NATS_orig),
+             ("mix NATS (episodio, SIA)", C_NATS_conv), ("eco de estresse", C_ECO), ("cintilografia", C_CINT)]
     print(f"\n### 4.3 delta necessario (C_CATE={C_CATE:.2f}; cintilo R$ {C_CINT:.2f})")
     print(f"  {'preco':<38}" + "".join(f"{s[0]:>16}" for s in subst))
     for pn, P in PRECOS:
@@ -156,6 +161,20 @@ def main():
     for sn, C in subst:
         print(f"  {sn:<16} P = R$ {C+lo*C_CATE/100:7.2f} a R$ {C+hi*C_CATE/100:7.2f}")
     print(f"  SCOT-HEART (aditivo, sem credito): " + " | ".join(f"{n} R$ {d*C_CATE/100:.2f}" for n, d in SCOT))
+    # ---- 4.6 revascularizacao: custo AIH observado x delta dos ensaios ----
+    C_PCI = ang.valor.sum() / ang.qtd.sum(); C_CRM = rev.valor.sum() / rev.qtd.sum()
+    print(f"\n### 4.6 revascularizacao no modelo (AIH: angioplastia R$ {C_PCI:,.0f} | CRM R$ {C_CRM:,.0f})")
+    # delta de revasc por 100 (positivo = AngioTC AUMENTA revasc -> debito). Fontes: Apendice B.
+    REV = [("PRECISE", 9.2 - 5.2, 3.75, 0.27), ("Foy 2017 (13 ECR)", 7.2 - 4.5, 2.7, 0.0),
+           ("DISCHARGE (gate)", 14.2 - 18.0, -3.8, 0.0)]
+    for n, d, dpci, dcrm in REV:
+        deb = dpci * C_PCI / 100 + dcrm * C_CRM / 100
+        print(f"  {n:<20} revasc {d:+.1f}/100 -> ajuste R$ {-deb:+,.0f}/paciente")
+    deb_pre = 3.75 * C_PCI / 100 + 0.27 * C_CRM / 100; deb_foy = 2.7 * C_PCI / 100; cred_dis = 3.8 * C_PCI / 100
+    print(f"  cintilografia + PRECISE (+4,1 CATE, +4,0 revasc): R$ {C_CINT + 4.1*C_CATE/100 - deb_pre:,.0f}  (sem revasc: {C_CINT + 4.1*C_CATE/100:,.0f})")
+    print(f"  cintilografia + Foy     (-2,9 CATE, +2,7 revasc): R$ {C_CINT - 2.9*C_CATE/100 - deb_foy:,.0f}  (sem revasc: {C_CINT - 2.9*C_CATE/100:,.0f})")
+    print(f"  DISCHARGE gate          (75,1 CATE, -3,8 revasc): R$ {75.1*C_CATE/100 + cred_dis:,.0f}  (sem revasc: {75.1*C_CATE/100:,.0f})")
+
     print(f"\n### 4.5 gatekeeping (limiar R$550: {550*100/C_CATE:.1f} | R$622,54: {622.54*100/C_CATE:.1f})")
     for n, d in sorted(GATE, key=lambda x: x[1]):
         P = d * C_CATE / 100; print(f"  {n:<11} d={d:5.1f}  P=R$ {P:7.2f}  vs 622,54: {P-622.54:+.2f}  | C_CATE 772,80: R$ {d*772.80/100:.2f}")
