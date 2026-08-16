@@ -5,3 +5,7 @@ TAB_CNES.zip
 TAB_CNES/
 .DS_Store
 log_*.txt
+
+# intermediário do gera_pdf.py
+contribuicao-cp73.html
+manuscrito-v0.html
