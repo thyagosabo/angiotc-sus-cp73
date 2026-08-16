@@ -122,7 +122,7 @@ Não há API REST para essas bases; o acesso é por FTP com arquivos `.dbc` (DBF
 
 ## Pendências
 
-- Extração das OCI de síndrome coronariana crônica no SIA 2025 (`0902010034`, `0902010042`, `0902010050`) — definem o episódio diagnóstico na própria tabela do SUS e podem substituir a reconstrução por pareamento.
+- ~~OCI de SCC~~ — extraídas: 7.616 episódios em 2025 (0,96%), intercepto +R$ 2,02 como sensibilidade, nenhuma conclusão muda.
 - Ancoragem do Δ de angiografias evitadas em ensaios randomizados, distinguindo comparador funcional-primeiro de invasivo-primeiro.
 - Microcusteio contemporâneo próprio.
 - Preço de aquisição pública em licitação como quarta categoria de benchmark.

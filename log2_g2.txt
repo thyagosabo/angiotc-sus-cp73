@@ -25,3 +25,9 @@ SIA 2025: 30 arquivos a processar
 [24/30] PAMG2510b.dbc: 1914 pares
 [25/30] PAMG2510c.dbc: 973 pares
 [26/30] PAMG2511a.dbc: 768 pares
+[27/30] PAMG2511b.dbc: 2614 pares
+[28/30] PAMG2511c.dbc: 191 pares
+[29/30] PAMG2512a.dbc: 928 pares
+[30/30] PAMG2512b.dbc: 2643 pares
+
+OK: 30 arquivos, nenhuma perda.

@@ -4,10 +4,6 @@
 
 **Natureza da contribuição:** técnico-científica.
 
-> **VERSÃO 2 — RASCUNHO.** Uma dependência aberta, marcada no texto como `[PENDENTE]`:
-> extração das OCI de síndrome coronariana crônica no SIA 2025, que pode substituir a
-> reconstrução de episódios por pareamento. Nenhuma conclusão da síntese depende dela.
-
 ---
 
 ## 1. Objeto da contribuição
@@ -111,7 +107,27 @@ Esta é uma afirmação sobre **registros administrativos selecionados**, não s
 
 A implicação que resiste a essa limitação é mais restrita e ainda assim relevante: **a avaliação econômica submetida comparou a angiotomografia predominantemente a exames funcionais de custo médio-alto, enquanto o gasto observado do SUS concentra-se no exame de menor custo da tabela.** Qualquer modelo que assuma substituição majoritária de cintilografia superestima a economia.
 
-`[PENDENTE]` As Ordens de Cuidado Integrado (OCI) de síndrome coronariana crônica — `0902010034` (avaliação diagnóstica inicial, R$ 270,00), `0902010042` (progressão I, R$ 250,00) e `0902010050` (progressão II, R$ 840,00) — definem, na própria tabela do SUS, o episódio diagnóstico para essa condição. Sua produção em 2025 está em extração e permitirá caracterizar a população contemporânea de investigação de SCC de forma muito mais específica do que a soma de testes cardiovasculares. Se o volume for relevante, essas OCI substituem a reconstrução por pareamento acima.
+### 3.2.1 As linhas de cuidado organizadas: OCI de síndrome coronariana crônica
+
+O Ministério da Saúde estruturou a investigação da síndrome coronariana crônica em Ordens de Cuidado Integrado próprias, remuneradas como episódio: `0902010034` — avaliação diagnóstica inicial, pacote com consulta especializada, ECG, ecocardiograma, teste ergométrico, exames laboratoriais e retorno, R$ 270,00; `0902010042` — progressão I, incorporando ecocardiografia de estresse, R$ 250,00; `0902010050` — progressão II, incorporando cintilografia de perfusão em estresse e repouso, R$ 840,00.
+
+Essas OCI são a unidade de episódio que o próprio SUS definiu para o PICO em apreciação, e sua produção efetiva importa para o intercepto da equação de neutralidade — não apenas para a escala.
+
+**Regra de análise, fixada antes da extração:** quando a OCI é registrada como procedimento principal, os componentes aparecem no SIA com valor zerado e **não são somados novamente** — o custo do episódio é o valor da OCI. Verificou-se que o mecanismo está no dado: 3.266 procedimentos funcionais com `PA_VALAPR = 0` em 2025 (1.997 ergometrias, 522 + 559 cintilografias, 188 ecos de estresse). Procedimentos isolados com valor positivo, fora de OCI, seguem no *legacy pathway*, pareados por episódio.
+
+A tabela da seção 3.1 (787.954 episódios) contou esses componentes zerados como episódios, porque não os distinguia; o legacy pathway abaixo (785.247) os exclui. A diferença de 2.707 corresponde aos 2.744 episódios zerados a menos de 37 — resíduo do pareamento estresse/repouso por contagem agregada, quando um estresse remunerado se pareia com um repouso zerado dentro de OCI. Não é dupla contagem; é o limite de precisão do pareamento sem identificador de paciente, e fica declarado.
+
+**Produção em 2025, 27 UFs:**
+
+| Pathway | Episódios | Gasto | R$ por episódio |
+|---|---|---|---|
+| Legacy — procedimentos isolados, fora de OCI (base do modelo, seção 3.1) | 785.247 | R$ 146,1 mi | 186,10 |
+| **OCI de SCC** (0034 · 0042 · 0050) | **7.616** | R$ 2,51 mi | 329,75 |
+| **Ponderado nacional** | **792.863** | R$ 148,6 mi | **187,48** |
+
+As OCI de SCC respondem por **0,96% dos episódios** de investigação funcional registrados — 6.505 avaliações iniciais, 302 progressões I e 809 progressões II, em 148 estabelecimentos de 13 UFs. A linha de cuidado organizada existe na tabela e no financiamento; **a produção registrada é residual**, e a investigação de DAC estável no SUS segue, em 99% dos episódios, fragmentada em procedimentos isolados.
+
+**Análise de sensibilidade do intercepto.** O modelo das seções 4.2 a 4.5 usa o legacy pathway (R$ 185,46 na tabela da seção 3.1, que inclui os componentes zerados na contagem de episódios; R$ 186,10 excluindo-os). Substituindo pelo ponderado nacional com OCI, R$ 187,48, todos os preços de neutralidade de primeira linha sobem R$ 2,02 e a lacuna no melhor caso passa de R$ 407 para R$ 405 por paciente. A reta de gatekeeping não se altera, porque nela o custo da investigação prévia é comum aos braços e cancela. Este é o **cenário contemporâneo mais favorável ao comparador**, e nenhuma conclusão muda.
 
 ### 3.3 Angiotomografia coronariana é administrativamente invisível
 
@@ -152,7 +168,7 @@ P_angioTC  =  C_episódio_atual  +  (Δ_CATE / 100) × C_CATE
 Δ_CATE     =  (P_angioTC − C_episódio_atual) × 100 / C_CATE
 ```
 
-com `C_episódio_atual = R$ 185,46` e `C_CATE = R$ 730,14`, ambos observados no SIA 2025. `Δ_CATE` é parâmetro declarado, não quantidade estimada dos dados.
+com `C_episódio_atual = R$ 185,46` (legacy pathway, 99% dos episódios; seção 3.1) e `C_CATE = R$ 730,14`, ambos observados no SIA 2025. A sensibilidade ao pathway ponderado com OCI (R$ 187,48; seção 3.2.1) desloca todos os preços de neutralidade de primeira linha em +R$ 2,02 e não altera nenhuma conclusão. `Δ_CATE` é parâmetro declarado, não quantidade estimada dos dados.
 
 ### 4.3 Resultado
 

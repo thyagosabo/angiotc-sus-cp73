@@ -65,3 +65,11 @@ SIA 2025: 72 arquivos a processar
 [64/72] PAPE2504.dbc: 925 pares
 [65/72] PAPE2505.dbc: 945 pares
 [66/72] PAPE2506.dbc: 937 pares
+[67/72] PAPE2507.dbc: 962 pares
+[68/72] PAPE2508.dbc: 1000 pares
+[69/72] PAPE2509.dbc: 1025 pares
+[70/72] PAPE2510.dbc: 1078 pares
+[71/72] PAPE2511.dbc: 1062 pares
+[72/72] PAPE2512.dbc: 1093 pares
+
+OK: 72 arquivos, nenhuma perda.

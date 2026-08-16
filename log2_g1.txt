@@ -26,3 +26,25 @@ SIA 2025: 47 arquivos a processar
 [25/47] PASP2507b.dbc: 1301 pares
 [26/47] PASP2507c.dbc: 2595 pares
 [27/47] PASP2507d.dbc: 1008 pares
+[28/47] PASP2508a.dbc: 1317 pares
+[29/47] PASP2508b.dbc: 1060 pares
+[30/47] PASP2508c.dbc: 2101 pares
+[31/47] PASP2508d.dbc: 1874 pares
+[32/47] PASP2509a.dbc: 1304 pares
+[33/47] PASP2509b.dbc: 969 pares
+[34/47] PASP2509c.dbc: 1715 pares
+[35/47] PASP2509d.dbc: 2473 pares
+[36/47] PASP2510a.dbc: 1298 pares
+[37/47] PASP2510b.dbc: 1004 pares
+[38/47] PASP2510c.dbc: 1578 pares
+[39/47] PASP2510d.dbc: 2590 pares
+[40/47] PASP2511a.dbc: 1398 pares
+[41/47] PASP2511b.dbc: 1203 pares
+[42/47] PASP2511c.dbc: 2123 pares
+[43/47] PASP2511d.dbc: 1693 pares
+[44/47] PASP2512a.dbc: 1354 pares
+[45/47] PASP2512b.dbc: 1231 pares
+[46/47] PASP2512c.dbc: 2353 pares
+[47/47] PASP2512d.dbc: 1306 pares
+
+OK: 47 arquivos, nenhuma perda.

@@ -150,3 +150,22 @@ SIA 2025: 168 arquivos a processar
 [149/168] PASE2505.dbc: 146 pares
 [150/168] PASE2506.dbc: 160 pares
 [151/168] PASE2507.dbc: 157 pares
+[152/168] PASE2508.dbc: 153 pares
+[153/168] PASE2509.dbc: 162 pares
+[154/168] PASE2510.dbc: 149 pares
+[155/168] PASE2511.dbc: 152 pares
+[156/168] PASE2512.dbc: 145 pares
+[157/168] PATO2501.dbc: 175 pares
+[158/168] PATO2502.dbc: 185 pares
+[159/168] PATO2503.dbc: 192 pares
+[160/168] PATO2504.dbc: 206 pares
+[161/168] PATO2505.dbc: 211 pares
+[162/168] PATO2506.dbc: 204 pares
+[163/168] PATO2507.dbc: 206 pares
+[164/168] PATO2508.dbc: 222 pares
+[165/168] PATO2509.dbc: 208 pares
+[166/168] PATO2510.dbc: 215 pares
+[167/168] PATO2511.dbc: 214 pares
+[168/168] PATO2512.dbc: 211 pares
+
+OK: 168 arquivos, nenhuma perda.
