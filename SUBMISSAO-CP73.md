@@ -70,28 +70,33 @@ gasto em cintilografia. As OCI de síndrome coronariana crônica somaram 7.616 e
 (0,96%). Não há código SIGTAP para angiotomografia; R$ 185,46 e o cateterismo (R$ 730,14)
 são preços de tabela, não custos.
 
-3. LIMIAR ORÇAMENTÁRIO — E O PARÂMETRO DOMINANTE. O SIA não tem identificador de paciente;
-razões entre contagens agregadas não são probabilidades. Em vez de estimar cateterismos
-evitados, calculou-se quantos seriam necessários por 100 pacientes para neutralidade a
-cada preço, com P = C_substituído + (Δ/100)×R$730,14. Nos sete ensaios/metanálises com
-comparador não invasivo (PROMISE, PRECISE, CAPP, CRESCENT I/II, Foy 2017), o Δ de
-cateterismo TOTAL foi de −6,3 a +4,1 por 100. O resultado depende de qual exame a
-AngioTC substitui: se o mix médio do SIA (R$ 185), neutralidade a R$ 139–215 e o Δ
-necessário ao preço proposto pelo demandante (R$ 550) é 49,9/100, doze vezes o melhor
-observado; se o mix do NATS (R$ 317), R$ 270–347; se a cintilografia (R$ 787), R$ 741–817
-— acima do preço proposto e do microcusteio de 2022 corrigido (R$ 622,54) em toda a faixa.
-O sinal inverte com o exame substituído, e esse exame não é identificável nos registros
-administrativos. É a mesma pergunta que o Comitê formulou como "definição precisa da
-população elegível" — respondível por protocolo, não por dado.
+3. LIMIAR ORÇAMENTÁRIO — E OS PARÂMETROS QUE OS REGISTROS NÃO IDENTIFICAM. O SIA não
+tem identificador de paciente; razões entre contagens agregadas não são probabilidades.
+Em vez de estimar cateterismos evitados, calculou-se quantos seriam necessários por 100
+pacientes para neutralidade a cada preço. Nos ensaios com comparador não invasivo
+(PROMISE, PRECISE, CAPP, CRESCENT I/II, Foy 2017), o Δ de cateterismo TOTAL foi de −6,3 a
++4,1 por 100. O resultado depende de qual exame a AngioTC substitui e de quanta
+revascularização induz: substituindo o mix médio do SIA (R$ 185, 76% ergometria), a
+neutralidade fica em R$ 139–215; substituindo o percurso do NATS precificado por episódio
+(R$ 524), em R$ 477–554; substituindo cintilografia (R$ 787), em R$ 741–817 só com exames,
+mas R$ 458–557 incluindo a revascularização adicional observada no PRECISE e em Foy 2017
+(R$ 7.713/angioplastia no SIH 2025). O preço proposto pelo demandante, R$ 550, está fora
+do alcance nos cenários de mix médio e eco de estresse, e dentro da zona de incerteza nos
+demais. Nenhum desses parâmetros é identificável nos registros administrativos. A
+Diretriz SBC de Síndrome Coronariana Crônica 2025 estratifica a AngioTC por probabilidade
+pré-teste — IIb-B como primeira opção na baixa, I-A como exame inicial na intermediária,
+alternativa à prova funcional — enquanto o PICO submetido trata "baixa ou intermediária"
+como faixa única. Alinhar a incorporação à estratificação da própria diretriz é o
+instrumento que a evidência sustenta.
 
 4. OUTRO PICO. Nos quatro ensaios com comparador cateterismo direto (CAD-MAN, DISCHARGE,
 CONSERVE, Reis 2022) — pacientes já indicados a cateterismo, população distinta —, o
-custo prévio cancela e o preço de neutralidade é de R$ 482–625 independentemente do exame
-anterior. Um ensaio (CAD-MAN) cruza R$ 622,54, por R$ 2,67. A análise não demonstra que
-essa indicação economiza; demonstra que o posicionamento no percurso muda radicalmente a
-plausibilidade. O próprio relatório preliminar usa o DISCHARGE (invasivo-primeiro) como
-fonte para o PICO de primeira linha. Recomenda-se avaliar essa indicação como pergunta
-separada.
+custo prévio cancela e o preço de neutralidade é de R$ 482–625 só com exames, subindo a
+R$ 841 no DISCHARGE quando a menor revascularização observada é creditada. A análise não
+demonstra que essa indicação economiza; demonstra que o posicionamento no percurso muda
+radicalmente a plausibilidade. O próprio relatório preliminar usa o DISCHARGE
+(invasivo-primeiro) como fonte para o PICO de primeira linha. Recomenda-se avaliar essa
+indicação como pergunta separada.
 
 5. Nada nesta contribuição se pronuncia sobre o mérito clínico — o SCOT-HEART demonstrou
 redução de morte coronariana e infarto em 5 e 10 anos. As conclusões referem-se
@@ -102,5 +107,5 @@ Código, dados intermediários e tabelas: [URL do repositório / DOI].
 
 ---
 
-*Contagem: ~3.600 caracteres. Se o campo tiver limite menor, cortar os itens 2 e 5 primeiro
+*Contagem: ~4.100 caracteres. Se o campo tiver limite menor, cortar os itens 2 e 5 primeiro
 — o anexo os cobre.*

@@ -25,101 +25,29 @@ A **Portaria SAES/MS nº 3.695, de 15/01/2026** desmembrou o código genérico d
 
 **Estrato de prontidão:** 79 estabelecimentos reúnem ≥64 canais, hemodinâmica co-localizada e produção coronariana documentada em 2025. **Doze UFs têm zero.** AP, PI e TO não têm nenhum tomógrafo ≥64 canais disponível ao SUS.
 
-### Preço admissível: análise de limiar — e o parâmetro dominante
+### Preço admissível: análise de limiar — e três parâmetros que os registros não identificam
 
 O SIA não tem identificador de paciente. Razões entre contagens agregadas não são probabilidades condicionais, então o modelo **não estima** quantas angiografias a AngioTC evitaria. Responde à pergunta inversa: quantas seria preciso evitar, por 100 pacientes, para neutralidade a cada preço.
 
 ```
-P_neutralidade = C_substituído + (Δ/100) × R$ 730,14
+P_neutralidade = C_substituído + (Δ_CATE/100) × R$ 730,14 − (Δ_revasc/100) × C_revasc
 ```
 
-**`C_substituído` é o parâmetro dominante e é desconhecido para a população elegível.** O SIA mostra o mix médio (R$ 185,46 — 76% teste ergométrico); não mostra qual exame a AngioTC substituiria em quem tem probabilidade pré-teste intermediária.
+Nos ensaios com comparador não invasivo, o Δ de cateterismo total foi de **−6,3 a +4,1 por 100**. Aplicando a cada cenário de exame substituído:
 
-| Exame substituído | C | Preço de neutralidade para Δ observado (−6,3 a +4,1) | vs R$ 550 (demandante) | vs R$ 622,54 |
-|---|---|---|---|---|
-| Mix médio do SIA | R$ 185,46 | R$ 139 – 215 | abaixo | abaixo |
-| Mix do NATS | R$ 316,76 | R$ 270 – 347 | abaixo | abaixo |
-| **Cintilografia** | R$ 786,83 | **R$ 741 – 817** | **acima** | **acima** |
+| Exame substituído | C | Só exames + cateterismo | Com revascularização observada |
+|---|---|---|---|
+| Mix médio do SIA (76% ergometria) | R$ 185,46 | R$ 139 – 215 | — |
+| Mix do NATS como publicado (cintilo só estresse) | R$ 316,76 | R$ 270 – 347 | — |
+| Mix do NATS por episódio (dois códigos, valores SIA) | R$ 523,81 | **R$ 477 – 554** | — |
+| Eco de estresse | R$ 196,39 | R$ 150 – 226 | — |
+| Cintilografia | R$ 786,83 | R$ 741 – 817 | **R$ 458 – 557** (PRECISE / Foy) |
 
-**O sinal inverte com o exame substituído.** A pergunta decisiva não é o Δ; é qual exame sai do percurso — a mesma que o Comitê formulou como "definição precisa da população elegível". Não é respondível pelo SIA; é respondível por protocolo.
+O preço proposto pelo demandante é **R$ 550,00**. Está fora do alcance nos cenários de mix médio e eco, e **dentro da zona de incerteza** nos de NATS-por-episódio e cintilografia-com-revascularização.
 
-### Unidade de análise: episódio, não procedimento
+A revascularização não pode ficar fora: o SIH dá R$ 7.713/angioplastia e R$ 25.904/CRM. PRECISE aumenta revasc em +4,0/100 (−R$ 359/paciente); DISCHARGE, no gatekeeping, reduz em −3,8/100 (+R$ 293) — o que leva o DISCHARGE de R$ 548 a **R$ 841**.
 
-A cintilografia de perfusão tem dois códigos, estresse e repouso. Em 2025: 151.784 e 151.225 — **151.225 pares e 559 órfãos**. São duas etapas do mesmo exame.
-
-Validação externa: o estudo de custo-efetividade no SUS de 2022 (Arq Bras Cardiol) precificou a cintilografia como unidade única em R$ 791,59 (valores 2020); a soma dos dois códigos SIA 2025 é R$ 788,24 — diferença de 0,4%.
-
-Contar procedimentos infla o denominador em 19%: 939.179 procedimentos contra **787.954 episódios**, e o custo médio sobe de R$ 155,60 para **R$ 185,46**.
-
----
-
-## Duas armadilhas dos dados
-
-**1. As tabelas de conversão do CNES estão defasadas.** Os arquivos `.cnv` em `TAB_CNES.zip` (competência 07/2026) listam apenas `0111 — Tomógrafo Computadorizado` e não refletem a Portaria 3.695/2026, embora os códigos 26–30 já estejam nos microdados. **Derivar a lista de códigos dessas tabelas exclui silenciosamente todo equipamento já reclassificado.** Enumere os valores presentes nos dados.
-
-**2. Arquivos SIA de MG, RJ, RS e SP são particionados** (`PASP2501a.dbc`, `…b`, `…c`, `…d`). Construir nomes de arquivo sem sufixo perde **71 dos 395 arquivos** do ano — as quatro UFs mais populosas — sem emitir erro. `extrai_dac.py` enumera o diretório remoto, verifica presença das 27 UFs e distingue falha de download de arquivo vazio.
-
-Ambas produzem resultados plausíveis e errados, em silêncio. A primeira custou uma versão inteira deste trabalho.
-
----
-
-## Reprodução
-
-```bash
-pip install -r requirements.txt
-```
-
-```bash
-python3 extrai_dac.py SIH 2025
-```
-
-```bash
-python3 extrai_dac.py SIA 2025
-```
-
-```bash
-python3 analise_final.py
-```
-
-`extrai_dac.py` aceita subconjunto de UFs e sufixo de saída, para paralelizar:
-
-```bash
-python3 extrai_dac.py SIA 2025 SP g1
-```
-
-Os arquivos CNES (`cnes/EQ*.dbc`, 06/2026) e a tabela SIGTAP (`sigtap/`, 08/2026) estão versionados para fixar as competências.
-
-## Estrutura
-
-```
-extrai_dac.py            extração SIA/SIH por estabelecimento (streaming, pico de disco = 1 arquivo)
-analise_final.py         demanda × capacidade → CSVs + resumo
-contribuicao-cp73.md     documento da consulta pública
-preview-angiotc.html     prévia (CSS de impressão + painéis mobile)
-angiotc-preview.pdf      PDF renderizado da prévia
-cnes/                    CNES equipamentos, .dbc, 06/2026
-sigtap/                  tabela de procedimentos, 08/2026
-data/                    intermediários v1 (comparadores + 0206)
-data-v2/                 intermediários v2 (+ OCI 0902)
-REGRAS-DE-ANALISE.md     regras fixadas antes de olhar o dado
-output/                  tabelas finais
-```
-
-`analise_final.py` declara a cobertura no cabeçalho e marca `PARCIAL — NÃO EXTRAPOLAR` quando faltam UFs ou competências.
-
-## Fontes
-
-| Base | Endereço | Competência |
-|---|---|---|
-| CNES — equipamentos | `ftp://ftp.datasus.gov.br/dissemin/publicos/CNES/200508_/Dados/EQ/` | 06/2026 |
-| SIA/SUS | `.../SIASUS/200801_/Dados/` | 01–12/2025 |
-| SIH/SUS | `.../SIHSUS/200801_/Dados/` | 01–12/2025 |
-| SIGTAP | `ftp://ftp2.datasus.gov.br/public/sistemas/tup/downloads/` | 08/2026 |
-| População | IBGE, agregado 6579, variável 9324 | 2025 |
-| IPCA | IBGE, agregado 1737, variável 2266 | 12/2020 → 07/2026 |
-| Portaria SAES/MS nº 3.695 | Diário Oficial da União | 15/01/2026 |
-
-Não há API REST para essas bases; o acesso é por FTP com arquivos `.dbc` (DBF comprimido), lidos com `datasus-dbc` + `dbfread`.
+**A Diretriz SBC de Síndrome Coronariana Crônica 2025** (Arq Bras Cardiol 2025;122(9)) estratifica: AngioTC como primeira opção é **IIb-B na probabilidade baixa** e **I-A na intermediária**, e o algoritmo a coloca como *alternativa* à prova funcional ("prova funcional ou angiotomografia"). O PICO submetido trata "baixa ou intermediária" como faixa única. Alinhar a incorporação à estratificação da própria diretriz é o instrumento que a evidência sustenta.
 
 ### Onde a tecnologia gera valor: a posição no percurso
 
@@ -128,7 +56,7 @@ O Δ de cateterismo foi ancorado em 12 ensaios randomizados, **cateterismo total
 | PICO | Equação | Δ observado /100 | Preço de neutralidade |
 |---|---|---|---|
 | Primeira linha (8 ensaios) | P = 185,46 + (Δ/100)·730,14 | −6,4 a +4,1 | **R$ 139 – 215** |
-| Gatekeeping (4 ensaios) | P = (Δ/100)·730,14 | 66,0 a 85,6 | **R$ 482 – 625** |
+| Gatekeeping (4 ensaios) | P = (Δ/100)·730,14 | 66,0 a 85,6 | **R$ 482 – 625** (R$ 841 no DISCHARGE com revasc.) |
 
 Substituindo o mix médio, no melhor caso de primeira linha resta lacuna de R$ 407 por paciente até o microcusteio corrigido. No melhor caso de gatekeeping, o CAD-MAN cruza por R$ 2,67. O SCOT-HEART, de desenho aditivo, não substitui episódio e fica fora da equação de primeira linha. **A análise não demonstra que gatekeeping economiza; demonstra que o posicionamento muda radicalmente a plausibilidade de a tecnologia se pagar** — e o PICO em apreciação é o de primeira linha.
 
