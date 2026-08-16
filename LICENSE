@@ -1,0 +1,12 @@
+Este repositório usa duas licenças:
+
+  - Texto, tabelas e dados derivados (*.md, output/, data/, data-v2/):
+    Creative Commons Attribution 4.0 International (CC BY 4.0)
+    https://creativecommons.org/licenses/by/4.0/
+
+  - Código (*.py):
+    MIT License — ver LICENSE-CODE
+
+Os microdados originais (cnes/*.dbc, sigtap/*.txt) são dados públicos do
+Ministério da Saúde / DATASUS, redistribuídos aqui apenas para fixar as
+competências utilizadas na análise.

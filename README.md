@@ -151,4 +151,4 @@ Esta análise **não se pronuncia sobre o mérito clínico** da angiotomografia 
 
 ## Licença
 
-[definir — sugestão: CC BY 4.0 para textos e dados, MIT para código]
+Texto, tabelas e dados derivados: **CC BY 4.0**. Código: **MIT** (`LICENSE-CODE`). Ver `LICENSE`.
