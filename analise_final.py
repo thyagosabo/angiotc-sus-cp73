@@ -32,7 +32,8 @@ FIRSTLINE = [("CAPP", 100 * (51 / 245 - 66 / 243)), ("PROMISE", -4.1), ("Foy est
              ("Foy 13", -2.6), ("CRESCENT-I", -1.0), ("CRESCENT-II", 1.4), ("PRECISE", 4.1)]
 GATE = [("CONSERVE", 89.0 - 23.0), ("Reis 2022", 100 * (105 / 105 - 32 / 115)),
         ("DISCHARGE", 100 * (1708 / 1753 - 404 / 1808)), ("CAD-MAN", 100 * (162 / 162 - 24 / 167))]
-SCOT = [("SCOT-HEART 6m", -1.2), ("SCOT-HEART 5a", 0.5)]  # aditivo: sem crédito de episódio
+# SCOT-HEART (aditivo): cateterismo total por braço, JACC 2016 (409 vs 401, mediana 20 m) e NEJM 2018 (491 vs 502, 5 a)
+SCOT = [("SCOT-HEART 20m", 100 * (401 / 2073 - 409 / 2073)), ("SCOT-HEART 5a", 100 * (502 / 2073 - 491 / 2073))]
 
 
 def ibge(agregado, periodo, variavel, loc):
@@ -167,15 +168,24 @@ def main():
     C_PCI = ang.valor.sum() / ang.qtd.sum(); C_CRM = rev.valor.sum() / rev.qtd.sum()
     print(f"\n### 4.6 revascularizacao no modelo (AIH: angioplastia R$ {C_PCI:,.0f} | CRM R$ {C_CRM:,.0f})")
     # delta de revasc por 100 (positivo = AngioTC AUMENTA revasc -> debito). Fontes: Apendice B.
+    # SCOT-HEART revasc: 233 vs 201 (20 m), 279 vs 267 (5 a) — valorados como angioplastia (sem desagregacao PCI/CRM)
+    # CONSERVE revasc: 13% vs 18% (abstract) — idem. Debitos incluem CRM (PRECISE); creditos so PCI: assimetria conservadora contra o gatekeeping.
     REV = [("PRECISE", 9.2 - 5.2, 3.75, 0.27), ("Foy 2017 (13 ECR)", 7.2 - 4.5, 2.7, 0.0),
-           ("DISCHARGE (gate)", 14.2 - 18.0, -3.8, 0.0)]
+           ("SCOT-HEART 20m (aditivo)", 100 * (233 - 201) / 2073, 100 * (233 - 201) / 2073, 0.0),
+           ("SCOT-HEART 5a (aditivo)", 100 * (279 - 267) / 2073, 100 * (279 - 267) / 2073, 0.0),
+           ("DISCHARGE (gate)", 14.2 - 18.0, -3.8, 0.0), ("CONSERVE (gate)", 13.0 - 18.0, -5.0, 0.0)]
     for n, d, dpci, dcrm in REV:
         deb = dpci * C_PCI / 100 + dcrm * C_CRM / 100
         print(f"  {n:<20} revasc {d:+.1f}/100 -> ajuste R$ {-deb:+,.0f}/paciente")
-    deb_pre = 3.75 * C_PCI / 100 + 0.27 * C_CRM / 100; deb_foy = 2.7 * C_PCI / 100; cred_dis = 3.8 * C_PCI / 100
+    deb_pre = 3.75 * C_PCI / 100 + 0.27 * C_CRM / 100; deb_foy = 2.7 * C_PCI / 100; cred_dis = 3.8 * C_PCI / 100; cred_con = 5.0 * C_PCI / 100
+    D_FOY13 = -2.6  # pareamento coerente: Δ_CATE dos 13 ensaios de Foy com a revasc dos mesmos 13 (v5.1)
+    deb_sh20, deb_sh5 = 100 * (233 - 201) / 2073 * C_PCI / 100, 100 * (279 - 267) / 2073 * C_PCI / 100
     print(f"  cintilografia + PRECISE (+4,1 CATE, +4,0 revasc): R$ {C_CINT + 4.1*C_CATE/100 - deb_pre:,.0f}  (sem revasc: {C_CINT + 4.1*C_CATE/100:,.0f})")
-    print(f"  cintilografia + Foy     (-2,9 CATE, +2,7 revasc): R$ {C_CINT - 2.9*C_CATE/100 - deb_foy:,.0f}  (sem revasc: {C_CINT - 2.9*C_CATE/100:,.0f})")
+    print(f"  cintilografia + Foy-13  ({D_FOY13} CATE, +2,7 revasc): R$ {C_CINT + D_FOY13*C_CATE/100 - deb_foy:,.0f}  (sem revasc: {C_CINT + D_FOY13*C_CATE/100:,.0f})")
     print(f"  DISCHARGE gate          (75,1 CATE, -3,8 revasc): R$ {75.1*C_CATE/100 + cred_dis:,.0f}  (sem revasc: {75.1*C_CATE/100:,.0f})")
+    print(f"  CONSERVE gate           (66,0 CATE, -5,0 revasc): R$ {66.0*C_CATE/100 + cred_con:,.0f}  (sem revasc: {66.0*C_CATE/100:,.0f})")
+    print(f"  aditivo SCOT-HEART 20m  ({SCOT[0][1]:+.2f} CATE, +{100*(233-201)/2073:.2f} revasc): R$ {SCOT[0][1]*C_CATE/100 - deb_sh20:,.0f}  (sem revasc: {SCOT[0][1]*C_CATE/100:.2f})")
+    print(f"  aditivo SCOT-HEART 5a   ({SCOT[1][1]:+.2f} CATE, +{100*(279-267)/2073:.2f} revasc): R$ {SCOT[1][1]*C_CATE/100 - deb_sh5:,.0f}  (sem revasc: {SCOT[1][1]*C_CATE/100:.2f})")
 
     print(f"\n### 4.5 gatekeeping (limiar R$550: {550*100/C_CATE:.1f} | R$622,54: {622.54*100/C_CATE:.1f})")
     for n, d in sorted(GATE, key=lambda x: x[1]):
@@ -192,11 +202,12 @@ def main():
     rows = []
     for est, comp, C in ESTR:
         p_lo, p_hi = C + lo * C_CATE / 100, C + hi * C_CATE / 100
-        r_pre, r_foy = C + 4.1 * C_CATE / 100 - deb_pre, C - 2.9 * C_CATE / 100 - deb_foy
+        r_pre, r_foy = C + 4.1 * C_CATE / 100 - deb_pre, C + D_FOY13 * C_CATE / 100 - deb_foy
         d550 = (550 - C) * 100 / C_CATE
         print(f"  {est:<34} {comp:<70} C={C:7.2f} | R$ {p_lo:7.2f} a {p_hi:7.2f} | revasc R$ {min(r_pre,r_foy):7.2f} a {max(r_pre,r_foy):7.2f} | Δ550 {d550:5.1f}")
         rows.append((est, comp, round(C, 2), round(p_lo, 2), round(p_hi, 2), round(min(r_pre, r_foy), 2), round(max(r_pre, r_foy), 2), round(d550, 1)))
-    print(f"  {'gatekeeping (ICA indicada)':<34} {'cateterismo direto (4 ensaios)':<70} C= cancela | R$ {min(d for _,d in GATE)*C_CATE/100:7.2f} a {max(d for _,d in GATE)*C_CATE/100:7.2f} | DISCHARGE c/ revasc R$ {75.1*C_CATE/100 + cred_dis:7.2f}")
+    print(f"  {'gatekeeping (ICA indicada)':<34} {'cateterismo direto (4 ensaios)':<70} C= cancela | R$ {min(d for _,d in GATE)*C_CATE/100:7.2f} a {max(d for _,d in GATE)*C_CATE/100:7.2f} | c/ revasc DISCHARGE R$ {75.1*C_CATE/100 + cred_dis:7.2f} CONSERVE R$ {66.0*C_CATE/100 + cred_con:7.2f}")
+    print(f"  aditivo c/ revasc do proprio SCOT-HEART: R$ {SCOT[0][1]*C_CATE/100 - deb_sh20:.2f} (20 m) a R$ {SCOT[1][1]*C_CATE/100 - deb_sh5:.2f} (5 a)")
     pd.DataFrame(rows, columns=["estrato_ppt", "comparador_premissa", "C_subst", "P_lo_so_exames", "P_hi_so_exames",
                                 "P_lo_com_revasc", "P_hi_com_revasc", "delta_exigido_R550"]).to_csv(f"{OUT}/out-limiar-por-estrato.csv", index=False)
     # aditivo: SCOT-HEART (unico desenho aditivo) e envelope de primeira linha
@@ -209,7 +220,7 @@ def main():
     N_TE, N_ECO, N_CINT = q["0211020060"], q["0205010016"], q["0208010025"]
     vol = {"adocao aditiva (sem protocolo)": Ne, "mix medio SIA": Ne, "teste ergometrico": N_TE,
            "eco de estresse": N_ECO, "cintilografia": N_CINT, "cintilografia c/ revasc": N_CINT}
-    pm_cint_rev = (C_CINT + 4.1*C_CATE/100 - deb_pre + C_CINT - 2.9*C_CATE/100 - deb_foy) / 2
+    pm_cint_rev = (C_CINT + 4.1*C_CATE/100 - deb_pre + C_CINT + D_FOY13*C_CATE/100 - deb_foy) / 2
     cen = [(sn, C + (lo + hi) / 2 * C_CATE / 100) for sn, C in subst] + [("teste ergometrico", C_TE + (lo + hi) / 2 * C_CATE / 100),
                                                                           ("cintilografia c/ revasc", pm_cint_rev)]
     print(f"\n### 4.10 cotas anuais a R$ 550 (ponto medio da faixa de Δ; N_epis={Ne:,.0f}, TE={N_TE:,.0f}, eco={N_ECO:,.0f}, cint={N_CINT:,.0f}, cate={cate.qtd.sum():,.0f})")

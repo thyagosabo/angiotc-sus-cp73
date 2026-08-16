@@ -51,3 +51,22 @@ janela ou desfecho mudou. Duas apresentações novas dos mesmos parâmetros:
    estratificar. O SIA não distingue estratos; o modelo distingue por premissa. O
    débito de revascularização (PRECISE, Foy 2017) passa a ser aplicado a **todos** os
    cenários de primeira linha, não só ao mais favorável.
+
+**v5.1, 16/08/2026, após a terceira rodada cega.** Correções de proveniência e pareamento,
+sem mudança de equação:
+
+9. **SCOT-HEART com os dados primários**: cateterismo 409 vs 401 (JACC 2016, mediana
+   20 meses) e 491 vs 502 (NEJM 2018, 5 anos); revascularização 233 vs 201 e 279 vs 267.
+   O valor "17,5% vs 16,3% aos 6 meses" usado até a v5 não tem proveniência nas
+   publicações primárias e foi retirado. Para o cenário aditivo, a revascularização é a
+   do próprio SCOT-HEART, não o envelope PRECISE/Foy.
+10. **CONSERVE entra na revascularização** (13% vs 18%, abstract) como segundo ensaio de
+    gatekeeping com crédito (R$ 868), ao lado do DISCHARGE (R$ 841).
+11. **Foy 2017 pareado 13-com-13**: o Δ de cateterismo dos 13 ensaios (−2,6) acompanha a
+    revascularização dos mesmos 13 (7,2% vs 4,5%); o subgrupo estável (−2,9) continua na
+    faixa de Δ, mas não é pareado com revascularização de outra população.
+12. Revascularização sem desagregação angioplastia/cirurgia é valorada como angioplastia;
+    débitos de primeira linha incluem CRM (PRECISE) — assimetria conservadora contra o
+    gatekeeping, declarada.
+13. Cotas anuais ancoradas no volume que cada cenário pode substituir (cintilografia
+    sobre 151.784, não sobre 787.954) e expressas também por 100 mil pacientes.

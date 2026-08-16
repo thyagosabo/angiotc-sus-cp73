@@ -79,11 +79,11 @@ pacientes para neutralidade a cada preço. Nos ensaios com comparador não invas
 revascularização induz: substituindo o mix médio do SIA (R$ 185, 76% ergometria), a
 neutralidade fica em R$ 139–215; substituindo o percurso do NATS precificado por episódio
 (R$ 524), em R$ 477–554; substituindo cintilografia (R$ 787), em R$ 741–817 só com exames,
-mas R$ 458–557 incluindo a revascularização adicional observada no PRECISE e em Foy 2017
+mas R$ 458–560 incluindo a revascularização adicional observada no PRECISE e em Foy 2017
 (R$ 7.713/angioplastia no
 SIH 2025). Sem protocolo de posicionamento — a AngioTC somada ao percurso atual, nada
-substituído, o cenário mais provável sem código SIGTAP —, nenhum preço é neutro (R$ −46 a
-+30). Estratificando pelo comparador que as diretrizes indicam: na probabilidade baixa
+substituído, o cenário de referência se a incorporação criar o código sem dizer o que sai
+do percurso —, nenhum preço plausível é neutro (R$ −46 a +30; teto R$ 30). Estratificando pelo comparador que as diretrizes indicam: na probabilidade baixa
 (nenhum exame ou ergometria) o preço proposto de R$ 550 está fora do alcance; na
 intermediária, dentro da zona de incerteza apenas quando substitui cintilografia. A
 Diretriz SBC de Síndrome Coronariana Crônica 2025 estratifica a AngioTC por probabilidade
@@ -96,7 +96,7 @@ evidência sustenta.
 4. OUTRO PICO. Nos quatro ensaios com comparador cateterismo direto (CAD-MAN, DISCHARGE,
 CONSERVE, Reis 2022) — pacientes já indicados a cateterismo, população distinta —, o
 custo prévio cancela e o preço de neutralidade é de R$ 482–625 só com exames, subindo a
-R$ 841 no DISCHARGE quando a menor revascularização observada é creditada. A análise não
+R$ 841–868 (DISCHARGE, CONSERVE) quando a menor revascularização observada é creditada. A análise não
 demonstra que essa indicação economiza; demonstra que o posicionamento no percurso muda
 radicalmente a plausibilidade. O próprio relatório preliminar usa o DISCHARGE
 (invasivo-primeiro) como fonte para o PICO de primeira linha. Recomenda-se avaliar essa
