@@ -33,7 +33,7 @@ URL: https://brasilparticipativo.presidencia.gov.br/processes/consultas-publicas
 | 14 | Experiência com outra tecnologia? | Sim/Não | *(você)* |
 | 15 | Contribuição técnica — evidências clínicas? | Sim/Não | **Sim** |
 | 16 | Contribuição técnica — estudos econômicos? | Sim/Não | **Sim** |
-| 17 | Anexo | arquivo | `contribuicao-cp73.pdf` (+ opcional `angiotc-preview.pdf`) |
+| 17 | Anexo | arquivo | `contribuicao-cp73.pdf` (só ele — a prévia HTML/PDF é v3, superada; não anexar) |
 | 18 | Declaração de responsabilidade | caixa | marcar |
 | 19 | Termos de serviço | caixa | marcar |
 
@@ -80,14 +80,18 @@ revascularização induz: substituindo o mix médio do SIA (R$ 185, 76% ergometr
 neutralidade fica em R$ 139–215; substituindo o percurso do NATS precificado por episódio
 (R$ 524), em R$ 477–554; substituindo cintilografia (R$ 787), em R$ 741–817 só com exames,
 mas R$ 458–557 incluindo a revascularização adicional observada no PRECISE e em Foy 2017
-(R$ 7.713/angioplastia no SIH 2025). O preço proposto pelo demandante, R$ 550, está fora
-do alcance nos cenários de mix médio e eco de estresse, e dentro da zona de incerteza nos
-demais. Nenhum desses parâmetros é identificável nos registros administrativos. A
+(R$ 7.713/angioplastia no
+SIH 2025). Sem protocolo de posicionamento — a AngioTC somada ao percurso atual, nada
+substituído, o cenário mais provável sem código SIGTAP —, nenhum preço é neutro (R$ −46 a
++30). Estratificando pelo comparador que as diretrizes indicam: na probabilidade baixa
+(nenhum exame ou ergometria) o preço proposto de R$ 550 está fora do alcance; na
+intermediária, dentro da zona de incerteza apenas quando substitui cintilografia. A
 Diretriz SBC de Síndrome Coronariana Crônica 2025 estratifica a AngioTC por probabilidade
 pré-teste — IIb-B como primeira opção na baixa, I-A como exame inicial na intermediária,
 alternativa à prova funcional — enquanto o PICO submetido trata "baixa ou intermediária"
-como faixa única. Alinhar a incorporação à estratificação da própria diretriz é o
-instrumento que a evidência sustenta.
+como faixa única. Alinhar a incorporação à estratificação da própria diretriz, e
+condicioná-la a protocolo que diga o que a AngioTC substitui, é o instrumento que a
+evidência sustenta.
 
 4. OUTRO PICO. Nos quatro ensaios com comparador cateterismo direto (CAD-MAN, DISCHARGE,
 CONSERVE, Reis 2022) — pacientes já indicados a cateterismo, população distinta —, o

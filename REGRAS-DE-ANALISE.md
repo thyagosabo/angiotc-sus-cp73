@@ -33,3 +33,21 @@ três erros anteriores (fórmula correta aplicada fora do domínio).
 ## Auditoria final (após a extração fechar)
 
 Exclusivamente de **unidades de análise e dupla contagem**. Não buscar novos desfechos.
+
+## Emendas posteriores (não pré-registradas — declaradas como tal)
+
+**v5, 16/08/2026, após leitura da v4 pelo coautor sênior.** Nenhuma equação, código,
+janela ou desfecho mudou. Duas apresentações novas dos mesmos parâmetros:
+
+7. **Cenário "adoção aditiva (sem protocolo)"**: `C_substituído = 0` — a angiotomografia
+   somada ao percurso atual, sem substituir exame. Algebricamente é a equação de
+   gatekeeping com o Δ dos ensaios de primeira linha. Motivo: sem código SIGTAP e sem
+   protocolo vinculante, é o cenário de adoção mais provável, e estava implícito
+   (SCOT-HEART "à parte") em vez de nomeado. Sexto cenário da Tabela 4.
+8. **Estratificação por probabilidade pré-teste como premissa declarada**: baixa →
+   comparador realista "nenhum exame" (diferir/ajustar PPT/escore de cálcio) ou
+   ergometria; intermediária → ecocardiografia de estresse ou cintilografia (ou o
+   percurso do NATS por episódio); mix médio do SIA = PICO como submetido, sem
+   estratificar. O SIA não distingue estratos; o modelo distingue por premissa. O
+   débito de revascularização (PRECISE, Foy 2017) passa a ser aplicado a **todos** os
+   cenários de primeira linha, não só ao mais favorável.

@@ -1,0 +1,7 @@
+estrato_ppt,comparador_premissa,C_subst,P_lo_so_exames,P_hi_so_exames,P_lo_com_revasc,P_hi_com_revasc,delta_exigido_R550
+baixa,nenhum exame (diferir/ajustar PPT/escore de calcio) = adocao aditiva,0.0,-46.32,29.94,-329.25,-229.43,75.3
+baixa,teste ergometrico,32.2,-14.13,62.13,-297.06,-197.24,70.9
+nao estratificado (PICO submetido),mix medio do SIA,185.46,139.14,215.39,-143.8,-43.98,49.9
+intermediaria,ecocardiografia de estresse,196.39,150.07,226.33,-132.86,-33.04,48.4
+intermediaria,percurso do NATS por episodio,523.81,477.49,553.74,194.55,294.37,3.6
+intermediaria,cintilografia de perfusao,786.83,740.51,816.77,457.58,557.4,-32.4

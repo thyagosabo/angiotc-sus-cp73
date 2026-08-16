@@ -150,7 +150,9 @@ def main():
     # NATS (relatorio preliminar): TE + 50% cintilo + 50% eco, MAS cintilo so pelo codigo de estresse (408,52)
     C_NATS_orig = 30.00 + 0.5 * 408.52 + 0.5 * 165.00           # = 316,76, como publicado
     C_NATS_conv = C_TE + 0.5 * C_CINT + 0.5 * C_ECO              # mesmo percurso, convencao do §3.1, valores SIA
-    subst = [("mix medio SIA", C_EP), ("mix NATS (publicado)", C_NATS_orig),
+    # v5: "adocao aditiva (sem protocolo)" = AngioTC somada ao percurso atual, nada substituido, C = 0.
+    # Algebricamente igual ao gatekeeping, mas com o Δ dos ensaios de primeira linha (sugestao do coautor, 16/08/2026).
+    subst = [("adocao aditiva (sem protocolo)", 0.0), ("mix medio SIA", C_EP), ("mix NATS (publicado)", C_NATS_orig),
              ("mix NATS (episodio, SIA)", C_NATS_conv), ("eco de estresse", C_ECO), ("cintilografia", C_CINT)]
     print(f"\n### 4.3 delta necessario (C_CATE={C_CATE:.2f}; cintilo R$ {C_CINT:.2f})")
     print(f"  {'preco':<38}" + "".join(f"{s[0]:>16}" for s in subst))
@@ -178,6 +180,39 @@ def main():
     print(f"\n### 4.5 gatekeeping (limiar R$550: {550*100/C_CATE:.1f} | R$622,54: {622.54*100/C_CATE:.1f})")
     for n, d in sorted(GATE, key=lambda x: x[1]):
         P = d * C_CATE / 100; print(f"  {n:<11} d={d:5.1f}  P=R$ {P:7.2f}  vs 622,54: {P-622.54:+.2f}  | C_CATE 772,80: R$ {d*772.80/100:.2f}")
+    # ---- 4.9 estratos de PPT: comparador realista por faixa como premissa declarada (coautor, 16/08/2026) ----
+    # Sem revasc: Δ_CATE −6,3 a +4,1. Com revasc: PRECISE (+4,1 CATE, débito deb_pre) e Foy (−2,9 CATE, débito deb_foy).
+    ESTR = [("baixa", "nenhum exame (diferir/ajustar PPT/escore de calcio) = adocao aditiva", 0.0),
+            ("baixa", "teste ergometrico", C_TE),
+            ("nao estratificado (PICO submetido)", "mix medio do SIA", C_EP),
+            ("intermediaria", "ecocardiografia de estresse", C_ECO),
+            ("intermediaria", "percurso do NATS por episodio", C_NATS_conv),
+            ("intermediaria", "cintilografia de perfusao", C_CINT)]
+    print(f"\n### 4.9 limiar por estrato de PPT (so exames | com revasc PRECISE/Foy | Δ exigido a R$550)")
+    rows = []
+    for est, comp, C in ESTR:
+        p_lo, p_hi = C + lo * C_CATE / 100, C + hi * C_CATE / 100
+        r_pre, r_foy = C + 4.1 * C_CATE / 100 - deb_pre, C - 2.9 * C_CATE / 100 - deb_foy
+        d550 = (550 - C) * 100 / C_CATE
+        print(f"  {est:<34} {comp:<70} C={C:7.2f} | R$ {p_lo:7.2f} a {p_hi:7.2f} | revasc R$ {min(r_pre,r_foy):7.2f} a {max(r_pre,r_foy):7.2f} | Δ550 {d550:5.1f}")
+        rows.append((est, comp, round(C, 2), round(p_lo, 2), round(p_hi, 2), round(min(r_pre, r_foy), 2), round(max(r_pre, r_foy), 2), round(d550, 1)))
+    print(f"  {'gatekeeping (ICA indicada)':<34} {'cateterismo direto (4 ensaios)':<70} C= cancela | R$ {min(d for _,d in GATE)*C_CATE/100:7.2f} a {max(d for _,d in GATE)*C_CATE/100:7.2f} | DISCHARGE c/ revasc R$ {75.1*C_CATE/100 + cred_dis:7.2f}")
+    pd.DataFrame(rows, columns=["estrato_ppt", "comparador_premissa", "C_subst", "P_lo_so_exames", "P_hi_so_exames",
+                                "P_lo_com_revasc", "P_hi_com_revasc", "delta_exigido_R550"]).to_csv(f"{OUT}/out-limiar-por-estrato.csv", index=False)
+    # aditivo: SCOT-HEART (unico desenho aditivo) e envelope de primeira linha
+    print(f"  aditivo, SCOT-HEART: R$ {SCOT[0][1]*C_CATE/100:.2f} a {SCOT[1][1]*C_CATE/100:.2f} | envelope 1a linha: R$ {lo*C_CATE/100:.2f} a {hi*C_CATE/100:.2f} | Δ exigido a R$550 = {550*100/C_CATE:.1f} (= limiar do gatekeeping)")
+
+    # ---- 4.10 cotas anuais (ordem de grandeza): todos os episodios funcionais a R$550, ponto medio da faixa de Δ ----
+    print(f"\n### 4.10 cotas anuais a R$ 550 (N_epis={Ne:,.0f}; N_cate={cate.qtd.sum():,.0f}; ponto medio da faixa de Δ)")
+    for sn, C in subst:
+        pm = C + (lo + hi) / 2 * C_CATE / 100
+        print(f"  {sn:<32} P_neutro medio R$ {pm:7.2f} -> impacto liquido {Ne*(550-pm)/1e6:+7.0f} mi/ano")
+    pm_cint_rev = (C_CINT + 4.1*C_CATE/100 - deb_pre + C_CINT - 2.9*C_CATE/100 - deb_foy) / 2
+    print(f"  {'cintilografia c/ revasc':<32} P_neutro medio R$ {pm_cint_rev:7.2f} -> impacto liquido {Ne*(550-pm_cint_rev)/1e6:+7.0f} mi/ano")
+    for n, d in GATE:
+        print(f"  gate {n:<27} P R$ {d*C_CATE/100:7.2f} -> {cate.qtd.sum()*(550-d*C_CATE/100)/1e6:+7.0f} mi/ano sobre os cateterismos")
+    print(f"  gate DISCHARGE c/ revasc         P R$ {75.1*C_CATE/100+cred_dis:7.2f} -> {cate.qtd.sum()*(550-(75.1*C_CATE/100+cred_dis))/1e6:+7.0f} mi/ano")
+
     print(f"\n### IPCA: 452,05 x {fator:.4f} = R$ {452.05*fator:.2f}")
 
     pd.DataFrame([(pn, P) + tuple((P - C) * 100 / C_CATE for _, C in subst) for pn, P in PRECOS],

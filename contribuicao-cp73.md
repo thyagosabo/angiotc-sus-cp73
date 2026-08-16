@@ -12,9 +12,9 @@
 |---|---|
 | Capacidade instalada | **432 tomógrafos de ≥64 canais em 315 estabelecimentos** disponíveis ao SUS (CNES 06/2026) — piso documentado; 2.785 equipamentos ainda sem especificação de canais. **79 estabelecimentos** reúnem hardware declarado compatível, hemodinâmica e produção coronariana em 2025. 12 UFs não têm nenhum estabelecimento nesse estrato; 3 não têm tomógrafo ≥64 confirmado. |
 | Custo do percurso atual | R$ 185,46 por episódio de investigação funcional (mix médio observado no SIA 2025); cateterismo R$ 730,14. Ambos são preços de tabela, não custos de produção. |
-| Preço admissível | Depende de **qual exame a AngioTC substitui e de quanta revascularização induz** — ambos não identificáveis nos registros. Nos ensaios com comparador não invasivo, o Δ de cateterismo total foi de −6,3 a +4,1 por 100. Só com exames e cateterismo, a neutralidade vai de **R$ 139–215** (mix médio do SIA) a **R$ 741–817** (cintilografia). Incluindo a revascularização observada nos ensaios, o cenário cintilografia cai para **R$ 458–557**. O preço proposto pelo demandante, R$ 550,00, está **dentro da zona de incerteza** dos cenários intermediários. |
+| Preço admissível | Depende de **qual exame a AngioTC substitui e de quanta revascularização induz** — ambos não identificáveis nos registros. Nos ensaios com comparador não invasivo, o Δ de cateterismo total foi de −6,3 a +4,1 por 100. **Sem protocolo de posicionamento (adoção aditiva, nada substituído — o cenário mais provável sem código SIGTAP), nenhum preço é neutro: R$ −46 a +30.** Só com exames e cateterismo, a neutralidade vai de **R$ 139–215** (mix médio do SIA) a **R$ 741–817** (cintilografia). Incluindo a revascularização observada nos ensaios, o cenário cintilografia cai para **R$ 458–557** e os demais ficam abaixo de R$ 300. O preço proposto pelo demandante, R$ 550,00, está **fora do alcance na probabilidade baixa** (comparador: nenhum exame ou ergometria) e **dentro da zona de incerteza na intermediária apenas quando substitui cintilografia**. |
 | Outro PICO | Em pacientes já indicados a cateterismo (4 ensaios), o preço de neutralidade é de **R$ 482–625** só com exames; incluindo a menor revascularização observada no DISCHARGE, sobe a **R$ 841**. População distinta, não intercambiável com a apreciada. |
-| Conclusão | **A sustentabilidade orçamentária depende de três parâmetros que os registros administrativos não identificam — o exame substituído, a revascularização induzida e a posição no percurso.** A Diretriz SBC de Síndrome Coronariana Crônica 2025 estratifica a AngioTC por probabilidade pré-teste (IIb na baixa; I-A na intermediária); o PICO submetido não. Alinhar a incorporação a essa estratificação é o instrumento que a evidência sustenta. |
+| Conclusão | **A sustentabilidade orçamentária depende de três parâmetros que os registros administrativos não identificam — o exame substituído, a revascularização induzida e a posição no percurso.** Estratificando por probabilidade pré-teste com o comparador que as diretrizes indicam, a mesma tecnologia ao mesmo preço é expansiva na baixa e plausivelmente sustentável na intermediária-com-cintilografia e no filtro pré-cateterismo. A Diretriz SBC de Síndrome Coronariana Crônica 2025 já faz essa estratificação (IIb na baixa; I-A na intermediária); o PICO submetido não. Alinhar a incorporação a essa estratificação — e condicioná-la a protocolo que diga o que a AngioTC substitui — é o instrumento que a evidência sustenta. |
 
 ---
 
@@ -185,13 +185,16 @@ Quando a angiotomografia filtra um cateterismo já indicado, a investigação pr
 P_neutralidade,gatekeeping     =                    (Δ_CATE / 100) × C_CATE
 ```
 
-com `C_CATE = R$ 730,14` (SIA 2025) e `Δ_CATE` como parâmetro declarado. O desenho de cada ensaio determina qual equação se aplica. **O SCOT-HEART, cujo desenho é aditivo — angiotomografia somada ao cuidado padrão contra cuidado padrão —, não substitui episódio funcional e recai na segunda equação**, embora sua população seja de primeira linha; seus preços de neutralidade (R$ −8,76 aos 6 meses; R$ 3,65 aos 5 anos) refletem apenas o custo dos cateterismos induzidos ou evitados, e o ensaio é apresentado à parte.
+com `C_CATE = R$ 730,14` (SIA 2025) e `Δ_CATE` como parâmetro declarado. O desenho de cada ensaio determina qual equação se aplica. **O SCOT-HEART, cujo desenho é aditivo — angiotomografia somada ao cuidado padrão contra cuidado padrão —, não substitui episódio funcional e recai na segunda equação**, embora sua população seja de primeira linha; seus preços de neutralidade (R$ −8,76 aos 6 meses; R$ 3,65 aos 5 anos) refletem apenas o custo dos cateterismos induzidos ou evitados.
 
-`C_substituído` é o parâmetro dominante e desconhecido para a população elegível (seção 3.2). A análise é apresentada para cinco valores:
+Esse desenho não é uma curiosidade de ensaio: **é o cenário de adoção mais provável no SUS.** Sem código SIGTAP, sem protocolo vinculante de posicionamento e com 787.954 episódios funcionais por ano em curso, a angiotomografia tende a entrar *somada* ao teste ergométrico, não no lugar dele. Nesse caso `C_substituído = 0` e a primeira equação colapsa na segunda — com o Δ dos ensaios de primeira linha, não o dos ensaios invasivo-primeiro. Esta contribuição o nomeia como sexto cenário, **"adoção aditiva (sem protocolo)"**, e o trata como o cenário de referência para uma incorporação que não especifique o que a tecnologia substitui.
+
+`C_substituído` é o parâmetro dominante e desconhecido para a população elegível (seção 3.2). A análise é apresentada para seis valores:
 
 | Cenário | C_substituído | Origem |
 |---|---|---|
-| Mix médio do SIA | R$ 185,46 | seção 3.1 — 76% ergometria |
+| **Adoção aditiva (sem protocolo)** | **R$ 0,00** | angiotomografia somada ao percurso atual; nada substituído; desenho do SCOT-HEART |
+| Mix médio do SIA | R$ 185,46 | seção 3.1 — 76% ergometria; equivale ao PICO como submetido, sem estratificar |
 | Mix do NATS, como publicado | R$ 316,76 | relatório preliminar: TE + 50% cintilografia + 50% eco de estresse, **com a cintilografia precificada só pelo código de estresse (R$ 408,52)** |
 | Mix do NATS, por episódio | R$ 523,81 | mesmo percurso, com a cintilografia como episódio (dois códigos) e valores médios observados no SIA |
 | Ecocardiografia de estresse | R$ 196,39 | valor médio aprovado por episódio |
@@ -207,16 +210,18 @@ As diretrizes internacionais convergem com essa estratificação. A ESC 2024 rec
 
 O relatório preliminar adota **R$ 550,00** como preço da angiotomografia proposto pelo demandante. Os demais preços de referência são o proxy de tabela para TC de tórax com contraste, o microcusteio de 2022 corrigido monetariamente, e a CBHPM.
 
-| Preço da AngioTC | Natureza | mix SIA | NATS publicado | NATS por episódio | eco de estresse | cintilografia |
-|---|---|---|---|---|---|---|
-| R$ 196,41 | TC tórax + contraste, proxy SIGTAP | 1,5 | já neutro | já neutro | 0,0 | já neutro |
-| **R$ 550,00** | **proposto pelo demandante** | **49,9** | **31,9** | **3,6** | 48,4 | **já neutro** |
-| R$ 622,54 | microcusteio 2022 corrigido a jul/2026 (IPCA 12/2020→07/2026, ×1,3771) | 59,9 | 41,9 | 13,5 | 58,4 | já neutro |
-| R$ 1.311,95 | CBHPM 2026, saúde suplementar | 154,3 | 136,3 | 107,9 | 152,8 | 71,9 |
+| Preço da AngioTC | Natureza | **adoção aditiva** | mix SIA | NATS publicado | NATS por episódio | eco de estresse | cintilografia |
+|---|---|---|---|---|---|---|---|
+| R$ 196,41 | TC tórax + contraste, proxy SIGTAP | 26,9 | 1,5 | já neutro | já neutro | 0,0 | já neutro |
+| **R$ 550,00** | **proposto pelo demandante** | **75,3** | **49,9** | **31,9** | **3,6** | 48,4 | **já neutro** |
+| R$ 622,54 | microcusteio 2022 corrigido a jul/2026 (IPCA 12/2020→07/2026, ×1,3771) | 85,3 | 59,9 | 41,9 | 13,5 | 58,4 | já neutro |
+| R$ 1.311,95 | CBHPM 2026, saúde suplementar | 179,7 | 154,3 | 136,3 | 107,9 | 152,8 | 71,9 |
 
 Valores: Δ de cateterismo total por 100 pacientes necessário para neutralidade, **considerando apenas o custo dos exames e do cateterismo**.
 
 Ao preço da CBHPM e substituindo o mix médio, seriam necessárias mais angiografias evitadas do que pacientes investigados — **inalcançável neste modelo**, em que o único crédito a jusante é o cateterismo evitado ao valor de tabela. Créditos por outros recursos evitados ou um `C_CATE` microcusteado superior alterariam esse limite.
+
+Na adoção aditiva, o Δ exigido a R$ 550 é 75,3 por 100 — **numericamente o mesmo limiar do gatekeeping (seção 4.5), porque a equação é a mesma**. A diferença é de onde vem o Δ: em pacientes já indicados a cateterismo, 75 por 100 é o que o DISCHARGE observou; em pacientes de primeira linha, o melhor Δ já observado é 4,1.
 
 ### 4.4 Confronto com a evidência — o resultado depende do exame substituído
 
@@ -236,6 +241,7 @@ Faixa observada: **−6,3 a +4,1 por 100**. Aplicando a equação de primeira li
 
 | Exame substituído | C | Neutralidade, só exames + cateterismo (Δ −6,3 a +4,1) | vs R$ 550 |
 |---|---|---|---|
+| **Adoção aditiva (sem protocolo)** | **R$ 0,00** | **R$ −46 – +30** (SCOT-HEART, desenho aditivo: R$ −9 – +4) | **nenhum preço fecha** |
 | Mix médio do SIA | R$ 185,46 | **R$ 139 – 215** | abaixo |
 | Mix do NATS, como publicado | R$ 316,76 | **R$ 270 – 347** | abaixo |
 | Mix do NATS, por episódio | R$ 523,81 | **R$ 477 – 554** | **dentro** |
@@ -243,6 +249,8 @@ Faixa observada: **−6,3 a +4,1 por 100**. Aplicando a equação de primeira li
 | Cintilografia de perfusão | R$ 786,83 | **R$ 741 – 817** | acima |
 
 **O resultado é sensível ao exame substituído em uma ordem de grandeza** — de R$ 139 a R$ 817 para o mesmo Δ observado. Se a angiotomografia substitui o mix médio do SUS, majoritariamente teste ergométrico, o preço de neutralidade fica 2,6 a 4 vezes abaixo do proposto e o Δ necessário (49,9 a R$ 550) é doze vezes o melhor observado. Se substitui exclusivamente a cintilografia de perfusão, o custo do comparador financia a substituição neste modelo restrito. Se substitui o percurso do NATS precificado por episódio, **o preço proposto cai dentro da faixa de neutralidade** e o Δ necessário (3,6 por 100) é 0,9 vez o melhor observado.
+
+**Se não substitui nada — adoção aditiva —, nenhum preço é neutro.** O preço de neutralidade vai de R$ −46 a R$ +30: mesmo gratuita, a angiotomografia adicionada ao percurso só é neutra se não induzir cateterismos, e o melhor Δ de primeira linha (+4,1) paga R$ 30 por exame. Isso não enfraquece a análise; é a sua forma mais forte: **sem especificação de posicionamento, a tecnologia é orçamentariamente expansiva por construção**, independentemente do preço negociado. Os cinco cenários seguintes descrevem quanto se recupera quando um protocolo diz o que sai do percurso.
 
 Nos ensaios que compararam estratégias não invasivas iniciais, a magnitude da redução observada na angiografia invasiva foi ausente, variável ou insuficiente para sustentar, isoladamente, neutralidade orçamentária aos custos estimados para o SUS — quando o exame substituído é o mix médio observado, a ecocardiografia de estresse, ou o mix do NATS como publicado. Quando o exame substituído é a cintilografia de perfusão — e apenas ela; a ecocardiografia de estresse, também imagem funcional, custa R$ 196 —, o modelo restrito a exames e cateterismo indica neutralidade. A seção 4.6 mostra que essa conclusão não sobrevive à inclusão da revascularização.
 
@@ -294,9 +302,27 @@ A única análise econômica de ensaio no cenário de substituição de imagem f
 
 Componentes ainda não quantificados: a menor frequência de complicações maiores relacionadas ao procedimento no DISCHARGE (0,5% contra 1,9%) e a redução da permanência no CAD-MAN (mediana de 52,9 para 30,0 horas), que tenderiam a favorecer o gatekeeping; angiotomografias não diagnósticas, testes funcionais subsequentes (13% no CRESCENT-II; 3,4% contra 9,9% no PRECISE, favorável à angiotomografia), achados incidentais e uso de contraste e betabloqueador. A premissa de substituição 1:1 é declarada como tal. **O impacto líquido de todos os componentes não foi estimado.**
 
-### 4.7 Um segundo desfecho, apresentado como eficiência diagnóstica
+### 4.7 Por estrato de probabilidade pré-teste — o comparador realista como premissa declarada
 
-> Esta seção apresenta **cateterismo sem DAC obstrutiva** como métrica de eficiência diagnóstica, **não utilizada como unidade do cálculo econômico**. Seus valores não entram nas seções 4.3 a 4.5, que usam cateterismo total.
+O SIA não distingue a probabilidade pré-teste dos pacientes investigados. O modelo, porém, distingue por premissa: as diretrizes (seção 4.2) dizem qual exame a angiotomografia substituiria em cada faixa, e essa premissa pode ser declarada em vez de escondida numa média. Na **probabilidade baixa**, o comparador realista é o teste ergométrico — ou nenhum exame, quando a diretriz recomenda diferir, ajustar a probabilidade ou usar escore de cálcio (SBC 2025, ESC 2024, AHA/ACC 2021); "nenhum exame" é a adoção aditiva. Na **intermediária**, é a imagem funcional que o serviço realizaria: ecocardiografia de estresse ou cintilografia de perfusão (ou o percurso do NATS, que as mistura). O mix médio do SIA corresponde ao PICO como submetido — "baixa ou intermediária" sem estratificar. Aplicando os mesmos Δ da seção 4.4 e o mesmo débito de revascularização da seção 4.6 (PRECISE e Foy 2017) a **todos** os cenários de primeira linha:
+
+| Estrato | Comparador (premissa) | C_substituído | Neutralidade, só exames | **Neutralidade com revascularização** | Δ exigido a R$ 550 |
+|---|---|---|---|---|---|
+| Baixa | nenhum exame → adoção aditiva | R$ 0 | R$ −46 – +30 | R$ −329 – −229 | 75,3 |
+| Baixa | teste ergométrico | R$ 32,20 | R$ −14 – +62 | R$ −297 – −197 | 70,9 |
+| Não estratificado (PICO submetido) | mix médio do SIA | R$ 185,46 | R$ 139 – 215 | R$ −144 – −44 | 49,9 |
+| Intermediária | ecocardiografia de estresse | R$ 196,39 | R$ 150 – 226 | R$ −133 – −33 | 48,4 |
+| Intermediária | percurso do NATS por episódio | R$ 523,81 | R$ 477 – 554 | R$ 195 – 294 | 3,6 |
+| Intermediária | cintilografia de perfusão | R$ 786,83 | R$ 741 – 817 | **R$ 458 – 557** | já neutro |
+| Já indicado a cateterismo (outro PICO) | cateterismo direto | cancela | R$ 482 – 625 | **R$ 841** (DISCHARGE) | 75,3 |
+
+`analise_final.py`, seção 4.9; `output/out-limiar-por-estrato.csv`. Débito de revascularização: PRECISE (+4,0/100) e Foy 2017 (+2,7/100), aplicados como envelope a todos os cenários de primeira linha — para a adoção aditiva é um envelope emprestado, pois o SCOT-HEART não é usado para revascularização.
+
+Três leituras. **Primeira: na probabilidade baixa, nenhum preço fecha** — com o comparador que as diretrizes indicam (nenhum exame ou ergometria), o preço de neutralidade é negativo ou de dezenas de reais, com ou sem revascularização. **Segunda: na intermediária, o resultado depende de qual imagem funcional sai do percurso.** Substituindo a ecocardiografia de estresse, R$ 550 está fora do alcance; substituindo a cintilografia, R$ 550 está dentro da zona de incerteza mesmo com a revascularização observada (R$ 458–557); o percurso misto do NATS, que sem revascularização cercava R$ 550, cai a R$ 195–294 quando ela entra. **Terceira: o PICO como submetido — a média não estratificada — herda o pior dos dois estratos**, porque três quartos do volume atual são ergometria. Estratificar não é análise de sensibilidade; é o resultado: a mesma tecnologia, ao mesmo preço, é expansiva na baixa e plausivelmente sustentável na intermediária-com-cintilografia e no filtro pré-cateterismo. É essa a estratificação que a Diretriz SBC de SCC 2025 já faz (IIb-B na baixa; I-A na intermediária) e que o PICO submetido não faz.
+
+### 4.8 Um segundo desfecho, apresentado como eficiência diagnóstica
+
+> Esta seção apresenta **cateterismo sem DAC obstrutiva** como métrica de eficiência diagnóstica, **não utilizada como unidade do cálculo econômico**. Seus valores não entram nas seções 4.3 a 4.7, que usam cateterismo total.
 
 O IQWiG (relatório final D22-01, 08/03/2024, por encomenda do G-BA) reporta cateterismos sem doença obstrutiva com denominador de **pacientes randomizados** (Tabela 43):
 
@@ -319,7 +345,7 @@ Metanálise do IQWiG para os estudos de alta certeza contra métodos funcionais 
 
 Esta é uma afirmação sobre utilização de recursos no curto prazo, **não uma caracterização do benefício clínico da tecnologia**. O SCOT-HEART demonstrou redução de morte coronariana e infarto não fatal em 5 anos com a angiotomografia associada ao cuidado padrão, resultado mantido na análise de 10 anos. Benefício clínico em desfechos duros e neutralidade orçamentária de curto prazo são perguntas distintas; esta contribuição responde apenas à segunda.
 
-### 4.8 Limitação metodológica desta seção
+### 4.9 Limitação metodológica desta seção
 
 Os Δ utilizados são diferenças aritméticas entre percentuais publicados por braço, não estimativas agrupadas de diferença absoluta. A metanálise em rede de Siontis (BMJ 2018) reporta NNT 24 (16 a 92) para teste funcional contra angiotomografia sobre taxa-base de 12,2% — equivalente a diferença absoluta de cerca de 4 por 100, coerente com a faixa aqui utilizada; a diferença de risco agrupada de Hulten (JACC 2013, +21 por 1.000) refere-se a população de emergência.
 
@@ -333,11 +359,12 @@ Advertências sobre fontes secundárias: a revisão de Zito (Ann Intern Med 2023
 2. **A reclassificação está 25–27% concluída.** Os 432 são piso documentado; 2.785 equipamentos permanecem sem especificação. Recomenda-se que a apreciação final utilize a competência mais recente e registre a proporção reclassificada.
 3. **79 estabelecimentos** reúnem hardware ≥64 canais, hemodinâmica co-localizada e produção coronariana documentada. **Doze UFs não possuem nenhum**; AP, PI e TO não possuem tomógrafo de ≥64 canais confirmado.
 4. A investigação funcional do SUS concentra-se em **volume no teste ergométrico (76%) e em gasto na cintilografia (82%)**. Qual exame a angiotomografia substituiria na população elegível **não é identificável nos registros administrativos** — e é o parâmetro dominante do modelo.
-5. **A sustentabilidade orçamentária da primeira linha depende de três parâmetros não identificáveis nos registros: o exame substituído, a revascularização induzida e a posição no percurso.** Só com exames e cateterismo, a neutralidade vai de R$ 139–215 (mix médio do SIA) a R$ 741–817 (cintilografia). Incluindo a revascularização observada nos ensaios, o cenário cintilografia cai para R$ 458–557. O preço proposto (R$ 550) está fora do alcance nos cenários de mix médio e ecocardiografia, e **dentro da zona de incerteza** nos cenários de mix do NATS por episódio e cintilografia com revascularização.
-6. **O espaço econômico é maior em outro PICO.** Em pacientes já indicados a cateterismo, o preço de neutralidade é de R$ 482–625 só com exames, independentemente do exame prévio, e sobe a R$ 841 no DISCHARGE quando a menor revascularização observada é creditada. Nesse PICO o custo da investigação prévia é comum aos braços e não pode ser creditado. População distinta, **não intercambiável** com a apreciada. O relatório preliminar já utiliza um ensaio dessa população (DISCHARGE) para o PICO de primeira linha.
-7. **O protocolo importa, e a Diretriz SBC de SCC 2025 já o estratifica.** A diretriz posiciona a angiotomografia como exame inicial de classe I-A na probabilidade intermediária e IIb-B na baixa, e o algoritmo a coloca como alternativa à prova funcional, não substituta. O PICO submetido trata "baixa ou intermediária" como faixa única; a economia difere entre elas. Alinhar a incorporação à estratificação da própria diretriz é o instrumento que a evidência sustenta.
-8. **No horizonte econômico analisado, o benefício mais consistente é o aumento da adequação da indicação de cateterismo**, não a redução de volume. Isto não caracteriza o benefício clínico: o SCOT-HEART demonstrou redução de morte coronariana e infarto em 5 e 10 anos.
-9. Não há código SIGTAP para a tecnologia; microcusteio contemporâneo da angiotomografia **e dos comparadores** é condição necessária para análise econômica simétrica.
+5. **A sustentabilidade orçamentária da primeira linha depende de três parâmetros não identificáveis nos registros: o exame substituído, a revascularização induzida e a posição no percurso.** Só com exames e cateterismo, a neutralidade vai de R$ 139–215 (mix médio do SIA) a R$ 741–817 (cintilografia). Incluindo a revascularização observada nos ensaios, o cenário cintilografia cai para R$ 458–557 e os demais cenários de primeira linha ficam abaixo de R$ 300. O preço proposto (R$ 550) está fora do alcance nos cenários de mix médio, ergometria e ecocardiografia, e **dentro da zona de incerteza** apenas quando a AngioTC substitui cintilografia.
+6. **Sem protocolo de posicionamento, nenhum preço é neutro.** Sem código SIGTAP e sem protocolo vinculante, o cenário de adoção mais provável é o aditivo — a AngioTC somada ao teste ergométrico em curso, não no lugar dele. Com nada substituído, o preço de neutralidade é de R$ −46 a +30 (desenho aditivo do SCOT-HEART: R$ −9 a +4): a tecnologia é orçamentariamente expansiva por construção, independentemente do preço negociado. A condição de sustentabilidade não é o preço; é a especificação do que sai do percurso.
+7. **O espaço econômico é maior em outro PICO.** Em pacientes já indicados a cateterismo, o preço de neutralidade é de R$ 482–625 só com exames, independentemente do exame prévio, e sobe a R$ 841 no DISCHARGE quando a menor revascularização observada é creditada. Nesse PICO o custo da investigação prévia é comum aos braços e não pode ser creditado. População distinta, **não intercambiável** com a apreciada. O relatório preliminar já utiliza um ensaio dessa população (DISCHARGE) para o PICO de primeira linha.
+8. **Estratificar por probabilidade pré-teste não é sensibilidade; é o resultado.** Com o comparador que as diretrizes indicam em cada faixa (seção 4.7), a mesma tecnologia ao mesmo preço é expansiva na baixa — onde o exame substituído é nenhum ou a ergometria — e plausivelmente sustentável na intermediária quando substitui cintilografia. A média não estratificada herda o pior estrato, porque três quartos do volume atual são ergometria. A Diretriz SBC de SCC 2025 já faz essa estratificação (I-A na intermediária, IIb-B na baixa; algoritmo com a angiotomografia como alternativa à prova funcional, não substituta). O PICO submetido trata "baixa ou intermediária" como faixa única. Alinhar a incorporação à estratificação da própria diretriz é o instrumento que a evidência sustenta.
+9. **No horizonte econômico analisado, o benefício mais consistente é o aumento da adequação da indicação de cateterismo**, não a redução de volume. Isto não caracteriza o benefício clínico: o SCOT-HEART demonstrou redução de morte coronariana e infarto em 5 e 10 anos.
+10. Não há código SIGTAP para a tecnologia; microcusteio contemporâneo da angiotomografia **e dos comparadores** é condição necessária para análise econômica simétrica.
 
 Nada nesta contribuição se pronuncia sobre o mérito clínico da tecnologia. As conclusões dizem respeito exclusivamente a capacidade de implementação e sustentabilidade orçamentária de curto prazo, nos termos em que o Comitê solicitou esclarecimento.
 
