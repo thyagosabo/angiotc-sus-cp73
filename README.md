@@ -23,26 +23,25 @@ A **Portaria SAES/MS nº 3.695, de 15/01/2026** desmembrou o código genérico d
 
 **A reclassificação está 26,8% concluída.** Os 432 são piso de capacidade documentada, não estimativa da capacidade real. A portaria dá prazo de três competências — se ele se encerrar antes da apreciação final, a Conitec terá o inventário nacional completo pela primeira vez.
 
-**Estrato de prontidão:** 83 estabelecimentos reúnem ≥64 canais, hemodinâmica co-localizada e produção coronariana documentada em 2025. **Doze UFs têm zero.** AP, PI e TO não têm nenhum tomógrafo ≥64 canais disponível ao SUS.
+**Estrato de prontidão:** 79 estabelecimentos reúnem ≥64 canais, hemodinâmica co-localizada e produção coronariana documentada em 2025. **Doze UFs têm zero.** AP, PI e TO não têm nenhum tomógrafo ≥64 canais disponível ao SUS.
 
-### Preço admissível: análise de limiar
+### Preço admissível: análise de limiar — e o parâmetro dominante
 
-O SIA não tem identificador de paciente. Razões entre contagens agregadas não são probabilidades condicionais, então o modelo **não estima** quantas angiografias a AngioTC evitaria. Responde à pergunta inversa:
+O SIA não tem identificador de paciente. Razões entre contagens agregadas não são probabilidades condicionais, então o modelo **não estima** quantas angiografias a AngioTC evitaria. Responde à pergunta inversa: quantas seria preciso evitar, por 100 pacientes, para neutralidade a cada preço.
 
 ```
-Δ_CATE necessário = (P_angioTC − R$ 185,46) × 100 / R$ 730,14
+P_neutralidade = C_substituído + (Δ/100) × R$ 730,14
 ```
 
-| Referência | Valor | Δ CATE/100 necessário |
-|---|---|---|
-| TC de tórax + contraste (SIGTAP) | R$ 196,41 | 1,5 |
-| Microcusteio SUS 2022 (valores 2020) | R$ 452,05 | 36,5 |
-| **Microcusteio corrigido a jul/2026** (IPCA +37,7%) | **R$ 622,54** | **59,9** |
-| CBHPM 2026 — saúde suplementar | R$ 1.311,95 | 154,3 — **impossível** |
+**`C_substituído` é o parâmetro dominante e é desconhecido para a população elegível.** O SIA mostra o mix médio (R$ 185,46 — 76% teste ergométrico); não mostra qual exame a AngioTC substituiria em quem tem probabilidade pré-teste intermediária.
 
-Ao preço da saúde suplementar seria preciso evitar mais angiografias do que pacientes investigados. Impossível sob qualquer premissa, qualquer base de custo, qualquer população elegível.
+| Exame substituído | C | Preço de neutralidade para Δ observado (−6,3 a +4,1) | vs R$ 550 (demandante) | vs R$ 622,54 |
+|---|---|---|---|---|
+| Mix médio do SIA | R$ 185,46 | R$ 139 – 215 | abaixo | abaixo |
+| Mix do NATS | R$ 316,76 | R$ 270 – 347 | abaixo | abaixo |
+| **Cintilografia** | R$ 786,83 | **R$ 741 – 817** | **acima** | **acima** |
 
-O preço de neutralidade é grandeza **por episódio** e, sob substituição 1:1, **independe do tamanho da população elegível** — contornando a incerteza que motivou parte da recomendação preliminar.
+**O sinal inverte com o exame substituído.** A pergunta decisiva não é o Δ; é qual exame sai do percurso — a mesma que o Comitê formulou como "definição precisa da população elegível". Não é respondível pelo SIA; é respondível por protocolo.
 
 ### Unidade de análise: episódio, não procedimento
 
@@ -131,7 +130,7 @@ O Δ de cateterismo foi ancorado em 12 ensaios randomizados, **cateterismo total
 | Primeira linha (8 ensaios) | P = 185,46 + (Δ/100)·730,14 | −6,4 a +4,1 | **R$ 139 – 215** |
 | Gatekeeping (4 ensaios) | P = (Δ/100)·730,14 | 66,0 a 85,6 | **R$ 482 – 625** |
 
-No melhor caso de primeira linha resta lacuna de R$ 407 por paciente até o microcusteio corrigido. No melhor caso de gatekeeping, o CAD-MAN cruza a neutralidade por R$ 2,67. **A análise não demonstra que gatekeeping economiza; demonstra que o posicionamento muda radicalmente a plausibilidade de a tecnologia se pagar** — e o PICO em apreciação é o de primeira linha.
+Substituindo o mix médio, no melhor caso de primeira linha resta lacuna de R$ 407 por paciente até o microcusteio corrigido. No melhor caso de gatekeeping, o CAD-MAN cruza por R$ 2,67. O SCOT-HEART, de desenho aditivo, não substitui episódio e fica fora da equação de primeira linha. **A análise não demonstra que gatekeeping economiza; demonstra que o posicionamento muda radicalmente a plausibilidade de a tecnologia se pagar** — e o PICO em apreciação é o de primeira linha.
 
 Cateterismo sem DAC obstrutiva (IQWiG D22-01, Tabela 43) é reportado separadamente como eficiência diagnóstica, fora do cálculo econômico.
 

@@ -12,8 +12,8 @@
 |---|---|
 | Capacidade instalada | **432 tomógrafos de ≥64 canais em 315 estabelecimentos** disponíveis ao SUS (CNES 06/2026) — piso documentado; 2.785 equipamentos ainda sem especificação de canais. **79 estabelecimentos** reúnem hardware compatível, hemodinâmica e produção coronariana em 2025. 12 UFs não têm nenhum. |
 | Custo do percurso atual | R$ 185,46 por episódio de investigação funcional (mix médio observado no SIA 2025); cateterismo R$ 730,14. Ambos são preços de tabela, não custos de produção. |
-| Preço admissível | Depende de **qual exame a AngioTC substitui**. Nos ensaios com comparador não invasivo, o Δ de cateterismo total foi de −6,3 a +4,1 por 100. Se substitui o mix médio: neutralidade a **R$ 139–215**. Se substitui cintilografia: **R$ 742–818**. O preço proposto pelo demandante é R$ 550,00. |
-| Outro PICO | Em pacientes já indicados a cateterismo (4 ensaios), o preço de neutralidade é de **R$ 482–625**; um ensaio (CAD-MAN) cruza R$ 622,54 por R$ 2,46. População distinta, não intercambiável com a apreciada. |
+| Preço admissível | Depende de **qual exame a AngioTC substitui**. Nos ensaios com comparador não invasivo, o Δ de cateterismo total foi de −6,3 a +4,1 por 100. Se substitui o mix médio: neutralidade a **R$ 139–215**. Se substitui cintilografia: **R$ 741–817**. O preço proposto pelo demandante é R$ 550,00. |
+| Outro PICO | Em pacientes já indicados a cateterismo (4 ensaios), o preço de neutralidade é de **R$ 482–625**; um ensaio (CAD-MAN) cruza R$ 622,54 por R$ 2,67. População distinta, não intercambiável com a apreciada. |
 | Conclusão | **A sustentabilidade orçamentária depende de onde a tecnologia entra no percurso e de qual exame substitui — e a população elegível não é identificável nos registros administrativos.** A análise não demonstra que nenhuma indicação economiza; demonstra que o posicionamento muda radicalmente a plausibilidade. |
 
 ---
@@ -86,7 +86,7 @@ Densidade nacional de equipamentos compatíveis confirmados: **2,02 por milhão 
 - **Doze unidades federativas não possuem nenhum estabelecimento no estrato de prontidão:** AC, AL, AM, AP, GO, MT, PA, PI, RO, RR, SE e TO.
 - São Paulo concentra 164 equipamentos compatíveis e 23 estabelecimentos prontos; o Distrito Federal lidera em densidade (6,01 por milhão).
 
-A desigualdade medida sobre hardware efetivamente compatível é mais acentuada do que a medida sobre o parque agregado: coeficiente de variação da densidade por UF de 0,86 (≥64 canais) contra 0,40 (todos os tomógrafos); índice de Gini ponderado por população de 0,30 contra 0,18. Projeções de difusão ancoradas no total de tomógrafos superestimam a capacidade acessível, e o fazem de modo desigual entre regiões.
+A desigualdade medida sobre hardware efetivamente compatível é mais acentuada do que a medida sobre o parque agregado: coeficiente de variação da densidade por UF de 0,86 (≥64 canais) contra 0,32 (todos os tomógrafos); índice de Gini ponderado por população de 0,30 contra 0,14. Projeções de difusão ancoradas no total de tomógrafos superestimam a capacidade acessível, e o fazem de modo desigual entre regiões.
 
 Tabela completa por UF: `output/out-capacidade-canais-uf.csv`.
 
@@ -187,7 +187,7 @@ P_neutralidade,gatekeeping     =                    (Δ_CATE / 100) × C_CATE
 
 com `C_CATE = R$ 730,14` (SIA 2025) e `Δ_CATE` como parâmetro declarado. O desenho de cada ensaio determina qual equação se aplica. **O SCOT-HEART, cujo desenho é aditivo — angiotomografia somada ao cuidado padrão contra cuidado padrão —, não substitui episódio funcional e recai na segunda equação**, embora sua população seja de primeira linha; seus preços de neutralidade (R$ −8,76 aos 6 meses; R$ 3,65 aos 5 anos) refletem apenas o custo dos cateterismos induzidos ou evitados, e o ensaio é apresentado à parte.
 
-`C_substituído` é o parâmetro dominante e desconhecido para a população elegível (seção 3.2). A análise é apresentada para três valores: o mix médio observado no SIA (R$ 185,46); o mix adotado pelo NATS no relatório preliminar (R$ 316,76: teste ergométrico seguido de 50% cintilografia e 50% ecocardiografia de estresse); e a cintilografia de perfusão (R$ 788,24), cenário em que a angiotomografia substitui o exame de imagem funcional — o mais plausível na probabilidade pré-teste intermediária.
+`C_substituído` é o parâmetro dominante e desconhecido para a população elegível (seção 3.2). A análise é apresentada para três valores: o mix médio observado no SIA (R$ 185,46); o mix adotado pelo NATS no relatório preliminar (R$ 316,76: teste ergométrico seguido de 50% cintilografia e 50% ecocardiografia de estresse); e a cintilografia de perfusão (R$ 786,83, valor médio aprovado por episódio), cenário em que a angiotomografia substitui o exame de imagem funcional — o mais plausível na probabilidade pré-teste intermediária.
 
 ### 4.3 Δ necessário por preço e por exame substituído
 
@@ -221,8 +221,8 @@ Faixa observada: **−6,3 a +4,1 por 100**. Aplicando a equação de primeira li
 | Exame substituído | C | Preço de neutralidade para Δ de −6,3 a +4,1 | vs R$ 550 | vs R$ 622,54 |
 |---|---|---|---|---|
 | Mix médio do SIA | R$ 185,46 | **R$ 139 – 215** | abaixo | abaixo |
-| Mix do NATS | R$ 316,76 | **R$ 271 – 347** | abaixo | abaixo |
-| Cintilografia de perfusão | R$ 788,24 | **R$ 742 – 818** | **acima** | **acima** |
+| Mix do NATS | R$ 316,76 | **R$ 270 – 347** | abaixo | abaixo |
+| Cintilografia de perfusão | R$ 786,83 | **R$ 741 – 817** | **acima** | **acima** |
 
 **O sinal da conclusão inverte com o exame substituído.** Se a angiotomografia substitui o mix médio do SUS — majoritariamente teste ergométrico —, o preço de neutralidade fica três a quatro vezes abaixo do proposto, e o Δ necessário (49,9 a R$ 550) é doze vezes o melhor Δ observado. Se substitui a cintilografia de perfusão, a estratégia é neutra ou economizadora em **toda** a faixa observada, mesmo ao custo microcusteado corrigido.
 
@@ -241,11 +241,11 @@ Ensaios com comparador **invasivo-primeiro** — pacientes já referenciados par
 | Ensaio | Cateterismo, AngioTC | Cateterismo, controle | Janela | Δ /100 | Preço de neutralidade |
 |---|---|---|---|---|---|
 | CONSERVE | 23% | 89% | 1 ano | 66,0 | R$ 481,89 |
-| Reis 2022 | 32/115 (27,8%) | 105/105 (100%) | ≤ 3 meses | 72,2 | R$ 527,16 |
-| DISCHARGE | 404/1808 (22,3%) | 1708/1753 (97,4%) | manejo inicial | 75,1 | R$ 548,34 |
-| CAD-MAN | 24/167 (14,4%) | 162/162 (100%) | índice | **85,6** | **R$ 625,00** |
+| Reis 2022 | 32/115 (27,8%) | 105/105 (100%) | ≤ 3 meses | 72,2 | R$ 526,97 |
+| DISCHARGE | 404/1808 (22,3%) | 1708/1753 (97,4%) | manejo inicial | 75,1 | R$ 548,25 |
+| CAD-MAN | 24/167 (14,4%) | 162/162 (100%) | índice | **85,6** | **R$ 625,21** |
 
-Nessa indicação o preço de neutralidade é de **R$ 482 a R$ 625**, independentemente do exame prévio — porque ele cancela. Ao preço proposto de R$ 550,00, o limiar é 75,3 por 100: o DISCHARGE fica a 0,2 abaixo, o CAD-MAN acima. Ao custo microcusteado corrigido, o limiar é 85,3: **um único ensaio, o CAD-MAN, o alcança, por R$ 2,46 por paciente** — margem inferior a qualquer incerteza de parâmetro deste modelo, apoiada em um ensaio de 340 pacientes cujo braço comparador é 100% invasivo por desenho. Com `C_CATE` de R$ 772,80 (AIH), a faixa passa a R$ 510–662.
+Nessa indicação o preço de neutralidade é de **R$ 482 a R$ 625**, independentemente do exame prévio — porque ele cancela. Ao preço proposto de R$ 550,00, o limiar é 75,3 por 100: o DISCHARGE fica a 0,2 abaixo, o CAD-MAN acima. Ao custo microcusteado corrigido, o limiar é 85,3: **um único ensaio, o CAD-MAN, o alcança, por R$ 2,67 por paciente** — margem inferior a qualquer incerteza de parâmetro deste modelo, apoiada em um ensaio de 340 pacientes cujo braço comparador é 100% invasivo por desenho. Com `C_CATE` de R$ 772,80 (AIH), a faixa passa a R$ 510–662.
 
 **Trata-se de outra população e de outro PICO.** A taxa do braço comparador — 89% a 100% — decorre do desenho. Não constitui alternativa automaticamente substituível à incorporação ora analisada.
 
@@ -253,7 +253,7 @@ O mecanismo explica a divergência de espaço econômico:
 
 | População | Trajetória | Espaço econômico |
 |---|---|---|
-| Investigação não invasiva inicial | teste funcional → angiotomografia | O exame substituído custa R$ 32 (ergometria) a R$ 788 (cintilografia). O espaço depende inteiramente de qual. |
+| Investigação não invasiva inicial | teste funcional → angiotomografia | O exame substituído custa R$ 32 (ergometria) a R$ 787 (cintilografia). O espaço depende inteiramente de qual. |
 | Já indicada a cateterismo | cateterismo direto → angiotomografia → cateterismo seletivo | Há um procedimento de R$ 730 a R$ 773 que pode sair do percurso, independentemente do que veio antes. |
 
 Registra-se que o próprio dossiê e a reanálise do NATS utilizaram o DISCHARGE — ensaio de população invasivo-primeiro — como fonte de parâmetros para o PICO de primeira linha. O desalinhamento de PICO aqui descrito já está, portanto, no relatório preliminar.
@@ -303,8 +303,8 @@ Advertências sobre fontes secundárias: a revisão de Zito (Ann Intern Med 2023
 2. **A reclassificação está 25–27% concluída.** Os 432 são piso documentado; 2.785 equipamentos permanecem sem especificação. Recomenda-se que a apreciação final utilize a competência mais recente e registre a proporção reclassificada.
 3. **79 estabelecimentos** reúnem hardware ≥64 canais, hemodinâmica co-localizada e produção coronariana documentada. **Doze UFs não possuem nenhum**; AP, PI e TO não possuem tomógrafo de ≥64 canais confirmado.
 4. A investigação funcional do SUS concentra-se em **volume no teste ergométrico (76%) e em gasto na cintilografia (82%)**. Qual exame a angiotomografia substituiria na população elegível **não é identificável nos registros administrativos** — e é o parâmetro dominante do modelo.
-5. **A sustentabilidade orçamentária da primeira linha depende do exame substituído.** Substituindo o mix médio, o preço de neutralidade é de R$ 139–215 e o Δ necessário ao preço proposto (R$ 550) é 49,9 por 100, doze vezes o melhor observado. Substituindo a cintilografia, é de R$ 742–818 e a estratégia é neutra em toda a faixa observada.
-6. **O espaço econômico é maior em outro PICO.** Em pacientes já indicados a cateterismo, o preço de neutralidade é de R$ 482–625 independentemente do exame prévio; um ensaio (CAD-MAN) alcança o custo microcusteado corrigido por R$ 2,46. População distinta, **não intercambiável** com a apreciada. O relatório preliminar já utiliza um ensaio dessa população (DISCHARGE) para o PICO de primeira linha.
+5. **A sustentabilidade orçamentária da primeira linha depende do exame substituído.** Substituindo o mix médio, o preço de neutralidade é de R$ 139–215 e o Δ necessário ao preço proposto (R$ 550) é 49,9 por 100, doze vezes o melhor observado. Substituindo a cintilografia, é de R$ 741–817 e a estratégia é neutra em toda a faixa observada.
+6. **O espaço econômico é maior em outro PICO.** Em pacientes já indicados a cateterismo, o preço de neutralidade é de R$ 482–625 independentemente do exame prévio; um ensaio (CAD-MAN) alcança o custo microcusteado corrigido por R$ 2,67. População distinta, **não intercambiável** com a apreciada. O relatório preliminar já utiliza um ensaio dessa população (DISCHARGE) para o PICO de primeira linha.
 7. **O protocolo importa.** Se a incorporação especificar que a angiotomografia substitui a imagem funcional na probabilidade intermediária, o cenário econômico é favorável; se substituir a investigação inicial indistintamente, não é. Comparações indiretas entre ensaios não quantificam esse efeito, mas a especificação é o instrumento de política disponível.
 8. **No horizonte econômico analisado, o benefício mais consistente é o aumento da adequação da indicação de cateterismo**, não a redução de volume. Isto não caracteriza o benefício clínico: o SCOT-HEART demonstrou redução de morte coronariana e infarto em 5 e 10 anos.
 9. Não há código SIGTAP para a tecnologia; microcusteio contemporâneo da angiotomografia **e dos comparadores** é condição necessária para análise econômica simétrica.
