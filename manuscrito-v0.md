@@ -35,8 +35,8 @@ Autoria, ordem e afiliações: a definir. Conflitos de interesse: a declarar.
 🔴 **A FAZER** — esqueleto:
 
 1. Carga da DAC no Brasil; investigação de dor torácica estável como porta de entrada de alto volume (787.954 episódios funcionais/ano no SUS em 2025 — número próprio, pode abrir o parágrafo).
-2. Mudança internacional para avaliação anatômica: SCOT-HEART, PROMISE, DISCHARGE; NICE CG95 (2016) como primeira diretriz a recomendar AngioTC de primeira linha; ESC 2024 e AHA/ACC 2021 `[agente ainda buscando texto exato — inserir classe/nível]`.
-3. Diretriz brasileira: SBC TC/RM 2024 (Classe I, A para PPT baixa/intermediária) e **SBC SCC 2025** (IIb na baixa, I-A na intermediária, "prova funcional ou angioTC") — notar que a diretriz mais recente estratifica.
+2. Mudança internacional para avaliação anatômica: SCOT-HEART, PROMISE, DISCHARGE; NICE CG95 (2016) como primeira diretriz a oferecer AngioTC ≥64 cortes a toda angina típica/atípica; ESC 2024 (CCTA preferida em likelihood >5–50%, I-B/I-A; imagem funcional >15–85%, I-B); AHA/ACC 2021 (CCTA 1-A e imagem de estresse 1-B-R co-iguais no risco intermediário-alto). Todas verificadas — ver 4.2.
+3. Diretriz brasileira: SBC TC/RM 2024 (I-A para PPT baixa/intermediária, sem distinção; I-A como alternativa ao cateterismo na intermediária; III-C na alta) e **SBC SCC 2025** (IIb-B na baixa, I-A na intermediária, "prova funcional ou angioTC") — a mais recente estratifica, e é da mesma sociedade que submeteu o pedido.
 4. Ausência de acesso estruturado no SUS: sem código SIGTAP; produção administrativamente invisível.
 5. O processo Conitec: submissão da SBC, recomendação preliminar desfavorável de 03/07/2026, os pontos que o Comitê listou como essenciais (capacidade instalada, população elegível, comparadores, impacto real sobre cateterismos e testes funcionais).
 6. Lacuna: análises de custo-efetividade prévias (Arq Bras Cardiol 2022, SUS; ABC 2026, suplementar) não modelam capacidade instalada nem a dependência do resultado em relação ao **posicionamento** da tecnologia no percurso.
@@ -161,9 +161,29 @@ Uma mesma tecnologia é orçamentariamente expansiva ou plausivelmente sustentá
 
 ### 4.2 Diretrizes: o PICO submetido versus a estratificação recomendada
 
-🟡 **PRÉVIA** — SBC 2025 verificada; ESC/AHA/NICE `[agente em curso]`
+🟢 **PRONTA** — cinco diretrizes verificadas em texto integral (SBC 2024, SBC 2025, ESC 2024, AHA/ACC 2021, NICE CG95); nenhuma diretriz AHA/ACC de 2025–26 sobre dor torácica ou doença coronariana crônica existe — a de 2023 remete explicitamente à de 2021.
 
-A Diretriz SBC de SCC 2025 estratifica a indicação por probabilidade pré-teste: IIb-B como primeira opção na baixa ("ajustar PPT ou angiotomografia"), I-A como exame inicial na intermediária ("prova funcional ou angiotomografia"), prova funcional na alta. `[ESC 2024: CCTA preferencial em likelihood baixa-moderada, imagem funcional em moderada-alta — inserir texto e classe]`. `[AHA/ACC 2021: CCTA razoável em risco intermediário-alto — inserir]`. `[NICE CG95: primeira linha para angina típica/atípica, ≥64 detectores]`. O PICO submetido à Conitec trata "baixa ou intermediária" como faixa única; a economia difere entre as faixas, e a diretriz da própria sociedade demandante também. Alinhar a incorporação à estratificação da diretriz — e não à faixa agregada — é o instrumento que a evidência sustenta.
+Nenhuma das cinco diretrizes posiciona a angiotomografia como primeira linha uniforme na faixa "baixa ou intermediária" — exceto o NICE, que a oferece a toda angina típica ou atípica sem estratificar por probabilidade e, ao fazê-lo, coloca a imagem funcional em segunda linha e o cateterismo em terceira, o modelo mais puro de gatekeeping. As demais estratificam, e convergem:
+
+| Diretriz | Probabilidade baixa | Intermediária | Alta | Filtro antes de cateterismo |
+|---|---|---|---|---|
+| **SBC SCC 2025** (Arq Bras Cardiol 2025;122(9)) | primeira opção **IIb-B**; "ajustar PPT ou angiotomografia" | exame inicial **I-A**; "prova funcional ou angiotomografia" | prova funcional (I-B para eco, SPECT/PET, RMC) | "alternativa ao estudo invasivo" após teste funcional conflitante (IIa-B baixa; I-A intermediária) |
+| **SBC TC/RM 2024** (Arq Bras Cardiol 2024;121(9)) | opção inicial **I-A** (baixa e intermediária, sem distinção) | opção inicial **I-A** | **III-C** | **I-A** — "alternativa … com probabilidade pré-teste intermediária e indicação de cinecoronariografia invasiva" |
+| **ESC 2024** (Eur Heart J 2024;45:3415) | ≤5% diferir (IIa-B); 5–15% escore de cálcio (IIa-B) | >5–50%: CCTA **preferida** para excluir DAC (I-B), diagnóstico e risco (I-A); >15–85%: imagem funcional (I-B), "melhor poder de confirmação" | >85%: cateterismo direto (I-C) | sequência da Tabela 13: CCTA → funcional se incerta → cateterismo se ainda incerto (I-B) |
+| **AHA/ACC 2021** (Circulation 2021;144:e368) | diferir/escore de cálcio/ergometria (1 B-NR; 2a) | risco intermediário-alto: CCTA **1-A** e imagem de estresse **1 B-R** co-iguais; CCTA preferível <65 anos, estresse ≥65 | — | "candidatos a cateterismo eletivo podem ser triados com segurança por CCTA ou teste de estresse" |
+| **NICE CG95** (2016) | CCTA ≥64 cortes a toda angina típica/atípica, sem PPT | idem | idem | funcional 2ª linha se CCTA incerta; cateterismo 3ª linha |
+
+Três observações decorrem para o PICO em apreciação.
+
+**Primeira: a estratificação por probabilidade é a regra, e a diretriz da própria sociedade demandante é a mais conservadora na faixa baixa.** A SBC 2024 (TC/RM) dá I-A para "baixa ou intermediária" sem distinção — o texto do PICO submetido reproduz essa formulação. A SBC 2025 (SCC), posterior e específica para a condição, separa: IIb-B na baixa, I-A na intermediária, e no algoritmo coloca a angiotomografia como *alternativa* à prova funcional ("prova funcional ou angiotomografia"), não como substituta. A ESC 2024 é a única que usa a palavra "preferida" — e restrita a >5–50%, com imagem funcional recomendada a partir de >15% pelo maior poder de confirmação. Ou seja: a faixa em que a angiotomografia é preferencial é estreita e sobreposta à faixa em que a imagem funcional também é classe I.
+
+**Segunda: a análise econômica desta contribuição depende de qual exame a angiotomografia substitui — e as diretrizes dizem qual.** Na probabilidade intermediária, ela substituiria a prova funcional que o serviço realizaria (SBC 2025), a imagem funcional (ESC, AHA/ACC) ou nada, sendo co-igual. Na baixa, substituiria "ajustar PPT" (SBC 2025), diferimento ou escore de cálcio (ESC, AHA/ACC) — isto é, **em muitos casos substituiria não testar**, o cenário economicamente menos favorável possível, pois C_substituído tende a zero. Isso reforça que "primeira linha em baixa e intermediária" agrega dois cenários econômicos opostos.
+
+**Terceira: o gatekeeping antes de cateterismo já indicado é endossado explicitamente por quatro das cinco diretrizes** — SBC 2024 (I-A), ESC 2024 (sequência da Tabela 13), AHA/ACC 2021 (texto), NICE (estrutura) — e implicitamente pela SBC 2025 ("alternativa ao estudo invasivo"). É a indicação em que esta análise encontrou maior espaço econômico, e é uma indicação com respaldo de diretriz — mas não é a que está sendo requerida.
+
+Sobre equipamento: apenas o NICE (na própria recomendação, "64-slice or above") e a ESC (no texto, "64-slice technology or above … must be considered a pre-requisite") fixam piso de detectores. Nenhuma diretriz brasileira o faz nas tabelas de recomendação. A análise de capacidade desta contribuição adotou o piso de 64 canais por coerência com as diretrizes internacionais e com o relatório preliminar, que transcreve a recomendação do NICE.
+
+**Implicação para a incorporação.** As diretrizes fornecem o protocolo que a análise econômica pede: estratificar por probabilidade pré-teste, com a angiotomografia como opção classe I na intermediária e como filtro antes de cateterismo já indicado, e com critérios explícitos na baixa (onde a SBC 2025 e a ESC convergem em "avaliar antes de testar"). Uma incorporação que espelhe essa estratificação — em vez da faixa agregada "baixa ou intermediária" — alinha o PICO à diretriz da própria sociedade demandante e às três internacionais, e restringe o cenário econômico desfavorável (substituição de ergometria ou de "não testar") por desenho.
 
 ### 4.3 O desalinhamento de PICO no processo
 

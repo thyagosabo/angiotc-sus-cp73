@@ -201,6 +201,8 @@ O parâmetro do NATS é reproduzido como publicado e também recalculado sob a c
 
 **Qual desses cenários corresponde à população elegível não é identificável nos registros administrativos.** A Diretriz SBC de Síndrome Coronariana Crônica 2025 (Arq Bras Cardiol 2025;122(9), DOI 10.36660/abc.20250619) posiciona a angiotomografia, na probabilidade pré-teste intermediária, como exame inicial de classe I-A **ou** alternativa à prova funcional (Figura 16: "prova funcional ou angiotomografia"); na baixa, como primeira opção de classe IIb-B, com o algoritmo indicando "ajustar PPT ou angiotomografia". O exame que a angiotomografia substituiria, por recomendação, é portanto a prova funcional que o serviço realizaria naquela faixa — e a diretriz não especifica qual.
 
+As diretrizes internacionais convergem com essa estratificação. A ESC 2024 recomenda a angiotomografia como modalidade **preferida** apenas na probabilidade baixa-a-moderada (>5–50%; I-B para excluir DAC, I-A para diagnóstico e risco) e a imagem funcional na moderada-a-alta (>15–85%; I-B), pelo maior poder de confirmação; abaixo de 5% recomenda diferir, e entre 5 e 15% considerar escore de cálcio antes de qualquer exame (IIa-B). A AHA/ACC 2021 dá angiotomografia (1-A) e imagem de estresse (1-B-R) como opções co-iguais no risco intermediário-alto, com preferência etária (<65 anos angiotomografia, ≥65 estresse), e recomenda diferir ou usar escore de cálcio no risco baixo. Nenhuma diretriz AHA/ACC posterior a 2021 sobre dor torácica ou doença coronariana crônica existe; a de 2023 remete à de 2021. Apenas o NICE CG95 (2016) oferece angiotomografia sem estratificar por probabilidade — a toda angina típica ou atípica, com equipamento de ≥64 cortes —, colocando a imagem funcional em segunda linha e o cateterismo em terceira. **Em síntese: na probabilidade baixa, as diretrizes recomendam majoritariamente reavaliar, diferir ou usar escore de cálcio — o exame que a angiotomografia substituiria ali tende a ser nenhum, o cenário economicamente menos favorável. Na intermediária, ela é opção classe I ao lado da imagem funcional.**
+
 ### 4.3 Δ necessário por preço e por exame substituído
 
 O relatório preliminar adota **R$ 550,00** como preço da angiotomografia proposto pelo demandante. Os demais preços de referência são o proxy de tabela para TC de tórax com contraste, o microcusteio de 2022 corrigido monetariamente, e a CBHPM.
@@ -407,9 +409,14 @@ Os quatro invasivo-primeiro não são comparáveis aos demais: a população já
 18. Hwang IC et al. Clin Cardiol. 2017;40:1129-38. PMID 28914973. [não utilizado — erro de extração para SCOT-HEART]
 19. Hulten E et al. J Am Coll Cardiol. 2013;61:880-92. PMID 23395069.
 20. Associação Médica Brasileira. CBHPM 2026.
-21. Sociedade Brasileira de Cardiologia. Diretriz de Síndrome Coronariana Crônica – 2025. Arq Bras Cardiol. 2025;122(9). DOI 10.36660/abc.20250619.
+21. Cesar LAM, Gowdak LHW, Pavanello R et al. Diretriz de Síndrome Coronariana Crônica – 2025. Arq Bras Cardiol. 2025;122(9):e20250619. DOI 10.36660/abc.20250619. PMID 41294178. Erratum 2026;123(7):e20260565 (autoria apenas).
 22. Mark DB et al. Economic outcomes with anatomical versus functional diagnostic testing for coronary artery disease (PROMISE). Ann Intern Med. 2016;165:94-102. PMID 26857050.
 23. SCOT-HEART Investigators. 10-year outcomes. N Engl J Med. 2025. PMID 39863372.
+24. Magalhães TA, Carneiro ACC, Moreira VM et al. Diretriz de Tomografia Computadorizada e Ressonância Magnética Cardiovascular da SBC e do CBR – 2024. Arq Bras Cardiol. 2024;121(9):e20240608. DOI 10.36660/abc.20240608. PMID 39475988.
+25. Vrints C, Andreotti F, Koskinas KC et al. 2024 ESC Guidelines for the management of chronic coronary syndromes. Eur Heart J. 2024;45(36):3415-537. DOI 10.1093/eurheartj/ehae177. PMID 39210710.
+26. Gulati M, Levy PD, Mukherjee D et al. 2021 AHA/ACC/ASE/CHEST/SAEM/SCCT/SCMR Guideline for the Evaluation and Diagnosis of Chest Pain. Circulation. 2021;144(22):e368-454. DOI 10.1161/CIR.0000000000001029. PMID 34709879.
+27. Virani SS et al. 2023 AHA/ACC/ACCP/ASPC/NLA/PCNA Guideline for the Management of Patients With Chronic Coronary Disease. Circulation. 2023;148:e9-e119. DOI 10.1161/CIR.0000000000001168.
+28. NICE. Recent-onset chest pain of suspected cardiac origin: assessment and diagnosis. Clinical guideline CG95. 2010, atualizada 30 nov 2016. NCBI Bookshelf NBK553650.
 
 ---
 
