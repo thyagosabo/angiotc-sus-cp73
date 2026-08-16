@@ -96,11 +96,13 @@ Os arquivos CNES (`cnes/EQ*.dbc`, 06/2026) e a tabela SIGTAP (`sigtap/`, 08/2026
 extrai_dac.py            extração SIA/SIH por estabelecimento (streaming, pico de disco = 1 arquivo)
 analise_final.py         demanda × capacidade → CSVs + resumo
 contribuicao-cp73.md     documento da consulta pública
-preview-angiotc.html     prévia de 5 páginas (CSS de impressão embutido)
+preview-angiotc.html     prévia (CSS de impressão + painéis mobile)
 angiotc-preview.pdf      PDF renderizado da prévia
 cnes/                    CNES equipamentos, .dbc, 06/2026
 sigtap/                  tabela de procedimentos, 08/2026
-data/                    intermediários agregados por CNES × procedimento
+data/                    intermediários v1 (comparadores + 0206)
+data-v2/                 intermediários v2 (+ OCI 0902)
+REGRAS-DE-ANALISE.md     regras fixadas antes de olhar o dado
 output/                  tabelas finais
 ```
 
@@ -120,12 +122,28 @@ output/                  tabelas finais
 
 Não há API REST para essas bases; o acesso é por FTP com arquivos `.dbc` (DBF comprimido), lidos com `datasus-dbc` + `dbfread`.
 
+### Onde a tecnologia gera valor: a posição no percurso
+
+O Δ de cateterismo foi ancorado em 12 ensaios randomizados, **cateterismo total por braço** (o procedimento que o SUS paga), cada um lido contra a equação do seu próprio desenho — porque no gatekeeping o custo da investigação prévia é comum aos braços e cancela:
+
+| PICO | Equação | Δ observado /100 | Preço de neutralidade |
+|---|---|---|---|
+| Primeira linha (8 ensaios) | P = 185,46 + (Δ/100)·730,14 | −6,4 a +4,1 | **R$ 139 – 215** |
+| Gatekeeping (4 ensaios) | P = (Δ/100)·730,14 | 66,0 a 85,6 | **R$ 482 – 625** |
+
+No melhor caso de primeira linha resta lacuna de R$ 407 por paciente até o microcusteio corrigido. No melhor caso de gatekeeping, o CAD-MAN cruza a neutralidade por R$ 2,67. **A análise não demonstra que gatekeeping economiza; demonstra que o posicionamento muda radicalmente a plausibilidade de a tecnologia se pagar** — e o PICO em apreciação é o de primeira linha.
+
+Cateterismo sem DAC obstrutiva (IQWiG D22-01, Tabela 43) é reportado separadamente como eficiência diagnóstica, fora do cálculo econômico.
+
+### OCI de síndrome coronariana crônica: o cenário mais favorável testado
+
+As OCI `0902010034/42/50` definem o episódio de SCC na própria tabela do SUS. Produção 2025: **7.616 episódios, 0,96% do total**, em 148 estabelecimentos. Componentes com valor zerado dentro de OCI não são somados (regra fixada antes da extração em `REGRAS-DE-ANALISE.md`). Ponderar o intercepto com OCI desloca a reta de primeira linha em +R$ 2,02; nenhuma conclusão muda.
+
 ## Pendências
 
-- ~~OCI de SCC~~ — extraídas: 7.616 episódios em 2025 (0,96%), intercepto +R$ 2,02 como sensibilidade, nenhuma conclusão muda.
-- Ancoragem do Δ de angiografias evitadas em ensaios randomizados, distinguindo comparador funcional-primeiro de invasivo-primeiro.
 - Microcusteio contemporâneo próprio.
 - Preço de aquisição pública em licitação como quarta categoria de benchmark.
+- Auditoria final exclusivamente de unidades de análise e dupla contagem (em curso).
 
 ## Escopo
 
