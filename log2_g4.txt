@@ -12,3 +12,4 @@ SIA 2025: 36 arquivos a processar
 [11/36] PABA2511.dbc: 1564 pares
 [12/36] PABA2512.dbc: 1469 pares
 [13/36] PAPR2501.dbc: 1513 pares
+[14/36] PAPR2502.dbc: 1535 pares

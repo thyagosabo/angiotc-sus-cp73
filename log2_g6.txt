@@ -67,3 +67,9 @@ SIA 2025: 168 arquivos a processar
 [66/168] PAMS2506.dbc: 358 pares
 [67/168] PAMS2507.dbc: 382 pares
 [68/168] PAMS2508.dbc: 397 pares
+[69/168] PAMS2509.dbc: 397 pares
+[70/168] PAMS2510.dbc: 387 pares
+[71/168] PAMS2511.dbc: 378 pares
+[72/168] PAMS2512.dbc: 372 pares
+[73/168] PAMT2501.dbc: 833 pares
+[74/168] PAMT2502.dbc: 881 pares

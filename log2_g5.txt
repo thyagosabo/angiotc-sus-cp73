@@ -20,3 +20,9 @@ SIA 2025: 72 arquivos a processar
 [19/72] PAES2507.dbc: 602 pares
 [20/72] PAES2508.dbc: 593 pares
 [21/72] PAES2509.dbc: 581 pares
+[22/72] PAES2510.dbc: 602 pares
+[23/72] PAES2511.dbc: 605 pares
+[24/72] PAES2512.dbc: 565 pares
+[25/72] PAGO2501.dbc: 1069 pares
+[26/72] PAGO2502.dbc: 1103 pares
+[27/72] PAGO2503.dbc: 1166 pares

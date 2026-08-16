@@ -32,375 +32,284 @@
   }
 
   *{box-sizing:border-box}
-  body{
-    background:var(--bg); color:var(--ink);
-    font-family:var(--sans); font-size:17px; line-height:1.65;
-    margin:0; padding:0 20px 96px;
-    -webkit-font-smoothing:antialiased;
-  }
-  /* margin-left/right only — a `margin:0 auto` shorthand here outranks
-     `section{margin-top}` (class beats type) and collapses section spacing */
+  body{background:var(--bg); color:var(--ink); font-family:var(--sans);
+       font-size:17px; line-height:1.65; margin:0; padding:0 20px 96px;
+       -webkit-font-smoothing:antialiased}
   .wrap{max-width:720px; margin-left:auto; margin-right:auto}
-  .bleed{max-width:880px; margin-left:auto; margin-right:auto}
+  .bleed{max-width:920px; margin-left:auto; margin-right:auto}
 
   h1,h2,h3{font-family:var(--display); font-weight:600; text-wrap:balance; margin:0}
-  h1{font-size:clamp(2.1rem,5.4vw,3.1rem); line-height:1.08; letter-spacing:-.015em}
-  h2{font-size:clamp(1.35rem,3vw,1.7rem); line-height:1.2; letter-spacing:-.01em}
-  h3{font-size:1.06rem; line-height:1.3}
+  h1{font-size:clamp(2rem,5vw,2.9rem); line-height:1.1; letter-spacing:-.015em}
+  h2{font-size:clamp(1.3rem,3vw,1.65rem); line-height:1.2; letter-spacing:-.01em}
   p{margin:0}
   strong{font-weight:640; color:var(--ink)}
-  a{color:var(--accent)}
-  :focus-visible{outline:2px solid var(--accent); outline-offset:3px; border-radius:2px}
+  :focus-visible{outline:2px solid var(--accent); outline-offset:3px}
 
-  .eyebrow{
-    font-family:var(--mono); font-size:.68rem; letter-spacing:.14em;
-    text-transform:uppercase; color:var(--muted);
-  }
-  .num{font-family:var(--mono); font-variant-numeric:tabular-nums}
-
-  header{padding:72px 0 0}
-  .stamp{
-    display:inline-flex; align-items:center; gap:10px;
-    border:1px solid var(--rule); border-radius:2px;
-    padding:6px 11px; background:var(--surface);
-    font-family:var(--mono); font-size:.7rem; letter-spacing:.08em;
-    text-transform:uppercase; color:var(--ink-2);
-  }
-  .stamp .dot{width:6px; height:6px; border-radius:50%; background:var(--over)}
-  .lede{
-    font-family:var(--display); font-size:clamp(1.15rem,2.4vw,1.35rem);
-    line-height:1.5; color:var(--ink-2);
-  }
+  .eyebrow{font-family:var(--mono); font-size:.68rem; letter-spacing:.14em;
+           text-transform:uppercase; color:var(--muted)}
   .stack{display:flex; flex-direction:column}
-  .g8{gap:8px} .g14{gap:14px} .g20{gap:20px} .g28{gap:28px} .g44{gap:44px}
-  section{margin-top:72px}
+  .g10{gap:10px} .g18{gap:18px} .g26{gap:26px}
+  section{margin-top:64px}
+  hr.rule{border:none; border-top:1px solid var(--rule); margin:0}
 
-  /* ---- instrument: measurement scale ---- */
-  .panel{
-    background:var(--surface); border:1px solid var(--rule);
-    border-radius:3px; padding:26px 24px; box-shadow:var(--shadow);
-    display:flex; flex-direction:column; gap:22px;
-  }
-  .scale{display:flex; flex-direction:column; gap:7px}
-  .scale-head{
-    display:flex; justify-content:space-between; align-items:baseline;
-    gap:16px; font-size:.9rem;
-  }
-  .scale-head .label{color:var(--ink-2)}
-  .scale-head .val{font-family:var(--mono); font-variant-numeric:tabular-nums; font-size:.9rem}
-  .track{
-    position:relative; height:26px; background:var(--sunk);
-    border-radius:2px;
-  }
-  .bar{
-    position:absolute; inset:0 auto 0 0; border-radius:2px;
-    width:calc(var(--w,0) * 100%);
-    animation:grow .9s cubic-bezier(.2,.7,.3,1) both;
-  }
-  @keyframes grow{from{width:0}to{width:calc(var(--w) * 100%)}}
-  .bar.under{background:var(--accent-fill); border-right:2px solid var(--accent)}
-  .bar.over{background:var(--over-fill); border-right:2px solid var(--over)}
-  .threshold{
-    position:absolute; top:-5px; bottom:-5px; width:2px;
-    background:var(--accent); left:var(--x);
-  }
-  .threshold::after{
-    content:""; position:absolute; top:-3px; left:-3px;
-    width:8px; height:8px; background:var(--accent);
-    transform:rotate(45deg);
-  }
-  .ticks{
-    position:relative; height:16px;
-    font-family:var(--mono); font-size:.62rem; color:var(--muted);
-  }
-  .ticks span{position:absolute; transform:translateX(-50%); white-space:nowrap}
-  .ratio{color:var(--over); font-family:var(--mono); font-size:.8rem}
+  .stamp{display:inline-flex; align-items:center; gap:10px; border:1px solid var(--rule);
+         border-radius:2px; padding:6px 11px; background:var(--surface);
+         font-family:var(--mono); font-size:.7rem; letter-spacing:.08em;
+         text-transform:uppercase; color:var(--ink-2)}
+  .stamp .dot{width:6px; height:6px; border-radius:50%; background:var(--over)}
+  .lede{font-family:var(--display); font-size:clamp(1.12rem,2.3vw,1.3rem);
+        line-height:1.5; color:var(--ink-2)}
 
-  /* ---- finding blocks ---- */
-  .finding{display:flex; flex-direction:column; gap:16px}
-  .objection{
-    display:flex; gap:11px; align-items:flex-start;
-    border-left:2px solid var(--rule); padding-left:13px;
-  }
-  .objection .q{
-    font-family:var(--mono); font-size:.68rem; letter-spacing:.1em;
-    text-transform:uppercase; color:var(--muted); white-space:nowrap; padding-top:3px;
-  }
-  .objection .t{font-size:.9rem; color:var(--ink-2); font-style:italic}
+  .thesis{border-left:3px solid var(--accent); padding:2px 0 2px 18px;
+          font-family:var(--display); font-size:1.12rem; line-height:1.45}
 
-  .figure{
-    display:flex; align-items:baseline; gap:12px; flex-wrap:wrap;
-    font-family:var(--mono); font-variant-numeric:tabular-nums;
-  }
-  .figure .big{font-size:clamp(2rem,5vw,2.7rem); letter-spacing:-.02em; line-height:1}
-  .figure .unit{font-size:.9rem; color:var(--muted)}
+  .panel{background:var(--surface); border:1px solid var(--rule); border-radius:3px;
+         padding:22px; box-shadow:var(--shadow)}
+  figure{margin:0; display:flex; flex-direction:column; gap:14px}
+  .figscroll{overflow-x:auto; -webkit-overflow-scrolling:touch}
+  svg{display:block; min-width:640px; width:100%; height:auto}
+  figcaption{font-size:.87rem; color:var(--muted); line-height:1.55}
+
+  .pathway{display:grid; grid-template-columns:1fr; gap:14px}
+  @media (min-width:700px){.pathway{grid-template-columns:1fr 1fr; gap:18px}}
+  .path{border:1px solid var(--rule); border-radius:3px; padding:18px;
+        display:flex; flex-direction:column; gap:10px; background:var(--surface)}
+  .path.win{border-color:var(--accent); background:var(--accent-soft)}
+  .path .who{font-family:var(--mono); font-size:.66rem; letter-spacing:.1em;
+             text-transform:uppercase; color:var(--muted)}
+  .path .flow{font-family:var(--mono); font-size:.82rem; line-height:1.7; color:var(--ink)}
+  .path .verdict{font-size:.9rem; color:var(--ink-2)}
+  .path.win .verdict strong{color:var(--accent)}
 
   table{border-collapse:collapse; width:100%; font-size:.87rem}
-  .tablewrap{overflow-x:auto; -webkit-overflow-scrolling:touch}
+  .tablewrap{overflow-x:auto}
   th,td{text-align:left; padding:9px 14px 9px 0; border-bottom:1px solid var(--rule-soft)}
-  th{
-    font-family:var(--mono); font-size:.66rem; letter-spacing:.1em;
-    text-transform:uppercase; color:var(--muted); font-weight:400;
-    border-bottom:1px solid var(--rule);
-  }
-  td.n{font-family:var(--mono); font-variant-numeric:tabular-nums; text-align:right; padding-right:0}
-  th.n{text-align:right; padding-right:0}
+  th{font-family:var(--mono); font-size:.66rem; letter-spacing:.1em; text-transform:uppercase;
+     color:var(--muted); font-weight:400; border-bottom:1px solid var(--rule)}
+  td.n,th.n{font-family:var(--mono); font-variant-numeric:tabular-nums; text-align:right; padding-right:0}
   tr:last-child td{border-bottom:none}
-  .rowmark td{color:var(--accent)}
 
-  /* ---- share bar ---- */
-  .share{display:flex; height:34px; border-radius:2px; overflow:hidden; border:1px solid var(--rule)}
-  .share div{display:flex; align-items:center; padding:0 11px; font-family:var(--mono); font-size:.7rem}
-  .share .dx{background:var(--accent-soft); color:var(--accent); flex:14.8}
-  .share .tx{background:var(--sunk); color:var(--muted); flex:85.2}
-
-  .grid2{display:grid; grid-template-columns:repeat(auto-fit,minmax(230px,1fr)); gap:18px}
-  .stat{
-    border-top:2px solid var(--rule); padding-top:12px;
-    display:flex; flex-direction:column; gap:4px;
-  }
-  .stat .v{font-family:var(--mono); font-variant-numeric:tabular-nums; font-size:1.5rem; line-height:1.1}
+  .grid2{display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:18px}
+  .stat{border-top:2px solid var(--rule); padding-top:12px; display:flex; flex-direction:column; gap:4px}
+  .stat .v{font-family:var(--mono); font-variant-numeric:tabular-nums; font-size:1.45rem; line-height:1.1}
   .stat .k{font-size:.82rem; color:var(--muted)}
   .stat.alert{border-top-color:var(--over)} .stat.alert .v{color:var(--over)}
 
-  .method{
-    background:var(--sunk); border-radius:3px; padding:22px 24px;
-    display:flex; flex-direction:column; gap:14px; font-size:.9rem;
-  }
+  .method{background:var(--sunk); border-radius:3px; padding:20px 22px; font-size:.89rem}
   .method ul{margin:0; padding-left:19px; display:flex; flex-direction:column; gap:7px; color:var(--ink-2)}
   .check{font-family:var(--mono); color:var(--accent)}
 
-  .gap{
-    display:grid; grid-template-columns:auto 1fr; gap:11px 15px;
-    align-items:start; font-size:.94rem;
-  }
-  .gap .mk{font-family:var(--mono); font-size:.72rem; color:var(--muted); padding-top:5px; white-space:nowrap}
-  .gap .tx{color:var(--ink-2)}
+  .close{border:1px solid var(--accent); border-radius:3px; padding:24px;
+         background:var(--accent-soft); display:flex; flex-direction:column; gap:14px}
+  .close .q{font-family:var(--display); font-size:clamp(1.15rem,2.6vw,1.42rem);
+            line-height:1.4; color:var(--ink)}
 
-  footer{
-    margin-top:80px; padding-top:24px; border-top:1px solid var(--rule);
-    font-size:.82rem; color:var(--muted); display:flex; flex-direction:column; gap:8px;
-  }
-  hr.rule{border:none; border-top:1px solid var(--rule); margin:0}
+  footer{margin-top:72px; padding-top:22px; border-top:1px solid var(--rule);
+         font-size:.82rem; color:var(--muted); display:flex; flex-direction:column; gap:8px}
 
-  @media (prefers-reduced-motion:reduce){
-    .bar{animation:none; width:calc(var(--w) * 100%)}
-    *{transition:none !important}
-  }
-  @media (max-width:520px){
-    body{font-size:16px; padding:0 16px 72px}
-    header{padding-top:48px}
-    section{margin-top:56px}
-    .objection{flex-direction:column; gap:5px}
-  }
-
-  /* Impressão / PDF — última no arquivo para vencer os blocos de tema escuro.
-     Sem print-color-adjust:exact as barras e painéis saem em branco. */
   @media print{
-    :root{
-      --bg:#FFFFFF; --surface:#F8F9F8; --sunk:#EAEEEC;
-      --ink:#14191A; --ink-2:#333D3F; --muted:#596567;
-      --rule:#BFC8C6; --rule-soft:#DCE2E0;
-      --accent:#0A5E5E; --accent-soft:#0A5E5E1F; --accent-fill:#0A5E5E42;
-      --over:#8F3823; --over-soft:#8F38231A; --over-fill:#8F38233D;
-      --shadow:none;
-    }
-    @page{size:A4; margin:14mm 13mm}
+    :root{--bg:#FFF; --surface:#F8F9F8; --sunk:#EAEEEC; --ink:#14191A; --ink-2:#333D3F;
+          --muted:#596567; --rule:#BFC8C6; --rule-soft:#DCE2E0;
+          --accent:#0A5E5E; --accent-soft:#0A5E5E1A; --accent-fill:#0A5E5E42;
+          --over:#8F3823; --over-soft:#8F38231A; --over-fill:#8F38233D; --shadow:none}
+    @page{size:A4; margin:13mm}
     html,body{background:#fff}
-    body{
-      font-size:10.2pt; line-height:1.5; padding:0;
-      -webkit-print-color-adjust:exact; print-color-adjust:exact;
-    }
+    body{font-size:10pt; line-height:1.48; padding:0;
+         -webkit-print-color-adjust:exact; print-color-adjust:exact}
     .wrap,.bleed{max-width:100%}
-    header{padding:0}
     section{margin-top:20px}
-    .panel{padding:16px 18px; gap:16px}
-    .g28{gap:18px} .g20{gap:14px}
-    h1{font-size:23pt} h2{font-size:13.5pt} .lede{font-size:11pt}
-    .figure .big{font-size:21pt}
-    .bar{animation:none; width:calc(var(--w) * 100%)}
-    .panel,.method,.tablewrap,.share,.stat,.scale,.objection,.finding{break-inside:avoid}
-    tr{break-inside:avoid}
+    h1{font-size:22pt} h2{font-size:13pt} .lede{font-size:10.5pt}
+    svg{min-width:0}
+    .panel,.method,.tablewrap,.path,.stat,.close,figure{break-inside:avoid}
     h1,h2{break-after:avoid}
-    footer{margin-top:26px}
-    a{text-decoration:none; color:var(--ink)}
+    footer{margin-top:22px}
   }
+  @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+  @media (max-width:520px){body{font-size:16px;padding:0 16px 72px} section{margin-top:48px}}
 </style>
 
-<div class="wrap stack g28">
-  <header class="stack g20">
+<div class="wrap stack g26">
+  <header class="stack g18" style="padding-top:64px">
     <span class="stamp"><span class="dot"></span>Consulta Pública 73/2026 · encerra 24 ago</span>
-    <h1>O SUS consegue implementar a AngioTC? Para quantos, onde, e a que preço?</h1>
-    <p class="lede">Uma caracterização nacional da capacidade instalada e do preço de neutralidade orçamentária, construída inteiramente sobre bases públicas — respondendo, item por item, às lacunas que a Conitec apontou.</p>
+    <h1>Onde a angiotomografia coronariana gera valor no SUS?</h1>
+    <p class="lede">O valor da AngioTC no sistema público depende de <em>onde</em> ela entra na jornada diagnóstica. Substituir teste não invasivo de primeira linha e filtrar cateterismo já indicado são estratégias distintas — e a evidência aponta em direções econômicas opostas.</p>
   </header>
-
   <hr class="rule">
-
-  <p style="font-size:.94rem;color:var(--ink-2)">Em <strong>3 de julho de 2026</strong>, na 153ª Reunião Ordinária, o Comitê de Produtos e Procedimentos deliberou por <strong>recomendação preliminar desfavorável</strong> à incorporação da angiotomografia coronariana como exame de primeira linha. O relatório fundamenta a decisão em incertezas quanto à avaliação econômica, ao impacto orçamentário, à capacidade de implementação e à delimitação da população elegível — e lista os pontos que a consulta pública deveria esclarecer.</p>
-
-  <p style="font-size:.94rem;color:var(--ink-2)">A sigla <strong>CNES não aparece uma única vez</strong> nas 119 páginas do relatório. A capacidade instalada, que o Comitê nomeou como essencial, nunca foi caracterizada pela base nacional de equipamentos.</p>
+  <p style="font-size:.94rem;color:var(--ink-2)">Em <strong>3 de julho de 2026</strong>, na 153ª Reunião Ordinária, o Comitê de Produtos e Procedimentos deliberou por <strong>recomendação preliminar desfavorável</strong>, citando incertezas sobre avaliação econômica, impacto orçamentário, capacidade de implementação e delimitação da população elegível. Esta análise responde a esses pontos com bases públicas — CNES, SIA, SIH, SIGTAP, IBGE.</p>
 </div>
 
-<!-- ACHADO 1 -->
-<section class="bleed stack g28">
-  <div class="wrap finding">
-    <div class="objection">
-      <span class="q">Objeção</span>
-      <span class="t">"a estimativa da capacidade instalada; a necessidade ou não de aquisição de equipamentos"</span>
-    </div>
-    <h2>Capacidade instalada é uma faixa, não um número</h2>
-    <p>O CNES possui um único código para tomógrafo — <span class="num">TIPEQUIP 01 / CODEQUIP 11</span> — <strong>sem qualquer desdobramento por número de canais</strong>. É impossível estimar, de fonte pública nacional, quantos equipamentos atendem à especificação de ≥64 canais que as próprias diretrizes citadas no relatório exigem.</p>
-    <p>A resposta honesta é uma faixa com dois limites declarados e reprodutíveis.</p>
+<section class="wrap stack g18">
+  <span class="eyebrow">1 · A decisão em apreciação</span>
+  <h2>O PICO submetido</h2>
+  <div class="panel" style="font-family:var(--mono);font-size:.86rem;line-height:1.9">
+    paciente sintomático<br>
+    + probabilidade pré-teste baixa ou intermediária<br>
+    + suspeita de DAC estável<br>
+    <span style="color:var(--accent)">→ AngioTC como <strong>exame de primeira linha</strong>, no lugar do teste funcional</span>
+  </div>
+  <p>O exame que ela substituiria custa, no SUS, entre R$ 32,20 (teste ergométrico, 76% dos episódios) e R$ 788,24 (cintilografia de perfusão). O custo médio por episódio de investigação funcional é de <strong>R$ 185,46</strong>.</p>
+</section>
+
+<section class="bleed stack g26">
+  <div class="wrap stack g18">
+    <span class="eyebrow">2 · O problema econômico</span>
+    <h2>Quanto o SUS poderia pagar, e o que os ensaios observaram</h2>
+    <p>Sob substituição de um episódio funcional por uma AngioTC, a neutralidade orçamentária exige que o preço não ultrapasse o custo do que foi substituído mais o valor dos cateterismos evitados:</p>
+    <p class="thesis" style="font-family:var(--mono);font-size:.95rem">P = R$ 185,46 + (Δ ⁄ 100) × R$ 730,14</p>
+    <p style="font-size:.94rem;color:var(--ink-2)">A linha traçada por essa equação separa o plano em duas regiões. Abaixo dela, a estratégia é neutra ou economiza. Acima, é expansiva.</p>
   </div>
 
   <div class="panel">
-    <div class="scale">
-      <div class="scale-head">
-        <span class="label"><strong>Piso</strong> — tomógrafo <em>e</em> hemodinâmica no mesmo CNES</span>
-        <span class="val">216</span>
-      </div>
-      <div class="track"><div class="bar under" style="--w:.085"></div></div>
-    </div>
-    <div class="scale">
-      <div class="scale-head">
-        <span class="label"><em>Referência</em> — rede que efetivamente realizou angioplastia ou revascularização em 2025</span>
-        <span class="val">290</span>
-      </div>
-      <div class="track"><div class="bar under" style="--w:.114"></div></div>
-    </div>
-    <div class="scale">
-      <div class="scale-head">
-        <span class="label"><strong>Teto</strong> — qualquer tomógrafo em uso disponível ao SUS</span>
-        <span class="val">2.534</span>
-      </div>
-      <div class="track"><div class="bar over" style="--w:1"></div></div>
-      <div class="ticks">
-        <span style="left:0">0</span><span style="left:8.5%">216</span>
-        <span style="left:50%">1.267</span><span style="left:99%">2.534</span>
-      </div>
-    </div>
-    <p style="font-size:.88rem;color:var(--muted);margin-top:2px">Dois caminhos independentes — cadastro de equipamentos e produção hospitalar observada — convergem para a mesma ordem de grandeza: <strong>centenas de serviços, não milhares</strong>. Projeções de difusão ancoradas no parque agregado operam próximas ao teto.</p>
-  </div>
+    <figure>
+      <div class="figscroll">
+        <svg viewBox="0 0 880 470" role="img" aria-label="Preço da AngioTC contra cateterismos evitados por 100 pacientes. A linha de neutralidade cruza o custo microcusteado corrigido em 59,9 evitados por 100. Os oito ensaios de primeira linha agrupam-se entre −6,4 e +4,1. Os quatro ensaios de gatekeeping situam-se entre 53,7 e 81,0.">
+          <defs>
+            <clipPath id="pa"><rect x="96" y="44" width="750" height="360"/></clipPath>
+          </defs>
+          <!-- eixos -->
+          <line x1="96" y1="404" x2="846" y2="404" stroke="var(--rule)" stroke-width="1"/>
+          <line x1="96" y1="44" x2="96" y2="404" stroke="var(--rule)" stroke-width="1"/>
 
-  <div class="wrap grid2">
-    <div class="stat"><span class="v">2.785</span><span class="k">tomógrafos em uso disponíveis ao SUS — 47,3% do parque nacional</span></div>
-    <div class="stat"><span class="v">13,05</span><span class="k">por milhão de habitantes, com variação de 6,1× entre UFs</span></div>
-    <div class="stat alert"><span class="v">AC · AM · RR</span><span class="k">sem nenhum serviço com tomógrafo-SUS e hemodinâmica co-localizados</span></div>
-    <div class="stat alert"><span class="v">9,68</span><span class="k">densidade de São Paulo — maior parque do país, abaixo da média nacional</span></div>
+          <!-- linhas de preco de referencia -->
+          <g stroke-dasharray="4 4" stroke-width="1">
+            <line x1="96" y1="353.5" x2="846" y2="353.5" stroke="var(--muted)"/>
+            <line x1="96" y1="243.9" x2="846" y2="243.9" stroke="var(--over)" stroke-width="1.5"/>
+            <line x1="96" y1="66.6" x2="846" y2="66.6" stroke="var(--muted)"/>
+          </g>
+          <g font-family="ui-monospace,Menlo,monospace" font-size="10" fill="var(--muted)">
+            <text x="842" y="349" text-anchor="end">TC tórax + contraste · R$ 196</text>
+            <text x="100" y="62">CBHPM · R$ 1.312</text>
+          </g>
+          <text x="100" y="239" font-family="ui-monospace,Menlo,monospace" font-size="10.5" fill="var(--over)" font-weight="600">microcusteio corrigido · R$ 622,54</text>
+
+          <!-- regiao acima da neutralidade -->
+          <g clip-path="url(#pa)">
+            <polygon points="96,375.1 846,187.3 846,44 96,44" fill="var(--over-soft)"/>
+            <polygon points="96,375.1 846,187.3 846,404 96,404" fill="var(--accent-soft)"/>
+            <line x1="96" y1="375.1" x2="846" y2="187.3" stroke="var(--accent)" stroke-width="2"/>
+          </g>
+          <text x="700" y="120" font-family="ui-monospace,Menlo,monospace" font-size="10" fill="var(--over)">orçamentariamente expansiva</text>
+          <text x="640" y="380" font-family="ui-monospace,Menlo,monospace" font-size="10" fill="var(--accent)">neutra ou economizadora</text>
+
+          <!-- cruzamento -->
+          <line x1="620" y1="243.9" x2="620" y2="404" stroke="var(--over)" stroke-width="1" stroke-dasharray="2 3"/>
+          <circle cx="620" cy="243.9" r="4.5" fill="var(--over)"/>
+          <text x="628" y="272" font-family="ui-monospace,Menlo,monospace" font-size="10" fill="var(--over)">cruzamento: 59,9 / 100</text>
+
+          <!-- faixa primeira linha -->
+          <rect x="123" y="340" width="79" height="36" fill="var(--accent-fill)" stroke="var(--accent)" stroke-width="1"/>
+          <text x="128" y="318" font-family="ui-monospace,Menlo,monospace" font-size="10" fill="var(--ink)">8 ensaios de</text>
+          <text x="128" y="330" font-family="ui-monospace,Menlo,monospace" font-size="10" fill="var(--ink)">primeira linha</text>
+          <text x="128" y="393" font-family="ui-monospace,Menlo,monospace" font-size="9.5" fill="var(--muted)">−6,4 a +4,1</text>
+
+          <!-- pontos gatekeeping -->
+          <g fill="var(--accent)">
+            <circle cx="574" cy="255.5" r="5"/><circle cx="606" cy="247.4" r="5"/>
+            <circle cx="664" cy="233.0" r="5"/><circle cx="778" cy="204.2" r="5"/>
+          </g>
+          <g font-family="ui-monospace,Menlo,monospace" font-size="9.5" fill="var(--ink-2)">
+            <text x="530" y="288">Reis</text><text x="592" y="303">CONSERVE</text>
+            <text x="646" y="222">DISCHARGE</text><text x="748" y="193">CAD-MAN</text>
+          </g>
+          <text x="560" y="150" font-family="ui-monospace,Menlo,monospace" font-size="10" fill="var(--accent)">4 ensaios de gatekeeping</text>
+
+          <!-- ticks -->
+          <g font-family="ui-monospace,Menlo,monospace" font-size="10" fill="var(--muted)">
+            <text x="171" y="422" text-anchor="middle">0</text>
+            <text x="321" y="422" text-anchor="middle">20</text>
+            <text x="471" y="422" text-anchor="middle">40</text>
+            <text x="621" y="422" text-anchor="middle">60</text>
+            <text x="771" y="422" text-anchor="middle">80</text>
+            <text x="88" y="408" text-anchor="end">0</text>
+            <text x="88" y="311" text-anchor="end">400</text>
+            <text x="88" y="209" text-anchor="end">800</text>
+            <text x="88" y="106" text-anchor="end">1.200</text>
+          </g>
+          <text x="471" y="443" text-anchor="middle" font-family="ui-monospace,Menlo,monospace" font-size="10.5" fill="var(--ink-2)">cateterismos evitados por 100 pacientes  (Δ)</text>
+          <text x="20" y="230" text-anchor="middle" transform="rotate(-90 20 230)" font-family="ui-monospace,Menlo,monospace" font-size="10.5" fill="var(--ink-2)">preço da AngioTC (R$)</text>
+        </svg>
+      </div>
+      <figcaption>Cada ensaio está posicionado pelo Δ absoluto de cateterismos que observou. A linha de neutralidade cruza o custo microcusteado corrigido (R$ 622,54) em <strong>59,9 evitados por 100</strong>. Os oito ensaios que compararam a AngioTC a estratégias não invasivas agrupam-se entre −6,4 e +4,1 — a mais de uma ordem de grandeza do cruzamento. Os quatro ensaios cujo comparador é o cateterismo direto situam-se entre 53,7 e 81,0, dois deles acima do cruzamento e dois logo abaixo.</figcaption>
+    </figure>
   </div>
 </section>
 
-<!-- ACHADO 2 -->
-<section class="bleed stack g28">
-  <div class="wrap finding">
-    <div class="objection">
-      <span class="q">Objeção</span>
-      <span class="t">"a revisão e transparência dos parâmetros econômicos"; "incerteza na estimativa da população elegível"</span>
+<section class="bleed stack g26">
+  <div class="wrap stack g18">
+    <span class="eyebrow">3 · A virada</span>
+    <h2>Mesma tecnologia. Outra posição no percurso. Outra economia.</h2>
+    <p>A divergência não é estatística, é mecânica. Depende do que existe no percurso para ser removido.</p>
+  </div>
+  <div class="wrap pathway">
+    <div class="path">
+      <span class="who">População de investigação não invasiva</span>
+      <span class="flow">teste funcional<br>→ <span style="color:var(--accent)">AngioTC</span></span>
+      <span class="verdict">O exame substituído custa <strong>R$ 32 a R$ 788</strong>. Há pouco a remover do percurso para financiar o custo adicional.</span>
     </div>
-    <h2>O preço de neutralidade — e por que ele dispensa a população elegível</h2>
-    <p>Não existe código de angiotomografia coronariana no SIGTAP: verificado nos <span class="num">5.023</span> procedimentos da tabela. A produção atual é administrativamente invisível e nenhum custo unitário pode ser ancorado em série histórica.</p>
-    <p>O que <em>pode</em> ser calculado é o preço máximo pagável para que a troca seja orçamentariamente neutra — o custo médio do exame que a AngioTC substituiria.</p>
-    <div class="figure" style="margin-top:6px">
-      <span class="big" style="color:var(--accent)">R$ 155,60</span>
-      <span class="unit">por exame · R$ 219,27 no cenário que elimina 50% dos cateterismos</span>
+    <div class="path win">
+      <span class="who">População já indicada a cateterismo</span>
+      <span class="flow">cateterismo direto<br>→ <span style="color:var(--accent)">AngioTC</span><br>→ cateterismo apenas se necessário</span>
+      <span class="verdict"><strong>Há um procedimento caro e invasivo que pode efetivamente sair do percurso.</strong></span>
     </div>
   </div>
-
-  <div class="panel">
-    <span class="eyebrow">Referências de preço disponíveis, contra o limiar</span>
-    <div class="scale">
-      <div class="scale-head"><span class="label">TC de tórax + contraste <span class="num" style="color:var(--muted)">(SIGTAP)</span></span><span class="val">R$ 196,41 <span class="ratio">1,26×</span></span></div>
-      <div class="track"><div class="bar over" style="--w:.14"></div><div class="threshold" style="--x:11.1%"></div></div>
-    </div>
-    <div class="scale">
-      <div class="scale-head"><span class="label">Microcusteio SUS 2022 <span class="num" style="color:var(--muted)">(valores 2020)</span></span><span class="val">R$ 452,05 <span class="ratio">2,91×</span></span></div>
-      <div class="track"><div class="bar over" style="--w:.323"></div><div class="threshold" style="--x:11.1%"></div></div>
-    </div>
-    <div class="scale">
-      <div class="scale-head"><span class="label">CBHPM / saúde suplementar 2026</span><span class="val">R$ 1.311,95 <span class="ratio">8,43×</span></span></div>
-      <div class="track"><div class="bar over" style="--w:.937"></div><div class="threshold" style="--x:11.1%"></div></div>
-      <div class="ticks">
-        <span style="left:11.1%;color:var(--accent)">◆ 155,60</span>
-        <span style="left:50%">700</span><span style="left:97%">1.400</span>
-      </div>
-    </div>
-    <p style="font-size:.88rem;color:var(--muted);margin-top:2px">Sob substituição 1:1, o preço de neutralidade é uma grandeza <strong>por exame</strong> — <strong>independe do tamanho da população elegível</strong>. A população determina <em>quanto</em> se gasta a mais, não <em>se</em> se gasta a mais. Isso contorna precisamente a incerteza que motivou parte da recomendação preliminar.</p>
-  </div>
-</section>
-
-<!-- ACHADO 3 -->
-<section class="wrap stack g20">
-  <div class="objection">
-    <span class="q">Objeção</span>
-    <span class="t">"a justificativa dos comparadores"; "o impacto real sobre a realização de angiografias invasivas e testes funcionais"</span>
-  </div>
-  <h2>O comparador efetivo do SUS não é a cintilografia</h2>
-  <p>A avaliação econômica submetida compara a AngioTC a exames funcionais de custo médio-alto. A produção real de 2025 mostra outra coisa.</p>
-  <div class="tablewrap">
+  <div class="wrap tablewrap">
     <table>
-      <thead><tr><th>Exame funcional não invasivo</th><th class="n">Quantidade</th><th class="n">Participação</th><th class="n">R$ médio</th></tr></thead>
+      <thead><tr><th>Ensaio</th><th>Comparador</th><th class="n">Δ evitados/100</th><th class="n">Preço de neutralidade</th></tr></thead>
       <tbody>
-        <tr class="rowmark"><td><strong>Teste ergométrico</strong></td><td class="n">598.695</td><td class="n">63,7%</td><td class="n">32,20</td></tr>
-        <tr><td>Cintilografia de perfusão — estresse</td><td class="n">151.784</td><td class="n">16,2%</td><td class="n">406,99</td></tr>
-        <tr><td>Cintilografia de perfusão — repouso</td><td class="n">151.225</td><td class="n">16,1%</td><td class="n">381,25</td></tr>
-        <tr><td>Ecocardiografia de estresse</td><td class="n">33.766</td><td class="n">3,6%</td><td class="n">196,39</td></tr>
-        <tr><td>Cintilografia de câmaras — esforço</td><td class="n">3.709</td><td class="n">0,4%</td><td class="n">214,85</td></tr>
+        <tr><td>PROMISE · PRECISE · SCOT-HEART · CAPP · CRESCENT I e II · Foy</td><td>não invasivo</td><td class="n">−6,4 a +4,1</td><td class="n">R$ 139 – 215</td></tr>
+        <tr><td>Reis 2022</td><td>cateterismo direto</td><td class="n">53,7</td><td class="n">R$ 577,55</td></tr>
+        <tr><td>CONSERVE</td><td>cateterismo direto</td><td class="n">58,0</td><td class="n">R$ 608,94</td></tr>
+        <tr><td>DISCHARGE</td><td>cateterismo direto</td><td class="n">65,7</td><td class="n">R$ 665,16</td></tr>
+        <tr><td>CAD-MAN</td><td>cateterismo direto</td><td class="n">81,0</td><td class="n">R$ 776,87</td></tr>
       </tbody>
     </table>
   </div>
-  <p>Quase dois terços da investigação funcional do SUS é <strong>teste ergométrico a R$ 32,20</strong>. Qualquer modelo que assuma substituição de cintilografia superestima a economia — e é essa mistura observada, não a assumida, que produz o limiar de R$ 155,60.</p>
+  <p class="wrap" style="font-size:.9rem;color:var(--muted)">Fonte dos Δ de cateterismo sem doença obstrutiva: IQWiG D22-01 (relatório final, 08/03/2024), Tabela 43, denominador de pacientes randomizados. Os ensaios de gatekeeping recrutam pacientes já referenciados a cateterismo — a taxa de 97% no braço comparador decorre do desenho. <strong>São PICOs distintos e não intercambiáveis.</strong></p>
 </section>
 
-<!-- ACHADO 4 -->
-<section class="wrap stack g20">
-  <div class="objection">
-    <span class="q">Objeção</span>
-    <span class="t">"incertezas quanto à magnitude do benefício em desfechos clínicos duros"</span>
-  </div>
-  <h2>A economia projetada está do outro lado da via</h2>
-  <p>A via da doença arterial coronariana consome <strong>R$ 1,80 bilhão por ano</strong> no SUS. A etapa diagnóstica é uma fração pequena dela.</p>
-  <div class="share" role="img" aria-label="Diagnóstico 14,8% do gasto; tratamento invasivo 85,2%">
-    <div class="dx">14,8% · diagnóstico</div>
-    <div class="tx">85,2% · angioplastia e revascularização · R$ 1,53 bi</div>
-  </div>
-  <p>A economia projetada pelo demandante depende de reduzir os 85,2% — precisamente a fração para a qual a metanálise conduzida pelo próprio parecerista <strong>não encontrou diferença estatisticamente significativa</strong> em eventos cardiovasculares maiores, infarto, mortalidade ou hospitalização.</p>
+<section class="wrap stack g18">
+  <span class="eyebrow">4 · Conclusão</span>
+  <h2>O que a evidência sustenta</h2>
+  <p>Nos ensaios que compararam estratégias não invasivas iniciais, a redução observada na angiografia invasiva foi <strong>ausente, variável ou insuficiente</strong> para sustentar, isoladamente, neutralidade orçamentária aos custos estimados para o SUS. O caso econômico torna-se substancialmente mais forte quando a AngioTC é usada como filtro em pacientes já selecionados para cateterismo.</p>
+  <p style="font-size:.94rem;color:var(--ink-2)">Duas ressalvas que o documento completo desenvolve. <strong>Reduzir cateterismo não implica reduzir gasto:</strong> no PRECISE, a economia diagnóstica de 27% foi acompanhada de aumento de 67% no custo de revascularização, com custo total semelhante. E esta é uma conclusão <strong>econômica de curto prazo, não clínica</strong> — o SCOT-HEART demonstrou redução de morte coronariana e infarto não fatal em 5 e 10 anos.</p>
 </section>
 
-<!-- METODO -->
-<section class="wrap stack g20">
+<section class="wrap stack g18">
+  <span class="eyebrow">5 · Capacidade instalada</span>
+  <h2>E se a decisão for positiva, para quantos?</h2>
+  <p>A Portaria SAES/MS nº 3.695, de 15/01/2026, desmembrou o código de tomógrafo do CNES por número de canais. Em 06/2026, disponíveis ao SUS e em uso:</p>
+  <div class="grid2">
+    <div class="stat"><span class="v">432</span><span class="k">equipamentos ≥64 canais confirmados, em 315 estabelecimentos</span></div>
+    <div class="stat"><span class="v">83</span><span class="k">estabelecimentos com ≥64 canais + hemodinâmica + produção coronariana</span></div>
+    <div class="stat alert"><span class="v">26,8%</span><span class="k">da reclassificação concluída — 2.785 equipamentos ainda sem especificação</span></div>
+    <div class="stat alert"><span class="v">12 UFs</span><span class="k">sem nenhum estabelecimento no estrato de prontidão</span></div>
+  </div>
+  <p style="font-size:.94rem;color:var(--ink-2)">Os 432 são <strong>piso de capacidade documentada</strong>, não estimativa da capacidade real. A portaria dá prazo de três competências: se ele se encerrar antes da apreciação final, a Conitec terá o inventário nacional completo pela primeira vez.</p>
+</section>
+
+<section class="wrap stack g18">
   <span class="eyebrow">Por que os números se sustentam</span>
   <h2>Inteiramente público, inteiramente reproduzível</h2>
   <div class="method">
     <ul>
-      <li><span class="check">✓</span> <strong>395/395</strong> arquivos SIA e <strong>324/324</strong> SIH processados, 27/27 UFs, competências 01–12/2025, <strong>sem perdas</strong></li>
-      <li><span class="check">✓</span> CNES 06/2026 · SIGTAP 08/2026 · IBGE 2025 — todos por FTP público, competências fixadas no repositório</li>
-      <li><span class="check">✓</span> Códigos de procedimento conferidos linha a linha contra a tabela oficial, não de memória</li>
-      <li><span class="check">✓</span> Rotina de extração publicada; a análise regenera todas as tabelas com um comando</li>
+      <li><span class="check">✓</span> <strong>395/395</strong> arquivos SIA e <strong>324/324</strong> SIH, 27/27 UFs, competências 01–12/2025, <strong>sem perdas</strong></li>
+      <li><span class="check">✓</span> CNES 06/2026 · SIGTAP 08/2026 · IBGE 2025 · IPCA para correção monetária — todos por FTP público</li>
+      <li><span class="check">✓</span> Códigos conferidos linha a linha contra a tabela oficial; Δ dos ensaios extraídos das publicações primárias</li>
+      <li><span class="check">✓</span> Nenhum número sem fonte verificável permanece no documento</li>
     </ul>
-    <p style="font-size:.85rem;color:var(--muted);border-top:1px solid var(--rule);padding-top:13px">Arquivos SIA de MG, RJ, RS e SP são particionados. Rotinas que constroem nomes de arquivo em vez de enumerar o diretório perdem <strong>71 dos 395 arquivos</strong> — as quatro UFs mais populosas — silenciosamente, sem erro. A extração enumera o servidor, verifica presença das 27 UFs e distingue falha de download de arquivo vazio.</p>
   </div>
-  <p style="font-size:.9rem;color:var(--ink-2)">A irreprodutibilidade do modelo submetido foi uma das críticas centrais do parecer. Um trabalho que responde a essa crítica precisa ser auditável linha a linha — inclusive nos seus erros.</p>
 </section>
 
-<!-- O QUE FALTA -->
-<section class="wrap stack g20">
-  <span class="eyebrow">Estado atual</span>
-  <h2>O que ainda falta</h2>
-  <p>A contribuição à consulta pública está fechada e é autossuficiente. O manuscrito completo não está — e as lacunas são clínicas, não computacionais.</p>
-  <div class="gap">
-    <span class="mk">01</span>
-    <span class="tx"><strong>Algoritmo de elegibilidade.</strong> A Conitec pediu "definição precisa da população elegível". Traduzir probabilidade pré-teste baixa/intermediária em critérios operacionais aplicáveis a dados administrativos exige julgamento clínico que a base não fornece.</span>
-    <span class="mk">02</span>
-    <span class="tx"><strong>Validação do proxy de capacidade.</strong> A co-localização com hemodinâmica é um marcador conservador de maturidade cardiovascular — deliberadamente subestimado. Quem conhece a realidade dos serviços sabe onde ele erra, e em que direção.</span>
-    <span class="mk">03</span>
-    <span class="tx"><strong>Microcusteio contemporâneo.</strong> Sem código SIGTAP, o custo unitário precisa ser construído do zero, com abertura completa de componentes. É trabalho de campo, não de base de dados.</span>
-    <span class="mk">04</span>
-    <span class="tx"><strong>Série histórica 2015–2025.</strong> A extração está dimensionada e testada; falta rodar. Dá tendência de utilização e ancora a projeção de difusão.</span>
+<section class="wrap">
+  <div class="close">
+    <span class="eyebrow">Implicação para política pública</span>
+    <p class="q">A pergunta talvez não seja <em>se</em> o SUS deve ter acesso à angiotomografia coronariana, mas <strong>quais pacientes devem recebê-la primeiro</strong>.</p>
+    <p style="font-size:.92rem;color:var(--ink-2)">Uma incorporação mal posicionada pode desperdiçar uma tecnologia boa. Uma incorporação mais seletiva pode entregar exatamente o benefício pretendido — e a evidência disponível indica onde.</p>
   </div>
-  <p style="font-size:.9rem;color:var(--ink-2);margin-top:6px">O que existe hoje é a infraestrutura de dados e a aritmética. O que falta é a camada clínica — e é ela que decide se o trabalho responde à pergunta certa.</p>
 </section>
 
 <footer class="wrap">
-  <p><strong>Escopo.</strong> Esta análise não se pronuncia sobre o mérito clínico da angiotomografia coronariana. As conclusões dizem respeito exclusivamente a capacidade de implementação e sustentabilidade orçamentária, nos termos em que o Comitê solicitou esclarecimento. O preço de neutralidade é uma meta de precificação, não um argumento contra a tecnologia.</p>
+  <p><strong>Escopo.</strong> Esta análise não se pronuncia sobre o mérito clínico da angiotomografia coronariana. As conclusões dizem respeito a capacidade de implementação e sustentabilidade orçamentária, nos termos em que o Comitê solicitou esclarecimento.</p>
+  <p>Título de trabalho: <em>Where Does Coronary CT Angiography Create Value in Brazil's Unified Health System? A National Capacity and Budget-Threshold Analysis</em></p>
   <p>Prévia de trabalho em andamento · autoria e afiliações a definir · agosto de 2026</p>
 </footer>
