@@ -203,6 +203,8 @@ def main():
     for est, comp, C in ESTR:
         p_lo, p_hi = C + lo * C_CATE / 100, C + hi * C_CATE / 100
         r_pre, r_foy = C + 4.1 * C_CATE / 100 - deb_pre, C + D_FOY13 * C_CATE / 100 - deb_foy
+        if C == 0:  # aditivo: revasc do proprio SCOT-HEART (20 m / 5 a), nao o envelope PRECISE/Foy
+            r_pre, r_foy = SCOT[0][1] * C_CATE / 100 - deb_sh20, SCOT[1][1] * C_CATE / 100 - deb_sh5
         d550 = (550 - C) * 100 / C_CATE
         print(f"  {est:<34} {comp:<70} C={C:7.2f} | R$ {p_lo:7.2f} a {p_hi:7.2f} | revasc R$ {min(r_pre,r_foy):7.2f} a {max(r_pre,r_foy):7.2f} | Δ550 {d550:5.1f}")
         rows.append((est, comp, round(C, 2), round(p_lo, 2), round(p_hi, 2), round(min(r_pre, r_foy), 2), round(max(r_pre, r_foy), 2), round(d550, 1)))
