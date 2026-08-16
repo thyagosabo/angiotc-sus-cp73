@@ -1,0 +1,406 @@
+<meta charset="utf-8">
+<title>AngioTC no SUS</title>
+<style>
+  :root{
+    --bg:#EFF1F0; --surface:#F7F8F7; --sunk:#E4E8E6;
+    --ink:#1B2224; --ink-2:#3D4749; --muted:#6D7A7C;
+    --rule:#CFD6D4; --rule-soft:#DFE4E2;
+    --accent:#0D6E6E; --accent-soft:#0D6E6E1F; --accent-fill:#0D6E6E38;
+    --over:#A6432D; --over-soft:#A6432D1A; --over-fill:#A6432D33;
+    --shadow:0 1px 2px #1b222410, 0 8px 24px #1b22240a;
+    --display:"Iowan Old Style","Palatino Linotype",Palatino,"Book Antiqua",Georgia,serif;
+    --sans:ui-sans-serif,-apple-system,BlinkMacSystemFont,"Segoe UI","Helvetica Neue",Arial,sans-serif;
+    --mono:ui-monospace,"SF Mono",SFMono-Regular,Menlo,Consolas,monospace;
+  }
+  @media (prefers-color-scheme:dark){
+    :root:not([data-theme="light"]){
+      --bg:#121617; --surface:#191E1F; --sunk:#0D1112;
+      --ink:#E7EBE9; --ink-2:#B8C1C0; --muted:#7E8C8D;
+      --rule:#2A3233; --rule-soft:#212829;
+      --accent:#4FB3AE; --accent-soft:#4FB3AE24; --accent-fill:#4FB3AE47;
+      --over:#D9765C; --over-soft:#D9765C22; --over-fill:#D9765C42;
+      --shadow:0 1px 2px #00000040, 0 8px 24px #00000030;
+    }
+  }
+  :root[data-theme="dark"]{
+    --bg:#121617; --surface:#191E1F; --sunk:#0D1112;
+    --ink:#E7EBE9; --ink-2:#B8C1C0; --muted:#7E8C8D;
+    --rule:#2A3233; --rule-soft:#212829;
+    --accent:#4FB3AE; --accent-soft:#4FB3AE24; --accent-fill:#4FB3AE47;
+    --over:#D9765C; --over-soft:#D9765C22; --over-fill:#D9765C42;
+    --shadow:0 1px 2px #00000040, 0 8px 24px #00000030;
+  }
+
+  *{box-sizing:border-box}
+  body{
+    background:var(--bg); color:var(--ink);
+    font-family:var(--sans); font-size:17px; line-height:1.65;
+    margin:0; padding:0 20px 96px;
+    -webkit-font-smoothing:antialiased;
+  }
+  /* margin-left/right only — a `margin:0 auto` shorthand here outranks
+     `section{margin-top}` (class beats type) and collapses section spacing */
+  .wrap{max-width:720px; margin-left:auto; margin-right:auto}
+  .bleed{max-width:880px; margin-left:auto; margin-right:auto}
+
+  h1,h2,h3{font-family:var(--display); font-weight:600; text-wrap:balance; margin:0}
+  h1{font-size:clamp(2.1rem,5.4vw,3.1rem); line-height:1.08; letter-spacing:-.015em}
+  h2{font-size:clamp(1.35rem,3vw,1.7rem); line-height:1.2; letter-spacing:-.01em}
+  h3{font-size:1.06rem; line-height:1.3}
+  p{margin:0}
+  strong{font-weight:640; color:var(--ink)}
+  a{color:var(--accent)}
+  :focus-visible{outline:2px solid var(--accent); outline-offset:3px; border-radius:2px}
+
+  .eyebrow{
+    font-family:var(--mono); font-size:.68rem; letter-spacing:.14em;
+    text-transform:uppercase; color:var(--muted);
+  }
+  .num{font-family:var(--mono); font-variant-numeric:tabular-nums}
+
+  header{padding:72px 0 0}
+  .stamp{
+    display:inline-flex; align-items:center; gap:10px;
+    border:1px solid var(--rule); border-radius:2px;
+    padding:6px 11px; background:var(--surface);
+    font-family:var(--mono); font-size:.7rem; letter-spacing:.08em;
+    text-transform:uppercase; color:var(--ink-2);
+  }
+  .stamp .dot{width:6px; height:6px; border-radius:50%; background:var(--over)}
+  .lede{
+    font-family:var(--display); font-size:clamp(1.15rem,2.4vw,1.35rem);
+    line-height:1.5; color:var(--ink-2);
+  }
+  .stack{display:flex; flex-direction:column}
+  .g8{gap:8px} .g14{gap:14px} .g20{gap:20px} .g28{gap:28px} .g44{gap:44px}
+  section{margin-top:72px}
+
+  /* ---- instrument: measurement scale ---- */
+  .panel{
+    background:var(--surface); border:1px solid var(--rule);
+    border-radius:3px; padding:26px 24px; box-shadow:var(--shadow);
+    display:flex; flex-direction:column; gap:22px;
+  }
+  .scale{display:flex; flex-direction:column; gap:7px}
+  .scale-head{
+    display:flex; justify-content:space-between; align-items:baseline;
+    gap:16px; font-size:.9rem;
+  }
+  .scale-head .label{color:var(--ink-2)}
+  .scale-head .val{font-family:var(--mono); font-variant-numeric:tabular-nums; font-size:.9rem}
+  .track{
+    position:relative; height:26px; background:var(--sunk);
+    border-radius:2px;
+  }
+  .bar{
+    position:absolute; inset:0 auto 0 0; border-radius:2px;
+    width:calc(var(--w,0) * 100%);
+    animation:grow .9s cubic-bezier(.2,.7,.3,1) both;
+  }
+  @keyframes grow{from{width:0}to{width:calc(var(--w) * 100%)}}
+  .bar.under{background:var(--accent-fill); border-right:2px solid var(--accent)}
+  .bar.over{background:var(--over-fill); border-right:2px solid var(--over)}
+  .threshold{
+    position:absolute; top:-5px; bottom:-5px; width:2px;
+    background:var(--accent); left:var(--x);
+  }
+  .threshold::after{
+    content:""; position:absolute; top:-3px; left:-3px;
+    width:8px; height:8px; background:var(--accent);
+    transform:rotate(45deg);
+  }
+  .ticks{
+    position:relative; height:16px;
+    font-family:var(--mono); font-size:.62rem; color:var(--muted);
+  }
+  .ticks span{position:absolute; transform:translateX(-50%); white-space:nowrap}
+  .ratio{color:var(--over); font-family:var(--mono); font-size:.8rem}
+
+  /* ---- finding blocks ---- */
+  .finding{display:flex; flex-direction:column; gap:16px}
+  .objection{
+    display:flex; gap:11px; align-items:flex-start;
+    border-left:2px solid var(--rule); padding-left:13px;
+  }
+  .objection .q{
+    font-family:var(--mono); font-size:.68rem; letter-spacing:.1em;
+    text-transform:uppercase; color:var(--muted); white-space:nowrap; padding-top:3px;
+  }
+  .objection .t{font-size:.9rem; color:var(--ink-2); font-style:italic}
+
+  .figure{
+    display:flex; align-items:baseline; gap:12px; flex-wrap:wrap;
+    font-family:var(--mono); font-variant-numeric:tabular-nums;
+  }
+  .figure .big{font-size:clamp(2rem,5vw,2.7rem); letter-spacing:-.02em; line-height:1}
+  .figure .unit{font-size:.9rem; color:var(--muted)}
+
+  table{border-collapse:collapse; width:100%; font-size:.87rem}
+  .tablewrap{overflow-x:auto; -webkit-overflow-scrolling:touch}
+  th,td{text-align:left; padding:9px 14px 9px 0; border-bottom:1px solid var(--rule-soft)}
+  th{
+    font-family:var(--mono); font-size:.66rem; letter-spacing:.1em;
+    text-transform:uppercase; color:var(--muted); font-weight:400;
+    border-bottom:1px solid var(--rule);
+  }
+  td.n{font-family:var(--mono); font-variant-numeric:tabular-nums; text-align:right; padding-right:0}
+  th.n{text-align:right; padding-right:0}
+  tr:last-child td{border-bottom:none}
+  .rowmark td{color:var(--accent)}
+
+  /* ---- share bar ---- */
+  .share{display:flex; height:34px; border-radius:2px; overflow:hidden; border:1px solid var(--rule)}
+  .share div{display:flex; align-items:center; padding:0 11px; font-family:var(--mono); font-size:.7rem}
+  .share .dx{background:var(--accent-soft); color:var(--accent); flex:14.8}
+  .share .tx{background:var(--sunk); color:var(--muted); flex:85.2}
+
+  .grid2{display:grid; grid-template-columns:repeat(auto-fit,minmax(230px,1fr)); gap:18px}
+  .stat{
+    border-top:2px solid var(--rule); padding-top:12px;
+    display:flex; flex-direction:column; gap:4px;
+  }
+  .stat .v{font-family:var(--mono); font-variant-numeric:tabular-nums; font-size:1.5rem; line-height:1.1}
+  .stat .k{font-size:.82rem; color:var(--muted)}
+  .stat.alert{border-top-color:var(--over)} .stat.alert .v{color:var(--over)}
+
+  .method{
+    background:var(--sunk); border-radius:3px; padding:22px 24px;
+    display:flex; flex-direction:column; gap:14px; font-size:.9rem;
+  }
+  .method ul{margin:0; padding-left:19px; display:flex; flex-direction:column; gap:7px; color:var(--ink-2)}
+  .check{font-family:var(--mono); color:var(--accent)}
+
+  .gap{
+    display:grid; grid-template-columns:auto 1fr; gap:11px 15px;
+    align-items:start; font-size:.94rem;
+  }
+  .gap .mk{font-family:var(--mono); font-size:.72rem; color:var(--muted); padding-top:5px; white-space:nowrap}
+  .gap .tx{color:var(--ink-2)}
+
+  footer{
+    margin-top:80px; padding-top:24px; border-top:1px solid var(--rule);
+    font-size:.82rem; color:var(--muted); display:flex; flex-direction:column; gap:8px;
+  }
+  hr.rule{border:none; border-top:1px solid var(--rule); margin:0}
+
+  @media (prefers-reduced-motion:reduce){
+    .bar{animation:none; width:calc(var(--w) * 100%)}
+    *{transition:none !important}
+  }
+  @media (max-width:520px){
+    body{font-size:16px; padding:0 16px 72px}
+    header{padding-top:48px}
+    section{margin-top:56px}
+    .objection{flex-direction:column; gap:5px}
+  }
+
+  /* Impressão / PDF — última no arquivo para vencer os blocos de tema escuro.
+     Sem print-color-adjust:exact as barras e painéis saem em branco. */
+  @media print{
+    :root{
+      --bg:#FFFFFF; --surface:#F8F9F8; --sunk:#EAEEEC;
+      --ink:#14191A; --ink-2:#333D3F; --muted:#596567;
+      --rule:#BFC8C6; --rule-soft:#DCE2E0;
+      --accent:#0A5E5E; --accent-soft:#0A5E5E1F; --accent-fill:#0A5E5E42;
+      --over:#8F3823; --over-soft:#8F38231A; --over-fill:#8F38233D;
+      --shadow:none;
+    }
+    @page{size:A4; margin:14mm 13mm}
+    html,body{background:#fff}
+    body{
+      font-size:10.2pt; line-height:1.5; padding:0;
+      -webkit-print-color-adjust:exact; print-color-adjust:exact;
+    }
+    .wrap,.bleed{max-width:100%}
+    header{padding:0}
+    section{margin-top:20px}
+    .panel{padding:16px 18px; gap:16px}
+    .g28{gap:18px} .g20{gap:14px}
+    h1{font-size:23pt} h2{font-size:13.5pt} .lede{font-size:11pt}
+    .figure .big{font-size:21pt}
+    .bar{animation:none; width:calc(var(--w) * 100%)}
+    .panel,.method,.tablewrap,.share,.stat,.scale,.objection,.finding{break-inside:avoid}
+    tr{break-inside:avoid}
+    h1,h2{break-after:avoid}
+    footer{margin-top:26px}
+    a{text-decoration:none; color:var(--ink)}
+  }
+</style>
+
+<div class="wrap stack g28">
+  <header class="stack g20">
+    <span class="stamp"><span class="dot"></span>Consulta Pública 73/2026 · encerra 24 ago</span>
+    <h1>O SUS consegue implementar a AngioTC? Para quantos, onde, e a que preço?</h1>
+    <p class="lede">Uma caracterização nacional da capacidade instalada e do preço de neutralidade orçamentária, construída inteiramente sobre bases públicas — respondendo, item por item, às lacunas que a Conitec apontou.</p>
+  </header>
+
+  <hr class="rule">
+
+  <p style="font-size:.94rem;color:var(--ink-2)">Em <strong>3 de julho de 2026</strong>, na 153ª Reunião Ordinária, o Comitê de Produtos e Procedimentos deliberou por <strong>recomendação preliminar desfavorável</strong> à incorporação da angiotomografia coronariana como exame de primeira linha. O relatório fundamenta a decisão em incertezas quanto à avaliação econômica, ao impacto orçamentário, à capacidade de implementação e à delimitação da população elegível — e lista os pontos que a consulta pública deveria esclarecer.</p>
+
+  <p style="font-size:.94rem;color:var(--ink-2)">A sigla <strong>CNES não aparece uma única vez</strong> nas 119 páginas do relatório. A capacidade instalada, que o Comitê nomeou como essencial, nunca foi caracterizada pela base nacional de equipamentos.</p>
+</div>
+
+<!-- ACHADO 1 -->
+<section class="bleed stack g28">
+  <div class="wrap finding">
+    <div class="objection">
+      <span class="q">Objeção</span>
+      <span class="t">"a estimativa da capacidade instalada; a necessidade ou não de aquisição de equipamentos"</span>
+    </div>
+    <h2>Capacidade instalada é uma faixa, não um número</h2>
+    <p>O CNES possui um único código para tomógrafo — <span class="num">TIPEQUIP 01 / CODEQUIP 11</span> — <strong>sem qualquer desdobramento por número de canais</strong>. É impossível estimar, de fonte pública nacional, quantos equipamentos atendem à especificação de ≥64 canais que as próprias diretrizes citadas no relatório exigem.</p>
+    <p>A resposta honesta é uma faixa com dois limites declarados e reprodutíveis.</p>
+  </div>
+
+  <div class="panel">
+    <div class="scale">
+      <div class="scale-head">
+        <span class="label"><strong>Piso</strong> — tomógrafo <em>e</em> hemodinâmica no mesmo CNES</span>
+        <span class="val">216</span>
+      </div>
+      <div class="track"><div class="bar under" style="--w:.085"></div></div>
+    </div>
+    <div class="scale">
+      <div class="scale-head">
+        <span class="label"><em>Referência</em> — rede que efetivamente realizou angioplastia ou revascularização em 2025</span>
+        <span class="val">290</span>
+      </div>
+      <div class="track"><div class="bar under" style="--w:.114"></div></div>
+    </div>
+    <div class="scale">
+      <div class="scale-head">
+        <span class="label"><strong>Teto</strong> — qualquer tomógrafo em uso disponível ao SUS</span>
+        <span class="val">2.534</span>
+      </div>
+      <div class="track"><div class="bar over" style="--w:1"></div></div>
+      <div class="ticks">
+        <span style="left:0">0</span><span style="left:8.5%">216</span>
+        <span style="left:50%">1.267</span><span style="left:99%">2.534</span>
+      </div>
+    </div>
+    <p style="font-size:.88rem;color:var(--muted);margin-top:2px">Dois caminhos independentes — cadastro de equipamentos e produção hospitalar observada — convergem para a mesma ordem de grandeza: <strong>centenas de serviços, não milhares</strong>. Projeções de difusão ancoradas no parque agregado operam próximas ao teto.</p>
+  </div>
+
+  <div class="wrap grid2">
+    <div class="stat"><span class="v">2.785</span><span class="k">tomógrafos em uso disponíveis ao SUS — 47,3% do parque nacional</span></div>
+    <div class="stat"><span class="v">13,05</span><span class="k">por milhão de habitantes, com variação de 6,1× entre UFs</span></div>
+    <div class="stat alert"><span class="v">AC · AM · RR</span><span class="k">sem nenhum serviço com tomógrafo-SUS e hemodinâmica co-localizados</span></div>
+    <div class="stat alert"><span class="v">9,68</span><span class="k">densidade de São Paulo — maior parque do país, abaixo da média nacional</span></div>
+  </div>
+</section>
+
+<!-- ACHADO 2 -->
+<section class="bleed stack g28">
+  <div class="wrap finding">
+    <div class="objection">
+      <span class="q">Objeção</span>
+      <span class="t">"a revisão e transparência dos parâmetros econômicos"; "incerteza na estimativa da população elegível"</span>
+    </div>
+    <h2>O preço de neutralidade — e por que ele dispensa a população elegível</h2>
+    <p>Não existe código de angiotomografia coronariana no SIGTAP: verificado nos <span class="num">5.023</span> procedimentos da tabela. A produção atual é administrativamente invisível e nenhum custo unitário pode ser ancorado em série histórica.</p>
+    <p>O que <em>pode</em> ser calculado é o preço máximo pagável para que a troca seja orçamentariamente neutra — o custo médio do exame que a AngioTC substituiria.</p>
+    <div class="figure" style="margin-top:6px">
+      <span class="big" style="color:var(--accent)">R$ 155,60</span>
+      <span class="unit">por exame · R$ 219,27 no cenário que elimina 50% dos cateterismos</span>
+    </div>
+  </div>
+
+  <div class="panel">
+    <span class="eyebrow">Referências de preço disponíveis, contra o limiar</span>
+    <div class="scale">
+      <div class="scale-head"><span class="label">TC de tórax + contraste <span class="num" style="color:var(--muted)">(SIGTAP)</span></span><span class="val">R$ 196,41 <span class="ratio">1,26×</span></span></div>
+      <div class="track"><div class="bar over" style="--w:.14"></div><div class="threshold" style="--x:11.1%"></div></div>
+    </div>
+    <div class="scale">
+      <div class="scale-head"><span class="label">Microcusteio SUS 2022 <span class="num" style="color:var(--muted)">(valores 2020)</span></span><span class="val">R$ 452,05 <span class="ratio">2,91×</span></span></div>
+      <div class="track"><div class="bar over" style="--w:.323"></div><div class="threshold" style="--x:11.1%"></div></div>
+    </div>
+    <div class="scale">
+      <div class="scale-head"><span class="label">CBHPM / saúde suplementar 2026</span><span class="val">R$ 1.311,95 <span class="ratio">8,43×</span></span></div>
+      <div class="track"><div class="bar over" style="--w:.937"></div><div class="threshold" style="--x:11.1%"></div></div>
+      <div class="ticks">
+        <span style="left:11.1%;color:var(--accent)">◆ 155,60</span>
+        <span style="left:50%">700</span><span style="left:97%">1.400</span>
+      </div>
+    </div>
+    <p style="font-size:.88rem;color:var(--muted);margin-top:2px">Sob substituição 1:1, o preço de neutralidade é uma grandeza <strong>por exame</strong> — <strong>independe do tamanho da população elegível</strong>. A população determina <em>quanto</em> se gasta a mais, não <em>se</em> se gasta a mais. Isso contorna precisamente a incerteza que motivou parte da recomendação preliminar.</p>
+  </div>
+</section>
+
+<!-- ACHADO 3 -->
+<section class="wrap stack g20">
+  <div class="objection">
+    <span class="q">Objeção</span>
+    <span class="t">"a justificativa dos comparadores"; "o impacto real sobre a realização de angiografias invasivas e testes funcionais"</span>
+  </div>
+  <h2>O comparador efetivo do SUS não é a cintilografia</h2>
+  <p>A avaliação econômica submetida compara a AngioTC a exames funcionais de custo médio-alto. A produção real de 2025 mostra outra coisa.</p>
+  <div class="tablewrap">
+    <table>
+      <thead><tr><th>Exame funcional não invasivo</th><th class="n">Quantidade</th><th class="n">Participação</th><th class="n">R$ médio</th></tr></thead>
+      <tbody>
+        <tr class="rowmark"><td><strong>Teste ergométrico</strong></td><td class="n">598.695</td><td class="n">63,7%</td><td class="n">32,20</td></tr>
+        <tr><td>Cintilografia de perfusão — estresse</td><td class="n">151.784</td><td class="n">16,2%</td><td class="n">406,99</td></tr>
+        <tr><td>Cintilografia de perfusão — repouso</td><td class="n">151.225</td><td class="n">16,1%</td><td class="n">381,25</td></tr>
+        <tr><td>Ecocardiografia de estresse</td><td class="n">33.766</td><td class="n">3,6%</td><td class="n">196,39</td></tr>
+        <tr><td>Cintilografia de câmaras — esforço</td><td class="n">3.709</td><td class="n">0,4%</td><td class="n">214,85</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>Quase dois terços da investigação funcional do SUS é <strong>teste ergométrico a R$ 32,20</strong>. Qualquer modelo que assuma substituição de cintilografia superestima a economia — e é essa mistura observada, não a assumida, que produz o limiar de R$ 155,60.</p>
+</section>
+
+<!-- ACHADO 4 -->
+<section class="wrap stack g20">
+  <div class="objection">
+    <span class="q">Objeção</span>
+    <span class="t">"incertezas quanto à magnitude do benefício em desfechos clínicos duros"</span>
+  </div>
+  <h2>A economia projetada está do outro lado da via</h2>
+  <p>A via da doença arterial coronariana consome <strong>R$ 1,80 bilhão por ano</strong> no SUS. A etapa diagnóstica é uma fração pequena dela.</p>
+  <div class="share" role="img" aria-label="Diagnóstico 14,8% do gasto; tratamento invasivo 85,2%">
+    <div class="dx">14,8% · diagnóstico</div>
+    <div class="tx">85,2% · angioplastia e revascularização · R$ 1,53 bi</div>
+  </div>
+  <p>A economia projetada pelo demandante depende de reduzir os 85,2% — precisamente a fração para a qual a metanálise conduzida pelo próprio parecerista <strong>não encontrou diferença estatisticamente significativa</strong> em eventos cardiovasculares maiores, infarto, mortalidade ou hospitalização.</p>
+</section>
+
+<!-- METODO -->
+<section class="wrap stack g20">
+  <span class="eyebrow">Por que os números se sustentam</span>
+  <h2>Inteiramente público, inteiramente reproduzível</h2>
+  <div class="method">
+    <ul>
+      <li><span class="check">✓</span> <strong>395/395</strong> arquivos SIA e <strong>324/324</strong> SIH processados, 27/27 UFs, competências 01–12/2025, <strong>sem perdas</strong></li>
+      <li><span class="check">✓</span> CNES 06/2026 · SIGTAP 08/2026 · IBGE 2025 — todos por FTP público, competências fixadas no repositório</li>
+      <li><span class="check">✓</span> Códigos de procedimento conferidos linha a linha contra a tabela oficial, não de memória</li>
+      <li><span class="check">✓</span> Rotina de extração publicada; a análise regenera todas as tabelas com um comando</li>
+    </ul>
+    <p style="font-size:.85rem;color:var(--muted);border-top:1px solid var(--rule);padding-top:13px">Arquivos SIA de MG, RJ, RS e SP são particionados. Rotinas que constroem nomes de arquivo em vez de enumerar o diretório perdem <strong>71 dos 395 arquivos</strong> — as quatro UFs mais populosas — silenciosamente, sem erro. A extração enumera o servidor, verifica presença das 27 UFs e distingue falha de download de arquivo vazio.</p>
+  </div>
+  <p style="font-size:.9rem;color:var(--ink-2)">A irreprodutibilidade do modelo submetido foi uma das críticas centrais do parecer. Um trabalho que responde a essa crítica precisa ser auditável linha a linha — inclusive nos seus erros.</p>
+</section>
+
+<!-- O QUE FALTA -->
+<section class="wrap stack g20">
+  <span class="eyebrow">Estado atual</span>
+  <h2>O que ainda falta</h2>
+  <p>A contribuição à consulta pública está fechada e é autossuficiente. O manuscrito completo não está — e as lacunas são clínicas, não computacionais.</p>
+  <div class="gap">
+    <span class="mk">01</span>
+    <span class="tx"><strong>Algoritmo de elegibilidade.</strong> A Conitec pediu "definição precisa da população elegível". Traduzir probabilidade pré-teste baixa/intermediária em critérios operacionais aplicáveis a dados administrativos exige julgamento clínico que a base não fornece.</span>
+    <span class="mk">02</span>
+    <span class="tx"><strong>Validação do proxy de capacidade.</strong> A co-localização com hemodinâmica é um marcador conservador de maturidade cardiovascular — deliberadamente subestimado. Quem conhece a realidade dos serviços sabe onde ele erra, e em que direção.</span>
+    <span class="mk">03</span>
+    <span class="tx"><strong>Microcusteio contemporâneo.</strong> Sem código SIGTAP, o custo unitário precisa ser construído do zero, com abertura completa de componentes. É trabalho de campo, não de base de dados.</span>
+    <span class="mk">04</span>
+    <span class="tx"><strong>Série histórica 2015–2025.</strong> A extração está dimensionada e testada; falta rodar. Dá tendência de utilização e ancora a projeção de difusão.</span>
+  </div>
+  <p style="font-size:.9rem;color:var(--ink-2);margin-top:6px">O que existe hoje é a infraestrutura de dados e a aritmética. O que falta é a camada clínica — e é ela que decide se o trabalho responde à pergunta certa.</p>
+</section>
+
+<footer class="wrap">
+  <p><strong>Escopo.</strong> Esta análise não se pronuncia sobre o mérito clínico da angiotomografia coronariana. As conclusões dizem respeito exclusivamente a capacidade de implementação e sustentabilidade orçamentária, nos termos em que o Comitê solicitou esclarecimento. O preço de neutralidade é uma meta de precificação, não um argumento contra a tecnologia.</p>
+  <p>Prévia de trabalho em andamento · autoria e afiliações a definir · agosto de 2026</p>
+</footer>
