@@ -1,44 +1,66 @@
 # AngioTC coronariana no SUS — capacidade instalada e impacto orçamentário
 
-Análise nacional reprodutível da **capacidade tomográfica do SUS** e do **preço de neutralidade orçamentária** da angiotomografia coronariana (AngioTC), construída exclusivamente sobre bases públicas.
+Análise nacional reprodutível da **capacidade tomográfica do SUS** e do **preço admissível** da angiotomografia coronariana (AngioTC), construída exclusivamente sobre bases públicas.
 
 Produzida como contribuição técnico-científica à **Consulta Pública nº 73/2026 da Conitec**, que trata da incorporação da AngioTC como exame de primeira linha para pacientes sintomáticos com probabilidade pré-teste baixa ou intermediária e suspeita de DAC estável.
 
-Contexto: em 3 de julho de 2026 (153ª Reunião Ordinária), o Comitê de Produtos e Procedimentos deliberou por **recomendação preliminar desfavorável**, fundamentada em incertezas quanto à avaliação econômica, ao impacto orçamentário, à capacidade de implementação e à delimitação da população elegível. O relatório preliminar não cita o CNES em nenhum ponto.
+Contexto: em 3 de julho de 2026 (153ª Reunião Ordinária), o Comitê de Produtos e Procedimentos deliberou por **recomendação preliminar desfavorável**, fundamentada em incertezas quanto à avaliação econômica, ao impacto orçamentário, à capacidade de implementação e à delimitação da população elegível.
 
 ---
 
-## Resultado principal
+## Resultados principais
 
-> **Preço de neutralidade orçamentária da AngioTC no SUS: R$ 155,60**
-> (R$ 219,27 mesmo assumindo eliminação de 50% dos cateterismos)
+### Capacidade: o cadastro já responde, mas está incompleto
 
-Sob substituição 1:1 e comportamento downstream constante, esse preço é uma grandeza **por exame** e **independe do tamanho da população elegível** — contornando a incerteza que motivou parte da recomendação preliminar.
+A **Portaria SAES/MS nº 3.695, de 15/01/2026** desmembrou o código genérico de tomógrafo em categorias por canais (26=4, 27=16, 28=32, 29=64, 30=128). Em 06/2026, disponíveis ao SUS e em uso:
 
-Todas as referências de preço disponíveis ficam acima:
-
-| Referência | Valor | Razão |
+| Camada | Estabelecimentos | Equipamentos |
 |---|---|---|
-| TC de tórax + contraste (SIGTAP) | R$ 196,41 | 1,26× |
-| Microcusteio SUS 2022 (valores 2020) | R$ 452,05 | 2,91× |
-| CBHPM / saúde suplementar 2026 | R$ 1.311,95 | 8,43× |
+| **Compatível confirmado (≥64 canais)** | **315** | **432** |
+| Incompatível confirmado (<64 canais) | 672 | 736 |
+| Especificação não declarada (código 11) | 2.534 | 2.785 |
+| **Parque total SUS** | **3.395** | **3.953** |
 
-### Achados de suporte
+**A reclassificação está 26,8% concluída.** Os 432 são piso de capacidade documentada, não estimativa da capacidade real. A portaria dá prazo de três competências — se ele se encerrar antes da apreciação final, a Conitec terá o inventário nacional completo pela primeira vez.
 
-- **O comparador efetivo é o teste ergométrico**, não a cintilografia: 598.695 exames em 2025, 63,7% de toda a investigação funcional não invasiva, a R$ 32,20 médios.
-- **A etapa diagnóstica é 14,8%** do gasto da via da DAC (R$ 1,80 bi/ano). A economia projetada depende de reduzir os 85,2% restantes — angioplastia e revascularização —, para os quais a metanálise do parecerista não encontrou diferença em desfechos duros.
-- **Capacidade instalada é uma banda, não um número: [216 – 2.534 estabelecimentos].** O limite inferior (tomógrafo + hemodinâmica co-localizados) converge com a rede invasiva efetivamente ativa em 2025 (290 serviços).
-- **AC, AM e RR** não possuem nenhum estabelecimento com tomógrafo-SUS e hemodinâmica co-localizados. Roraima não registrou nenhum procedimento coronariano invasivo em 2025.
+**Estrato de prontidão:** 83 estabelecimentos reúnem ≥64 canais, hemodinâmica co-localizada e produção coronariana documentada em 2025. **Doze UFs têm zero.** AP, PI e TO não têm nenhum tomógrafo ≥64 canais disponível ao SUS.
+
+### Preço admissível: análise de limiar
+
+O SIA não tem identificador de paciente. Razões entre contagens agregadas não são probabilidades condicionais, então o modelo **não estima** quantas angiografias a AngioTC evitaria. Responde à pergunta inversa:
+
+```
+Δ_CATE necessário = (P_angioTC − R$ 185,46) × 100 / R$ 730,14
+```
+
+| Referência | Valor | Δ CATE/100 necessário |
+|---|---|---|
+| TC de tórax + contraste (SIGTAP) | R$ 196,41 | 1,5 |
+| Microcusteio SUS 2022 (valores 2020) | R$ 452,05 | 36,5 |
+| **Microcusteio corrigido a jul/2026** (IPCA +37,7%) | **R$ 622,54** | **59,9** |
+| CBHPM 2026 — saúde suplementar | R$ 1.311,95 | 154,3 — **impossível** |
+
+Ao preço da saúde suplementar seria preciso evitar mais angiografias do que pacientes investigados. Impossível sob qualquer premissa, qualquer base de custo, qualquer população elegível.
+
+O preço de neutralidade é grandeza **por episódio** e, sob substituição 1:1, **independe do tamanho da população elegível** — contornando a incerteza que motivou parte da recomendação preliminar.
+
+### Unidade de análise: episódio, não procedimento
+
+A cintilografia de perfusão tem dois códigos, estresse e repouso. Em 2025: 151.784 e 151.225 — **151.225 pares e 559 órfãos**. São duas etapas do mesmo exame.
+
+Validação externa: o estudo de custo-efetividade no SUS de 2022 (Arq Bras Cardiol) precificou a cintilografia como unidade única em R$ 791,59 (valores 2020); a soma dos dois códigos SIA 2025 é R$ 788,24 — diferença de 0,4%.
+
+Contar procedimentos infla o denominador em 19%: 939.179 procedimentos contra **787.954 episódios**, e o custo médio sobe de R$ 155,60 para **R$ 185,46**.
 
 ---
 
-## Duas limitações que definem o método
+## Duas armadilhas dos dados
 
-**1. O CNES não discrimina canais de tomógrafo.** Existe um único código (`TIPEQUIP=01`, `CODEQUIP=11`), sem desdobramento por cortes por rotação. Não é possível estimar de fonte pública quantos equipamentos atendem à especificação de ≥64 canais adotada pelas diretrizes. Daí a análise entregar uma banda com dois limites declarados em vez de uma estimativa pontual.
+**1. As tabelas de conversão do CNES estão defasadas.** Os arquivos `.cnv` em `TAB_CNES.zip` (competência 07/2026) listam apenas `0111 — Tomógrafo Computadorizado` e não refletem a Portaria 3.695/2026, embora os códigos 26–30 já estejam nos microdados. **Derivar a lista de códigos dessas tabelas exclui silenciosamente todo equipamento já reclassificado.** Enumere os valores presentes nos dados.
 
-**2. Não existe código SIGTAP para AngioTC.** Verificado nos 5.023 procedimentos da competência 08/2026. A produção atual do exame é administrativamente invisível, e nenhum custo unitário pode ser ancorado em série histórica do SUS.
+**2. Arquivos SIA de MG, RJ, RS e SP são particionados** (`PASP2501a.dbc`, `…b`, `…c`, `…d`). Construir nomes de arquivo sem sufixo perde **71 dos 395 arquivos** do ano — as quatro UFs mais populosas — sem emitir erro. `extrai_dac.py` enumera o diretório remoto, verifica presença das 27 UFs e distingue falha de download de arquivo vazio.
 
-Adicionalmente, o código `0206030045 — CONTRASTE PARA TOMOGRAFIA COMPUTADORIZADA` **não registra faturamento no SIA em 2025**, o que o inviabiliza como marcador de serviços com capacidade para exames contrastados. O proxy adotado em seu lugar é a co-localização com sala de hemodinâmica (`CODEQUIP=10`).
+Ambas produzem resultados plausíveis e errados, em silêncio. A primeira custou uma versão inteira deste trabalho.
 
 ---
 
@@ -66,24 +88,18 @@ python3 analise_final.py
 python3 extrai_dac.py SIA 2025 SP g1
 ```
 
-Os arquivos CNES (`cnes/EQ*.dbc`, competência 06/2026) e a tabela SIGTAP (`sigtap/`, competência 08/2026) estão versionados para fixar as competências usadas. Para atualizá-los, ver endereços na tabela de fontes abaixo.
-
-### Armadilha de particionamento
-
-Arquivos SIA de **MG, RJ, RS e SP são particionados** (`PASP2501a.dbc`, `…b`, `…c`, `…d`). Rotinas que constroem nomes de arquivo sem sufixo perdem silenciosamente **71 dos 395 arquivos** do ano — exatamente as quatro UFs mais populosas, sem emitir erro.
-
-`extrai_dac.py` enumera o diretório remoto em vez de construir nomes, verifica presença das 27 UFs, e distingue falha de download de arquivo vazio. Execução de referência: **395/395 arquivos SIA e 324/324 SIH, sem perdas.**
-
----
+Os arquivos CNES (`cnes/EQ*.dbc`, 06/2026) e a tabela SIGTAP (`sigtap/`, 08/2026) estão versionados para fixar as competências.
 
 ## Estrutura
 
 ```
 extrai_dac.py            extração SIA/SIH por estabelecimento (streaming, pico de disco = 1 arquivo)
-analise_final.py         demanda × banda de capacidade → 4 CSVs + resumo
-contribuicao-cp73.md     documento submetido à consulta pública
-cnes/                    CNES equipamentos, .dbc, competência 06/2026
-sigtap/                  tabela de procedimentos, competência 08/2026
+analise_final.py         demanda × capacidade → CSVs + resumo
+contribuicao-cp73.md     documento da consulta pública
+preview-angiotc.html     prévia de 5 páginas (CSS de impressão embutido)
+angiotc-preview.pdf      PDF renderizado da prévia
+cnes/                    CNES equipamentos, .dbc, 06/2026
+sigtap/                  tabela de procedimentos, 08/2026
 data/                    intermediários agregados por CNES × procedimento
 output/                  tabelas finais
 ```
@@ -95,13 +111,21 @@ output/                  tabelas finais
 | Base | Endereço | Competência |
 |---|---|---|
 | CNES — equipamentos | `ftp://ftp.datasus.gov.br/dissemin/publicos/CNES/200508_/Dados/EQ/` | 06/2026 |
-| CNES — tabelas de código | `.../CNES/200508_/Auxiliar/TAB_CNES.zip` | 07/2026 |
 | SIA/SUS | `.../SIASUS/200801_/Dados/` | 01–12/2025 |
 | SIH/SUS | `.../SIHSUS/200801_/Dados/` | 01–12/2025 |
 | SIGTAP | `ftp://ftp2.datasus.gov.br/public/sistemas/tup/downloads/` | 08/2026 |
 | População | IBGE, agregado 6579, variável 9324 | 2025 |
+| IPCA | IBGE, agregado 1737, variável 2266 | 12/2020 → 07/2026 |
+| Portaria SAES/MS nº 3.695 | Diário Oficial da União | 15/01/2026 |
 
 Não há API REST para essas bases; o acesso é por FTP com arquivos `.dbc` (DBF comprimido), lidos com `datasus-dbc` + `dbfread`.
+
+## Pendências
+
+- Extração das OCI de síndrome coronariana crônica no SIA 2025 (`0902010034`, `0902010042`, `0902010050`) — definem o episódio diagnóstico na própria tabela do SUS e podem substituir a reconstrução por pareamento.
+- Ancoragem do Δ de angiografias evitadas em ensaios randomizados, distinguindo comparador funcional-primeiro de invasivo-primeiro.
+- Microcusteio contemporâneo próprio.
+- Preço de aquisição pública em licitação como quarta categoria de benchmark.
 
 ## Escopo
 

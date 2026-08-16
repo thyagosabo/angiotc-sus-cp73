@@ -28,7 +28,14 @@ SIA_CARDIO = {
 }
 # Grupo 0206 inteiro (tomografia) = proxy de capacidade revelada.
 # Nao existe codigo de angioTC de coronarias no SIGTAP; por isso o grupo todo.
-SIA_PREFIX = ("0206",)
+SIA_PREFIX = ("0206", "0902")
+# 0902 = OCI. O SUS ja define episodio para sindrome coronariana cronica:
+#   0902010026 avaliacao cardiologica            R$ 200,00
+#   0902010034 avaliacao diagnostica inicial SCC R$ 270,00
+#   0902010042 progressao I  SCC                 R$ 250,00
+#   0902010050 progressao II SCC                 R$ 840,00
+# Unidade de analise correta para o preco de neutralidade — o procedimento
+# avulso conta estresse e repouso da cintilografia como dois exames.
 SIH_PREFIX = ("0406",)                         # cirurgia do aparelho circulatorio
 SIH_EXTRA = {"0211020010"}                     # cateterismo faturado em AIH
 
