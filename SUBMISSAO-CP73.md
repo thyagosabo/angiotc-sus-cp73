@@ -52,41 +52,49 @@ ressalva no texto, também é defensável. **Você decide.**
 ## Campo 12 — texto pronto (colar)
 
 Contribuição técnico-científica, com análise nacional reprodutível sobre bases públicas
-(CNES, SIA/SUS, SIH/SUS, SIGTAP, IBGE). Documento completo em anexo. Síntese:
+(CNES, SIA/SUS, SIH/SUS, SIGTAP, IBGE). Documento completo, código e dados em anexo /
+repositório. Síntese:
 
 1. CAPACIDADE INSTALADA. A Portaria SAES/MS 3.695/2026 desmembrou o código de tomógrafo
 do CNES por número de canais. Em 06/2026 há 432 equipamentos de 64 canais ou mais em 315
-estabelecimentos disponíveis ao SUS — piso documentado, pois a reclassificação está 26,8%
-concluída (2.785 equipamentos ainda sem especificação). Recomenda-se que a apreciação
-final ocorra sobre o cadastro reclassificado. 83 estabelecimentos reúnem hardware
-compatível, hemodinâmica e produção coronariana em 2025; 12 UFs não têm nenhum.
+estabelecimentos disponíveis ao SUS — piso documentado, pois só 25% dos estabelecimentos
+migraram do código genérico (2.785 equipamentos ainda sem especificação). Recomenda-se que
+a apreciação final use a competência mais recente e registre a proporção reclassificada.
+79 estabelecimentos reúnem hardware compatível, hemodinâmica e produção coronariana em
+2025; 12 UFs não têm nenhum; AP, PI e TO não têm nenhum tomógrafo de 64+ canais.
 
 2. UNIDADE DE ANÁLISE. A cintilografia de perfusão é faturada em dois códigos (estresse e
 repouso: 151.784 e 151.225 em 2025). Contar procedimentos infla o denominador em 19%. Por
-episódio, a investigação funcional custa R$ 185,46 (787.954 episódios, 76% teste
-ergométrico). As OCI de síndrome coronariana crônica somaram 7.616 episódios (0,96%).
+episódio: 787.954, custo médio R$ 185,46 — 76% teste ergométrico em volume, mas 82% do
+gasto em cintilografia. As OCI de síndrome coronariana crônica somaram 7.616 episódios
+(0,96%). Não há código SIGTAP para angiotomografia; R$ 185,46 e o cateterismo (R$ 730,14)
+são preços de tabela, não custos.
 
-3. LIMIAR ORÇAMENTÁRIO. O SIA não tem identificador de paciente; razões entre contagens
-agregadas não são probabilidades. Em vez de estimar cateterismos evitados, calculou-se
-quantos seriam necessários por 100 pacientes para neutralidade a cada preço. Ao custo
-microcusteado de 2022 corrigido a jul/2026 (R$ 622,54), seriam necessários 59,9 por 100.
-Nos oito ensaios randomizados com comparador não invasivo (PROMISE, SCOT-HEART, PRECISE,
-CAPP, CRESCENT I/II, Foy 2017), o Δ de cateterismo total observado foi de −6,4 a +4,1 por
-100 — preço de neutralidade de R$ 139 a R$ 215. A redução observada foi ausente, variável
-ou insuficiente para sustentar, isoladamente, neutralidade orçamentária aos custos
-estimados para o SUS.
+3. LIMIAR ORÇAMENTÁRIO — E O PARÂMETRO DOMINANTE. O SIA não tem identificador de paciente;
+razões entre contagens agregadas não são probabilidades. Em vez de estimar cateterismos
+evitados, calculou-se quantos seriam necessários por 100 pacientes para neutralidade a
+cada preço, com P = C_substituído + (Δ/100)×R$730,14. Nos sete ensaios/metanálises com
+comparador não invasivo (PROMISE, PRECISE, CAPP, CRESCENT I/II, Foy 2017), o Δ de
+cateterismo TOTAL foi de −6,3 a +4,1 por 100. O resultado depende de qual exame a
+AngioTC substitui: se o mix médio do SIA (R$ 185), neutralidade a R$ 139–215 e o Δ
+necessário ao preço proposto pelo demandante (R$ 550) é 49,9/100, doze vezes o melhor
+observado; se o mix do NATS (R$ 317), R$ 270–347; se a cintilografia (R$ 787), R$ 741–817
+— acima do preço proposto e do microcusteio de 2022 corrigido (R$ 622,54) em toda a faixa.
+O sinal inverte com o exame substituído, e esse exame não é identificável nos registros
+administrativos. É a mesma pergunta que o Comitê formulou como "definição precisa da
+população elegível" — respondível por protocolo, não por dado.
 
 4. OUTRO PICO. Nos quatro ensaios com comparador cateterismo direto (CAD-MAN, DISCHARGE,
-CONSERVE, Reis 2022) — pacientes já indicados a cateterismo, população distinta da ora
-apreciada — o Δ foi de 66,0 a 85,6 por 100 e o preço de neutralidade de R$ 482 a R$ 625.
-Um único ensaio (CAD-MAN) cruza marginalmente R$ 622,54, por R$ 2,67. A análise não
-demonstra que essa indicação economiza; demonstra que o posicionamento no percurso
-diagnóstico muda radicalmente a plausibilidade de a tecnologia se pagar. Recomenda-se que a
-apreciação final considere avaliá-la como pergunta separada, com elegibilidade própria.
+CONSERVE, Reis 2022) — pacientes já indicados a cateterismo, população distinta —, o
+custo prévio cancela e o preço de neutralidade é de R$ 482–625 independentemente do exame
+anterior. Um ensaio (CAD-MAN) cruza R$ 622,54, por R$ 2,67. A análise não demonstra que
+essa indicação economiza; demonstra que o posicionamento no percurso muda radicalmente a
+plausibilidade. O próprio relatório preliminar usa o DISCHARGE (invasivo-primeiro) como
+fonte para o PICO de primeira linha. Recomenda-se avaliar essa indicação como pergunta
+separada.
 
-5. Não há código SIGTAP para a tecnologia; microcusteio contemporâneo é condição
-necessária. Nada nesta contribuição se pronuncia sobre o mérito clínico — o SCOT-HEART
-demonstrou redução de morte coronariana e infarto em 5 e 10 anos. As conclusões referem-se
+5. Nada nesta contribuição se pronuncia sobre o mérito clínico — o SCOT-HEART demonstrou
+redução de morte coronariana e infarto em 5 e 10 anos. As conclusões referem-se
 exclusivamente a capacidade de implementação e sustentabilidade orçamentária de curto
 prazo, nos termos em que o Comitê solicitou esclarecimento.
 
@@ -94,5 +102,5 @@ Código, dados intermediários e tabelas: [URL do repositório / DOI].
 
 ---
 
-*Contagem: ~2.900 caracteres. Se o campo tiver limite menor, cortar os itens 2 e 5 primeiro
+*Contagem: ~3.600 caracteres. Se o campo tiver limite menor, cortar os itens 2 e 5 primeiro
 — o anexo os cobre.*
