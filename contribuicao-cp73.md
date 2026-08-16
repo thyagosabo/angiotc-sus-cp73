@@ -208,18 +208,18 @@ As diretrizes internacionais convergem com essa estratificação. A ESC 2024 rec
 
 ### 4.3 Δ necessário por preço e por exame substituído
 
-O relatório preliminar adota **R$ 550,00** como preço da angiotomografia proposto pelo demandante. Os demais preços de referência são o proxy de tabela para TC de tórax com contraste, o microcusteio de 2022 corrigido monetariamente, e a CBHPM.
+O relatório preliminar adota **R$ 550,00** como preço da angiotomografia proposto pelo demandante. Os demais preços de referência são o proxy de tabela para TC de tórax com contraste, o microcusteio de 2022 corrigido monetariamente, e o valor da angiotomografia na saúde suplementar usado por Shiozaki et al. (Arq Bras Cardiol 2025;122(12):e20250204) — R$ 1.311,95, "conforme referência da ANS", apresentado como 100% da CBHPM.
 
 | Preço da AngioTC | Natureza | **adoção aditiva** | mix SIA | NATS publicado | NATS por episódio | eco de estresse | cintilografia |
 |---|---|---|---|---|---|---|---|
 | R$ 196,41 | TC tórax + contraste, proxy SIGTAP | 26,9 | 1,5 | já neutro | já neutro | 0,0 | já neutro |
 | **R$ 550,00** | **proposto pelo demandante** | **75,3** | **49,9** | **31,9** | **3,6** | 48,4 | **já neutro** |
-| R$ 622,54 | microcusteio 2022 corrigido a jul/2026 (IPCA 12/2020→07/2026, ×1,3771) | 85,3 | 59,9 | 41,9 | 13,5 | 58,4 | já neutro |
-| R$ 1.311,95 | CBHPM 2026, saúde suplementar | 179,7 | 154,3 | 136,3 | 107,9 | 152,8 | 71,9 |
+| R$ 622,54 | microcusteio 2022 (Carmo et al.) corrigido a jul/2026 (IPCA 12/2020→07/2026, ×1,3771; ano-base não explicitado no artigo, 12/2020 é o limite otimista) | 85,3 | 59,9 | 41,9 | 13,5 | 58,4 | já neutro |
+| R$ 1.311,95 | saúde suplementar (Shiozaki et al. 2025: referência ANS, 100% CBHPM) | 179,7 | 154,3 | 136,3 | 107,9 | 152,8 | 71,9 |
 
 Valores: Δ de cateterismo total por 100 pacientes necessário para neutralidade, **considerando apenas o custo dos exames e do cateterismo**.
 
-Ao preço da CBHPM e substituindo o mix médio, seriam necessárias mais angiografias evitadas do que pacientes investigados — **inalcançável neste modelo**, em que o único crédito a jusante é o cateterismo evitado ao valor de tabela. Créditos por outros recursos evitados ou um `C_CATE` microcusteado superior alterariam esse limite.
+Ao preço da saúde suplementar e substituindo o mix médio, seriam necessárias mais angiografias evitadas do que pacientes investigados — **inalcançável neste modelo**, em que o único crédito a jusante é o cateterismo evitado ao valor de tabela. Créditos por outros recursos evitados ou um `C_CATE` microcusteado superior alterariam esse limite.
 
 Na adoção aditiva, o Δ exigido a R$ 550 é 75,3 por 100 — **numericamente o mesmo limiar do gatekeeping (seção 4.5), porque a equação é a mesma**. A diferença é de onde vem o Δ: em pacientes já indicados a cateterismo, 75 por 100 é o que o DISCHARGE observou; em pacientes de primeira linha, o melhor Δ já observado é 4,1.
 
@@ -283,6 +283,8 @@ O mecanismo explica a divergência de espaço econômico:
 | Já indicada a cateterismo | cateterismo direto → angiotomografia → cateterismo seletivo | Há um procedimento de R$ 730 a R$ 773 que pode sair do percurso, independentemente do que veio antes. |
 
 Registra-se que o próprio dossiê e a reanálise do NATS utilizaram o DISCHARGE — ensaio de população invasivo-primeiro — como fonte de parâmetros para o PICO de primeira linha. O desalinhamento de PICO aqui descrito já está, portanto, no relatório preliminar.
+
+O mesmo desalinhamento está na única avaliação econômica brasileira publicada da angiotomografia na saúde suplementar (Shiozaki et al., Arq Bras Cardiol 2025;122(12):e20250204, epub jan/2026), cuja economia de R$ 1.021 "por vida" em cinco anos tem circulado como argumento público em favor da incorporação. O artigo compara a angiotomografia, a R$ 1.311,95, com **a angiografia invasiva como estratégia inicial, a R$ 1.900,79 — único comparador** —, em população de probabilidade intermediária, com eventos do DISCHARGE, e declara nas limitações não ter comparado com testes funcionais. É, portanto, um modelo do PICO de filtro pré-cateterismo, no qual o Δ exigido naquele sistema é de 69 por 100 (1.311,95 ÷ 1.900,79) e o DISCHARGE (75,1) o alcança — o mesmo mecanismo da tabela acima —, não do PICO de primeira linha em apreciação. A economia é por beneficiário de uma carteira de 100.000 vidas, não por paciente examinado. A projeção de "mais de R$ 30 bilhões em cinco anos" não consta do artigo; aparece em material de imprensa de 11/08/2026, que a qualifica como projeção teórica para a saúde suplementar, "sem representar diretamente uma estimativa de impacto" para o SUS [29].
 
 **Recomenda-se que a apreciação final considere avaliar a indicação de filtro anterior a cateterismo já indicado como pergunta separada, com critérios de elegibilidade próprios.**
 
@@ -418,7 +420,7 @@ Os quatro invasivo-primeiro não são comparáveis aos demais: a população já
 
 1. Brasil. Ministério da Saúde. Conitec. Relatório de Recomendação Preliminar — Angiotomografia coronariana como exame de primeira linha. CP nº 73/2026. Disponível em: gov.br/conitec.
 2. Brasil. Ministério da Saúde. Portaria SAES/MS nº 3.695, de 15 de janeiro de 2026. DOU nº 18, 27 jan 2026, Seção 1, p. 89–90. Republicada em 18 mai 2026.
-3. Análise de custo-efetividade da angiotomografia coronariana no SUS, em comparação com outros métodos não invasivos na suspeita de DAC estável. Arq Bras Cardiol. 2022. PMC8959029.
+3. Carmo PB, Magliano CAS, Rey HCV, Camargo GC, Trocado LFL, Gottlieb I. Análise da Custo-Efetividade da Angiotomografia Coronariana no SUS, em Comparação com Outros Métodos Não Invasivos na Suspeita de DAC Estável. Arq Bras Cardiol. 2022;118(3):578-85. DOI 10.36660/abc.20201050. PMID 35137778. PMC8959029.
 4. IQWiG. Coronary computed tomography angiography (with or without functional evaluation) for the diagnosis of chronic coronary heart disease. Final report D22-01, 8 Mar 2024. English extract: NBK602895. Full report (German): iqwig.de.
 5. Douglas PS et al. PROMISE. N Engl J Med. 2015;372:1291-300. PMID 25773919.
 6. SCOT-HEART Investigators. Lancet 2015;385:2383-91; JACC 2016;67:1759-68 (PMID 27081014); N Engl J Med. 2018;379:924-33 (PMID 30145934).
@@ -435,7 +437,7 @@ Os quatro invasivo-primeiro não são comparáveis aos demais: a população já
 17. Zito A et al. Ann Intern Med. 2023;176:817-26. PMID 37276592. Erratum: 2024;177:991-2. PMID 38830226.
 18. Hwang IC et al. Clin Cardiol. 2017;40:1129-38. PMID 28914973. [não utilizado — erro de extração para SCOT-HEART]
 19. Hulten E et al. J Am Coll Cardiol. 2013;61:880-92. PMID 23395069.
-20. Associação Médica Brasileira. CBHPM 2026.
+20. Shiozaki A, Torreão J, Costa IBSS, Suarez AB, Silva MT, Oliveira TG, et al. Análise de Custo-Efetividade da Angiotomografia Coronária como Exame Preferencial na Investigação de Dor Torácica Estável na Saúde Suplementar no Brasil. Arq Bras Cardiol. 2025;122(12):e20250204 (epub 9 jan 2026). DOI 10.36660/abc.20250204. PMID 41637322. [fonte do preço da angiotomografia na saúde suplementar, R$ 1.311,95, "referência da ANS", e do cateterismo, R$ 1.900,79; baseada na CBHPM 2022 (AMB)]
 21. Cesar LAM, Gowdak LHW, Pavanello R et al. Diretriz de Síndrome Coronariana Crônica – 2025. Arq Bras Cardiol. 2025;122(9):e20250619. DOI 10.36660/abc.20250619. PMID 41294178. Erratum 2026;123(7):e20260565 (autoria apenas).
 22. Mark DB et al. Economic outcomes with anatomical versus functional diagnostic testing for coronary artery disease (PROMISE). Ann Intern Med. 2016;165:94-102. PMID 26857050.
 23. SCOT-HEART Investigators. 10-year outcomes. N Engl J Med. 2025. PMID 39863372.
@@ -444,6 +446,7 @@ Os quatro invasivo-primeiro não são comparáveis aos demais: a população já
 26. Gulati M, Levy PD, Mukherjee D et al. 2021 AHA/ACC/ASE/CHEST/SAEM/SCCT/SCMR Guideline for the Evaluation and Diagnosis of Chest Pain. Circulation. 2021;144(22):e368-454. DOI 10.1161/CIR.0000000000001029. PMID 34709879.
 27. Virani SS et al. 2023 AHA/ACC/ACCP/ASPC/NLA/PCNA Guideline for the Management of Patients With Chronic Coronary Disease. Circulation. 2023;148:e9-e119. DOI 10.1161/CIR.0000000000001168.
 28. NICE. Recent-onset chest pain of suspected cardiac origin: assessment and diagnosis. Clinical guideline CG95. 2010, atualizada 30 nov 2016. NCBI Bookshelf NBK553650.
+29. Duarte M. Doenças cardiovasculares causam mais de 300 mil mortes por ano no Brasil; Conitec abre Consulta pública sobre angiotomografia coronariana no SUS [release de imprensa]. Jornal do Brás, 11 ago 2026. Disponível em: https://jornaldobras.com.br/noticia/133881/ (acesso em 16 ago 2026).
 
 ---
 

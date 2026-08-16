@@ -26,7 +26,7 @@ GE64, SUB64, GEN, HEMO = ["29", "30"], ["26", "27", "28"], ["11"], "10"
 
 # ---- parâmetros do modelo -------------------------------------------------
 PRECOS = [("TC torax + contraste (proxy SIGTAP)", 196.41), ("Demandante", 550.00),
-          ("Microcusteio 2022 corrigido", 622.54), ("CBHPM 2026", 1311.95)]
+          ("Microcusteio 2022 corrigido", 622.54), ("Saude suplementar (Shiozaki 2025)", 1311.95)]  # ref. ANS / "100% CBHPM" em Shiozaki et al., ABC 2025;122(12)
 # Δ de cateterismo TOTAL por 100, extraídos das publicações primárias (Apêndice B)
 FIRSTLINE = [("CAPP", 100 * (51 / 245 - 66 / 243)), ("PROMISE", -4.1), ("Foy estavel", -2.9),
              ("Foy 13", -2.6), ("CRESCENT-I", -1.0), ("CRESCENT-II", 1.4), ("PRECISE", 4.1)]
@@ -202,16 +202,24 @@ def main():
     # aditivo: SCOT-HEART (unico desenho aditivo) e envelope de primeira linha
     print(f"  aditivo, SCOT-HEART: R$ {SCOT[0][1]*C_CATE/100:.2f} a {SCOT[1][1]*C_CATE/100:.2f} | envelope 1a linha: R$ {lo*C_CATE/100:.2f} a {hi*C_CATE/100:.2f} | Δ exigido a R$550 = {550*100/C_CATE:.1f} (= limiar do gatekeeping)")
 
-    # ---- 4.10 cotas anuais (ordem de grandeza): todos os episodios funcionais a R$550, ponto medio da faixa de Δ ----
-    print(f"\n### 4.10 cotas anuais a R$ 550 (N_epis={Ne:,.0f}; N_cate={cate.qtd.sum():,.0f}; ponto medio da faixa de Δ)")
-    for sn, C in subst:
-        pm = C + (lo + hi) / 2 * C_CATE / 100
-        print(f"  {sn:<32} P_neutro medio R$ {pm:7.2f} -> impacto liquido {Ne*(550-pm)/1e6:+7.0f} mi/ano")
+    # ---- 4.10 cotas anuais (ordem de grandeza) a R$550, ponto medio da faixa de Δ ----
+    # Cada cenario e ancorado no volume que ele pode substituir (aditivo e mix: todos os episodios; ergometria,
+    # eco e cintilografia: o proprio volume de 2025; NATS por episodio: percurso hipotetico, sem volume proprio),
+    # e tambem expresso por 100.000 pacientes, comparavel entre cenarios.
+    N_TE, N_ECO, N_CINT = q["0211020060"], q["0205010016"], q["0208010025"]
+    vol = {"adocao aditiva (sem protocolo)": Ne, "mix medio SIA": Ne, "teste ergometrico": N_TE,
+           "eco de estresse": N_ECO, "cintilografia": N_CINT, "cintilografia c/ revasc": N_CINT}
     pm_cint_rev = (C_CINT + 4.1*C_CATE/100 - deb_pre + C_CINT - 2.9*C_CATE/100 - deb_foy) / 2
-    print(f"  {'cintilografia c/ revasc':<32} P_neutro medio R$ {pm_cint_rev:7.2f} -> impacto liquido {Ne*(550-pm_cint_rev)/1e6:+7.0f} mi/ano")
+    cen = [(sn, C + (lo + hi) / 2 * C_CATE / 100) for sn, C in subst] + [("teste ergometrico", C_TE + (lo + hi) / 2 * C_CATE / 100),
+                                                                          ("cintilografia c/ revasc", pm_cint_rev)]
+    print(f"\n### 4.10 cotas anuais a R$ 550 (ponto medio da faixa de Δ; N_epis={Ne:,.0f}, TE={N_TE:,.0f}, eco={N_ECO:,.0f}, cint={N_CINT:,.0f}, cate={cate.qtd.sum():,.0f})")
+    for sn, pm in cen:
+        n = vol.get(sn); anc = f"{n*(550-pm)/1e6:+6.0f} mi/ano sobre {n:,.0f}" if n else "  (sem volume proprio)"
+        print(f"  {sn:<32} P_neutro medio R$ {pm:7.2f} | por 100 mil pacientes {1e5*(550-pm)/1e6:+6.1f} mi | {anc}")
     for n, d in GATE:
-        print(f"  gate {n:<27} P R$ {d*C_CATE/100:7.2f} -> {cate.qtd.sum()*(550-d*C_CATE/100)/1e6:+7.0f} mi/ano sobre os cateterismos")
-    print(f"  gate DISCHARGE c/ revasc         P R$ {75.1*C_CATE/100+cred_dis:7.2f} -> {cate.qtd.sum()*(550-(75.1*C_CATE/100+cred_dis))/1e6:+7.0f} mi/ano")
+        print(f"  gate {n:<27} P R$ {d*C_CATE/100:7.2f} | por 100 mil {1e5*(550-d*C_CATE/100)/1e6:+6.1f} mi | {cate.qtd.sum()*(550-d*C_CATE/100)/1e6:+6.0f} mi/ano sobre os cateterismos")
+    pg = 75.1*C_CATE/100 + cred_dis
+    print(f"  gate DISCHARGE c/ revasc         P R$ {pg:7.2f} | por 100 mil {1e5*(550-pg)/1e6:+6.1f} mi | {cate.qtd.sum()*(550-pg)/1e6:+6.0f} mi/ano")
 
     print(f"\n### IPCA: 452,05 x {fator:.4f} = R$ {452.05*fator:.2f}")
 
