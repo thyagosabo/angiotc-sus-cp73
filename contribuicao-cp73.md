@@ -171,17 +171,17 @@ Ao custo microcusteado e corrigido monetariamente, o requisito é de **59,9 angi
 
 Ensaios randomizados de estratégia diagnóstica reportam taxas absolutas de angiografia invasiva por braço. Convertendo para a convenção desta análise (Δ positivo = angiografias evitadas por 100 pacientes):
 
-| Ensaio | Comparador | Δ observado /100 | Preço de neutralidade correspondente |
-|---|---|---|---|
-| CAPP (1 ano) | funcional-primeiro (ergometria) | **−6,4** | R$ 138,73 |
-| PROMISE (90 dias) | funcional-primeiro | **−4,1** | R$ 155,52 |
-| Foy 2017, subgrupo estável | funcional-primeiro | **−2,9** | R$ 164,29 |
-| Foy 2017, 13 ensaios | funcional-primeiro | −2,6 | R$ 166,48 |
-| SCOT-HEART (6 meses) | usual care | −1,2 | R$ 176,70 |
-| CRESCENT-I (1 ano) | funcional-primeiro | −1,0 | R$ 178,16 |
-| SCOT-HEART (5 anos) | usual care | +0,5 | R$ 189,11 |
-| CRESCENT-II (6 meses) | funcional-primeiro | +1,4 | R$ 195,68 |
-| PRECISE (11,8 meses) | usual care | +4,1 | R$ 215,40 |
+| Ensaio | Comparador | Janela do Δ | Δ observado /100 | Preço de neutralidade correspondente |
+|---|---|---|---|---|
+| CAPP | funcional-primeiro (ergometria) | 1 ano | **−6,4** | R$ 138,73 |
+| PROMISE | funcional-primeiro | 90 dias | **−4,1** | R$ 155,52 |
+| Foy 2017, subgrupo estável | funcional-primeiro | média 18 meses | **−2,9** | R$ 164,29 |
+| Foy 2017, 13 ensaios | funcional-primeiro | média 18 meses | −2,6 | R$ 166,48 |
+| SCOT-HEART | usual care | 6 meses | −1,2 | R$ 176,70 |
+| CRESCENT-I | funcional-primeiro | 1 ano | −1,0 | R$ 178,16 |
+| SCOT-HEART | usual care | 5 anos | +0,5 | R$ 189,11 |
+| CRESCENT-II | funcional-primeiro | 6 meses | +1,4 | R$ 195,68 |
+| PRECISE | usual care | 11,8 meses | +4,1 | R$ 215,40 |
 
 **Nos ensaios que compararam estratégias não invasivas iniciais, a magnitude da redução observada na angiografia invasiva foi ausente, variável ou insuficiente para sustentar, isoladamente, neutralidade orçamentária aos custos estimados para o SUS.** A faixa observada vai de −6,4 a +4,1 por 100, e a metanálise de Foy (2017), no subgrupo de dor torácica estável, aponta aumento de 2,9 por 100.
 
@@ -220,18 +220,20 @@ P_neutralidade,gate  =  (Δ_CATE / 100) × C_CATE
 
 Todos os Δ abaixo usam **cateterismo total por braço randomizado** — o mesmo desfecho da seção anterior, e o único admissível para cálculo econômico, já que o SUS remunera o procedimento independentemente do achado.
 
-| Ensaio | Cateterismo, AngioTC | Cateterismo, controle | Δ /100 | Preço de neutralidade |
-|---|---|---|---|---|
-| CONSERVE | 23% | 89% | 66,0 | R$ 481,89 |
-| Reis 2022 | 32/115 (27,8%) | 105/105 (100%) | 72,2 | R$ 526,97 |
-| DISCHARGE | 404/1808 (22,3%) | 1708/1753 (97,4%) | 75,1 | R$ 548,25 |
-| CAD-MAN | 24/167 (14,4%) | 162/162 (100%) | **85,6** | **R$ 625,21** |
+| Ensaio | Cateterismo, AngioTC | Cateterismo, controle | Janela do Δ | Δ /100 | Preço de neutralidade |
+|---|---|---|---|---|---|
+| CONSERVE | 23% | 89% | 1 ano | 66,0 | R$ 481,89 |
+| Reis 2022 | 32/115 (27,8%) | 105/105 (100%) | ≤ 3 meses | 72,2 | R$ 526,97 |
+| DISCHARGE | 404/1808 (22,3%) | 1708/1753 (97,4%) | manejo inicial | 75,1 | R$ 548,25 |
+| CAD-MAN | 24/167 (14,4%) | 162/162 (100%) | índice | **85,6** | **R$ 625,21** |
 
 Nessa indicação o preço de neutralidade é **duas a três vezes superior ao do PICO de primeira linha** (R$ 139 a R$ 215). **Um único ensaio, o CAD-MAN, alcança o custo microcusteado corrigido de R$ 622,54 — e por R$ 2,67 por paciente**, margem inferior a qualquer incerteza de parâmetro deste modelo, apoiada em um ensaio de 340 pacientes cujo braço comparador é 100% invasivo por desenho.
 
-Isto não demonstra que o gatekeeping economiza. Demonstra que, no cenário mais favorável analisado, **a lacuna residual para neutralidade é mais de dez vezes menor no gatekeeping que na estratégia de primeira linha** — R$ 407 por paciente contra praticamente nenhuma.
+Isto não demonstra que o gatekeeping economiza. Demonstra que **no cenário mais favorável de primeira linha permanece uma lacuna de R$ 407 por paciente; no cenário mais favorável de gatekeeping, o CAD-MAN cruza marginalmente a neutralidade em R$ 2,67 por paciente.** A comparação fala por si.
 
-O modelo inclui deliberadamente apenas um componente de custo. Componentes documentados e não quantificados aqui — as menores complicações maiores relacionadas ao procedimento observadas no DISCHARGE, e diferenças de permanência hospitalar — poderiam reduzir a lacuna remanescente, o que **não foi demonstrado nesta análise**.
+Os Δ representam incidência cumulativa de cateterismo nas janelas reportadas pelos respectivos ensaios; os horizontes diferem e os pontos não constituem uma metanálise.
+
+O modelo inclui deliberadamente apenas o custo dos exames. Componentes não quantificados aqui — a menor frequência de complicações maiores relacionadas ao procedimento no DISCHARGE (0,5% contra 1,9%) e a redução da permanência no CAD-MAN (mediana de 52,9 para 30,0 horas) — tenderiam a favorecer o gatekeeping. Em sentido contrário, alterações em revascularização e outros recursos a jusante podem compensar parcial ou integralmente esses ganhos. **O impacto líquido não foi estimado nesta análise.**
 
 **Estes Δ não são intercambiáveis com os da seção anterior. Trata-se de outra população e de outro PICO** — pacientes já referenciados para procedimento invasivo —, e a taxa do braço comparador é de 97% por construção do desenho. Não constitui alternativa automaticamente substituível à incorporação ora analisada.
 
@@ -252,7 +254,7 @@ Recomenda-se que a apreciação final considere explicitamente essa distinção,
 
 Há um desfecho em que a angiotomografia é consistente em **todos** os ensaios que o reportam, independentemente do comparador: a redução de angiografias invasivas sem doença obstrutiva.
 
-> **Advertência de desfecho.** Esta seção usa **cateterismo sem doença obstrutiva**, que é métrica de **eficiência diagnóstica e não de gasto** — o SUS remunera o procedimento independentemente do achado. Seus valores **não entram no cálculo de neutralidade** das seções 4.2 a 4.5, que usam cateterismo total, e não são intercambiáveis com eles.
+> **Advertência de desfecho.** Esta seção apresenta **cateterismo sem DAC obstrutiva** como métrica de eficiência diagnóstica, **não utilizada como unidade do cálculo econômico**. Seus valores não entram no cálculo de neutralidade das seções 4.2 a 4.5, que usam cateterismo total, e não são intercambiáveis com eles.
 
 O **IQWiG**, agência alemã de avaliação de tecnologias em saúde, publicou em 8 de março de 2024 o relatório final D22-01 sobre exatamente esta tecnologia, por encomenda do G-BA. Sua Tabela 43 reporta cateterismos sem doença obstrutiva com denominador de **pacientes randomizados**:
 

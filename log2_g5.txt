@@ -48,3 +48,15 @@ SIA 2025: 72 arquivos a processar
 [47/72] PAMA2511.dbc: 843 pares
 [48/72] PAMA2512.dbc: 847 pares
 [49/72] PAPA2501.dbc: 906 pares
+[50/72] PAPA2502.dbc: 900 pares
+[51/72] PAPA2503.dbc: 900 pares
+[52/72] PAPA2504.dbc: 952 pares
+[53/72] PAPA2505.dbc: 907 pares
+[54/72] PAPA2506.dbc: 969 pares
+[55/72] PAPA2507.dbc: 1005 pares
+[56/72] PAPA2508.dbc: 985 pares
+[57/72] PAPA2509.dbc: 1035 pares
+[58/72] PAPA2510.dbc: 1021 pares
+[59/72] PAPA2511.dbc: 1018 pares
+[60/72] PAPA2512.dbc: 1061 pares
+[61/72] PAPE2501.dbc: 853 pares
