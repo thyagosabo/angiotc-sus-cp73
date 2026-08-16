@@ -154,18 +154,20 @@
   <div class="wrap stack g18">
     <span class="eyebrow">2 · O problema econômico</span>
     <h2>Quanto o SUS poderia pagar, e o que os ensaios observaram</h2>
-    <p>Sob substituição de um episódio funcional por uma AngioTC, a neutralidade orçamentária exige que o preço não ultrapasse o custo do que foi substituído mais o valor dos cateterismos evitados:</p>
-    <p class="thesis" style="font-family:var(--mono);font-size:.95rem">P = R$ 185,46 + (Δ ⁄ 100) × R$ 730,14</p>
-    <p style="font-size:.94rem;color:var(--ink-2)">A linha traçada por essa equação separa o plano em duas regiões. Abaixo dela, a estratégia é neutra ou economiza. Acima, é expansiva.</p>
+    <p>A equação de neutralidade <strong>não é a mesma nos dois PICOs</strong>, e essa distinção é decisiva. Quando a AngioTC substitui um episódio funcional, o custo desse episódio é crédito. Quando ela filtra um cateterismo já indicado, a investigação prévia já ocorreu e é comum aos dois braços — cancela, e não pode ser creditada.</p>
+    <div class="panel" style="font-family:var(--mono);font-size:.9rem;line-height:2;padding:18px 20px">
+      <span style="color:var(--muted)">primeira linha</span><br>
+      P = R$ 185,46 + (Δ ⁄ 100) × R$ 730,14<br><br>
+      <span style="color:var(--muted)">gatekeeping</span><br>
+      P = <span style="opacity:.35">R$ 185,46 +</span> (Δ ⁄ 100) × R$ 730,14
+    </div>
+    <p style="font-size:.94rem;color:var(--ink-2)">São duas retas paralelas, separadas por R$ 185,46. Cada ensaio deve ser lido contra a reta do seu próprio desenho.</p>
   </div>
 
   <div class="panel">
     <figure>
       <div class="figscroll">
-        <svg viewBox="0 0 880 470" role="img" aria-label="Preço da AngioTC contra cateterismos evitados por 100 pacientes. A linha de neutralidade cruza o custo microcusteado corrigido em 59,9 evitados por 100. Os oito ensaios de primeira linha agrupam-se entre −6,4 e +4,1. Os quatro ensaios de gatekeeping situam-se entre 53,7 e 81,0.">
-          <defs>
-            <clipPath id="pa"><rect x="96" y="44" width="750" height="360"/></clipPath>
-          </defs>
+        <svg viewBox="0 0 880 470" role="img" aria-label="Preço da AngioTC contra cateterismos evitados por 100 pacientes, com duas retas de neutralidade paralelas separadas por 185,46 reais. Os oito ensaios de primeira linha agrupam-se entre menos 6,4 e mais 4,1 sobre a reta superior. Os quatro ensaios de gatekeeping situam-se entre 53,7 e 81,0 sobre a reta inferior, todos abaixo do custo microcusteado corrigido de 622,54 reais.">
           <!-- eixos -->
           <line x1="96" y1="404" x2="846" y2="404" stroke="var(--rule)" stroke-width="1"/>
           <line x1="96" y1="44" x2="96" y2="404" stroke="var(--rule)" stroke-width="1"/>
@@ -182,36 +184,32 @@
           </g>
           <text x="100" y="239" font-family="ui-monospace,Menlo,monospace" font-size="10.5" fill="var(--over)" font-weight="600">microcusteio corrigido · R$ 622,54</text>
 
-          <!-- regiao acima da neutralidade -->
-          <g clip-path="url(#pa)">
-            <polygon points="96,375.1 846,187.3 846,44 96,44" fill="var(--over-soft)"/>
-            <polygon points="96,375.1 846,187.3 846,404 96,404" fill="var(--accent-soft)"/>
-            <line x1="96" y1="375.1" x2="846" y2="187.3" stroke="var(--accent)" stroke-width="2"/>
-          </g>
-          <text x="700" y="120" font-family="ui-monospace,Menlo,monospace" font-size="10" fill="var(--over)">orçamentariamente expansiva</text>
-          <text x="640" y="380" font-family="ui-monospace,Menlo,monospace" font-size="10" fill="var(--accent)">neutra ou economizadora</text>
+          <!-- duas retas de neutralidade -->
+          <line x1="96" y1="375.1" x2="846" y2="187.3" stroke="var(--accent)" stroke-width="2"/>
+          <line x1="171" y1="404" x2="846" y2="235.0" stroke="var(--accent)" stroke-width="2" stroke-dasharray="7 4"/>
+          <text x="250" y="330" font-family="ui-monospace,Menlo,monospace" font-size="10" fill="var(--accent)">neutralidade · primeira linha</text>
+          <text x="330" y="392" font-family="ui-monospace,Menlo,monospace" font-size="10" fill="var(--accent)">neutralidade · gatekeeping</text>
 
-          <!-- cruzamento -->
-          <line x1="620" y1="243.9" x2="620" y2="404" stroke="var(--over)" stroke-width="1" stroke-dasharray="2 3"/>
-          <circle cx="620" cy="243.9" r="4.5" fill="var(--over)"/>
-          <text x="628" y="272" font-family="ui-monospace,Menlo,monospace" font-size="10" fill="var(--over)">cruzamento: 59,9 / 100</text>
+          <!-- faixa primeira linha, sobre a reta superior -->
+          <rect x="123" y="348" width="79" height="28" fill="var(--accent-fill)" stroke="var(--accent)" stroke-width="1"/>
+          <text x="128" y="324" font-family="ui-monospace,Menlo,monospace" font-size="10" fill="var(--ink)">8 ensaios de</text>
+          <text x="128" y="336" font-family="ui-monospace,Menlo,monospace" font-size="10" fill="var(--ink)">primeira linha</text>
+          <text x="128" y="392" font-family="ui-monospace,Menlo,monospace" font-size="9.5" fill="var(--muted)">−6,4 a +4,1</text>
 
-          <!-- faixa primeira linha -->
-          <rect x="123" y="340" width="79" height="36" fill="var(--accent-fill)" stroke="var(--accent)" stroke-width="1"/>
-          <text x="128" y="318" font-family="ui-monospace,Menlo,monospace" font-size="10" fill="var(--ink)">8 ensaios de</text>
-          <text x="128" y="330" font-family="ui-monospace,Menlo,monospace" font-size="10" fill="var(--ink)">primeira linha</text>
-          <text x="128" y="393" font-family="ui-monospace,Menlo,monospace" font-size="9.5" fill="var(--muted)">−6,4 a +4,1</text>
-
-          <!-- pontos gatekeeping -->
+          <!-- pontos gatekeeping, sobre a reta inferior -->
           <g fill="var(--accent)">
-            <circle cx="574" cy="255.5" r="5"/><circle cx="606" cy="247.4" r="5"/>
-            <circle cx="664" cy="233.0" r="5"/><circle cx="778" cy="204.2" r="5"/>
+            <circle cx="574" cy="303.2" r="5"/><circle cx="606" cy="295.1" r="5"/>
+            <circle cx="664" cy="280.7" r="5"/><circle cx="778" cy="251.9" r="5"/>
           </g>
           <g font-family="ui-monospace,Menlo,monospace" font-size="9.5" fill="var(--ink-2)">
-            <text x="530" y="288">Reis</text><text x="592" y="303">CONSERVE</text>
-            <text x="646" y="222">DISCHARGE</text><text x="748" y="193">CAD-MAN</text>
+            <text x="536" y="320">Reis</text><text x="560" y="288">CONSERVE</text>
+            <text x="640" y="272">DISCHARGE</text><text x="748" y="242">CAD-MAN</text>
           </g>
-          <text x="560" y="150" font-family="ui-monospace,Menlo,monospace" font-size="10" fill="var(--accent)">4 ensaios de gatekeeping</text>
+          <text x="600" y="150" font-family="ui-monospace,Menlo,monospace" font-size="10" fill="var(--accent)">4 ensaios de gatekeeping</text>
+
+          <!-- lacuna que resta em CAD-MAN -->
+          <line x1="778" y1="251.9" x2="778" y2="243.9" stroke="var(--over)" stroke-width="2"/>
+          <text x="700" y="228" font-family="ui-monospace,Menlo,monospace" font-size="9.5" fill="var(--over)">lacuna R$ 31</text>
 
           <!-- ticks -->
           <g font-family="ui-monospace,Menlo,monospace" font-size="10" fill="var(--muted)">
@@ -229,7 +227,7 @@
           <text x="20" y="230" text-anchor="middle" transform="rotate(-90 20 230)" font-family="ui-monospace,Menlo,monospace" font-size="10.5" fill="var(--ink-2)">preço da AngioTC (R$)</text>
         </svg>
       </div>
-      <figcaption>Cada ensaio está posicionado pelo Δ absoluto de cateterismos que observou. A linha de neutralidade cruza o custo microcusteado corrigido (R$ 622,54) em <strong>59,9 evitados por 100</strong>. Os oito ensaios que compararam a AngioTC a estratégias não invasivas agrupam-se entre −6,4 e +4,1 — a mais de uma ordem de grandeza do cruzamento. Os quatro ensaios cujo comparador é o cateterismo direto situam-se entre 53,7 e 81,0, dois deles acima do cruzamento e dois logo abaixo.</figcaption>
+      <figcaption>Cada ensaio está posicionado pelo Δ absoluto de cateterismos que observou e lido contra a reta do seu próprio desenho. Os oito ensaios de primeira linha agrupam-se entre −6,4 e +4,1, correspondendo a preços de neutralidade de <strong>R$ 139 a R$ 215</strong>. Os quatro de gatekeeping situam-se entre 53,7 e 81,0, correspondendo a <strong>R$ 392 a R$ 591</strong> — três a quatro vezes mais, porém <strong>todos ainda abaixo do custo microcusteado corrigido</strong>. No caso mais favorável, CAD-MAN, restam R$ 31 por paciente. Pela via de cateterismo evitado isoladamente, nenhum dos dois PICOs atinge neutralidade a R$ 622,54; a distância, contudo, difere por uma ordem de grandeza.</figcaption>
     </figure>
   </div>
 </section>
@@ -257,10 +255,10 @@
       <thead><tr><th>Ensaio</th><th>Comparador</th><th class="n">Δ evitados/100</th><th class="n">Preço de neutralidade</th></tr></thead>
       <tbody>
         <tr><td>PROMISE · PRECISE · SCOT-HEART · CAPP · CRESCENT I e II · Foy</td><td>não invasivo</td><td class="n">−6,4 a +4,1</td><td class="n">R$ 139 – 215</td></tr>
-        <tr><td>Reis 2022</td><td>cateterismo direto</td><td class="n">53,7</td><td class="n">R$ 577,55</td></tr>
-        <tr><td>CONSERVE</td><td>cateterismo direto</td><td class="n">58,0</td><td class="n">R$ 608,94</td></tr>
-        <tr><td>DISCHARGE</td><td>cateterismo direto</td><td class="n">65,7</td><td class="n">R$ 665,16</td></tr>
-        <tr><td>CAD-MAN</td><td>cateterismo direto</td><td class="n">81,0</td><td class="n">R$ 776,87</td></tr>
+        <tr><td>Reis 2022</td><td>cateterismo direto</td><td class="n">53,7</td><td class="n">R$ 392,09</td></tr>
+        <tr><td>CONSERVE</td><td>cateterismo direto</td><td class="n">58,0</td><td class="n">R$ 423,48</td></tr>
+        <tr><td>DISCHARGE</td><td>cateterismo direto</td><td class="n">65,7</td><td class="n">R$ 479,70</td></tr>
+        <tr><td>CAD-MAN</td><td>cateterismo direto</td><td class="n">81,0</td><td class="n">R$ 591,41</td></tr>
       </tbody>
     </table>
   </div>
@@ -270,7 +268,8 @@
 <section class="wrap stack g18">
   <span class="eyebrow">4 · Conclusão</span>
   <h2>O que a evidência sustenta</h2>
-  <p>Nos ensaios que compararam estratégias não invasivas iniciais, a redução observada na angiografia invasiva foi <strong>ausente, variável ou insuficiente</strong> para sustentar, isoladamente, neutralidade orçamentária aos custos estimados para o SUS. O caso econômico torna-se substancialmente mais forte quando a AngioTC é usada como filtro em pacientes já selecionados para cateterismo.</p>
+  <p>Nos ensaios que compararam estratégias não invasivas iniciais, a redução observada na angiografia invasiva foi <strong>ausente, variável ou insuficiente</strong> para sustentar, isoladamente, neutralidade orçamentária aos custos estimados para o SUS. O caso econômico torna-se <strong>três a quatro vezes mais forte</strong> quando a AngioTC filtra pacientes já selecionados para cateterismo — mas, mesmo ali, a via de cateterismo evitado isoladamente não fecha a conta ao custo microcusteado corrigido.</p>
+  <p style="font-size:.94rem;color:var(--ink-2)">No ensaio mais favorável, a lacuna remanescente é de <strong>R$ 31 por paciente</strong> — 5%. O modelo inclui deliberadamente apenas um componente de custo. Componentes documentados e ainda não quantificados aqui — menos complicações maiores relacionadas ao procedimento, observadas no DISCHARGE, e diferenças de permanência hospitalar — poderiam plausivelmente fechá-la, mas <strong>isso não foi demonstrado nesta análise</strong>.</p>
   <p style="font-size:.94rem;color:var(--ink-2)">Duas ressalvas que o documento completo desenvolve. <strong>Reduzir cateterismo não implica reduzir gasto:</strong> no PRECISE, a economia diagnóstica de 27% foi acompanhada de aumento de 67% no custo de revascularização, com custo total semelhante. E esta é uma conclusão <strong>econômica de curto prazo, não clínica</strong> — o SCOT-HEART demonstrou redução de morte coronariana e infarto não fatal em 5 e 10 anos.</p>
 </section>
 

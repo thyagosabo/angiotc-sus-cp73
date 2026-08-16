@@ -212,12 +212,20 @@ Ainda assim, o ponto responde a um dos itens que o Comitê listou como essencial
 
 Ensaios com comparador **invasivo-primeiro**, isto é, pacientes já encaminhados para cateterismo, produzem resultado inteiramente distinto:
 
+**A equação de neutralidade não é a mesma nos dois PICOs.** Quando a angiotomografia substitui um episódio funcional, o custo desse episódio (R$ 185,46) é crédito legítimo. Quando ela filtra um cateterismo já indicado, a investigação prévia **já ocorreu antes da randomização, é comum aos dois braços e cancela** — não pode ser creditada. A equação aplicável é:
+
+```
+P_neutralidade,gate  =  (Δ_CATE / 100) × C_CATE
+```
+
 | Ensaio | Δ observado /100 | Preço de neutralidade |
 |---|---|---|
-| DISCHARGE (manejo inicial) | **+75,1** | **R$ 733,80** |
-| CONSERVE (1 ano) | **+66,0** | **R$ 667,35** |
+| DISCHARGE (manejo inicial) | +75,1 | R$ 548,34 |
+| CONSERVE (1 ano) | +66,0 | R$ 481,89 |
 
-Nessa indicação, o preço de neutralidade **supera o custo microcusteado corrigido de R$ 622,54**. A angiotomografia como filtro anterior a um cateterismo já indicado é, pelos dados disponíveis, orçamentariamente neutra ou economizadora.
+Nessa indicação o preço de neutralidade é **duas a três vezes superior ao do PICO de primeira linha** (R$ 139 a R$ 215), mas **permanece abaixo do custo microcusteado corrigido de R$ 622,54**. Pela via de cateterismo evitado isoladamente, tampouco o gatekeeping fecha a conta a esse preço — a distância, contudo, é de outra ordem.
+
+O modelo inclui deliberadamente apenas um componente de custo. Componentes documentados e não quantificados aqui — as menores complicações maiores relacionadas ao procedimento observadas no DISCHARGE, e diferenças de permanência hospitalar — poderiam reduzir a lacuna remanescente, o que **não foi demonstrado nesta análise**.
 
 **Estes Δ não são intercambiáveis com os da seção anterior. Trata-se de outra população e de outro PICO** — pacientes já referenciados para procedimento invasivo —, e a taxa do braço comparador é de 97% por construção do desenho. Não constitui alternativa automaticamente substituível à incorporação ora analisada.
 
@@ -307,7 +315,7 @@ O `C_episódio_atual` de R$ 185,46 é, portanto, **preço de tabela, não custo 
 4. **Doze UFs não possuem nenhum estabelecimento nesse estrato**; AP, PI e TO não possuem nenhum tomógrafo de ≥64 canais confirmado disponível ao SUS.
 5. A investigação funcional do SUS concentra-se no **teste ergométrico (76,0% dos episódios identificados, R$ 32,20)**, e não em exames de custo médio-alto — ressalvado que a composição da população elegível não é identificável nos registros administrativos.
 6. **Nos ensaios que compararam estratégias não invasivas iniciais, a redução observada na angiografia invasiva foi ausente, variável ou insuficiente para sustentar, isoladamente, neutralidade orçamentária aos custos estimados para o SUS.** O requisito de 59,9 angiografias evitadas por 100 pacientes, ao custo microcusteado corrigido de R$ 622,54, é **14,6 vezes maior que o melhor resultado observado**. A faixa da literatura (−6,4 a +4,1 por 100) corresponde a preços de neutralidade entre R$ 138,73 e R$ 215,40. Ao preço da saúde suplementar, a neutralidade é logicamente impossível.
-7. **Existe espaço econômico em outro PICO, que não é o ora apreciado.** Em pacientes já referenciados a cateterismo, o Δ observado é de +54 a +81 por 100 e o preço de neutralidade supera o custo microcusteado corrigido. O mecanismo é claro: há um procedimento caro e invasivo a remover do percurso, o que não ocorre quando o exame substituído custa R$ 32. Trata-se de população distinta, com critérios de elegibilidade próprios, e **não de alternativa automaticamente substituível** à incorporação requerida. Recomenda-se que a apreciação final considere avaliá-la como pergunta separada.
+7. **O espaço econômico é substancialmente maior em outro PICO, que não é o ora apreciado.** Em pacientes já referenciados a cateterismo, o preço de neutralidade é de **R$ 392 a R$ 591** — duas a três vezes o do PICO de primeira linha (R$ 139 a R$ 215) —, porém **ainda abaixo do custo microcusteado corrigido**. No caso mais favorável resta lacuna de R$ 31 por paciente. O mecanismo é claro: há um procedimento caro a remover do percurso, o que não ocorre quando o exame substituído custa R$ 32. Note-se que, nesse PICO, o custo da investigação prévia é comum aos dois braços e **não pode ser creditado** à estratégia. Trata-se de população distinta, com critérios próprios, e **não de alternativa automaticamente substituível** à incorporação requerida.
 8. **O impacto orçamentário depende do protocolo, não apenas da tecnologia** — critérios de seleção e regras de utilização alteram o resultado observado entre ensaios. Comparações indiretas, contudo, não permitem quantificar isoladamente o efeito de nenhum componente do protocolo. Recomenda-se que qualquer incorporação especifique regras de utilização.
 9. **No horizonte econômico desta contribuição, o benefício mais consistente ligado a recursos é o aumento da adequação da indicação de cateterismo** (5,7 a 7,6 evitados por 100 sem doença obstrutiva), e não economia por redução de volume. Isto **não caracteriza o benefício clínico da tecnologia**: o SCOT-HEART demonstrou redução de morte coronariana e infarto não fatal em 5 e 10 anos. Benefício clínico e neutralidade orçamentária de curto prazo são perguntas distintas; esta contribuição responde apenas à segunda.
 10. Não há código SIGTAP para a tecnologia; microcusteio contemporâneo é condição necessária para qualquer análise econômica reprodutível.
