@@ -17,3 +17,6 @@ SIA 2025: 36 arquivos a processar
 [16/36] PAPR2504.dbc: 1538 pares
 [17/36] PAPR2505.dbc: 1588 pares
 [18/36] PAPR2506.dbc: 1563 pares
+[19/36] PAPR2507.dbc: 1630 pares
+[20/36] PAPR2508.dbc: 1658 pares
+[21/36] PAPR2509.dbc: 1678 pares

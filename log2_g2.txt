@@ -12,3 +12,7 @@ SIA 2025: 30 arquivos a processar
 [11/30] PAMG2505c.dbc: 69 pares
 [12/30] PAMG2506a.dbc: 782 pares
 [13/30] PAMG2506b.dbc: 2463 pares
+[14/30] PAMG2507a.dbc: 687 pares
+[15/30] PAMG2507b.dbc: 2133 pares
+[16/30] PAMG2507c.dbc: 575 pares
+[17/30] PAMG2508a.dbc: 806 pares

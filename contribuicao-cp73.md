@@ -218,12 +218,18 @@ Ensaios com comparador **invasivo-primeiro**, isto é, pacientes já encaminhado
 P_neutralidade,gate  =  (Δ_CATE / 100) × C_CATE
 ```
 
-| Ensaio | Δ observado /100 | Preço de neutralidade |
-|---|---|---|
-| DISCHARGE (manejo inicial) | +75,1 | R$ 548,34 |
-| CONSERVE (1 ano) | +66,0 | R$ 481,89 |
+Todos os Δ abaixo usam **cateterismo total por braço randomizado** — o mesmo desfecho da seção anterior, e o único admissível para cálculo econômico, já que o SUS remunera o procedimento independentemente do achado.
 
-Nessa indicação o preço de neutralidade é **duas a três vezes superior ao do PICO de primeira linha** (R$ 139 a R$ 215), mas **permanece abaixo do custo microcusteado corrigido de R$ 622,54**. Pela via de cateterismo evitado isoladamente, tampouco o gatekeeping fecha a conta a esse preço — a distância, contudo, é de outra ordem.
+| Ensaio | Cateterismo, AngioTC | Cateterismo, controle | Δ /100 | Preço de neutralidade |
+|---|---|---|---|---|
+| CONSERVE | 23% | 89% | 66,0 | R$ 481,89 |
+| Reis 2022 | 32/115 (27,8%) | 105/105 (100%) | 72,2 | R$ 526,97 |
+| DISCHARGE | 404/1808 (22,3%) | 1708/1753 (97,4%) | 75,1 | R$ 548,25 |
+| CAD-MAN | 24/167 (14,4%) | 162/162 (100%) | **85,6** | **R$ 625,21** |
+
+Nessa indicação o preço de neutralidade é **duas a três vezes superior ao do PICO de primeira linha** (R$ 139 a R$ 215). **Um único ensaio, o CAD-MAN, alcança o custo microcusteado corrigido de R$ 622,54 — e por R$ 2,67 por paciente**, margem inferior a qualquer incerteza de parâmetro deste modelo, apoiada em um ensaio de 340 pacientes cujo braço comparador é 100% invasivo por desenho.
+
+Isto não demonstra que o gatekeeping economiza. Demonstra que, no cenário mais favorável analisado, **a lacuna residual para neutralidade é mais de dez vezes menor no gatekeeping que na estratégia de primeira linha** — R$ 407 por paciente contra praticamente nenhuma.
 
 O modelo inclui deliberadamente apenas um componente de custo. Componentes documentados e não quantificados aqui — as menores complicações maiores relacionadas ao procedimento observadas no DISCHARGE, e diferenças de permanência hospitalar — poderiam reduzir a lacuna remanescente, o que **não foi demonstrado nesta análise**.
 
@@ -246,7 +252,9 @@ Recomenda-se que a apreciação final considere explicitamente essa distinção,
 
 Há um desfecho em que a angiotomografia é consistente em **todos** os ensaios que o reportam, independentemente do comparador: a redução de angiografias invasivas sem doença obstrutiva.
 
-O **IQWiG**, agência alemã de avaliação de tecnologias em saúde, publicou em 8 de março de 2024 o relatório final D22-01 sobre exatamente esta tecnologia, por encomenda do G-BA. Sua Tabela 43 reporta cateterismos sem doença obstrutiva com denominador de **pacientes randomizados** — que é a grandeza economicamente relevante:
+> **Advertência de desfecho.** Esta seção usa **cateterismo sem doença obstrutiva**, que é métrica de **eficiência diagnóstica e não de gasto** — o SUS remunera o procedimento independentemente do achado. Seus valores **não entram no cálculo de neutralidade** das seções 4.2 a 4.5, que usam cateterismo total, e não são intercambiáveis com eles.
+
+O **IQWiG**, agência alemã de avaliação de tecnologias em saúde, publicou em 8 de março de 2024 o relatório final D22-01 sobre exatamente esta tecnologia, por encomenda do G-BA. Sua Tabela 43 reporta cateterismos sem doença obstrutiva com denominador de **pacientes randomizados**:
 
 **Contra métodos funcionais**
 
@@ -315,7 +323,7 @@ O `C_episódio_atual` de R$ 185,46 é, portanto, **preço de tabela, não custo 
 4. **Doze UFs não possuem nenhum estabelecimento nesse estrato**; AP, PI e TO não possuem nenhum tomógrafo de ≥64 canais confirmado disponível ao SUS.
 5. A investigação funcional do SUS concentra-se no **teste ergométrico (76,0% dos episódios identificados, R$ 32,20)**, e não em exames de custo médio-alto — ressalvado que a composição da população elegível não é identificável nos registros administrativos.
 6. **Nos ensaios que compararam estratégias não invasivas iniciais, a redução observada na angiografia invasiva foi ausente, variável ou insuficiente para sustentar, isoladamente, neutralidade orçamentária aos custos estimados para o SUS.** O requisito de 59,9 angiografias evitadas por 100 pacientes, ao custo microcusteado corrigido de R$ 622,54, é **14,6 vezes maior que o melhor resultado observado**. A faixa da literatura (−6,4 a +4,1 por 100) corresponde a preços de neutralidade entre R$ 138,73 e R$ 215,40. Ao preço da saúde suplementar, a neutralidade é logicamente impossível.
-7. **O espaço econômico é substancialmente maior em outro PICO, que não é o ora apreciado.** Em pacientes já referenciados a cateterismo, o preço de neutralidade é de **R$ 392 a R$ 591** — duas a três vezes o do PICO de primeira linha (R$ 139 a R$ 215) —, porém **ainda abaixo do custo microcusteado corrigido**. No caso mais favorável resta lacuna de R$ 31 por paciente. O mecanismo é claro: há um procedimento caro a remover do percurso, o que não ocorre quando o exame substituído custa R$ 32. Note-se que, nesse PICO, o custo da investigação prévia é comum aos dois braços e **não pode ser creditado** à estratégia. Trata-se de população distinta, com critérios próprios, e **não de alternativa automaticamente substituível** à incorporação requerida.
+7. **O espaço econômico é substancialmente maior em outro PICO, que não é o ora apreciado.** Em pacientes já referenciados a cateterismo, o preço de neutralidade é de **R$ 482 a R$ 625** — duas a três vezes o do PICO de primeira linha (R$ 139 a R$ 215). Apenas o CAD-MAN alcança o custo microcusteado corrigido, por R$ 2,67. No cenário mais favorável de cada PICO, a lacuna residual é de R$ 407 por paciente na primeira linha contra praticamente nenhuma no gatekeeping. O mecanismo é claro: há um procedimento caro a remover do percurso, o que não ocorre quando o exame substituído custa R$ 32. Note-se que, nesse PICO, o custo da investigação prévia é comum aos dois braços e **não pode ser creditado** à estratégia. Trata-se de população distinta, com critérios próprios, e **não de alternativa automaticamente substituível** à incorporação requerida.
 8. **O impacto orçamentário depende do protocolo, não apenas da tecnologia** — critérios de seleção e regras de utilização alteram o resultado observado entre ensaios. Comparações indiretas, contudo, não permitem quantificar isoladamente o efeito de nenhum componente do protocolo. Recomenda-se que qualquer incorporação especifique regras de utilização.
 9. **No horizonte econômico desta contribuição, o benefício mais consistente ligado a recursos é o aumento da adequação da indicação de cateterismo** (5,7 a 7,6 evitados por 100 sem doença obstrutiva), e não economia por redução de volume. Isto **não caracteriza o benefício clínico da tecnologia**: o SCOT-HEART demonstrou redução de morte coronariana e infarto não fatal em 5 e 10 anos. Benefício clínico e neutralidade orçamentária de curto prazo são perguntas distintas; esta contribuição responde apenas à segunda.
 10. Não há código SIGTAP para a tecnologia; microcusteio contemporâneo é condição necessária para qualquer análise econômica reprodutível.

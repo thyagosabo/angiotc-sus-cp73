@@ -14,3 +14,7 @@ SIA 2025: 47 arquivos a processar
 [13/47] PASP2504b.dbc: 1170 pares
 [14/47] PASP2504c.dbc: 2296 pares
 [15/47] PASP2504d.dbc: 1292 pares
+[16/47] PASP2505a.dbc: 1411 pares
+[17/47] PASP2505b.dbc: 1072 pares
+[18/47] PASP2505c.dbc: 2266 pares
+[19/47] PASP2505d.dbc: 1444 pares

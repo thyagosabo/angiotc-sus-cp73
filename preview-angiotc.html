@@ -159,7 +159,7 @@
       <span style="color:var(--muted)">primeira linha</span><br>
       P = R$ 185,46 + (Δ ⁄ 100) × R$ 730,14<br><br>
       <span style="color:var(--muted)">gatekeeping</span><br>
-      P = <span style="opacity:.35">R$ 185,46 +</span> (Δ ⁄ 100) × R$ 730,14
+      P = (Δ ⁄ 100) × R$ 730,14
     </div>
     <p style="font-size:.94rem;color:var(--ink-2)">São duas retas paralelas, separadas por R$ 185,46. Cada ensaio deve ser lido contra a reta do seu próprio desenho.</p>
   </div>
@@ -167,7 +167,7 @@
   <div class="panel">
     <figure>
       <div class="figscroll">
-        <svg viewBox="0 0 880 470" role="img" aria-label="Preço da AngioTC contra cateterismos evitados por 100 pacientes, com duas retas de neutralidade paralelas separadas por 185,46 reais. Os oito ensaios de primeira linha agrupam-se entre menos 6,4 e mais 4,1 sobre a reta superior. Os quatro ensaios de gatekeeping situam-se entre 53,7 e 81,0 sobre a reta inferior, todos abaixo do custo microcusteado corrigido de 622,54 reais.">
+        <svg viewBox="0 0 880 470" role="img" aria-label="Preço da AngioTC contra cateterismos totais evitados por 100 pacientes, com duas retas de neutralidade paralelas separadas por 185,46 reais. Os oito ensaios de primeira linha agrupam-se entre menos 6,4 e mais 4,1 sobre a reta superior, correspondendo a 139 a 215 reais. Os quatro ensaios de gatekeeping situam-se entre 66,0 e 85,6 sobre a reta inferior, correspondendo a 482 a 625 reais; apenas o CAD-MAN alcança o custo microcusteado corrigido de 622,54 reais, por 2,67 reais.">
           <!-- eixos -->
           <line x1="96" y1="404" x2="846" y2="404" stroke="var(--rule)" stroke-width="1"/>
           <line x1="96" y1="44" x2="96" y2="404" stroke="var(--rule)" stroke-width="1"/>
@@ -198,18 +198,17 @@
 
           <!-- pontos gatekeeping, sobre a reta inferior -->
           <g fill="var(--accent)">
-            <circle cx="574" cy="303.2" r="5"/><circle cx="606" cy="295.1" r="5"/>
-            <circle cx="664" cy="280.7" r="5"/><circle cx="778" cy="251.9" r="5"/>
+            <circle cx="666" cy="280.1" r="5"/><circle cx="712" cy="268.5" r="5"/>
+            <circle cx="734" cy="263.0" r="5"/><circle cx="813" cy="243.2" r="5.5"/>
           </g>
           <g font-family="ui-monospace,Menlo,monospace" font-size="9.5" fill="var(--ink-2)">
-            <text x="536" y="320">Reis</text><text x="560" y="288">CONSERVE</text>
-            <text x="640" y="272">DISCHARGE</text><text x="748" y="242">CAD-MAN</text>
+            <text x="600" y="297">CONSERVE</text><text x="676" y="256">Reis</text>
+            <text x="700" y="290">DISCHARGE</text><text x="768" y="228">CAD-MAN</text>
           </g>
+          <line x1="712" y1="268.5" x2="690" y2="259" stroke="var(--rule)" stroke-width=".8"/>
+          <line x1="734" y1="263.0" x2="748" y2="283" stroke="var(--rule)" stroke-width=".8"/>
           <text x="600" y="150" font-family="ui-monospace,Menlo,monospace" font-size="10" fill="var(--accent)">4 ensaios de gatekeeping</text>
-
-          <!-- lacuna que resta em CAD-MAN -->
-          <line x1="778" y1="251.9" x2="778" y2="243.9" stroke="var(--over)" stroke-width="2"/>
-          <text x="700" y="228" font-family="ui-monospace,Menlo,monospace" font-size="9.5" fill="var(--over)">lacuna R$ 31</text>
+          <text x="600" y="164" font-family="ui-monospace,Menlo,monospace" font-size="9.5" fill="var(--muted)">comparador = cateterismo direto</text>
 
           <!-- ticks -->
           <g font-family="ui-monospace,Menlo,monospace" font-size="10" fill="var(--muted)">
@@ -223,11 +222,11 @@
             <text x="88" y="209" text-anchor="end">800</text>
             <text x="88" y="106" text-anchor="end">1.200</text>
           </g>
-          <text x="471" y="443" text-anchor="middle" font-family="ui-monospace,Menlo,monospace" font-size="10.5" fill="var(--ink-2)">cateterismos evitados por 100 pacientes  (Δ)</text>
+          <text x="471" y="443" text-anchor="middle" font-family="ui-monospace,Menlo,monospace" font-size="10.5" fill="var(--ink-2)">cateterismos TOTAIS evitados por 100 pacientes  (Δ)</text>
           <text x="20" y="230" text-anchor="middle" transform="rotate(-90 20 230)" font-family="ui-monospace,Menlo,monospace" font-size="10.5" fill="var(--ink-2)">preço da AngioTC (R$)</text>
         </svg>
       </div>
-      <figcaption>Cada ensaio está posicionado pelo Δ absoluto de cateterismos que observou e lido contra a reta do seu próprio desenho. Os oito ensaios de primeira linha agrupam-se entre −6,4 e +4,1, correspondendo a preços de neutralidade de <strong>R$ 139 a R$ 215</strong>. Os quatro de gatekeeping situam-se entre 53,7 e 81,0, correspondendo a <strong>R$ 392 a R$ 591</strong> — três a quatro vezes mais, porém <strong>todos ainda abaixo do custo microcusteado corrigido</strong>. No caso mais favorável, CAD-MAN, restam R$ 31 por paciente. Pela via de cateterismo evitado isoladamente, nenhum dos dois PICOs atinge neutralidade a R$ 622,54; a distância, contudo, difere por uma ordem de grandeza.</figcaption>
+      <figcaption><strong>Todos os doze pontos usam o mesmo desfecho: cateterismo total por braço randomizado</strong> — o procedimento que o SUS paga, independentemente de encontrar doença obstrutiva. Cada ensaio é lido contra a reta do seu próprio desenho. Os oito de primeira linha agrupam-se entre −6,4 e +4,1, correspondendo a <strong>R$ 139 a R$ 215</strong>. Os quatro de gatekeeping situam-se entre 66,0 e 85,6, correspondendo a <strong>R$ 482 a R$ 625</strong>. Apenas o CAD-MAN alcança o custo microcusteado corrigido, e <strong>por R$ 2,67 — margem menor que qualquer incerteza de parâmetro do modelo</strong>. No melhor caso de primeira linha resta lacuna de R$ 407 por paciente; no melhor caso de gatekeeping, essencialmente nenhuma.</figcaption>
     </figure>
   </div>
 </section>
@@ -255,21 +254,43 @@
       <thead><tr><th>Ensaio</th><th>Comparador</th><th class="n">Δ evitados/100</th><th class="n">Preço de neutralidade</th></tr></thead>
       <tbody>
         <tr><td>PROMISE · PRECISE · SCOT-HEART · CAPP · CRESCENT I e II · Foy</td><td>não invasivo</td><td class="n">−6,4 a +4,1</td><td class="n">R$ 139 – 215</td></tr>
-        <tr><td>Reis 2022</td><td>cateterismo direto</td><td class="n">53,7</td><td class="n">R$ 392,09</td></tr>
-        <tr><td>CONSERVE</td><td>cateterismo direto</td><td class="n">58,0</td><td class="n">R$ 423,48</td></tr>
-        <tr><td>DISCHARGE</td><td>cateterismo direto</td><td class="n">65,7</td><td class="n">R$ 479,70</td></tr>
-        <tr><td>CAD-MAN</td><td>cateterismo direto</td><td class="n">81,0</td><td class="n">R$ 591,41</td></tr>
+        <tr><td>CONSERVE · 23% vs 89%</td><td>cateterismo direto</td><td class="n">66,0</td><td class="n">R$ 481,89</td></tr>
+        <tr><td>Reis 2022 · 32/115 vs 105/105</td><td>cateterismo direto</td><td class="n">72,2</td><td class="n">R$ 526,97</td></tr>
+        <tr><td>DISCHARGE · 404/1808 vs 1708/1753</td><td>cateterismo direto</td><td class="n">75,1</td><td class="n">R$ 548,25</td></tr>
+        <tr><td>CAD-MAN · 24/167 vs 162/162</td><td>cateterismo direto</td><td class="n">85,6</td><td class="n">R$ 625,21</td></tr>
       </tbody>
     </table>
   </div>
-  <p class="wrap" style="font-size:.9rem;color:var(--muted)">Fonte dos Δ de cateterismo sem doença obstrutiva: IQWiG D22-01 (relatório final, 08/03/2024), Tabela 43, denominador de pacientes randomizados. Os ensaios de gatekeeping recrutam pacientes já referenciados a cateterismo — a taxa de 97% no braço comparador decorre do desenho. <strong>São PICOs distintos e não intercambiáveis.</strong></p>
+  <p class="wrap" style="font-size:.9rem;color:var(--muted)">Δ de cateterismo total extraídos das publicações primárias de cada ensaio. Os ensaios de gatekeeping recrutam pacientes já referenciados a cateterismo — a taxa de 89% a 100% no braço comparador decorre do desenho. <strong>São PICOs distintos e não intercambiáveis.</strong></p>
+
+  <div class="wrap stack g18" style="margin-top:34px">
+    <h2 style="font-size:1.2rem">Um segundo desfecho, que não é econômico</h2>
+    <p style="font-size:.94rem">Cateterismo <em>sem doença obstrutiva</em> é métrica de eficiência diagnóstica, não de gasto — o SUS paga o procedimento de qualquer modo. Medido separadamente, é o único desfecho em que a AngioTC é consistente nos dois PICOs.</p>
+    <div class="tablewrap">
+      <table>
+        <thead><tr><th>Ensaio</th><th>Comparador</th><th class="n">AngioTC</th><th class="n">Controle</th><th class="n">Evitados/100</th></tr></thead>
+        <tbody>
+          <tr><td>CARE-CCTA</td><td>não invasivo</td><td class="n">0,9%</td><td class="n">6,8%</td><td class="n">5,9</td></tr>
+          <tr><td>CATCH</td><td>não invasivo</td><td class="n">4,9%</td><td class="n">7,9%</td><td class="n">3,0</td></tr>
+          <tr><td>SCOT-HEART</td><td>usual care</td><td class="n">1,0%</td><td class="n">2,7%</td><td class="n">1,7</td></tr>
+          <tr><td>PROMISE</td><td>não invasivo</td><td class="n">3,4%</td><td class="n">4,3%</td><td class="n">0,9</td></tr>
+          <tr><td>CAD-MAN</td><td>cateterismo direto</td><td class="n">3,6%</td><td class="n">84,6%</td><td class="n">81,0</td></tr>
+          <tr><td>DISCHARGE</td><td>cateterismo direto</td><td class="n">6,1%</td><td class="n">71,9%</td><td class="n">65,7</td></tr>
+          <tr><td>CONSERVE</td><td>cateterismo direto</td><td class="n">3,1%</td><td class="n">61,1%</td><td class="n">58,0</td></tr>
+          <tr><td>Reis 2022</td><td>cateterismo direto</td><td class="n">4,3%</td><td class="n">58,1%</td><td class="n">53,7</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p style="font-size:.88rem;color:var(--muted)">Fonte: IQWiG D22-01 (relatório final, 08/03/2024), Tabela 43, denominador de pacientes randomizados. Metanálise dos estudos de alta certeza contra métodos funcionais (CATCH e PROMISE): OR 0,77 (IC95% 0,64–0,94; p = 0,011), favorável à AngioTC. <strong>Estes valores não entram no cálculo de neutralidade e não devem ser confundidos com os Δ de cateterismo total da figura acima.</strong></p>
+  </div>
 </section>
 
 <section class="wrap stack g18">
   <span class="eyebrow">4 · Conclusão</span>
   <h2>O que a evidência sustenta</h2>
-  <p>Nos ensaios que compararam estratégias não invasivas iniciais, a redução observada na angiografia invasiva foi <strong>ausente, variável ou insuficiente</strong> para sustentar, isoladamente, neutralidade orçamentária aos custos estimados para o SUS. O caso econômico torna-se <strong>três a quatro vezes mais forte</strong> quando a AngioTC filtra pacientes já selecionados para cateterismo — mas, mesmo ali, a via de cateterismo evitado isoladamente não fecha a conta ao custo microcusteado corrigido.</p>
-  <p style="font-size:.94rem;color:var(--ink-2)">No ensaio mais favorável, a lacuna remanescente é de <strong>R$ 31 por paciente</strong> — 5%. O modelo inclui deliberadamente apenas um componente de custo. Componentes documentados e ainda não quantificados aqui — menos complicações maiores relacionadas ao procedimento, observadas no DISCHARGE, e diferenças de permanência hospitalar — poderiam plausivelmente fechá-la, mas <strong>isso não foi demonstrado nesta análise</strong>.</p>
+  <p>Nos ensaios que compararam estratégias não invasivas iniciais, a redução observada na angiografia invasiva foi <strong>ausente, variável ou insuficiente</strong> para sustentar, isoladamente, neutralidade orçamentária aos custos estimados para o SUS. <strong>No cenário mais favorável analisado, a lacuna residual para neutralidade é mais de dez vezes menor no gatekeeping que na estratégia de primeira linha</strong> — R$ 407 por paciente contra praticamente nenhuma.</p>
+  <p style="font-size:.94rem;color:var(--ink-2)">Um único ensaio, o CAD-MAN, alcança o custo microcusteado corrigido, e <strong>por R$ 2,67 por paciente</strong> — margem inferior a qualquer incerteza de parâmetro deste modelo, e apoiada em um ensaio de 340 pacientes cujo braço comparador é 100% invasivo por desenho. Não constitui demonstração de que o gatekeeping economiza; constitui demonstração de que <em>ali</em> a conta chega perto de fechar, e na primeira linha não chega.</p>
+  <p style="font-size:.94rem;color:var(--ink-2)">O modelo inclui deliberadamente <strong>um só componente de custo</strong>. Componentes documentados e não quantificados aqui — menos complicações maiores relacionadas ao procedimento, observadas no DISCHARGE, e diferenças de permanência hospitalar — poderiam alterar o resultado em qualquer direção, o que <strong>não foi demonstrado nesta análise</strong>.</p>
   <p style="font-size:.94rem;color:var(--ink-2)">Duas ressalvas que o documento completo desenvolve. <strong>Reduzir cateterismo não implica reduzir gasto:</strong> no PRECISE, a economia diagnóstica de 27% foi acompanhada de aumento de 67% no custo de revascularização, com custo total semelhante. E esta é uma conclusão <strong>econômica de curto prazo, não clínica</strong> — o SCOT-HEART demonstrou redução de morte coronariana e infarto não fatal em 5 e 10 anos.</p>
 </section>
 

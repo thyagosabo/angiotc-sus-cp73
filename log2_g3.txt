@@ -14,3 +14,9 @@ SIA 2025: 42 arquivos a processar
 [13/42] PARJ2507a.dbc: 1179 pares
 [14/42] PARJ2507b.dbc: 513 pares
 [15/42] PARJ2507c.dbc: 2036 pares
+[16/42] PARJ2508a.dbc: 1400 pares
+[17/42] PARJ2508b.dbc: 300 pares
+[18/42] PARJ2508c.dbc: 2037 pares
+[19/42] PARJ2509a.dbc: 1168 pares
+[20/42] PARJ2509b.dbc: 545 pares
+[21/42] PARJ2509c.dbc: 2085 pares
