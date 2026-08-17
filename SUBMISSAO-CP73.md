@@ -33,7 +33,7 @@ URL: https://brasilparticipativo.presidencia.gov.br/processes/consultas-publicas
 | 14 | Experiência com outra tecnologia? | Sim/Não | *(você)* |
 | 15 | Contribuição técnica — evidências clínicas? | Sim/Não | **Sim** |
 | 16 | Contribuição técnica — estudos econômicos? | Sim/Não | **Sim** |
-| 17 | Anexo | arquivo | `contribuicao-cp73.pdf` (só ele — a prévia HTML/PDF é v3, superada; não anexar) |
+| 17 | Anexo | arquivo | `contribuicao-cp73.pdf` (só ele — a prévia HTML/PDF é v3, superada; não anexar). O anexo não traz nomes; se o coautor entrar, dizer no campo 12 "elaborada com [coautor]" |
 | 18 | Declaração de responsabilidade | caixa | marcar |
 | 19 | Termos de serviço | caixa | marcar |
 
@@ -42,12 +42,28 @@ URL: https://brasilparticipativo.presidencia.gov.br/processes/consultas-publicas
 As três opções são: *Não acho que deve ser incorporada* / *Eu acho que deve ser
 incorporada* / *Não tenho opinião formada*.
 
-Nenhuma delas cabe no achado. O documento não diz "não incorpore"; diz que o PICO
-submetido (primeira linha) não sustenta neutralidade e que existe outro PICO onde a conta
-quase fecha. A opção mais fiel ao conteúdo é **"Não tenho opinião formada"** com o campo 12
-explicando que a resposta é condicional ao posicionamento — mas isso é uma decisão de
-posicionamento seu, não minha. Se você preferir marcar "não deve ser incorporada" com a
-ressalva no texto, também é defensável. **Você decide.**
+Nenhuma delas cabe no achado sem ressalva. O documento não diz "não incorpore"; diz que o
+PICO submetido (primeira linha) não sustenta neutralidade e que existe outro PICO onde a
+conta quase fecha. Duas leituras:
+
+- **Minha (16/08):** "Não tenho opinião formada", com o campo 12 explicando que a resposta é
+  condicional ao posicionamento.
+- **Do parecer no papel de coautor (17/08):** marcar **"Eu acho que deve ser incorporada"** e
+  abrir o campo 12 com a condição — é o que a análise diz ("não recusar a tecnologia"); "não
+  tenho opinião" vira ruído na tabulação da Conitec; "não deve" é como a SBC lerá a
+  contribuição inteira, e não é o que ela diz. Se marcar "sem opinião", é defensável; "não
+  deve" ele não marcaria.
+
+**Você decide.** Se optar por "deve ser incorporada", use esta primeira linha no campo 12
+(antes do "Contribuição técnico-científica…"):
+
+> Favorável à incorporação condicionada a protocolo de posicionamento por probabilidade
+> pré-teste (Diretriz SBC de Síndrome Coronariana Crônica 2025) que especifique o exame
+> substituído, e à avaliação em separado do filtro pré-cateterismo; desfavorável à
+> incorporação na formulação agregada "baixa ou intermediária" sem essa especificação, que a
+> análise anexa mostra ser orçamentariamente expansiva a qualquer preço plausível.
+
+(≈ 430 caracteres; com ela o campo 12 fica em ≈ 4.550 — cortar os itens 2 e 5 se houver limite.)
 
 ## Campo 12 — texto pronto (colar)
 

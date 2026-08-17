@@ -70,3 +70,16 @@ sem mudança de equação:
     gatekeeping, declarada.
 13. Cotas anuais ancoradas no volume que cada cenário pode substituir (cintilografia
     sobre 151.784, não sobre 787.954) e expressas também por 100 mil pacientes.
+
+**v5.2, 17/08/2026, após leitura no papel de coautor.** Sem mudança de equação:
+
+14. **Cenário descritivo da intermediária sem protocolo:** teste ergométrico seguido de
+    imagem funcional em fração p dos pacientes; p tem teto pelos volumes do SIA,
+    p ≤ (cintilografias + ecos) ÷ ergometrias = 0,31 (supõe toda imagem a jusante de um TE),
+    com a imagem ao preço médio ponderado (R$ 679): C ≤ R$ 242,75. É limite superior de
+    volumes, não inferência ecológica sobre pacientes. Sensibilidade, não cenário-base.
+15. **Recalibração das premissas por estrato (juízo clínico declarado):** baixa = ergometria
+    (o "nenhum exame" é normativo; diferimento vira nota, teto R$ 0); aditiva = cenário de
+    referência de qualquer estrato sem protocolo (linha própria); intermediária com
+    protocolo = cintilografia (cenário-base); eco e NATS = sensibilidade.
+

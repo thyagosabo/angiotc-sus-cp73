@@ -197,7 +197,13 @@ def main():
             ("nao estratificado (PICO submetido)", "mix medio do SIA", C_EP),
             ("intermediaria", "ecocardiografia de estresse", C_ECO),
             ("intermediaria", "percurso do NATS por episodio", C_NATS_conv),
-            ("intermediaria", "cintilografia de perfusao", C_CINT)]
+            ("intermediaria", "cintilografia de perfusao", C_CINT),
+            # descritivo sem protocolo (coautor, 17/08): TE seguido de imagem numa fracao p dos pacientes;
+            # teto p <= (cintilo + eco)/TE pelos volumes do SIA (todo exame de imagem a jusante de um TE), preco medio ponderado da imagem
+            ("intermediaria (descritivo, sem protocolo)", "TE -> imagem em fracao p (teto p pelo SIA)",
+             C_TE + ((q["0208010025"] + q["0205010016"]) / q["0211020060"]) * ((v["0208010025"] + v["0208010033"] + v["0205010016"]) / (q["0208010025"] + q["0205010016"])))]
+    p_img = (q["0208010025"] + q["0205010016"]) / q["0211020060"]; c_img = (v["0208010025"] + v["0208010033"] + v["0205010016"]) / (q["0208010025"] + q["0205010016"])
+    print(f"  (descritivo: p <= {p_img:.2f}; imagem media ponderada R$ {c_img:.2f}; C = {C_TE:.2f} + {p_img:.2f} x {c_img:.2f} = R$ {C_TE + p_img*c_img:.2f})")
     print(f"\n### 4.9 limiar por estrato de PPT (so exames | com revasc PRECISE/Foy | Δ exigido a R$550)")
     rows = []
     for est, comp, C in ESTR:
