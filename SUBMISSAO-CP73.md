@@ -27,7 +27,7 @@ URL: https://brasilparticipativo.presidencia.gov.br/processes/consultas-publicas
 | 8 | Como ficou sabendo | escolha | Site da Conitec |
 | 9 | Deseja contribuir como? | escolha | **Profissional de saúde** |
 | 10 | CNPJ/razão social (se PJ) | parágrafo | *deixar em branco — pessoa física* |
-| 11 | **Opinião sobre a incorporação** | escolha | ver decisão abaixo |
+| 11 | **Opinião sobre a incorporação** | escolha | **"Eu acho que deve ser incorporada"** (decidido em 17/08) — o campo 12 abre com a condição |
 | 12 | **Comente sobre a sua opinião** | parágrafo | texto pronto abaixo |
 | 13 | Experiência com a tecnologia? | Sim/Não | *(você)* |
 | 14 | Experiência com outra tecnologia? | Sim/Não | *(você)* |
@@ -37,7 +37,7 @@ URL: https://brasilparticipativo.presidencia.gov.br/processes/consultas-publicas
 | 18 | Declaração de responsabilidade | caixa | marcar |
 | 19 | Termos de serviço | caixa | marcar |
 
-## Campo 11 — decisão sua, com minha leitura
+## Campo 11 — decidido: "Eu acho que deve ser incorporada" (17/08/2026)
 
 As três opções são: *Não acho que deve ser incorporada* / *Eu acho que deve ser
 incorporada* / *Não tenho opinião formada*.
@@ -54,8 +54,8 @@ conta quase fecha. Duas leituras:
   contribuição inteira, e não é o que ela diz. Se marcar "sem opinião", é defensável; "não
   deve" ele não marcaria.
 
-**Você decide.** Se optar por "deve ser incorporada", use esta primeira linha no campo 12
-(antes do "Contribuição técnico-científica…"):
+**Decisão do autor (17/08): "deve ser incorporada".** O campo 12 abaixo já começa com a
+condição (primeira linha):
 
 > Favorável à incorporação condicionada a protocolo de posicionamento por probabilidade
 > pré-teste (Diretriz SBC de Síndrome Coronariana Crônica 2025) que especifique o exame
@@ -63,9 +63,13 @@ conta quase fecha. Duas leituras:
 > incorporação na formulação agregada "baixa ou intermediária" sem essa especificação, que a
 > análise anexa mostra ser orçamentariamente expansiva a qualquer preço plausível.
 
-(≈ 430 caracteres; com ela o campo 12 fica em ≈ 4.550 — cortar os itens 2 e 5 se houver limite.)
-
 ## Campo 12 — texto pronto (colar)
+
+Favorável à incorporação condicionada a protocolo de posicionamento por probabilidade
+pré-teste (Diretriz SBC de Síndrome Coronariana Crônica 2025) que especifique o exame
+substituído, e à avaliação em separado do filtro pré-cateterismo; desfavorável à
+incorporação na formulação agregada "baixa ou intermediária" sem essa especificação, que a
+análise anexa mostra ser orçamentariamente expansiva a qualquer preço plausível.
 
 Contribuição técnico-científica, com análise nacional reprodutível sobre bases públicas
 (CNES, SIA/SUS, SIH/SUS, SIGTAP, IBGE). Documento completo, código e dados em anexo /
@@ -127,5 +131,4 @@ Código, dados intermediários e tabelas: [URL do repositório / DOI].
 
 ---
 
-*Contagem: ~4.100 caracteres. Se o campo tiver limite menor, cortar os itens 2 e 5 primeiro
-— o anexo os cobre.*
+*Contagem: ≈ 5.000 caracteres com a linha condicional. Se o campo tiver limite menor, cortar os itens 2 e 5 primeiro (≈ −1.100) — o anexo os cobre.*
