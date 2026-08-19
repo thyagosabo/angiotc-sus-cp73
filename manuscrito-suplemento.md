@@ -135,7 +135,9 @@ Fonte: `analise_final.py` e `output/out-limiar-por-estrato.csv`. Δ de cateteris
 
 ## Figura S1 — Análise de sensibilidade univariada (tornado)
 
-*[A gerar por `analise_final.py`: variação de C_substituído (R$ 0 a 787), C_CATE (730 vs 773), Δ_CATE (−6,3 a +4,1; 66 a 86 no filtro), Δ_revasc (−5,0 a +4,0), C_revasc (angioplastia vs cirurgia) sobre o preço de neutralidade.]*
+![Figura S1](figuras/figS1-tornado.png)
+
+Variação de um parâmetro por vez sobre o preço de neutralidade. (A) primeira linha, intermediária com protocolo (cintilografia); caso-base R$ 520 (Δ_CATE −1,1, ponto médio de −6,3 a +4,1; Δ_revasc +3,35, ponto médio de PRECISE e Foy; revascularização valorada como angioplastia). (B) filtro pré-cateterismo (DISCHARGE); caso-base R$ 841. Faixas: C_substituído R$ 0–787; Δ_CATE −6,3 a +4,1 (66,0 a 85,6 no filtro); Δ_revasc 0 a +4,0 (0 a −5,0 no filtro); C_revasc R$ 7.713 (angioplastia) a R$ 8.935 (mix do PRECISE, 93% angioplastia e 7% cirurgia); C_CATE R$ 730,14 a R$ 772,80. O exame substituído domina a primeira linha; no filtro, o crédito de revascularização e o Δ de cateterismo. Gerada por `gera_figuras.py`.
 
 ## Texto S1 — Desenho mínimo do microcusteio proposto
 

@@ -28,6 +28,7 @@ code { font-family: Menlo, monospace; font-size: 8.6pt; background: #f3f3f3; pad
 pre { background: #f3f3f3; padding: 6pt; font-size: 8.6pt; overflow: hidden; white-space: pre-wrap; }
 blockquote { border-left: 3px solid #999; margin: 6pt 0; padding: 2pt 10pt; color: #222; }
 hr { border: 0; border-top: 1px solid #bbb; margin: 12pt 0; }
+img { max-width: 100%; height: auto; display: block; margin: 8pt auto 4pt; page-break-inside: avoid; }
 """
 html = f'<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><title>{src.stem}</title><style>{CSS}</style></head><body>{body}</body></html>'
 html_path.write_text(html, encoding="utf-8")

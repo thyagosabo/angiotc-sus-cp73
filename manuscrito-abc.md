@@ -147,11 +147,17 @@ Após a Portaria SAES/MS 3.695/2026, o cadastro nacional responde pela primeira 
 
 ## Legendas
 
+![Figura central](figuras/fig-central.png)
+
 **Figura central.** Onde a angioTC gera valor no SUS. (A) tomógrafos ≥64 canais por milhão por UF, estabelecimentos prontos (n = 79) e UFs sem nenhum (n = 12). (B) preço de neutralidade por estrato e posição no percurso, só exames (hachura) e com revascularização (cheio), com marcações em R$ 550 e R$ 623 e a faixa "sem protocolo (aditiva): teto R$ 30".
 
-**Figura 1.** Capacidade tomográfica compatível com angioTC por UF (CNES 06/2026): equipamentos ≥64 canais por milhão, estrato pronto e UFs sem ≥64 canais.
+![Figura 1](figuras/fig1-capacidade-uf.png)
 
-**Figura 2.** Preço de neutralidade em função do Δ de cateterismo total por 100 pacientes. Retas de primeira linha com C_substituído = R$ 0 (aditiva), R$ 185 (mix) e R$ 787 (cintilografia), e reta do filtro pré-cateterismo. Δ observados em dez ensaios e uma metanálise. Preços de referência.
+**Figura 1.** Capacidade tomográfica compatível com angioTC por UF (CNES 06/2026): equipamentos ≥64 canais por milhão, estrato pronto, UFs sem ≥64 canais e parque total.
+
+![Figura 2](figuras/fig2-preco-x-delta.png)
+
+**Figura 2.** Preço de neutralidade em função do Δ de cateterismo total por 100 pacientes. Retas de primeira linha com C_substituído = R$ 0 (aditiva), R$ 185 (mix) e R$ 787 (cintilografia), e reta do filtro pré-cateterismo. Δ de dez ensaios e uma metanálise; preços de referência.
 
 ## Referências
 
