@@ -1,4 +1,4 @@
-# AngioTC coronariana no SUS — capacidade instalada e impacto orçamentário
+# AngioTC coronariana no SUS — capacidade instalada e limiar orçamentário
 
 Análise nacional reprodutível da **capacidade tomográfica do SUS** e do **preço admissível** da angiotomografia coronariana (AngioTC), construída exclusivamente sobre bases públicas.
 
@@ -46,11 +46,11 @@ Nos ensaios com comparador não invasivo, o Δ de cateterismo total foi de **−
 
 (Mix do NATS como publicado, cintilografia só pelo código de estresse, R$ 316,76: R$ 270 – 347 só com exames.)
 
-O preço proposto pelo demandante é **R$ 550,00**. **Sem protocolo de posicionamento — a AngioTC somada ao percurso atual, o cenário de referência se a incorporação criar o código sem dizer o que sai do percurso — nenhum preço plausível é neutro (teto R$ 30).** Na probabilidade baixa (comparador: nenhum exame ou ergometria) R$ 550 está fora do alcance; na intermediária, dentro da zona de incerteza **apenas quando substitui cintilografia**. Estratificar não é sensibilidade: é o resultado — a média não estratificada é puxada para o estrato baixo porque três quartos do volume atual são ergometria.
+O preço proposto pelo demandante é **R$ 550,00**. **Sem protocolo de posicionamento — a AngioTC somada ao percurso atual, o cenário de referência se a incorporação criar o código sem dizer o que sai do percurso — nenhum preço plausível é neutro (teto R$ 30).** No PICO agregado de primeira linha, os preços avaliados excedem a neutralidade; na probabilidade baixa (comparador: nenhum exame ou ergometria) R$ 550 está fora do alcance; na intermediária, fica na zona de incerteza **apenas quando substitui cintilografia** (R$ 458–560 com revascularização). Estratificar não é sensibilidade: é o resultado — a média não estratificada é puxada para o estrato baixo porque três quartos do volume atual são ergometria.
 
 A revascularização não pode ficar fora: o SIH dá R$ 7.713/angioplastia e R$ 25.904/CRM. PRECISE aumenta revasc em +4,0/100 (−R$ 359/paciente); DISCHARGE e CONSERVE, no gatekeeping, reduzem em −3,8 e −5,0/100 (+R$ 293 e +R$ 386) — o que leva o DISCHARGE de R$ 548 a **R$ 841** e o CONSERVE de R$ 482 a **R$ 868**.
 
-**A Diretriz SBC de Síndrome Coronariana Crônica 2025** (Arq Bras Cardiol 2025;122(9)) estratifica: AngioTC como primeira opção é **IIb-B na probabilidade baixa** e **I-A na intermediária**, e o algoritmo a coloca como *alternativa* à prova funcional ("prova funcional ou angiotomografia"). O PICO submetido trata "baixa ou intermediária" como faixa única. Alinhar a incorporação à estratificação da própria diretriz é o instrumento que a evidência sustenta.
+**A Diretriz SBC de Síndrome Coronariana Crônica 2025** (Arq Bras Cardiol 2025;122(9)) estratifica: AngioTC como primeira opção é **IIb-B na probabilidade baixa** e **I-A na intermediária**, e o algoritmo a coloca como *alternativa* à prova funcional ("prova funcional ou angiotomografia"). O PICO submetido trata "baixa ou intermediária" como faixa única. A evidência econômica não sustenta decisão uniforme para toda a faixa; sustenta condicionar qualquer incorporação ao posicionamento e ao exame substituído, alinhando-a à estratificação da própria diretriz, com protocolo que diga, em cada faixa, o que a AngioTC substitui. A análise não é uma avaliação completa de incorporação (sem QALY, prognóstico de longo prazo, população elegível ou impacto orçamentário formal): é análise de limiar e de capacidade.
 
 ### Onde a tecnologia gera valor: a posição no percurso
 
@@ -71,17 +71,17 @@ As OCI `0902010034/42/50` definem o episódio de SCC na própria tabela do SUS. 
 
 ## Documentos
 
-- `contribuicao-cp73.md` — contribuição à CP 73/2026 (v6, 18/08/2026: corpo condensado e reescrito pelos autores; apêndices e referências inalterados), a peça a anexar (PDF).
+- `contribuicao-cp73.md` — contribuição à CP 73/2026 (v6.1, 19/08/2026: corpo condensado e reescrito pelos autores; apêndices e referências inalterados; conclusões no tom condicional), a peça a anexar (PDF, 12 p.).
 - `gera_figuras.py` → `figuras/` — Figura central, Figuras 1–2 e Figura S1 (PNG 300 dpi + PDF), geradas a partir de `output/`; embutidas nos PDFs dos manuscritos.
-- `manuscrito-abc.md` — manuscrito no formato da Arq Bras Cardiol (artigo original; corpo ≤ 5.000 palavras contando tudo; v1.3, redação revista pelos autores em 18/08/2026), com `manuscrito-suplemento.md` (Tabelas S1–S8, Figura S1, Textos S1–S2). `manuscrito-v0.md` — versão integral de trabalho (v1.2, arquivo do argumento completo; a prosa vigente é a de `manuscrito-abc.md`).
+- `manuscrito-abc.md` — manuscrito no formato da Arq Bras Cardiol (artigo original; corpo ≤ 5.000 palavras contando tudo; v1.3.1, redação revista pelos autores em 18/08 e conclusões moderadas em 19/08/2026), com `manuscrito-suplemento.md` (Tabelas S1–S8, Figura S1, Textos S1–S2). `manuscrito-v0.md` — versão integral de trabalho (v1.2, arquivo do argumento completo; a prosa vigente é a de `manuscrito-abc.md`).
 - `SUBMISSAO-CP73.md` — roteiro do formulário; `REGRAS-DE-ANALISE.md` — regras pré-registradas e emendas.
 - `preview-angiotc.html` / `angiotc-preview.pdf` — prévia de leitura da **v3**, superada; mantida por histórico, não anexar.
 
 ## Pendências
 
-- Microcusteio contemporâneo próprio (desenho mínimo em `manuscrito-v0.md`, 4.6).
+- Microcusteio contemporâneo próprio (desenho mínimo no Texto S1 do suplemento).
 - Preço de aquisição pública em licitação como quarta categoria de benchmark.
-- Auditoria final exclusivamente de unidades de análise e dupla contagem (em curso).
+- Auditoria de unidades de análise e dupla contagem: feita (seções 3.1 e 3.2.1; quatro rodadas de revisão cega, 16–18/08/2026). Pendente apenas o que depende dos autores: nomes/afiliações, decisão sobre o título do artigo e submissão.
 
 ## Escopo
 

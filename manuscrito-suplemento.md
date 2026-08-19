@@ -1,6 +1,6 @@
 # Material suplementar
 
-**Onde a angiotomografia coronariana gera valor no Sistema Único de Saúde? Capacidade instalada, limiar orçamentário e o caso do filtro pré-cateterismo** — material suplementar (v1.3, 18/08/2026). Todos os números são reproduzidos por `analise_final.py` a partir dos microdados versionados no repositório [URL/DOI]; a contribuição técnica à Consulta Pública Conitec nº 73/2026 (`contribuicao-cp73.pdf`) contém a versão extensa das seções 2–4.
+**Onde a angiotomografia coronariana gera valor no Sistema Único de Saúde? Capacidade instalada, limiar orçamentário e o caso do filtro pré-cateterismo** — material suplementar (v1.3.1, 19/08/2026). Todos os números são reproduzidos por `analise_final.py` a partir dos microdados versionados no repositório [URL/DOI]; a contribuição técnica à Consulta Pública Conitec nº 73/2026 (`contribuicao-cp73.pdf`) contém a versão extensa das seções 2–4.
 
 ## Tabela S1 — Fontes de dados, endereços e competências; e Tabela S2 — códigos SIGTAP e CNES utilizados
 
