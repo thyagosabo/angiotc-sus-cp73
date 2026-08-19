@@ -304,7 +304,7 @@ Os quatro invasivo-primeiro não são comparáveis aos demais: a população já
 7. Lubbers M et al. CRESCENT. Eur Heart J. 2016;37:1232-43. PMID 26746631.
 8. Lubbers M et al. CRESCENT-II. JACC Cardiovasc Imaging. 2018;11:1625-36. PMID 29248657.
 9. McKavanagh P et al. CAPP. Eur Heart J Cardiovasc Imaging. 2015;16:441-8. PMID 25473041.
-10. Douglas PS et al. PRECISE. JAMA Cardiol. 2023. PMID 37610731. Economic outcomes: Circ Cardiovasc Qual Outcomes. 2025. PMID 39895495.
+10. Douglas PS et al. PRECISE. JAMA Cardiol. 2023;8(10):904-14. PMID 37610731. Desfechos econômicos: Chew DS et al. Circ Cardiovasc Qual Outcomes. 2025;18(2):e011008. PMID 39895495.
 11. Foy AJ et al. JAMA Intern Med. 2017;177:1623-31. PMID 28973101.
 12. Dewey M et al. CAD-Man. BMJ. 2016;355:i5441. PMID 27777234.
 13. Chang HJ et al. CONSERVE. JACC Cardiovasc Imaging. 2019;12:1303-12. PMID 30553687.
@@ -316,8 +316,8 @@ Os quatro invasivo-primeiro não são comparáveis aos demais: a população já
 19. Hulten E et al. J Am Coll Cardiol. 2013;61:880-92. PMID 23395069.
 20. Shiozaki A, Torreão J, Costa IBSS, Suarez AB, Silva MT, Oliveira TG, et al. Análise de Custo-Efetividade da Angiotomografia Coronária como Exame Preferencial na Investigação de Dor Torácica Estável na Saúde Suplementar no Brasil. Arq Bras Cardiol. 2025;122(12):e20250204 (epub 9 jan 2026). DOI 10.36660/abc.20250204. PMID 41637322. [fonte do preço da angiotomografia na saúde suplementar, R$ 1.311,95, "referência da ANS", e do cateterismo, R$ 1.900,79; baseada na CBHPM 2022 (AMB)]
 21. Cesar LAM, Gowdak LHW, Pavanello R et al. Diretriz de Síndrome Coronariana Crônica – 2025. Arq Bras Cardiol. 2025;122(9):e20250619. DOI 10.36660/abc.20250619. PMID 41294178. Erratum 2026;123(7):e20260565 (autoria apenas).
-22. Mark DB et al. Economic outcomes with anatomical versus functional diagnostic testing for coronary artery disease (PROMISE). Ann Intern Med. 2016;165:94-102. PMID 26857050.
-23. SCOT-HEART Investigators. 10-year outcomes. N Engl J Med. 2025. PMID 39863372.
+22. Mark DB et al. Economic outcomes with anatomical versus functional diagnostic testing for coronary artery disease (PROMISE). Ann Intern Med. 2016;165(2):94-102. PMID 27214597.
+23. Williams MC et al. SCOT-HEART, 10-year outcomes. Lancet. 2025;405(10475):329-37. PMID 39863372.
 24. Magalhães TA, Carneiro ACC, Moreira VM et al. Diretriz de Tomografia Computadorizada e Ressonância Magnética Cardiovascular da SBC e do CBR – 2024. Arq Bras Cardiol. 2024;121(9):e20240608. DOI 10.36660/abc.20240608. PMID 39475988.
 25. Vrints C, Andreotti F, Koskinas KC et al. 2024 ESC Guidelines for the management of chronic coronary syndromes. Eur Heart J. 2024;45(36):3415-537. DOI 10.1093/eurheartj/ehae177. PMID 39210710.
 26. Gulati M, Levy PD, Mukherjee D et al. 2021 AHA/ACC/ASE/CHEST/SAEM/SCCT/SCMR Guideline for the Evaluation and Diagnosis of Chest Pain. Circulation. 2021;144(22):e368-454. DOI 10.1161/CIR.0000000000001029. PMID 34709879.

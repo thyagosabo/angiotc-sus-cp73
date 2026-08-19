@@ -59,14 +59,14 @@ Os quatro invasivo-primeiro não são comparáveis aos demais: a população já
 
 ## Tabela S5 — Posição da angiotomografia coronariana nas diretrizes vigentes, por probabilidade pré-teste
 
-Cinco diretrizes verificadas em texto integral (SBC/CBR TC/RM 2024; SBC SCC 2025; ESC 2024; AHA/ACC 2021; NICE CG95). Nenhuma diretriz AHA/ACC posterior a 2021 sobre dor torácica ou doença coronariana crônica existe (a de 2023 remete à de 2021). Célula AHA/ACC de probabilidade baixa: classe da recomendação de diferimento a conferir na prova.
+Cinco diretrizes verificadas em texto integral (SBC/CBR TC/RM 2024; SBC SCC 2025; ESC 2024; AHA/ACC 2021; NICE CG95). Nenhuma diretriz AHA/ACC posterior a 2021 sobre dor torácica ou doença coronariana crônica existe (a de 2023 remete à de 2021).
 
 | Diretriz | Probabilidade baixa | Intermediária | Alta | Filtro antes de cateterismo |
 |---|---|---|---|---|
 | **SBC SCC 2025** (Arq Bras Cardiol 2025;122(9)) | primeira opção **IIb-B**; "ajustar PPT ou angiotomografia" | exame inicial **I-A**; "prova funcional ou angiotomografia" | prova funcional (I-B para eco, SPECT/PET, RMC) | "alternativa ao estudo invasivo" após teste funcional conflitante (IIa-B baixa; I-A intermediária) |
 | **SBC TC/RM 2024** (Arq Bras Cardiol 2024;121(9)) | opção inicial **I-A** (baixa e intermediária, sem distinção) | opção inicial **I-A** | **III-C** | **I-A** — "alternativa … com probabilidade pré-teste intermediária e indicação de cinecoronariografia invasiva" |
 | **ESC 2024** (Eur Heart J 2024;45:3415) | ≤5% diferir (IIa-B); 5–15% escore de cálcio (IIa-B) | >5–50%: CCTA **preferida** para excluir DAC (I-B), diagnóstico e risco (I-A); >15–85%: imagem funcional (I-B), "melhor poder de confirmação" | >85%: cateterismo direto (I-C) | sequência da Tabela 13: CCTA → funcional se incerta → cateterismo se ainda incerto (I-B) |
-| **AHA/ACC 2021** (Circulation 2021;144:e368) | modelo de PPT para identificar baixo risco em quem o teste pode ser diferido; no baixo risco, escore de cálcio ou teste ergométrico sem imagem como primeira linha (2a B-NR) *[classe do diferimento a conferir na prova]* | risco intermediário-alto: CCTA **1-A** e imagem de estresse **1 B-R** co-iguais; CCTA preferível <65 anos, estresse ≥65 | — | "candidatos a cateterismo eletivo podem ser triados com segurança por CCTA ou teste de estresse" |
+| **AHA/ACC 2021** (Circulation 2021;144:e368) | modelo de PPT identifica os de baixa probabilidade em quem o teste adicional pode ser diferido; no baixo risco, escore de cálcio ou teste ergométrico sem imagem como primeira linha (classe 2a) | risco intermediário-alto: CCTA **1-A** e imagem de estresse **1 B-R** co-iguais; CCTA preferível <65 anos, estresse ≥65 | — | "candidatos a cateterismo eletivo podem ser triados com segurança por CCTA ou teste de estresse" |
 | **NICE CG95** (2016) | CCTA ≥64 cortes a toda angina típica/atípica, sem PPT | idem | idem | funcional 2ª linha se CCTA incerta; cateterismo 3ª linha |
 
 Texto da SBC SCC 2025 (seção 3.1.7, "Resumo com sugestão de como investigar com métodos diagnósticos"): "A escolha do exame inicial deve levar em conta: Capacidade funcional: se preservada, iniciar com TE ou ecocardiograma de estresse; ECG basal interpretável: se não for interpretável, preferir métodos de imagem (ecocardiograma, cintilografia, RMC); Acesso local e disponibilidade: considerar custo, tempo de realização e familiaridade da equipe; DRC ou alergia a contraste: pode haver restrição para realização de angioTC." E: "Pacientes com PPT < 5% não requerem investigação adicional. Aqueles entre 5 e 15% devem ser avaliados individualmente. PPT entre 15 e 85% indica a necessidade de testes funcionais ou anatômicos".
@@ -234,4 +234,35 @@ sem mudança de equação:
 
 ## Checklist CHEERS 2022
 
-*[A anexar na submissão: itens aplicáveis a análise de limiar; itens não aplicáveis (horizonte de longo prazo, desconto, QALY, análise probabilística) marcados como tal.]*
+Correspondência item a item com a nomenclatura oficial (Husereau et al., Value Health 2022;25:3-9). "NA" = não aplicável a uma análise de limiar de curto prazo que não agrega desfechos em saúde.
+
+| # | Item | Onde está |
+|---|---|---|
+| 1 | Título | Título ("limiar orçamentário") |
+| 2 | Resumo | Resumo estruturado |
+| 3 | Contexto e objetivos | Introdução |
+| 4 | Plano de análise econômica | Texto S2 (regras pré-registradas e emendas declaradas) |
+| 5 | População do estudo | Métodos (PICOs; estratos de probabilidade pré-teste como premissa) |
+| 6 | Setting e localização | Métodos (SUS, 27 UFs, 2025) |
+| 7 | Comparadores | Métodos (seis cenários de C_substituído; dois PICOs); Tabelas 2 e S8 |
+| 8 | Perspectiva | Métodos (SUS como pagador) |
+| 9 | Horizonte temporal | Métodos (curto prazo: episódio diagnóstico e desfechos invasivos imediatos) |
+| 10 | Taxa de desconto | NA (horizonte inferior a um ano) |
+| 11 | Seleção de desfechos | Métodos (cateterismo total e revascularização; cateterismo sem DAC obstrutiva fora do cálculo) |
+| 12 | Medida dos desfechos | Métodos (Δ por braço randomizado; Tabela S4) |
+| 13 | Valoração dos desfechos | NA (sem QALY; desfechos valorados apenas como custos evitados/induzidos) |
+| 14 | Medida e valoração de recursos e custos | Métodos e Resultados (SIA/SIH/SIGTAP; preços pagos, não custos; assimetria declarada nas Limitações) |
+| 15 | Moeda, data de preços e conversão | Métodos (R$ de 2025; IPCA 12/2020→07/2026 para o microcusteio de 2022) |
+| 16 | Justificativa e descrição do modelo | Métodos (duas equações de neutralidade, uma por PICO) |
+| 17 | Análises e premissas | Métodos (cenários; comparador por estrato como premissa declarada; pareamento Δ–revascularização por estudo) |
+| 18 | Caracterização da heterogeneidade | Tabelas 2 e S8 (estratos); Discussão |
+| 19 | Caracterização de efeitos distributivos | Resultados (capacidade por UF; CV e Gini; Figura 1) |
+| 20 | Caracterização da incerteza | Faixas por Δ; sensibilidade C_CATE; Figura S1 (tornado) |
+| 21 | Engajamento de pacientes e afetados | NA (dados administrativos e literatura; sem engajamento) |
+| 22 | Parâmetros do estudo | Tabelas 1, S3, S4 e S7; Apêndice A da contribuição (códigos e fontes) |
+| 23 | Resumo dos resultados principais | Resultados; Tabela 2 |
+| 24 | Efeito da incerteza | Resultados (faixas); Figura S1; notas da Tabela 2 |
+| 25 | Efeito do engajamento | NA |
+| 26 | Achados, limitações, generalização | Discussão (Limitações; agenda de microcusteio) |
+| 27 | Fonte de financiamento | Declarações (nenhum) |
+| 28 | Conflitos de interesse | Declarações |

@@ -1,0 +1,16 @@
+cff-version: 1.2.0
+message: "Cite este repositório e o artigo associado."
+title: "AngioTC coronariana no SUS: capacidade instalada e limiar orçamentário"
+type: software
+authors:
+  - family-names: "[Sobrenome]"
+    given-names: "[Nome]"
+    orcid: "https://orcid.org/XXXX-XXXX-XXXX-XXXX"
+repository-code: "https://github.com/thyagosabo/angiotc-sus-cp73"
+license: CC-BY-4.0
+keywords:
+  - angiotomografia coronariana
+  - SUS
+  - avaliação de tecnologias em saúde
+  - análise de limiar
+  - CNES

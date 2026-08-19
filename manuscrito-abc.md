@@ -26,6 +26,21 @@
 
 **Conclusões:** A sustentabilidade orçamentária depende da posição no percurso e do exame substituído, não do preço: parâmetros que os registros não identificam e o protocolo define. A evidência econômica não sustenta decisão uniforme para a faixa baixa/intermediária; sustenta condicionar a incorporação ao posicionamento e ao exame substituído, como estratifica a Diretriz SBC de Síndrome Coronariana Crônica 2025, e avaliar o filtro em separado.
 
+
+## Abstract
+
+**Background:** Brazil's Conitec preliminarily recommended against coronary computed tomography angiography (CCTA) as a first-line test for low-or-intermediate-probability stable chest pain, citing capacity and budget uncertainties. The missing question is *where*, not only *whether*.
+
+**Objectives:** To characterize the CCTA-compatible scanner capacity of the Unified Health System (SUS) and the pathway positions in which CCTA is budget-sustainable.
+
+**Methods:** Nationwide analysis of public databases: capacity by detector rows after regulation SAES/MS 3,695/2026, and a threshold analysis (catheterization change required for neutrality) in two PICOs (first line; pre-catheterization gatekeeping), with differences from ten randomized trials and one meta-analysis, with and without revascularization.
+
+**Results:** In the aggregate first-line PICO, the evaluated prices exceed neutrality: the displaced test in the SUS is mostly exercise ECG (76% of 787,954 episodes/year; R$ 32) and the best observed difference (+4.1/100) does not cover R$ 550; in the intermediate stratum, only substituting perfusion scintigraphy brings R$ 550 into the uncertainty zone (R$ 458–560 with revascularization). In gatekeeping the sign reverses: differences of 66–86/100 and neutrality at R$ 482–625 (R$ 841–868 with revascularization). Of 315 facilities with ≥64-row scanners (432, a floor), 79 combine catheterization laboratories and coronary output; twelve states have none.
+
+**Conclusions:** Budget sustainability is a property of pathway position and displaced test, not of price: parameters records do not identify and a protocol defines. The economic evidence does not support a uniform decision for the low-or-intermediate range; it supports conditioning incorporation on positioning and displaced test, as the 2025 SBC Chronic Coronary Syndrome Guideline stratifies, and assessing gatekeeping separately.
+
+**Keywords:** Computed Tomography Angiography; Coronary Artery Disease; Technology Assessment, Biomedical; Costs and Cost Analysis; Unified Health System.
+
 ---
 
 ## Introdução
@@ -162,7 +177,7 @@ Após a Portaria SAES/MS 3.695/2026, o cadastro nacional responde pela primeira 
 ## Referências
 
 1. SCOT-HEART Investigators. CT coronary angiography in patients with suspected angina due to coronary heart disease (SCOT-HEART). Lancet. 2015;385(9985):2383-91; Williams MC, et al. J Am Coll Cardiol. 2016;67(15):1759-68; Newby DE, et al. N Engl J Med. 2018;379(10):924-33.
-2. SCOT-HEART Investigators. Coronary CT angiography and 10-year outcomes. N Engl J Med. 2025. PMID 39863372.
+2. Williams MC, Wereski R, Tuck C, et al. Coronary CT angiography-guided management of patients with stable chest pain: 10-year outcomes from the SCOT-HEART randomised controlled trial. Lancet. 2025;405(10475):329-37.
 3. Douglas PS, Hoffmann U, Patel MR, et al. Outcomes of anatomical versus functional testing for coronary artery disease (PROMISE). N Engl J Med. 2015;372(14):1291-300.
 4. DISCHARGE Trial Group. CT or invasive coronary angiography in stable chest pain. N Engl J Med. 2022;386(17):1591-602.
 5. National Institute for Health and Care Excellence. Recent-onset chest pain of suspected cardiac origin: assessment and diagnosis (CG95). 2010, atualizada 2016.
@@ -181,11 +196,11 @@ Após a Portaria SAES/MS 3.695/2026, o cadastro nacional responde pela primeira 
 18. Lubbers M, Dedic A, Coenen A, et al. Calcium imaging and selective computed tomography angiography in comparison to functional testing for suspected coronary artery disease (CRESCENT). Eur Heart J. 2016;37(15):1232-43.
 19. Lubbers M, Coenen A, Kofflard M, et al. Comprehensive cardiac CT with myocardial perfusion imaging versus functional testing in suspected coronary artery disease (CRESCENT-II). JACC Cardiovasc Imaging. 2018;11(11):1625-36.
 20. McKavanagh P, Lusk L, Ball PA, et al. A comparison of cardiac computerized tomography and exercise stress electrocardiogram test for the investigation of stable chest pain (CAPP). Eur Heart J Cardiovasc Imaging. 2015;16(4):441-8.
-21. Douglas PS, Nanna MG, Kelsey MD, et al. Comparison of an initial risk-based testing strategy vs usual testing in stable symptomatic patients with suspected coronary artery disease (PRECISE). JAMA Cardiol. 2023;8(10):904-14; economic outcomes: Circ Cardiovasc Qual Outcomes. 2025 (PMID 39895495).
+21. Douglas PS, Nanna MG, Kelsey MD, et al. Comparison of an initial risk-based testing strategy vs usual testing in stable symptomatic patients with suspected coronary artery disease (PRECISE). JAMA Cardiol. 2023;8(10):904-14; desfechos econômicos: Chew DS, et al. Circ Cardiovasc Qual Outcomes. 2025;18(2):e011008.
 22. Foy AJ, Dhruva SS, Peterson B, Mandrola JM, Morgan DJ, Redberg RF. Coronary computed tomography angiography vs functional stress testing for patients with suspected coronary artery disease: a systematic review and meta-analysis. JAMA Intern Med. 2017;177(11):1623-31.
 23. Dewey M, Rief M, Martus P, et al. Evaluation of computed tomography in patients with atypical angina or chest pain clinically referred for invasive coronary angiography (CAD-Man). BMJ. 2016;355:i5441.
 24. Chang HJ, Lin FY, Gebow D, et al. Selective referral using CCTA versus direct referral for individuals referred to invasive coronary angiography for suspected CAD (CONSERVE). JACC Cardiovasc Imaging. 2019;12(7 Pt 2):1303-12.
-25. Reis JF, Torres D, Ferreira AM, et al. Coronary computed tomography angiography for the assessment of chest pain in patients referred for invasive coronary angiography. Int J Cardiovasc Imaging. 2022;38(4):883-93.
+25. Reis JF, Freitas P, Guerreiro S, et al. Cardiac computed tomographic angiography after abnormal ischemia test as a gatekeeper to invasive coronary angiography. Int J Cardiovasc Imaging. 2022;38(4):883-93.
 26. Institut für Qualität und Wirtschaftlichkeit im Gesundheitswesen. Coronary computed tomography angiography for the diagnosis of chronic coronary heart disease. Final report D22-01. Colônia; 2024. NCBI Bookshelf NBK602895.
 27. Mark DB, Federspiel JJ, Cowper PA, et al. Economic outcomes with anatomical versus functional diagnostic testing for coronary artery disease (PROMISE). Ann Intern Med. 2016;165(2):94-102.
 28. Duarte M. Doenças cardiovasculares causam mais de 300 mil mortes por ano no Brasil; Conitec abre consulta pública sobre angiotomografia coronariana no SUS [release de imprensa]. Jornal do Brás. 11 ago 2026. Acesso em 16 ago 2026.
