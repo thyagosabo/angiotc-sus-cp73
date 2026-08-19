@@ -16,7 +16,7 @@
 
 ## Resumo
 
-**Fundamento:** A Conitec recomendou preliminarmente contra a angiotomografia coronariana (angioTC) como primeira linha na doença coronariana estável de probabilidade pré-teste baixa ou intermediária, por incertezas de capacidade e orçamento. Falta perguntar *onde*, não só *se*.
+**Fundamento:** A Conitec recomendou preliminarmente contra a angiotomografia coronariana (angioTC) como primeira linha na suspeita de doença coronariana estável com probabilidade pré-teste baixa ou intermediária, por incertezas de capacidade e orçamento. Falta perguntar *onde*, não só *se*.
 
 **Objetivos:** Caracterizar a capacidade tomográfica do SUS compatível com angioTC e em que posição do percurso ela é sustentável.
 
@@ -26,20 +26,6 @@
 
 **Conclusões:** A sustentabilidade orçamentária depende da posição no percurso e do exame substituído, não do preço: parâmetros que os registros não identificam e o protocolo define. A evidência econômica não sustenta decisão uniforme para a faixa baixa/intermediária; sustenta condicionar a incorporação ao posicionamento e ao exame substituído, como estratifica a Diretriz SBC de Síndrome Coronariana Crônica 2025, e avaliar o filtro em separado.
 
-
-## Abstract
-
-**Background:** Brazil's Conitec preliminarily recommended against coronary computed tomography angiography (CCTA) as a first-line test for low-or-intermediate-probability stable chest pain, citing capacity and budget uncertainties. The missing question is *where*, not only *whether*.
-
-**Objectives:** To characterize the CCTA-compatible scanner capacity of the Unified Health System (SUS) and the pathway positions in which CCTA is budget-sustainable.
-
-**Methods:** Nationwide analysis of public databases: capacity by detector rows after regulation SAES/MS 3,695/2026, and a threshold analysis (catheterization change required for neutrality) in two PICOs (first line; pre-catheterization gatekeeping), with differences from ten randomized trials and one meta-analysis, with and without revascularization.
-
-**Results:** In the aggregate first-line PICO, the evaluated prices exceed neutrality: the displaced test in the SUS is mostly exercise ECG (76% of 787,954 episodes/year; R$ 32) and the best observed difference (+4.1/100) does not cover R$ 550; in the intermediate stratum, only substituting perfusion scintigraphy brings R$ 550 into the uncertainty zone (R$ 458–560 with revascularization). In gatekeeping the sign reverses: differences of 66–86/100 and neutrality at R$ 482–625 (R$ 841–868 with revascularization). Of 315 facilities with ≥64-row scanners (432, a floor), 79 combine catheterization laboratories and coronary output; twelve states have none.
-
-**Conclusions:** Budget sustainability is a property of pathway position and displaced test, not of price: parameters records do not identify and a protocol defines. The economic evidence does not support a uniform decision for the low-or-intermediate range; it supports conditioning incorporation on positioning and displaced test, as the 2025 SBC Chronic Coronary Syndrome Guideline stratifies, and assessing gatekeeping separately.
-
-**Keywords:** Computed Tomography Angiography; Coronary Artery Disease; Technology Assessment, Biomedical; Costs and Cost Analysis; Unified Health System.
 
 ---
 
@@ -136,7 +122,7 @@ O CNES agora permite contar tomógrafos por canais, mas 74,6% dos estabeleciment
 
 ### A literatura econômica, lida pela mesma chave
 
-Os ensaios com desfecho de custo confirmam o sinal que a Tabela 2 prevê. O PROMISE, cujo comparador foi majoritariamente cintilografia, não encontrou economia aos 90 dias nem aos 3 anos.^27^ O SCOT-HEART custou +US$ 462 por paciente aos 6 meses, sem diferença a jusante.^1^ O PRECISE reduziu o custo diagnóstico em 27% mas aumentou o de revascularização em 67%.^21^ No Brasil, os modelos de custo-efetividade de longo prazo de Bertoldi^12,13^ respondem a uma pergunta distinta (benefício clínico ao longo do tempo), não contraditória; e o microcusteio de Carmo^14^ precificou a angioTC (R$ 452) contra comparadores de tabela, a mesma assimetria que este estudo herda e declara.
+Os ensaios com desfecho de custo confirmam o sinal que a Tabela 2 prevê. O PROMISE, com comparador majoritariamente cintilográfico, não encontrou economia aos 90 dias nem aos 3 anos.^27^ O SCOT-HEART custou +US$ 462 por paciente aos 6 meses, sem diferença a jusante.^1^ O PRECISE reduziu o custo diagnóstico em 27% mas aumentou o de revascularização em 67%.^21^ No Brasil, os modelos de custo-efetividade de longo prazo de Bertoldi^12,13^ respondem a uma pergunta distinta (benefício clínico ao longo do tempo), não contraditória; e o microcusteio de Carmo^14^ precificou a angioTC (R$ 452) contra comparadores de tabela, a mesma assimetria que este estudo herda e declara.
 
 O confronto mais instrutivo é com Shiozaki et al.,^15^ o estudo mais recente e mais presente no debate público, que estima economia de R$ 1.021 por beneficiário em cinco anos numa carteira de 100.000 vidas da saúde suplementar. Ele compara a angioTC (R$ 1.311,95) com a angiografia invasiva como estratégia inicial (R$ 1.900,79, único comparador), com eventos do DISCHARGE, e declara não ter comparado com testes funcionais. Ou seja, é um modelo do filtro pré-cateterismo, não da primeira linha. Nesse desenho o Δ exigido é 69 por 100, que o DISCHARGE (75,1) alcança. Transposto ao SUS, o mesmo mecanismo sustenta o filtro (R$ 482–868), não a primeira linha, que ao mesmo preço exigiria 154 cateterismos evitados por 100 pacientes. Mesma tecnologia, sinal oposto: não pelos preços relativos, mas pelo comparador. A economia, ademais, é por beneficiário de carteira, não por paciente examinado; as projeções de dezenas de bilhões veiculadas na imprensa não constam do artigo, que as qualifica como projeção teórica para a saúde suplementar.^28^
 
@@ -148,13 +134,13 @@ A limitação metodológica mais importante é a assimetria entre a angioTC micr
 
 ### Implicações
 
-A pergunta talvez não seja se o SUS deve ter acesso à angioTC, mas quais pacientes devem recebê-la primeiro e o que ela substitui quando os recebe. Primeiro, condicionar a incorporação a um protocolo que especifique posicionamento e substituição. Sem ele, o cenário de referência é o aditivo, em que nenhum preço plausível é neutro: a sustentabilidade é propriedade do protocolo, não do preço. O protocolo já existe na Diretriz SBC de SCC 2025, e o instrumento administrativo também: as OCI de síndrome coronariana crônica remuneram por episódio e nomeiam o exame de cada progressão. Uma progressão anatômica, em alternativa à progressão II (cintilografia, R$ 840), incorporaria a substituição no próprio código. O protocolo deve excluir explicitamente o assintomático, indicação de classe III em todas as diretrizes, porque código sem protocolo vira rastreamento.
+A pergunta talvez não seja se o SUS deve ter angioTC, mas quais pacientes a recebem primeiro e o que ela substitui. Primeiro, condicionar a incorporação a um protocolo que especifique posicionamento e substituição. Sem ele, o cenário de referência é o aditivo, em que nenhum preço plausível é neutro: a sustentabilidade é propriedade do protocolo, não do preço. O protocolo já existe na Diretriz SBC de SCC 2025, e o instrumento administrativo também: as OCI de síndrome coronariana crônica remuneram por episódio e nomeiam o exame de cada progressão. Uma progressão anatômica, em alternativa à progressão II (cintilografia, R$ 840), incorporaria a substituição no próprio código. O protocolo deve excluir explicitamente o assintomático, indicação de classe III em todas as diretrizes, porque código sem protocolo vira rastreamento.
 
-Segundo, avaliar o filtro antes de cinecoronariografia já indicada como pergunta separada: a indicação com maior espaço econômico e respaldo de diretriz. Terceiro, criar o código SIGTAP e microcustear a angioTC e os comparadores. Quarto, completar a reclassificação do CNES antes da apreciação final e planejar a implantação a partir do estrato pronto, com estratégia regional para as doze UFs sem estabelecimento.
+Segundo, avaliar o filtro antes de cinecoronariografia já indicada como pergunta separada: a indicação com maior espaço econômico e respaldo de diretriz. Terceiro, criar o código SIGTAP e microcustear angioTC e comparadores. Quarto, completar a reclassificação do CNES antes da apreciação final e implantar a partir do estrato pronto, com estratégia regional para as doze UFs sem estabelecimento.
 
 ## Conclusão
 
-Após a Portaria SAES/MS 3.695/2026, o cadastro nacional responde pela primeira vez à pergunta de capacidade: 432 tomógrafos de ≥64 canais em 315 estabelecimentos, como piso, e 79 prontos, com forte desigualdade regional. A pergunta orçamentária, por sua vez, não tem resposta única, e isso é o achado. Sem protocolo, a angioTC entra somada ao percurso, e nenhum preço plausível a torna neutra. Com protocolo, é expansiva na probabilidade baixa, incerta na intermediária quando substitui a cintilografia (e apenas ela), e tem espaço como filtro antes de uma cinecoronariografia já indicada. Essa estratificação já está escrita na Diretriz de Síndrome Coronariana Crônica da SBC de 2025, posterior à formulação que o pedido reproduz. A evidência econômica não sustenta uma decisão uniforme para toda a faixa baixa ou intermediária; sustenta condicionar qualquer incorporação ao posicionamento e ao exame substituído, com o protocolo que a cardiologia brasileira já publicou, e avaliar em separado, com critérios próprios, o filtro antes da cinecoronariografia já indicada, onde o espaço econômico é maior e o estrato pronto já está.
+Após a Portaria SAES/MS 3.695/2026, o cadastro nacional responde pela primeira vez à pergunta de capacidade: 432 tomógrafos de ≥64 canais em 315 estabelecimentos, como piso, e 79 prontos, com forte desigualdade regional. A pergunta orçamentária, por sua vez, não tem resposta única, e isso é o achado. Sem protocolo, a angioTC entra somada ao percurso e nenhum preço plausível a torna neutra. Com protocolo, é expansiva na probabilidade baixa, incerta na intermediária quando substitui a cintilografia (e apenas ela), e tem espaço como filtro antes de uma cinecoronariografia já indicada. Essa estratificação já está na Diretriz de Síndrome Coronariana Crônica da SBC de 2025, posterior à formulação que o pedido reproduz. A evidência econômica não sustenta uma decisão uniforme para toda a faixa baixa ou intermediária; sustenta condicionar qualquer incorporação ao posicionamento e ao exame substituído, com o protocolo que a cardiologia brasileira já publicou, e avaliar em separado, com critérios próprios, o filtro antes da cinecoronariografia já indicada, onde o espaço econômico é maior e o estrato pronto já está.
 
 ## Declarações
 

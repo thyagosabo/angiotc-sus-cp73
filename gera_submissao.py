@@ -4,7 +4,7 @@
 - pagina-titulo.docx     título/autores/correspondência (a parte identificada)
 - manuscrito-cego.docx   resumos + corpo + refs, sem autores e sem figuras embutidas
 - suplemento.docx        material suplementar (sem autores)
-- carta-apresentacao.docx
+- carta-apresentacao.docx, abstract-en.docx (a ABC traduz; enviar se o sistema pedir)
 - fig-central.jpg, fig1.jpg, fig2.jpg, figS1.jpg (300 dpi, via sips)
 Requer pandoc e macOS (sips). Fonte da verdade continua sendo os .md.
 """
@@ -32,6 +32,7 @@ pandoc("# Onde a angiotomografia coronariana gera valor no Sistema Único de Sa�
        OUT / "manuscrito-cego.docx")
 pandoc(pathlib.Path("manuscrito-suplemento.md").read_text(), OUT / "suplemento.docx")
 pandoc(pathlib.Path("carta-apresentacao.md").read_text(), OUT / "carta-apresentacao.docx")
+pandoc(pathlib.Path("abstract-en.md").read_text(), OUT / "abstract-en.docx")
 
 for src, dst in [("fig-central", "figura-central"), ("fig1-capacidade-uf", "figura-1"),
                  ("fig2-preco-x-delta", "figura-2"), ("figS1-tornado", "figura-S1")]:

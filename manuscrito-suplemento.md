@@ -247,7 +247,7 @@ Correspondência item a item com a nomenclatura oficial (Husereau et al., Value 
 | 7 | Comparadores | Métodos (seis cenários de C_substituído; dois PICOs); Tabelas 2 e S8 |
 | 8 | Perspectiva | Métodos (SUS como pagador) |
 | 9 | Horizonte temporal | Métodos (curto prazo: episódio diagnóstico e desfechos invasivos imediatos) |
-| 10 | Taxa de desconto | NA (horizonte inferior a um ano) |
+| 10 | Taxa de desconto | Sem desconto: os Δ de cateterismo têm janelas de 90 dias a 18 meses; o cenário aditivo usa a revascularização do SCOT-HEART a 20 meses e 5 anos sem desconto, com magnitude pequena (+0,6/100) e efeito do desconto desprezível, declarado aqui |
 | 11 | Seleção de desfechos | Métodos (cateterismo total e revascularização; cateterismo sem DAC obstrutiva fora do cálculo) |
 | 12 | Medida dos desfechos | Métodos (Δ por braço randomizado; Tabela S4) |
 | 13 | Valoração dos desfechos | NA (sem QALY; desfechos valorados apenas como custos evitados/induzidos) |
@@ -259,7 +259,7 @@ Correspondência item a item com a nomenclatura oficial (Husereau et al., Value 
 | 19 | Caracterização de efeitos distributivos | Resultados (capacidade por UF; CV e Gini; Figura 1) |
 | 20 | Caracterização da incerteza | Faixas por Δ; sensibilidade C_CATE; Figura S1 (tornado) |
 | 21 | Engajamento de pacientes e afetados | NA (dados administrativos e literatura; sem engajamento) |
-| 22 | Parâmetros do estudo | Tabelas 1, S3, S4 e S7; Apêndice A da contribuição (códigos e fontes) |
+| 22 | Parâmetros do estudo | Tabelas 1, S1, S2, S3, S4 e S7 |
 | 23 | Resumo dos resultados principais | Resultados; Tabela 2 |
 | 24 | Efeito da incerteza | Resultados (faixas); Figura S1; notas da Tabela 2 |
 | 25 | Efeito do engajamento | NA |
