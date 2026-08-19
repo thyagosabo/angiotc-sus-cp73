@@ -113,9 +113,10 @@ proposto de R$ 550 está fora do alcance; na intermediária, fica na zona de inc
 apenas quando substitui a cintilografia. A Diretriz SBC de Síndrome Coronariana Crônica
 2025 estratifica a indicação por probabilidade pré-teste (IIb-B na baixa; I-A na
 intermediária, como alternativa à prova funcional). O PICO submetido trata "baixa ou
-intermediária" como faixa única. Alinhar a incorporação a essa estratificação, com
-protocolo que diga o que a angiotomografia substitui, é o instrumento que a evidência
-sustenta.
+intermediária" como faixa única. A evidência econômica não sustenta decisão uniforme para
+toda a faixa; sustenta condicionar a incorporação ao posicionamento e ao exame
+substituído, alinhando-a a essa estratificação com protocolo que diga o que a
+angiotomografia substitui.
 
 4. OUTRO PICO. Nos quatro ensaios em que o comparador foi o cateterismo direto (CAD-MAN,
 DISCHARGE, CONSERVE, Reis 2022), os pacientes já estavam indicados ao cateterismo, uma
