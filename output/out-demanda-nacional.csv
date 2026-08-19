@@ -1,7 +1,7 @@
-nome,qtd,valor,estab,r$_medio
-Teste ergometrico,598695.0,19275376.92,1110,32.2
-Cateterismo cardiaco,163803.0,119599756.52,235,730.14
-Cintilografia perfusao - estresse,151784.0,61774187.08,358,406.99
-Cintilografia perfusao - repouso,151225.0,57654118.73,362,381.25
-Ecocardiografia de estresse,33766.0,6631454.24,308,196.39
-Cintilografia camaras - esforco,3709.0,796878.65,7,214.85
+procedimento,nome,qtd,valor,estab,r$_medio
+0205010016,Ecocardiografia de estresse,33766.0,6631454.24,308,196.39
+0208010025,Cintilografia perfusao - estresse,151784.0,61774187.08,358,406.99
+0208010033,Cintilografia perfusao - repouso,151225.0,57654118.73,362,381.25
+0208010076,Cintilografia camaras - esforco,3709.0,796878.65,7,214.85
+0211020010,Cateterismo cardiaco,163803.0,119599756.52,235,730.14
+0211020060,Teste ergometrico,598695.0,19275376.92,1110,32.2

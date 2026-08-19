@@ -1,6 +1,6 @@
 # Material suplementar
 
-**Onde a angiotomografia coronariana gera valor no Sistema Único de Saúde? Uma análise nacional de capacidade instalada e limiar orçamentário** — material suplementar (v1.2, 17/08/2026). Todos os números são reproduzidos por `analise_final.py` a partir dos microdados versionados no repositório [URL/DOI]; a contribuição técnica à Consulta Pública Conitec nº 73/2026 (`contribuicao-cp73.pdf`) contém a versão extensa das seções 2–4.
+**Onde a angiotomografia coronariana gera valor no Sistema Único de Saúde? Capacidade instalada, limiar orçamentário e o caso do filtro pré-cateterismo** — material suplementar (v1.3, 18/08/2026). Todos os números são reproduzidos por `analise_final.py` a partir dos microdados versionados no repositório [URL/DOI]; a contribuição técnica à Consulta Pública Conitec nº 73/2026 (`contribuicao-cp73.pdf`) contém a versão extensa das seções 2–4.
 
 ## Tabela S1 — Fontes de dados, endereços e competências; e Tabela S2 — códigos SIGTAP e CNES utilizados
 
@@ -24,18 +24,16 @@ Leitura de `.dbc`: `datasus-dbc` e `dbfread` (Python). Regras de análise fixada
 
 ---
 
-## Tabela S3 — Δ de cateterismo total por 100 pacientes necessário para neutralidade, por preço da AngioTC e por exame substituído (só exames e cateterismo)
+## Tabela S3 — Δ de cateterismo total por 100 pacientes necessário para neutralidade, por preço da angioTC e por exame substituído (só exames e cateterismo)
 
-| Preço da AngioTC | Natureza | **adoção aditiva** | mix SIA | NATS publicado | NATS por episódio | eco de estresse | cintilografia |
+| Preço da angioTC | Natureza | **adoção aditiva** | mix SIA | NATS publicado | NATS por episódio | eco de estresse | cintilografia |
 |---|---|---|---|---|---|---|---|
 | R$ 196,41 | TC tórax + contraste, proxy SIGTAP | 26,9 | 1,5 | já neutro | já neutro | 0,0 | já neutro |
 | **R$ 550,00** | **proposto pelo demandante** | **75,3** | **49,9** | **31,9** | **3,6** | 48,4 | **já neutro** |
 | R$ 622,54 | microcusteio 2022 (Carmo et al.) corrigido a jul/2026 (IPCA 12/2020→07/2026, ×1,3771; ano-base não explicitado no artigo, 12/2020 é o limite otimista) | 85,3 | 59,9 | 41,9 | 13,5 | 58,4 | já neutro |
 | R$ 1.311,95 | saúde suplementar (Shiozaki et al. 2025: referência ANS, 100% CBHPM) | 179,7 | 154,3 | 136,3 | 107,9 | 152,8 | 71,9 |
 
-Valores: Δ de cateterismo total por 100 pacientes necessário para neutralidade, **considerando apenas o custo dos exames e do cateterismo**.
-
-Valores: Δ de cateterismo total por 100 pacientes; "já neutro" = preço abaixo do custo do exame substituído. Faixa observada em primeira linha: −6,3 a +4,1; contra cateterismo direto: 66,0 a 85,6.
+Valores: Δ de cateterismo total por 100 pacientes necessário para neutralidade, considerando apenas o custo dos exames e do cateterismo; "já neutro" = preço abaixo do custo do exame substituído. Faixa observada em primeira linha: −6,3 a +4,1; contra cateterismo direto: 66,0 a 85,6.
 
 ## Tabela S4 — Ensaios utilizados: cateterismo total por braço, janelas e revascularização
 
@@ -55,7 +53,7 @@ Valores: Δ de cateterismo total por 100 pacientes; "já neutro" = preço abaixo
 | CATCH | (via IQWiG D22-01) | funcional; dor torácica aguda | 285 / 291 | — | — | — |
 | CARE-CCTA | (via IQWiG D22-01) | funcional | 460 / 443 | — | — | — |
 
-Os quatro invasivo-primeiro não são comparáveis aos demais: a população já estava referenciada para procedimento invasivo e a taxa do braço controle é determinada pelo desenho. CATCH e CARE-CCTA entram apenas no desfecho de cateterismo sem DAC obstrutiva (seção 4.8). Revascularização por braço, usada na seção 4.6: PRECISE 9,2% vs 5,2%; Foy 2017 (13 ensaios) 7,2% vs 4,5%; SCOT-HEART 233 vs 201 (20 m) e 279 vs 267 (5 a); DISCHARGE 14,2% vs 18,0%; CONSERVE 13% vs 18%. Nos ensaios em que a revascularização não é desagregada, ela é valorada como angioplastia. Os Δ de cateterismo provêm de 10 ensaios e 1 metanálise; CATCH e CARE-CCTA (12 estudos ao todo) só entram na eficiência diagnóstica.
+Os quatro invasivo-primeiro não são comparáveis aos demais: a população já estava referenciada para procedimento invasivo e a taxa do braço controle é determinada pelo desenho. CATCH e CARE-CCTA entram apenas no desfecho de cateterismo sem DAC obstrutiva (Tabela S6). As contagens do CAPP (66/51) não constam do artigo primário; provêm do gráfico de floresta de Foy 2017. Revascularização por braço, usada na Tabela S7: PRECISE 9,2% vs 5,2%; Foy 2017 (13 ensaios) 7,2% vs 4,5%; SCOT-HEART 233 vs 201 (20 m) e 279 vs 267 (5 a); DISCHARGE 14,2% vs 18,0%; CONSERVE 13% vs 18%. Nos ensaios em que a revascularização não é desagregada, ela é valorada como angioplastia. Os Δ de cateterismo provêm de 10 ensaios e 1 metanálise; CATCH e CARE-CCTA (12 estudos ao todo) só entram na eficiência diagnóstica.
 
 ---
 
@@ -77,7 +75,7 @@ Texto da SBC SCC 2025 (seção 3.1.7, "Resumo com sugestão de como investigar c
 
 Métrica de eficiência diagnóstica, **não utilizada no cálculo econômico**.
 
-| Ensaio | Comparador | AngioTC | Controle | Evitados /100 |
+| Ensaio | Comparador | angioTC | Controle | Evitados /100 |
 |---|---|---|---|---|
 | CARE-CCTA | funcional | 4/460 (0,9%) | 30/443 (6,8%) | 5,9 |
 | CATCH | funcional (dor torácica aguda, SCA excluída) | 14/285 (4,9%) | 23/291 (7,9%) | 3,0 |
@@ -87,8 +85,6 @@ Métrica de eficiência diagnóstica, **não utilizada no cálculo econômico**.
 | DISCHARGE | cateterismo direto | 111/1808 (6,1%) | 1260/1753 (71,9%) | 65,7 |
 | Reis 2022 | cateterismo direto | 5/115 (4,3%) | 61/105 (58,1%) | 53,7 |
 | CONSERVE | cateterismo direto | 24/784 (3,1%)ᵃ | 439/719 (61,1%)ᵃ | 58,0ᵃ |
-
-ᵃ Para o CONSERVE, os valores são os da Tabela 43 do IQWiG (cálculo próprio da agência, denominadores de pacientes avaliados por estratégia, 784/719, não os randomizados, 823/808). O abstract do ensaio reporta 24,6% e 61,1% como taxas de cateterismo normal **entre os cateterismos realizados**, não por paciente; os dois números não são diretamente comparáveis, e a linha é mantida com essa ressalva. Não entra em nenhum cálculo. Adicionalmente: PRECISE 2,6% vs 10,2% (evitados 7,6/100); CRESCENT-II, cateterismo sem indicação classe I, 1,5% vs 7,2% (5,7/100).
 
 ᵃ CONSERVE: valores da Tabela 43 do IQWiG (denominadores de pacientes avaliados por estratégia, 784/719, não os randomizados, 823/808); o abstract do ensaio reporta 24,6% e 61,1% como taxas de cateterismo normal entre os cateterismos realizados, não por paciente. Adicionalmente: PRECISE 2,6% vs 10,2%; CRESCENT-II (cateterismo sem indicação classe I) 1,5% vs 7,2%. Metanálise do IQWiG para os estudos de alta certeza contra métodos funcionais (CATCH e PROMISE): OR 0,77 (IC95% 0,64–0,94; p = 0,011). Contra cateterismo direto, OR de 0,01 a 0,03, sem estimativa agrupada por heterogeneidade.
 
@@ -104,7 +100,7 @@ Custo unitário observado no SIH 2025: R$ 7.713 por angioplastia coronariana; R$
 | Gatekeeping, DISCHARGE (Δ CATE 75,1; revasc. 18,0% → 14,2%) | −3,8 | +R$ 293 | R$ 548 | **R$ 841** |
 | Gatekeeping, CONSERVE (Δ CATE 66,0; revasc. 18% → 13%) | −5,0 | +R$ 386 | R$ 482 | **R$ 868** |
 
-Cotas anuais a R$ 550, no ponto médio da faixa de Δ observada (`analise_final.py`, seção 4.10):
+Cotas anuais a R$ 550, no ponto médio da faixa de Δ observada (`analise_final.py`):
 
 | Cenário | P de neutralidade médio | Por 100 mil pacientes | Sobre o volume que pode substituir (2025) |
 |---|---|---|---|
@@ -121,13 +117,29 @@ Cotas anuais a R$ 550, no ponto médio da faixa de Δ observada (`analise_final.
 
 Não constitui análise de impacto orçamentário: não há população elegível nem curva de difusão; são cotas de ordem de grandeza.
 
+## Tabela S8 — Preço de neutralidade por estrato de probabilidade pré-teste, tabela completa (inclui os cenários omitidos da Tabela 2 do artigo)
+
+| Estrato | Comparador (premissa) | C_substituído | Só exames + cateterismo | Com revascularização | Δ exigido a R$ 550 (só exames) |
+|---|---|---|---|---|---|
+| Qualquer estrato, sem protocolo | adoção aditiva (nada substituído) | R$ 0 | R$ −46 a +30 (SCOT-HEART: −3 a +4) | R$ −122 a −41 (revasc. do próprio SCOT-HEART) | 75,3 |
+| Baixa | diferir / ajustar PPT (contrafactual sem teste) | R$ 0 | teto R$ 0 (Δ ≤ 0 por construção) | — | — |
+| Baixa | teste ergométrico | R$ 32,20 | R$ −14 a +62 | R$ −297 a −195 | 70,9 |
+| Não estratificado (PICO submetido) | mix médio do SIA | R$ 185,46 | R$ 139 a 215 | R$ −144 a −42 | 49,9 |
+| Intermediária, sensibilidade | ecocardiografia de estresse | R$ 196,39 | R$ 150 a 226 | R$ −133 a −31 | 48,4 |
+| Intermediária, sensibilidade | percurso do NATS por episódio | R$ 523,81 | R$ 477 a 554 | R$ 195 a 297 | 3,6 |
+| Intermediária, com protocolo (cenário-base do estrato) | cintilografia de perfusão | R$ 786,83 | R$ 741 a 817 | **R$ 458 a 560** | já neutro |
+| Intermediária, descritivo sem protocolo (sensibilidade) | teste ergométrico seguido de imagem em fração p dos pacientes; teto p ≤ 0,31 pelos volumes do SIA (toda cintilografia e eco a jusante de um TE), imagem a R$ 679 em média | ≤ R$ 242,75 | ≤ R$ 196 a 273 | ≤ R$ −87 a +16 | ≥ 42,1 |
+| Já indicado a cateterismo (outro PICO) | cateterismo direto | cancela | R$ 482 a 625 | **R$ 841** (DISCHARGE) / **R$ 868** (CONSERVE) | 75,3 |
+
+Fonte: `analise_final.py` e `output/out-limiar-por-estrato.csv`. Δ de cateterismo de primeira linha de −6,3 a +4,1 por 100. O débito de revascularização vem do PRECISE (+4,0/100) e de Foy 2017, 13 ensaios (+2,7/100, pareado com o Δ de cateterismo dos mesmos 13, −2,6), aplicados como envelope aos cenários de substituição; para a adoção aditiva usa-se a revascularização do próprio SCOT-HEART (+1,5/100 em 20 meses e +0,6/100 em 5 anos). O débito absoluto escala com a prevalência de doença: na probabilidade baixa, o envelope PRECISE/Foy (população intermediária) tende a superestimá-lo, sem alterar o sinal. Para o diferimento, o contrafactual não contém cateterismo diagnóstico, logo Δ ≤ 0 e o teto é R$ 0. O cenário descritivo supõe que todo exame de imagem funcional do SUS seja a jusante de um teste ergométrico: p = (151.784 cintilografias + 33.766 ecos) ÷ 598.695 ergometrias = 0,31 no máximo; é limite superior de volumes, não inferência ecológica sobre pacientes. Com C_CATE = R$ 772,80 (AIH), o filtro vai a R$ 510–662.
+
 ## Figura S1 — Análise de sensibilidade univariada (tornado)
 
 *[A gerar por `analise_final.py`: variação de C_substituído (R$ 0 a 787), C_CATE (730 vs 773), Δ_CATE (−6,3 a +4,1; 66 a 86 no filtro), Δ_revasc (−5,0 a +4,0), C_revasc (angioplastia vs cirurgia) sobre o preço de neutralidade.]*
 
 ## Texto S1 — Desenho mínimo do microcusteio proposto
 
-A limitação metodológica mais importante é a assimetria: a AngioTC entra microcusteada (2022, corrigida) ou pelo preço proposto, e os comparadores e o cateterismo entram por tabela. Não trava a conclusão — o sinal da Tabela 4 depende de razões de preço que um microcusteio dificilmente inverteria na baixa, e a direção na intermediária já é declarada como incerta —, mas um revisor a apontará, com razão. Declara-se, portanto, como agenda, com o desenho mínimo que a corrigiria: microcusteio *bottom-up* na perspectiva do prestador — incluindo contraste iodado (o código de contraste tem faturamento zero: R$ 550 tem de embutir contraste, bomba injetora e acesso venoso), betabloqueador e nitrato para controle de frequência (condição de exame diagnóstico em 64 canais; exame não diagnóstico é cateterismo induzido) —, pelo método de custeio baseado em atividades e tempo (TDABC) ou por absorção — um só método, escolhido a priori conforme a Diretriz Metodológica de Estudos de Microcusteio do Ministério da Saúde [32] —, **da AngioTC e dos comparadores no mesmo serviço** (teste ergométrico, ecocardiografia de estresse, cintilografia de perfusão em estresse e repouso, cateterismo diagnóstico), em ao menos **oito serviços do SUS**, cobrindo as cinco regiões e as três naturezas (público, filantrópico, universitário) sem exigir célula cheia e incluindo serviços do estrato pronto de 79. Componentes: depreciação e manutenção do equipamento (tomógrafo ≥64 canais, gama-câmara, ecocardiógrafo, sala de hemodinâmica); insumos por exame (contraste iodado, betabloqueador e nitrato, radiofármaco, kits e materiais de hemodinâmica); tempo de sala e de pessoal por etapa (preparo, aquisição, pós-processamento, laudo, enfermagem, técnico, médico executor); software e estação de trabalho; rateio administrativo; **exames não diagnósticos e repetições** (que diluem o custo por diagnóstico útil); e, decisivamente, **a dependência do custo unitário do volume** — custo fixo dividido por *throughput*, que decide se um tomógrafo do estrato pronto absorve a AngioTC à margem ou exige turno adicional. Custo do prestador não é preço do pagador; o estudo deve reportar ambos. Um estudo desse porte custa uma fração da incerteza que resolve, e é condição para qualquer análise econômica simétrica — inclusive a do demandante.
+A limitação metodológica mais importante é a assimetria: a angioTC entra microcusteada (2022, corrigida) ou pelo preço proposto, e os comparadores e o cateterismo entram por tabela. Não trava a conclusão — o sinal da Tabela 2 do artigo depende de razões de preço que um microcusteio dificilmente inverteria na baixa, e a direção na intermediária já é declarada como incerta —, mas um revisor a apontará, com razão. Declara-se, portanto, como agenda, com o desenho mínimo que a corrigiria: microcusteio *bottom-up* na perspectiva do prestador — incluindo contraste iodado (o código de contraste tem faturamento zero: R$ 550 tem de embutir contraste, bomba injetora e acesso venoso), betabloqueador e nitrato para controle de frequência (condição de exame diagnóstico em 64 canais; exame não diagnóstico é cateterismo induzido) —, pelo método de custeio baseado em atividades e tempo (TDABC) ou por absorção — um só método, escolhido a priori conforme a Diretriz Metodológica de Estudos de Microcusteio do Ministério da Saúde (referência 29 do artigo) —, **da angioTC e dos comparadores no mesmo serviço** (teste ergométrico, ecocardiografia de estresse, cintilografia de perfusão em estresse e repouso, cateterismo diagnóstico), em ao menos **oito serviços do SUS**, cobrindo as cinco regiões e as três naturezas (público, filantrópico, universitário) sem exigir célula cheia e incluindo serviços do estrato pronto de 79. Componentes: depreciação e manutenção do equipamento (tomógrafo ≥64 canais, gama-câmara, ecocardiógrafo, sala de hemodinâmica); insumos por exame (contraste iodado, betabloqueador e nitrato, radiofármaco, kits e materiais de hemodinâmica); tempo de sala e de pessoal por etapa (preparo, aquisição, pós-processamento, laudo, enfermagem, técnico, médico executor); software e estação de trabalho; rateio administrativo; **exames não diagnósticos e repetições** (que diluem o custo por diagnóstico útil); e, decisivamente, **a dependência do custo unitário do volume** — custo fixo dividido por *throughput*, que decide se um tomógrafo do estrato pronto absorve a angioTC à margem ou exige turno adicional. Custo do prestador não é preço do pagador; o estudo deve reportar ambos. Um estudo desse porte custa uma fração da incerteza que resolve, e é condição para qualquer análise econômica simétrica — inclusive a do demandante.
 
 ## Texto S2 — Regras de análise pré-registradas e emendas declaradas
 

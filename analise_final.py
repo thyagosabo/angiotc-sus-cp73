@@ -126,6 +126,9 @@ def main():
     print(f"  gasto: ergo {100*v['0211020060']/Ve:.1f}% | cintilo {100*(v['0208010025']+v['0208010033'])/Ve:.1f}% | eco {100*v['0205010016']/Ve:.1f}%")
     C_EP = Ve / Ne
     cate = sia[sia.procedimento == CATE]; C_CATE = cate.valor.sum() / cate.qtd.sum()
+    dem = sia[sia.procedimento.isin(list(FUNC) + [CATE])].groupby("procedimento").agg(qtd=("qtd", "sum"), valor=("valor", "sum"), estab=("cnes", "nunique"))
+    dem.insert(0, "nome", [FUNC.get(c, "Cateterismo cardiaco") for c in dem.index]); dem["r$_medio"] = (dem.valor / dem.qtd).round(2)
+    dem.to_csv(f"{OUT}/out-demanda-nacional.csv")
     print(f"  cateterismo: {cate.qtd.sum():,.0f} | R$ {cate.valor.sum()/1e6:.1f} mi | R$ {C_CATE:.2f}")
     g = f[f.procedimento.isin(["0208010025", "0208010033"])].pivot_table(index=["cnes", "competencia"], columns="procedimento", values="qtd", aggfunc="sum").fillna(0)
     print(f"  por CNES-mes: estresse>repouso {(g['0208010025']-g['0208010033']).clip(lower=0).sum():,.0f} | repouso>estresse {(g['0208010033']-g['0208010025']).clip(lower=0).sum():,.0f}")
@@ -141,9 +144,16 @@ def main():
     print(f"  legacy (valor>0): {Nl:,.0f} epis R$ {Vl/Nl:.2f} | ponderado {Nl+No:,.0f} R$ {(Vl+Vo)/(Nl+No):.2f} | delta intercepto +{(Vl+Vo)/(Nl+No)-C_EP:.2f}")
     print(f"  3.1 - legacy = {Ne-Nl:.0f} = zerados por estresse {zer['0211020060']+zer['0208010025']+zer['0205010016']:.0f}")
     o26 = sia[sia.procedimento == "0902010026"]; print(f"  OCI 0902010026 (nao examinada): {o26.qtd.sum():,.0f} epis")
+    pd.DataFrame([(f"{c} {n}", oci[oci.procedimento==c].qtd.sum(), oci[oci.procedimento==c].valor.sum(), oci[oci.procedimento==c].cnes.nunique(), oci[oci.procedimento==c].uf.nunique()) for c, n in OCI_SCC.items()],
+                 columns=["oci", "epis", "valor", "estab", "ufs"]).assign(**{"r$/epis": lambda d: (d.valor / d.epis).round(2)}).to_csv(f"{OUT}/out-oci-scc-2025.csv", index=False)
+    pd.DataFrame([("legacy", Nl, Vl, Vl / Nl), ("OCI_SCC", No, Vo, Vo / No), ("ponderado", Nl + No, Vl + Vo, (Vl + Vo) / (Nl + No))],
+                 columns=["pathway", "episodios", "valor", "r$_por_episodio"]).to_csv(f"{OUT}/out-intercepto-por-pathway.csv", index=False)
 
     ang = sih[sih.procedimento.isin(ANGIO)]; rev = sih[sih.procedimento.isin(REVASC)]
     print(f"\n### 3.4 SIH: angioplastia {ang.qtd.sum():,.0f} R$ {ang.valor.sum()/1e6:,.0f} mi {ang.cnes.nunique()} estab | revasc {rev.qtd.sum():,.0f} R$ {rev.valor.sum()/1e6:,.0f} mi {rev.cnes.nunique()} estab | rede {len(coron)}")
+    pd.DataFrame({"angioplastia_qtd": ang.groupby("uf").qtd.sum(), "angioplastia_r$": ang.groupby("uf").valor.sum(),
+                  "revasc_qtd": rev.groupby("uf").qtd.sum(), "revasc_r$": rev.groupby("uf").valor.sum(),
+                  "estab_invasivos": sih[sih.procedimento.isin(ANGIO + REVASC)].groupby("uf").cnes.nunique()}).reindex(UFS).fillna(0).rename_axis("uf").to_csv(f"{OUT}/out-sih-invasivo-uf.csv")
 
     # ================= §4 LIMIAR =================
     C_CINT = (v["0208010025"] + v["0208010033"]) / q["0208010025"]

@@ -4,10 +4,13 @@
 Sem dados pessoais e sem imagens de pessoas (regra do formulário da CP). Tabelas largas
 rolam? Não em PDF — por isso o CSS reduz a fonte das tabelas e usa A4 retrato com margens curtas.
 """
-import subprocess, sys, os, pathlib, markdown
+import subprocess, sys, os, pathlib, re, markdown
 
 src = pathlib.Path(sys.argv[1]); html_path = src.with_suffix(".html"); pdf_path = src.with_suffix(".pdf")
-body = markdown.markdown(src.read_text(encoding="utf-8"), extensions=["tables", "fenced_code", "sane_lists"])
+md = src.read_text(encoding="utf-8")
+# ^n^ / ^1,3–5^ (citações Vancouver) -> <sup>; não toca blocos de código
+md = re.sub(r"\^([0-9][0-9,\u2013\-– ]*)\^", r"<sup>\1</sup>", md)
+body = markdown.markdown(md, extensions=["tables", "fenced_code", "sane_lists"])
 CSS = """
 @page { size: A4; margin: 16mm 14mm 16mm 14mm; }
 html { font-family: -apple-system, "Helvetica Neue", Arial, sans-serif; font-size: 10.2pt; line-height: 1.38; color: #111; }
@@ -20,6 +23,7 @@ table { border-collapse: collapse; width: 100%; font-size: 8.4pt; margin: 6pt 0 
 th, td { border: 1px solid #bbb; padding: 2.5pt 4pt; vertical-align: top; }
 th { background: #eee; }
 tr { page-break-inside: avoid; }
+sup { font-size: 0.72em; line-height: 0; }
 code { font-family: Menlo, monospace; font-size: 8.6pt; background: #f3f3f3; padding: 0 2px; }
 pre { background: #f3f3f3; padding: 6pt; font-size: 8.6pt; overflow: hidden; white-space: pre-wrap; }
 blockquote { border-left: 3px solid #999; margin: 6pt 0; padding: 2pt 10pt; color: #222; }

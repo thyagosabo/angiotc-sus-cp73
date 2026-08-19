@@ -71,8 +71,8 @@ As OCI `0902010034/42/50` definem o episódio de SCC na própria tabela do SUS. 
 
 ## Documentos
 
-- `contribuicao-cp73.md` — contribuição à CP 73/2026 (v5, 16/08/2026), a peça a anexar (PDF).
-- `manuscrito-abc.md` — manuscrito no formato da Arq Bras Cardiol (artigo original; corpo ≤ 5.000 palavras contando tudo), com `manuscrito-suplemento.md` (Tabelas S1–S7, Figura S1, Textos S1–S2). `manuscrito-v0.md` — versão integral de trabalho (v1.2), com marcadores de estado e notas.
+- `contribuicao-cp73.md` — contribuição à CP 73/2026 (v6, 18/08/2026: corpo condensado e reescrito pelos autores; apêndices e referências inalterados), a peça a anexar (PDF).
+- `manuscrito-abc.md` — manuscrito no formato da Arq Bras Cardiol (artigo original; corpo ≤ 5.000 palavras contando tudo; v1.3, redação revista pelos autores em 18/08/2026), com `manuscrito-suplemento.md` (Tabelas S1–S8, Figura S1, Textos S1–S2). `manuscrito-v0.md` — versão integral de trabalho (v1.2, arquivo do argumento completo; a prosa vigente é a de `manuscrito-abc.md`).
 - `SUBMISSAO-CP73.md` — roteiro do formulário; `REGRAS-DE-ANALISE.md` — regras pré-registradas e emendas.
 - `preview-angiotc.html` / `angiotc-preview.pdf` — prévia de leitura da **v3**, superada; mantida por histórico, não anexar.
 
