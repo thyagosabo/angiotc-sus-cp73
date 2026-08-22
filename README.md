@@ -83,7 +83,7 @@ As OCI `0902010034/42/50` definem o episódio de SCC na própria tabela do SUS. 
 - Preço de aquisição pública em licitação como quarta categoria de benchmark.
 - Auditoria de unidades de análise e dupla contagem: feita (seções 3.1 e 3.2.1; quatro rodadas de revisão cega, 16–18/08/2026).
 - Pacote de submissão ABC pronto em `submissao-abc/` (`gera_submissao.py`): página de título + declarações, manuscrito cego, suplemento com checklist CHEERS preenchido, carta de apresentação e figuras em JPG 300 dpi. Resumo em inglês incluído no manuscrito. Referências conferidas por PMID no PubMed em 19/08/2026 (três corrigidas: SCOT-HEART 10 anos = Lancet 2025;405:329-37; PROMISE econômico PMID 27214597; título de Reis 2022).
-- Pendente dos autores: nomes/ORCID/afiliações/conflitos (`CITATION.cff` incluso), decisão sobre o título, tornar o repositório público + DOI Zenodo (trocar os `[URL/DOI]`), e submeter (ScholarOne da ABC; CP 73 até 24/08).
+- Pendente dos autores: nomes/ORCID/afiliações/conflitos (`CITATION.cff` incluso), decisão sobre o título, submeter (repositório fica privado até o aceite; no aceite, tornar público + DOI Zenodo e inserir o link no texto), e (ScholarOne da ABC; CP 73 até 24/08).
 
 ## Escopo
 
