@@ -132,7 +132,7 @@ SCOT-HEART demonstrou redução de morte coronariana e infarto em 5 e 10 anos. A
 conclusões referem-se apenas à capacidade de implementação e à sustentabilidade
 orçamentária de curto prazo, nos termos em que o Comitê solicitou esclarecimento.
 
-Código, dados intermediários e tabelas: [URL do repositório / DOI].
+Código, dados intermediários e tabelas: https://github.com/thyagosabo/angiotc-sus-cp73
 
 ---
 *Contagem: ≈ 4.800 caracteres, sem travessões. Se o campo tiver limite menor, cortar os itens 2 e 5 primeiro (≈ −1.100); o anexo os cobre.*
