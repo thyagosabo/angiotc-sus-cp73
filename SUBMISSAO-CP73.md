@@ -1,5 +1,52 @@
 # Submissão à CP 73/2026 — roteiro do formulário
 
+> **SUBMETIDO em 24/08/2026** (último dia). Confirmação do sistema: "Formulário respondido
+> corretamente" / "Respostas enviadas". Página das respostas (requer login gov.br):
+> https://brasilparticipativo.presidencia.gov.br/processes/consultas-publicas-conitec/f/5217/surveys/1156
+> Contador da CP no momento do envio: 1.893 respostas. Anexo único: `contribuicao-cp73.pdf` (407,98 KB, v6.2).
+>
+> **Diferenças em relação ao roteiro abaixo, descobertas no formulário real:**
+> - O campo 12 tem limite de **2.000 caracteres** (o roteiro previa ~5.000). Foi submetida a
+>   versão condensada de 1.966 caracteres registrada em `campo12-colar.txt` (seção nova abaixo).
+> - O formulário real tem 27 campos, não 19: perguntas 21/23 ("contribuição técnica sobre
+>   evidências clínicas / estudos econômicos?") abrem os campos dissertativos 22/24 (2.000
+>   caracteres cada), que foram preenchidos (textos abaixo). Perguntas 13/17 sobre experiência
+>   pessoal foram respondidas pelo autor.
+> - Campos 26/27 + Termos de Serviço: 5 caixas de declaração marcadas.
+
+## Textos efetivamente submetidos (24/08/2026)
+
+### Campo 12 (1.966/2.000 caracteres)
+
+```
+Favorável à incorporação condicionada a protocolo de posicionamento por probabilidade pré-teste (Diretriz SBC de Síndrome Coronariana Crônica 2025) que diga qual exame a angiotomografia substitui, e à avaliação em separado do uso como filtro antes do cateterismo já indicado. Sem essa especificação, na formulação agregada "baixa ou intermediária", a análise anexa mostra que a tecnologia é orçamentariamente expansiva a qualquer preço plausível.
+
+Análise nacional reprodutível, anexa, sobre bases públicas (CNES, SIA/SUS, SIH/SUS, SIGTAP, IBGE). Síntese:
+
+1. CAPACIDADE. Após a Portaria SAES/MS 3.695/2026, o CNES registra 432 tomógrafos de 64 canais ou mais em 315 estabelecimentos (06/2026). É um piso: 74,6% dos estabelecimentos seguem no código genérico. Só 79 reúnem hardware compatível, hemodinâmica e produção coronariana; 12 UFs não têm nenhum nessa condição.
+
+2. LIMIAR. O SIA não tem identificador de paciente; em vez de estimar cateterismos evitados, calculou-se o necessário, por 100 pacientes, para neutralidade a cada preço. Nos ensaios de primeira linha, a variação foi de -6,3 a +4,1 por 100. Substituindo o mix real do SUS (76% ergometria; R$ 185 por episódio), a neutralidade é R$ 139-215; substituindo a cintilografia (R$ 787), R$ 741-817, caindo a R$ 458-560 com a revascularização induzida. Somada ao percurso sem substituir nada (cenário provável sem protocolo), nenhum preço plausível é neutro (teto R$ 30). O preço proposto (R$ 550) só entra na zona de incerteza na intermediária, substituindo cintilografia.
+
+3. OUTRO PICO. Em pacientes já indicados a cateterismo (CAD-MAN, CONSERVE, DISCHARGE, Reis 2022), a neutralidade é R$ 482-625, subindo a R$ 841-868 com a revascularização evitada. Recomenda-se avaliá-lo como pergunta separada.
+
+A evidência econômica não sustenta decisão uniforme para toda a faixa; sustenta condicionar a incorporação ao posicionamento e ao exame substituído. Código e dados: github.com/thyagosabo/angiotc-sus-cp73
+```
+
+### Campo 22 — evidências clínicas (1.673/2.000)
+
+```
+Evidências clínicas (fontes: PMID). Ensaios randomizados de estratégia com comparador não invasivo mostram variação de cateterismo total entre -6,3 e +4,1 por 100 pacientes: PROMISE (25773919) 12,2% vs 8,1%; PRECISE (37610731) 12,8% vs 16,9%; CAPP (25473041); CRESCENT-I/II (26746631, 29248657); metanálise de Foy (28973101) 11,7% vs 9,1%. No desenho aditivo, SCOT-HEART (27081014, 30145934): 409 vs 401 cateterismos aos 20 meses e 491 vs 502 em 5 anos, com redução de morte coronariana e infarto em 5 e 10 anos (39863372), benefício clínico distinto da questão orçamentária. Nos ensaios com cateterismo já indicado (CAD-MAN 27777234; CONSERVE 30553687; DISCHARGE 35240010; Reis 35226221), a angiotomografia evita 66 a 86 cateterismos por 100. Eficiência diagnóstica (IQWiG D22-01, NBK602895): 0,9 a 5,9 cateterismos sem doença obstrutiva evitados por 100 contra métodos funcionais (OR 0,77; IC95% 0,64-0,94) e 53,7 a 81,0 contra cateterismo direto, direção favorável à angiotomografia nos dois PICOs. Revascularização: PRECISE 9,2% vs 5,2%; Foy 7,2% vs 4,5%; DISCHARGE 14,2% vs 18,0%; CONSERVE 13% vs 18%. Ressalvas: horizontes heterogêneos (90 dias a 18 meses); PRECISE inclui diferimento em 20% dos de menor risco; Foy tem 9 de 13 ensaios de emergência. A Diretriz SBC de Síndrome Coronariana Crônica 2025 (DOI 10.36660/abc.20250619) estratifica a indicação: IIb-B na probabilidade baixa, I-A na intermediária como alternativa à prova funcional, condicionada a capacidade funcional, ECG basal, acesso e função renal. ESC 2024 e AHA/ACC 2021 convergem com essa estratificação. Detalhamento por ensaio no PDF anexo (Apêndice B) e em github.com/thyagosabo/angiotc-sus-cp73.
+```
+
+### Campo 24 — estudos econômicos (1.678/2.000)
+
+```
+Estudos econômicos. 1) Análise de limiar anexa (bases públicas SIA/SIH/SIGTAP/CNES 2025-2026): preço de neutralidade da angiotomografia por exame substituído e posição no percurso: mix real do SUS R$ 139-215; cintilografia R$ 741-817 (R$ 458-560 com revascularização); adoção aditiva, teto R$ 30; filtro pré-cateterismo R$ 482-625 (R$ 841-868 com revascularização). O preço proposto (R$ 550) só entra na zona de incerteza na intermediária substituindo cintilografia. 2) Análises econômicas de ensaios: PROMISE não encontrou economia (PMID 26857050); SCOT-HEART custou +US$ 462 por paciente aos 6 meses; PRECISE reduziu o custo diagnóstico em 27% e aumentou o de revascularização em 67% (PMID 39895495). 3) Brasil: Carmo 2022 (PMID 35137778) microcusteou a angiotomografia (R$ 452,05) contra comparadores a preços de tabela, assimetria que persiste; Bertoldi 2016/2017 modelam custo-efetividade de longo prazo, pergunta distinta. 4) Shiozaki 2025 (DOI 10.36660/abc.20250204), saúde suplementar: compara a angiotomografia (R$ 1.311,95) apenas com a angiografia invasiva (R$ 1.900,79); é um modelo do filtro pré-cateterismo, não da primeira linha em apreciação; transposto ao SUS, sustenta o filtro, não o PICO submetido. 5) Recomendações: criar código SIGTAP com protocolo que especifique o exame substituído; microcusteio bottom-up da angiotomografia e dos comparadores no mesmo serviço, conforme a diretriz metodológica do Ministério da Saúde, em ao menos 8 serviços; avaliar o filtro pré-cateterismo como pergunta separada; completar a reclassificação do CNES antes da apreciação final. Método reproduzível, código e tabelas: PDF anexo e github.com/thyagosabo/angiotc-sus-cp73.
+```
+
+---
+
+
 Formulário no Brasil Participativo (Decidim). **Exige login gov.br.** Sessão expira em
 **30 minutos** após o login — preparar tudo antes de entrar. Prazo: **24/08/2026**.
 446 respostas registradas até 16/08.
