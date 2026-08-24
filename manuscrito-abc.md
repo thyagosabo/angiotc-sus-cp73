@@ -154,7 +154,7 @@ Após a Portaria SAES/MS 3.695/2026, o cadastro nacional responde pela primeira 
 
 ![Figura 1](figuras/fig1-capacidade-uf.png)
 
-**Figura 1.** Capacidade tomográfica compatível com angioTC por UF (CNES 06/2026): equipamentos ≥64 canais por milhão, estrato pronto, UFs sem ≥64 canais e parque total.
+**Figura 1.** Capacidade compatível com angioTC por UF (CNES 06/2026): ≥64 canais por milhão, estrato pronto, UFs sem ≥64 e parque total.
 
 ![Figura 2](figuras/fig2-preco-x-delta.png)
 
@@ -182,12 +182,12 @@ Após a Portaria SAES/MS 3.695/2026, o cadastro nacional responde pela primeira 
 18. Lubbers M, Dedic A, Coenen A, et al. Calcium imaging and selective computed tomography angiography in comparison to functional testing for suspected coronary artery disease (CRESCENT). Eur Heart J. 2016;37(15):1232-43.
 19. Lubbers M, Coenen A, Kofflard M, et al. Comprehensive cardiac CT with myocardial perfusion imaging versus functional testing in suspected coronary artery disease (CRESCENT-II). JACC Cardiovasc Imaging. 2018;11(11):1625-36.
 20. McKavanagh P, Lusk L, Ball PA, et al. A comparison of cardiac computerized tomography and exercise stress electrocardiogram test for the investigation of stable chest pain (CAPP). Eur Heart J Cardiovasc Imaging. 2015;16(4):441-8.
-21. Douglas PS, Nanna MG, Kelsey MD, et al. Comparison of an initial risk-based testing strategy vs usual testing in stable symptomatic patients with suspected coronary artery disease (PRECISE). JAMA Cardiol. 2023;8(10):904-14; desfechos econômicos: Chew DS, et al. Circ Cardiovasc Qual Outcomes. 2025;18(2):e011008.
+21. Douglas PS, Nanna MG, Kelsey MD, et al. Comparison of an initial risk-based testing strategy vs usual testing in stable symptomatic patients with suspected coronary artery disease (PRECISE). JAMA Cardiol. 2023;8(10):904-14; econômico: Chew DS, et al. Circ Cardiovasc Qual Outcomes. 2025;18(2):e011008.
 22. Foy AJ, Dhruva SS, Peterson B, Mandrola JM, Morgan DJ, Redberg RF. Coronary computed tomography angiography vs functional stress testing for patients with suspected coronary artery disease: a systematic review and meta-analysis. JAMA Intern Med. 2017;177(11):1623-31.
 23. Dewey M, Rief M, Martus P, et al. Evaluation of computed tomography in patients with atypical angina or chest pain clinically referred for invasive coronary angiography (CAD-Man). BMJ. 2016;355:i5441.
 24. Chang HJ, Lin FY, Gebow D, et al. Selective referral using CCTA versus direct referral for individuals referred to invasive coronary angiography for suspected CAD (CONSERVE). JACC Cardiovasc Imaging. 2019;12(7 Pt 2):1303-12.
 25. Reis JF, Ramos RB, Marques H, et al. Cardiac computed tomographic angiography after abnormal ischemia test as a gatekeeper to invasive coronary angiography. Int J Cardiovasc Imaging. 2022;38(4):883-93.
 26. Institut für Qualität und Wirtschaftlichkeit im Gesundheitswesen. Coronary computed tomography angiography (with or without functional evaluation) for the diagnosis of chronic coronary heart disease. Final report D22-01. Colônia; 2024. NCBI Bookshelf NBK602895.
 27. Mark DB, Federspiel JJ, Cowper PA, et al. Economic outcomes with anatomical versus functional diagnostic testing for coronary artery disease (PROMISE). Ann Intern Med. 2016;165(2):94-102.
-28. Duarte M. Doenças cardiovasculares causam mais de 300 mil mortes por ano no Brasil; Conitec abre consulta pública sobre angiotomografia coronariana no SUS [release de imprensa]. Jornal do Brás. 11 ago 2026. Acesso em 16 ago 2026 (indisponível em 24 ago 2026).
+28. Duarte M. Doenças cardiovasculares causam mais de 300 mil mortes por ano no Brasil; Conitec abre consulta pública sobre angiotomografia coronariana no SUS [release de imprensa]. Jornal do Brás. 11 ago 2026. Acesso em 16 ago 2026; indisponível em 24 ago 2026.
 29. Brasil. Ministério da Saúde. Diretriz metodológica: estudos de microcusteio aplicados a avaliações econômicas em saúde. Brasília; 2021.
