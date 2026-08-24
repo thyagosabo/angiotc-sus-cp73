@@ -162,7 +162,7 @@ Após a Portaria SAES/MS 3.695/2026, o cadastro nacional responde pela primeira 
 
 ## Referências
 
-1. SCOT-HEART Investigators. CT coronary angiography in patients with suspected angina due to coronary heart disease (SCOT-HEART). Lancet. 2015;385(9985):2383-91; Williams MC, et al. J Am Coll Cardiol. 2016;67(15):1759-68; Newby DE, et al. N Engl J Med. 2018;379(10):924-33.
+1. SCOT-HEART Investigators. CT coronary angiography in patients with suspected angina due to coronary heart disease. Lancet. 2015;385(9985):2383-91; Williams MC, et al. J Am Coll Cardiol. 2016;67(15):1759-68; Newby DE, et al. N Engl J Med. 2018;379(10):924-33.
 2. Williams MC, Wereski R, Tuck C, et al. Coronary CT angiography-guided management of patients with stable chest pain: 10-year outcomes from the SCOT-HEART randomised controlled trial in Scotland. Lancet. 2025;405(10475):329-37.
 3. Douglas PS, Hoffmann U, Patel MR, et al. Outcomes of anatomical versus functional testing for coronary artery disease (PROMISE). N Engl J Med. 2015;372(14):1291-300.
 4. DISCHARGE Trial Group. CT or invasive coronary angiography in stable chest pain. N Engl J Med. 2022;386(17):1591-602.
@@ -171,7 +171,7 @@ Após a Portaria SAES/MS 3.695/2026, o cadastro nacional responde pela primeira 
 7. Vrints C, Andreotti F, Koskinas KC, et al. 2024 ESC Guidelines for the management of chronic coronary syndromes. Eur Heart J. 2024;45(36):3415-537.
 8. Magalhães TA, Carneiro ACC, Moreira VM, et al. Diretriz de Tomografia Computadorizada e Ressonância Magnética Cardiovascular da SBC e do CBR – 2024. Arq Bras Cardiol. 2024;121(9):e20240608.
 9. Cesar LAM, Gowdak LHW, Pavanello R, et al. Diretriz de Síndrome Coronariana Crônica – 2025. Arq Bras Cardiol. 2025;122(9):e20250619.
-10. Brasil. Ministério da Saúde. Conitec. Relatório para a Sociedade nº 745: angiotomografia coronariana como exame de primeira linha em pacientes sintomáticos e probabilidade pré-teste baixa ou intermediária com suspeita de doença arterial coronariana estável. Brasília; ago 2026.
+10. Brasil. Ministério da Saúde. Conitec. Relatório para a Sociedade nº 745: angiotomografia coronariana como exame de primeira linha. Brasília; ago 2026.
 11. Brasil. Ministério da Saúde. Conitec. Relatório de Recomendação Preliminar — angiotomografia coronariana como exame de primeira linha. Consulta Pública nº 73/2026. Brasília; 2026.
 12. Bertoldi EG, Stella SF, Rohde LE, Polanczyk CA. Long-term cost-effectiveness of diagnostic tests for assessing stable chest pain: modeled analysis of anatomical and functional strategies. Clin Cardiol. 2016;39(5):249-56.
 13. Bertoldi EG, Stella SF, Rohde LEP, Polanczyk CA. Cost-effectiveness of anatomical and functional test strategies for stable chest pain: public health perspective from a middle-income country. BMJ Open. 2017;7(4):e012652.
