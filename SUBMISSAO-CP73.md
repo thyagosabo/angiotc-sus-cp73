@@ -14,6 +14,10 @@
 >   pessoal foram respondidas pelo autor.
 > - Campos 26/27 + Termos de Serviço: 5 caixas de declaração marcadas.
 
+> **Errata pós-submissão (24/08, conferência bibliográfica):** iniciais de autores corrigidas nas
+> refs 3 (Carmo PBD; Magliano CADS) e 20 (Costa IBSDS; Silva MTD) da contribuição no repositório.
+> Nada muda em números ou conclusões; o PDF submetido é o registro do que foi enviado.
+
 ## Textos efetivamente submetidos (24/08/2026)
 
 ### Campo 12 (1.966/2.000 caracteres)

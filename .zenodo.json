@@ -1,0 +1,13 @@
+{
+  "title": "AngioTC coronariana no SUS: capacidade instalada e limiar orçamentário (código e dados da análise; CP Conitec 73/2026)",
+  "description": "Análise nacional reprodutível da capacidade tomográfica do SUS compatível com angiotomografia coronariana (CNES por número de canais, Portaria SAES/MS 3.695/2026) e análise de limiar orçamentário por exame substituído, estrato de probabilidade pré-teste e posição no percurso (primeira linha; filtro pré-cateterismo). Bases: CNES, SIA/SUS, SIH/SUS, SIGTAP, IBGE (2025-2026). Inclui a contribuição técnica submetida à Consulta Pública Conitec nº 73/2026 e o manuscrito associado.",
+  "creators": [
+    {"name": "Cavassani, Thyago Sabo"}
+  ],
+  "license": "cc-by-4.0",
+  "upload_type": "software",
+  "keywords": ["angiotomografia coronariana", "CCTA", "SUS", "avaliação de tecnologias em saúde", "impacto orçamentário", "análise de limiar", "CNES", "Conitec"],
+  "related_identifiers": [
+    {"relation": "isSupplementTo", "identifier": "https://brasilparticipativo.presidencia.gov.br/processes/consultas-publicas-conitec/f/5217/", "resource_type": "other"}
+  ]
+}

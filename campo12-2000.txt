@@ -1,0 +1,11 @@
+Favorável à incorporação condicionada a protocolo de posicionamento por probabilidade pré-teste (Diretriz SBC de Síndrome Coronariana Crônica 2025) que diga qual exame a angiotomografia substitui, e à avaliação em separado do uso como filtro antes do cateterismo já indicado. Sem essa especificação, na formulação agregada "baixa ou intermediária", a análise anexa mostra que a tecnologia é orçamentariamente expansiva a qualquer preço plausível.
+
+Análise nacional reprodutível, anexa, sobre bases públicas (CNES, SIA/SUS, SIH/SUS, SIGTAP, IBGE). Síntese:
+
+1. CAPACIDADE. Após a Portaria SAES/MS 3.695/2026, o CNES registra 432 tomógrafos de 64 canais ou mais em 315 estabelecimentos (06/2026). É um piso: 74,6% dos estabelecimentos seguem no código genérico. Só 79 reúnem hardware compatível, hemodinâmica e produção coronariana; 12 UFs não têm nenhum nessa condição.
+
+2. LIMIAR. O SIA não tem identificador de paciente; em vez de estimar cateterismos evitados, calculou-se o necessário, por 100 pacientes, para neutralidade a cada preço. Nos ensaios de primeira linha, a variação foi de -6,3 a +4,1 por 100. Substituindo o mix real do SUS (76% ergometria; R$ 185 por episódio), a neutralidade é R$ 139-215; substituindo a cintilografia (R$ 787), R$ 741-817, caindo a R$ 458-560 com a revascularização induzida. Somada ao percurso sem substituir nada (cenário provável sem protocolo), nenhum preço plausível é neutro (teto R$ 30). O preço proposto (R$ 550) só entra na zona de incerteza na intermediária, substituindo cintilografia.
+
+3. OUTRO PICO. Em pacientes já indicados a cateterismo (CAD-MAN, CONSERVE, DISCHARGE, Reis 2022), a neutralidade é R$ 482-625, subindo a R$ 841-868 com a revascularização evitada. Recomenda-se avaliá-lo como pergunta separada.
+
+A evidência econômica não sustenta decisão uniforme para toda a faixa; sustenta condicionar a incorporação ao posicionamento e ao exame substituído. Código e dados: github.com/thyagosabo/angiotc-sus-cp73

@@ -163,7 +163,7 @@ Após a Portaria SAES/MS 3.695/2026, o cadastro nacional responde pela primeira 
 ## Referências
 
 1. SCOT-HEART Investigators. CT coronary angiography in patients with suspected angina due to coronary heart disease (SCOT-HEART). Lancet. 2015;385(9985):2383-91; Williams MC, et al. J Am Coll Cardiol. 2016;67(15):1759-68; Newby DE, et al. N Engl J Med. 2018;379(10):924-33.
-2. Williams MC, Wereski R, Tuck C, et al. Coronary CT angiography-guided management of patients with stable chest pain: 10-year outcomes from the SCOT-HEART randomised controlled trial. Lancet. 2025;405(10475):329-37.
+2. Williams MC, Wereski R, Tuck C, et al. Coronary CT angiography-guided management of patients with stable chest pain: 10-year outcomes from the SCOT-HEART randomised controlled trial in Scotland. Lancet. 2025;405(10475):329-37.
 3. Douglas PS, Hoffmann U, Patel MR, et al. Outcomes of anatomical versus functional testing for coronary artery disease (PROMISE). N Engl J Med. 2015;372(14):1291-300.
 4. DISCHARGE Trial Group. CT or invasive coronary angiography in stable chest pain. N Engl J Med. 2022;386(17):1591-602.
 5. National Institute for Health and Care Excellence. Recent-onset chest pain of suspected cardiac origin: assessment and diagnosis (CG95). 2010, atualizada 2016.
@@ -175,8 +175,8 @@ Após a Portaria SAES/MS 3.695/2026, o cadastro nacional responde pela primeira 
 11. Brasil. Ministério da Saúde. Conitec. Relatório de Recomendação Preliminar — angiotomografia coronariana como exame de primeira linha. Consulta Pública nº 73/2026. Brasília; 2026.
 12. Bertoldi EG, Stella SF, Rohde LE, Polanczyk CA. Long-term cost-effectiveness of diagnostic tests for assessing stable chest pain: modeled analysis of anatomical and functional strategies. Clin Cardiol. 2016;39(5):249-56.
 13. Bertoldi EG, Stella SF, Rohde LEP, Polanczyk CA. Cost-effectiveness of anatomical and functional test strategies for stable chest pain: public health perspective from a middle-income country. BMJ Open. 2017;7(4):e012652.
-14. Carmo PB, Magliano CAS, Rey HCV, Camargo GC, Trocado LFL, Gottlieb I. Análise da custo-efetividade da angiotomografia coronariana no SUS, em comparação com outros métodos não invasivos na suspeita de DAC estável. Arq Bras Cardiol. 2022;118(3):578-85.
-15. Shiozaki A, Torreão J, Costa IBSS, Suarez AB, Silva MT, Oliveira TG, et al. Análise de custo-efetividade da angiotomografia coronária como exame preferencial na investigação de dor torácica estável na saúde suplementar no Brasil. Arq Bras Cardiol. 2025;122(12):e20250204.
+14. Carmo PBD, Magliano CADS, Rey HCV, Camargo GC, Trocado LFL, Gottlieb I. Análise da custo-efetividade da angiotomografia coronariana no SUS, em comparação com outros métodos não invasivos na suspeita de DAC estável. Arq Bras Cardiol. 2022;118(3):578-85.
+15. Shiozaki A, Torreão J, Costa IBSDS, Suarez AB, Silva MTD, Oliveira TG, et al. Análise de custo-efetividade da angiotomografia coronária como exame preferencial na investigação de dor torácica estável na saúde suplementar no Brasil. Arq Bras Cardiol. 2025;122(12):e20250204.
 16. Brasil. Ministério da Saúde. Portaria SAES/MS nº 3.695, de 15 de janeiro de 2026. Diário Oficial da União. 27 jan 2026; Seção 1:89-90. Republicada 18 mai 2026.
 17. Husereau D, Drummond M, Augustovski F, et al. Consolidated Health Economic Evaluation Reporting Standards 2022 (CHEERS 2022) statement. Value Health. 2022;25(1):3-9.
 18. Lubbers M, Dedic A, Coenen A, et al. Calcium imaging and selective computed tomography angiography in comparison to functional testing for suspected coronary artery disease (CRESCENT). Eur Heart J. 2016;37(15):1232-43.
@@ -186,8 +186,8 @@ Após a Portaria SAES/MS 3.695/2026, o cadastro nacional responde pela primeira 
 22. Foy AJ, Dhruva SS, Peterson B, Mandrola JM, Morgan DJ, Redberg RF. Coronary computed tomography angiography vs functional stress testing for patients with suspected coronary artery disease: a systematic review and meta-analysis. JAMA Intern Med. 2017;177(11):1623-31.
 23. Dewey M, Rief M, Martus P, et al. Evaluation of computed tomography in patients with atypical angina or chest pain clinically referred for invasive coronary angiography (CAD-Man). BMJ. 2016;355:i5441.
 24. Chang HJ, Lin FY, Gebow D, et al. Selective referral using CCTA versus direct referral for individuals referred to invasive coronary angiography for suspected CAD (CONSERVE). JACC Cardiovasc Imaging. 2019;12(7 Pt 2):1303-12.
-25. Reis JF, Freitas P, Guerreiro S, et al. Cardiac computed tomographic angiography after abnormal ischemia test as a gatekeeper to invasive coronary angiography. Int J Cardiovasc Imaging. 2022;38(4):883-93.
-26. Institut für Qualität und Wirtschaftlichkeit im Gesundheitswesen. Coronary computed tomography angiography for the diagnosis of chronic coronary heart disease. Final report D22-01. Colônia; 2024. NCBI Bookshelf NBK602895.
+25. Reis JF, Ramos RB, Marques H, et al. Cardiac computed tomographic angiography after abnormal ischemia test as a gatekeeper to invasive coronary angiography. Int J Cardiovasc Imaging. 2022;38(4):883-93.
+26. Institut für Qualität und Wirtschaftlichkeit im Gesundheitswesen. Coronary computed tomography angiography (with or without functional evaluation) for the diagnosis of chronic coronary heart disease. Final report D22-01. Colônia; 2024. NCBI Bookshelf NBK602895.
 27. Mark DB, Federspiel JJ, Cowper PA, et al. Economic outcomes with anatomical versus functional diagnostic testing for coronary artery disease (PROMISE). Ann Intern Med. 2016;165(2):94-102.
-28. Duarte M. Doenças cardiovasculares causam mais de 300 mil mortes por ano no Brasil; Conitec abre consulta pública sobre angiotomografia coronariana no SUS [release de imprensa]. Jornal do Brás. 11 ago 2026. Acesso em 16 ago 2026.
+28. Duarte M. Doenças cardiovasculares causam mais de 300 mil mortes por ano no Brasil; Conitec abre consulta pública sobre angiotomografia coronariana no SUS [release de imprensa]. Jornal do Brás. 11 ago 2026. Acesso em 16 ago 2026 (indisponível em 24 ago 2026).
 29. Brasil. Ministério da Saúde. Diretriz metodológica: estudos de microcusteio aplicados a avaliações econômicas em saúde. Brasília; 2021.

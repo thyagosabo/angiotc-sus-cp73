@@ -297,7 +297,7 @@ Os quatro invasivo-primeiro não são comparáveis aos demais: a população já
 
 1. Brasil. Ministério da Saúde. Conitec. Relatório de Recomendação Preliminar — Angiotomografia coronariana como exame de primeira linha. CP nº 73/2026. Disponível em: gov.br/conitec.
 2. Brasil. Ministério da Saúde. Portaria SAES/MS nº 3.695, de 15 de janeiro de 2026. DOU nº 18, 27 jan 2026, Seção 1, p. 89–90. Republicada em 18 mai 2026.
-3. Carmo PB, Magliano CAS, Rey HCV, Camargo GC, Trocado LFL, Gottlieb I. Análise da Custo-Efetividade da Angiotomografia Coronariana no SUS, em Comparação com Outros Métodos Não Invasivos na Suspeita de DAC Estável. Arq Bras Cardiol. 2022;118(3):578-85. DOI 10.36660/abc.20201050. PMID 35137778. PMC8959029.
+3. Carmo PBD, Magliano CADS, Rey HCV, Camargo GC, Trocado LFL, Gottlieb I. Análise da Custo-Efetividade da Angiotomografia Coronariana no SUS, em Comparação com Outros Métodos Não Invasivos na Suspeita de DAC Estável. Arq Bras Cardiol. 2022;118(3):578-85. DOI 10.36660/abc.20201050. PMID 35137778. PMC8959029.
 4. IQWiG. Coronary computed tomography angiography (with or without functional evaluation) for the diagnosis of chronic coronary heart disease. Final report D22-01, 8 Mar 2024. English extract: NBK602895. Full report (German): iqwig.de.
 5. Douglas PS et al. PROMISE. N Engl J Med. 2015;372:1291-300. PMID 25773919.
 6. SCOT-HEART Investigators. Lancet 2015;385:2383-91; JACC 2016;67:1759-68 (PMID 27081014); N Engl J Med. 2018;379:924-33 (PMID 30145934).
@@ -314,7 +314,7 @@ Os quatro invasivo-primeiro não são comparáveis aos demais: a população já
 17. Zito A et al. Ann Intern Med. 2023;176:817-26. PMID 37276592. Erratum: 2024;177:991-2. PMID 38830226.
 18. Hwang IC et al. Clin Cardiol. 2017;40:1129-38. PMID 28914973. [não utilizado — erro de extração para SCOT-HEART]
 19. Hulten E et al. J Am Coll Cardiol. 2013;61:880-92. PMID 23395069.
-20. Shiozaki A, Torreão J, Costa IBSS, Suarez AB, Silva MT, Oliveira TG, et al. Análise de Custo-Efetividade da Angiotomografia Coronária como Exame Preferencial na Investigação de Dor Torácica Estável na Saúde Suplementar no Brasil. Arq Bras Cardiol. 2025;122(12):e20250204 (epub 9 jan 2026). DOI 10.36660/abc.20250204. PMID 41637322. [fonte do preço da angiotomografia na saúde suplementar, R$ 1.311,95, "referência da ANS", e do cateterismo, R$ 1.900,79; baseada na CBHPM 2022 (AMB)]
+20. Shiozaki A, Torreão J, Costa IBSDS, Suarez AB, Silva MTD, Oliveira TG, et al. Análise de Custo-Efetividade da Angiotomografia Coronária como Exame Preferencial na Investigação de Dor Torácica Estável na Saúde Suplementar no Brasil. Arq Bras Cardiol. 2025;122(12):e20250204 (epub 9 jan 2026). DOI 10.36660/abc.20250204. PMID 41637322. [fonte do preço da angiotomografia na saúde suplementar, R$ 1.311,95, "referência da ANS", e do cateterismo, R$ 1.900,79; baseada na CBHPM 2022 (AMB)]
 21. Cesar LAM, Gowdak LHW, Pavanello R et al. Diretriz de Síndrome Coronariana Crônica – 2025. Arq Bras Cardiol. 2025;122(9):e20250619. DOI 10.36660/abc.20250619. PMID 41294178. Erratum 2026;123(7):e20260565 (autoria apenas).
 22. Mark DB et al. Economic outcomes with anatomical versus functional diagnostic testing for coronary artery disease (PROMISE). Ann Intern Med. 2016;165(2):94-102. PMID 27214597.
 23. Williams MC et al. SCOT-HEART, 10-year outcomes. Lancet. 2025;405(10475):329-37. PMID 39863372.
